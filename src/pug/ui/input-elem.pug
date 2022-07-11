@@ -1,0 +1,21 @@
+mixin inputElem(type, placeholder, className, status, popUpText)
+  div(class= `input-elem ${className}`)
+    input(type= type, placeholder= placeholder).input-elem__input
+
+    if popUpText !== null
+      .input-elem__pop-up= popUpText
+
+    if status === 'error'
+      .input-elem__cross
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M9.21316 11.3523L0.893422 19.672C0.399999 20.1655 0.399998 20.9654 0.89342 21.4589C1.38684 21.9523 2.18684 21.9523 2.68026 21.4589L11 13.1391L19.3197 21.4589C19.8132 21.9523 20.6132 21.9523 21.1066 21.4589C21.6 20.9654 21.6 20.1655 21.1066 19.672L12.7868 11.3523L21.1066 3.03256C21.6 2.53914 21.6 1.73914 21.1066 1.24572C20.6132 0.752293 19.8132 0.752293 19.3197 1.24572L11 9.56545L2.68026 1.24572C2.18684 0.752294 1.38684 0.752293 0.893421 1.24572C0.399998 1.73914 0.399998 2.53914 0.893421 3.03256L9.21316 11.3523Z" fill="#AB2421"/>
+        </svg>
+    else if status === 'success'
+      .input-elem__check-mark
+        <svg width="30" height="23" viewBox="0 0 30 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 14.5L8 21.5L28.5 1" stroke="#6FCF97" stroke-width="2" stroke-linejoin="round"/>
+        </svg>
+    else
+
+        //if status === 'input-elem_error'
+        ////span.input-elem__placeholder= placeholder

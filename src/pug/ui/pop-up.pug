@@ -1,0 +1,13 @@
+include ../ui/btn
+include ../ui/cross
+
+mixin popUp(image, headline, text, btn)
+  .container-pop-up
+    .pop-up
+      .pop-up__wrap-cross
+        +cross
+      img(src=`../../images/${image}`).pop-up__image
+      h2.pop-up__headline= headline
+      p.pop-up__text= text
+      .pop-up__btn
+        +btn('Ок', 'btn_red', null)

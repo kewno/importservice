@@ -1,0 +1,87 @@
+include ../ui/arrow
+include ../ui/social
+include ../ui/btn
+include ../ui/play
+include ../ui/cross
+include ../ui/news-elem
+include ../ui/pop-up
+include ../ui/input-elem
+include ../ui/main-menu
+
+-
+  let menu = [{name: 'о компании', href: '/',
+              submenu: [{text: 'О компании', href: '/'},
+                        {text: 'новости и акции', href: '/'},
+                        {text: 'Нам доверяют', href: '/'},
+                        {text: 'Команда', href: '/'},
+                        {text: 'вакансии', href: '/'},
+                        {text: 'Фотогалерея/Видеогалерея', href: '/'},
+                        {text: 'Сертификаты', href: '/'}]},
+              {name: 'Продукция', href: '/',
+              submenu: [{text: 'Продукция', href: '/'},
+                        {text: 'Справочная информация', href: '/'}]},
+              {name: 'сервис и услуги', href: '/',
+              submenu: [{text: 'Сервис и услуги', href: '/'},
+                        {text: 'Оптимизация Технического обслуживания и ремонта оборудования', href: '/'},
+                        {text: 'Повышение надежности работы оборудования', href: '/'},
+                        {text: 'Вибродиагностика и наладка оборудования', href: '/'},
+                        {text: 'Ремонт и изготовление приводной техники', href: '/'},
+                        {text: 'Мониторинг состояния оборудования', href: '/'}]},
+              {name: 'Контакты', href: '/', submenu: null}
+              ]
+doctype html
+html(lang="en")
+
+head
+  meta(charset="UTF-8")
+  meta(name="viewport" content="width=device-width, initial-scale=1.0")
+  title UI-KIT
+
+body
+  .ui-kit-wrap-menu
+    +mainMenu(menu)
+
+  .ui-kit-wrap-arrows
+    +arrow('arrow_red arrow_right')
+    +arrow('arrow_white')
+    +arrow('arrow_grey-light arrow_right')
+    +arrow('arrow_grey arrow_right')
+    +arrow('arrow_red')
+
+    +social()
+
+  .ui-kit-wrap-btn
+    .ui-kit-wrap-btn__container
+      .ui-kit-btn
+        +btn('Ссылка', 'btn_red', '/')
+      .ui-kit-btn
+        +btn('Ссылка', 'btn_white', '/')
+      .ui-kit-btn
+        +btn('Ссылка', 'btn_invisible', '/')
+    .ui-kit-wrap-btn__container
+      .ui-kit-btn
+        +btn('Кнопка', 'btn_red', null)
+      .ui-kit-btn
+        +btn('Кнопка', 'btn_white', null)
+      .ui-kit-btn
+        +btn('Кнопка', 'btn_invisible', null)
+
+  .ui-kit-wrap-play-cross
+    +play
+    +cross
+  .ui-kit-wrap-news-block
+    .ui-kit-wrap-news
+      +newsElem('/', 'Ультразвуковой прибор повышает точность повторного смазывания', 'Уникальный ультразвуковой прибор, способный «слышать» звук пластичной смазки, заполняющей подшипник, повышает...', '01.01.22', 'news-elem.png')
+    .ui-kit-wrap-news
+      +newsElem('/', 'Ультразвуковой прибор повышает точность повторного смазывания', 'Уникальный ультразвуковой прибор, способный «слышать» звук пластичной смазки, заполняющей подшипник, повышает...', '01.01.22', null)
+
+  .ui-kit-pop-up
+    +popUp('sms.png', 'Ваше сообщение успешно отправлено!', 'здесь может быть дополнительный текст, до двух-трех строк', btn)
+  .ui-kit-wrap-inputs
+    .ui-kit-wrap-inputs__input
+      +inputElem('type', 'Введите ваше имя', null, null, null)
+    .ui-kit-wrap-inputs__input
+      +inputElem('type', 'Введите ваше имя', 'input-elem_error', 'error', 'Непрвильно, нужны буквы')
+    .ui-kit-wrap-inputs__input
+      +inputElem('type', 'Введите ваше имя', 'input-elem_success', 'success', null)
+

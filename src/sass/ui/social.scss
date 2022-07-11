@@ -1,0 +1,17 @@
+.social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 108px;
+  width: 100%;
+
+  &__elem {
+    &:hover {
+      svg {
+        path:first-child {
+          fill: var(--red);
+        }
+      }
+    }
+  }
+}

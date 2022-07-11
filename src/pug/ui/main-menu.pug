@@ -1,0 +1,60 @@
+include ../ui/main-menu-vertical
+
+mixin mainMenu(menu)
+  // -
+  //   let elemMenu1 = [{text: 'О компании', href: '/'},
+  //                   {text: 'новости и акции', href: '/'},
+  //                   {text: 'Нам доверяют', href: '/'},
+  //                   {text: 'Команда', href: '/'},
+  //                   {text: 'вакансии', href: '/'},
+  //                   {text: 'Фотогалерея/Видеогалерея', href: '/'},
+  //                   {text: 'Сертификаты', href: '/'}]
+  //
+  //   let elemMenu2 = [{text: 'Продукция', href: '/'},
+  //                   {text: 'Справочная информация', href: '/'}]
+  //
+  //   let elemMenu3 = [{text: 'Сервис и услуги', href: '/'},
+  //                   {text: 'Оптимизация Технического обслуживания и ремонта оборудования', href: '/'},
+  //                   {text: 'Повышение надежности работы оборудования', href: '/'},
+  //                   {text: 'Вибродиагностика и наладка оборудования', href: '/'},
+  //                   {text: 'Ремонт и изготовление приводной техники', href: '/'},
+  //                   {text: 'Мониторинг состояния оборудования', href: '/'}]
+
+  nav.main-menu.main-menu_black
+    ul.main-menu-list
+      each el in menu
+        li.main-menu-elem
+          a(href= href).main-menu-elem__href= el.name
+          if el.submenu !== null
+            <svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.5 0.5L6.20711 4.79289C5.81658 5.18342 5.18342 5.18342 4.79289 4.79289L0.5 0.5" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            +mainMenuVertical(el.submenu)
+    .header-contacts
+      p.header-contacts__email zakaz@impservice.ru
+      p.header-contacts__phone +7 (342) 225-00-88
+      .header-contacts__wrap-btn
+        +btn('Заказать звонок', 'btn_invisible', '/')
+      //li.main-menu-elem
+        a(href='/').main-menu-elem__href О компании
+        <svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10.5 0.5L6.20711 4.79289C5.81658 5.18342 5.18342 5.18342 4.79289 4.79289L0.5 0.5" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        +mainMenuVertical(elemMenu1)
+      //li.main-menu-elem
+        a(href='/').main-menu-elem__href Продукция
+        <svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10.5 0.5L6.20711 4.79289C5.81658 5.18342 5.18342 5.18342 4.79289 4.79289L0.5 0.5" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        +mainMenuVertical(elemMenu2)
+      //li.main-menu-elem
+        a(href='/').main-menu-elem__href Сервис и услуги
+        <svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10.5 0.5L6.20711 4.79289C5.81658 5.18342 5.18342 5.18342 4.79289 4.79289L0.5 0.5" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        +mainMenuVertical(elemMenu3)
+      //li.main-menu-elem
+        a(href='/').main-menu-elem__href Контакты
+
+
+        //#FFF

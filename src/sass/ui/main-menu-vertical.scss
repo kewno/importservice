@@ -1,0 +1,40 @@
+.main-menu-vertical {
+  position: absolute;
+  top: 13px;
+  left: 0;
+  z-index: 3;
+  display: none;
+  padding-top: 15px;
+}
+
+.main-menu-vertical-list {
+  list-style-type: none;
+  background: var(--red);
+  padding: 0;
+  //max-width: 238px;
+  box-sizing: border-box;
+  //width: 100%;
+  width: 198px;
+}
+
+.main-menu-vertical-elem {
+  display: block;
+  padding: 15px 25px 15px 22px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--white);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  &:hover {
+    background: var(--reb-dark);
+  }
+  //&__href {
+  //  text-decoration: none;
+  //  text-transform: uppercase;
+  //  color: var(--white);
+  //  font-weight: 500;
+  //  font-size: 14px;
+  //  line-height: 20px;
+  //}
+}

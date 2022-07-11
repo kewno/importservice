@@ -1,0 +1,16 @@
+.cross {
+  width: 100px;
+  height: 100px;
+  background: var(--red);
+  box-sizing: border-box;
+  padding: 25px 0 0 25px;
+  cursor: pointer;
+  &:hover {
+    background: var(--white);
+    svg {
+      path {
+        fill: var(--red);
+      }
+    }
+  }
+}
