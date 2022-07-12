@@ -1,0 +1,26 @@
+.header-slider {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  .swiper-wrapper {
+
+  }
+  .swiper-slide {
+
+  }
+}
+
+.wrap-control-header-slider {
+  position: absolute;
+  z-index: 2;
+  bottom: 4px;
+  width: 100%;
+  max-width: 1407px;
+  display: flex;
+  justify-content: end;
+}
+.control-header-slider {
+  max-width: 1407px;
+  display: flex;
+}

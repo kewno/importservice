@@ -11,9 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
     //     return '<span class="' + className + ' swiper-pagination__point' + '">' + "</span>";
     //   },
     // // },
-    // navigation: {
-    //   nextEl: ".control-slider-next",
-    //   prevEl: ".control-slider-prev",
-    // },
+    navigation: {
+      nextEl: ".control-header-slider-next",
+      prevEl: ".control-header-slider-prev",
+    },
   })
 })

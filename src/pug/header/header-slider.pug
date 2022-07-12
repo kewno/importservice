@@ -1,8 +1,16 @@
-mixin headerSlider(typeSlider)
-  div(class=`container-slider ${typeSlider}`)
-    .header-slider
-      .swiper-wrapper
-        .swiper-slide
-          +mainSliderSlide('slider-1.png', 'slider-slide__play')
-        .swiper-slide
-          +mainSliderSlide('slider-1.png', null)
+include ../ui/arrow
+
+mixin headerSlider()
+  //div(class=`container-slider ${typeSlider}`)
+  .header-slider
+    .swiper-wrapper
+      .swiper-slide
+        img(src='../../images/header-slide-1.png').swiper-slide__image
+      .swiper-slide
+        img(src='../../images/header-slide-1.png').swiper-slide__image
+    .wrap-control-header-slider
+      .control-header-slider
+        .control-header-slider-prev
+          +arrow('arrow_white')
+        .control-header-slider-next
+          +arrow('arrow_red arrow_right')

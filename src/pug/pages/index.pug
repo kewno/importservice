@@ -1,21 +1,13 @@
+//include ../ui/pop-up
+include ../header/header
+
 doctype html
 html(lang="en")
 
 head
-	meta(charset="UTF-8")
-	meta(name="viewport" content="width=device-width, initial-scale=1.0")
-	title Document
+  meta(charset="UTF-8")
+  meta(name="viewport" content="width=device-width, initial-scale=1.0")
+  title Main
 
-body
-	//include ../components/header.pug
-
-	//.swiper-container
-	//	.swiper-wrapper
-	//		.swiper-slide
-	//			img(src="./images/jaba.png")
-	//		.swiper-slide
-	//			img(src="./images/jaba.png")
-	//		.swiper-slide
-	//			img(src="./images/jaba.png")
-	//		.swiper-slide
-	//			img(src="./images/jaba.png")
+body.main-page
+  +header()
