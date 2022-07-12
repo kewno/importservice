@@ -1,0 +1,9 @@
+.main-bearing {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 720px;
+  > * {
+    width: 33%;
+  }
+}

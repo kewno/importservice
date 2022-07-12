@@ -1,0 +1,36 @@
+.bearing-elem {
+  max-width: 204px; //max-width: 164px;
+
+  &:hover {
+    .bearing-elem__image {
+      svg {
+        * { //path, circle, line, ellipse
+          stroke: var(--red);
+        }
+      }
+    }
+    .bearing-elem__headline {
+      color: var(--red);
+    }
+  }
+
+  &__image {
+    display: flex;
+    justify-content: center;
+    //svg {
+    //  * {
+    //    stroke: var(--red);
+    //  }
+    //}
+  }
+
+
+  &__headline {
+    text-align: center;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    text-transform: uppercase;
+
+  }
+}

@@ -1,0 +1,11 @@
+include ../ui/play
+
+mixin mainSlaiderSlide(img, className)
+  .slaider-slide
+    img(src=`../../images/${img}`).slider-slide__image
+    if className === 'slaider-slide__play'
+      div.slaider-slide__play
+        +play
+
+
+      //div(class=`slaider-slide ${className}`)

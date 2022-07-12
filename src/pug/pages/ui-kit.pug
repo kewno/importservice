@@ -7,6 +7,9 @@ include ../ui/news-elem
 include ../ui/pop-up
 include ../ui/input-elem
 include ../ui/main-menu
+include ../ui/checkbox-elem
+include ../main/main-slaider
+include ../main/main-bearing
 
 -
   let menu = [{name: 'о компании', href: '/',
@@ -69,6 +72,9 @@ body
   .ui-kit-wrap-play-cross
     +play
     +cross
+
+  .ui-kit-wrap-checkbox
+    +checkboxElem('Товарные позиции со скидкой в этом месяце', 'product')
   .ui-kit-wrap-news-block
     .ui-kit-wrap-news
       +newsElem('/', 'Ультразвуковой прибор повышает точность повторного смазывания', 'Уникальный ультразвуковой прибор, способный «слышать» звук пластичной смазки, заполняющей подшипник, повышает...', '01.01.22', 'news-elem.png')
@@ -85,3 +91,7 @@ body
     .ui-kit-wrap-inputs__input
       +inputElem('type', 'Введите ваше имя', 'input-elem_success', 'success', null)
 
+  .ui-kit-wrap-slider
+    +mainSlaider()
+  .ui-kit-wrap-bearing
+    +mainBearing()

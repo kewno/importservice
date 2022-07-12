@@ -1,7 +1,7 @@
 import Swiper from 'swiper';
 
 document.addEventListener('DOMContentLoaded', () => {
-  new Swiper('.slider', {
+  new Swiper('.header-slider', {
     //spaceBetween: 13,
     slidesPerView: 1,
     // pagination: {
@@ -10,10 +10,10 @@ document.addEventListener('DOMContentLoaded', () => {
     //   renderBullet: function (index, className) {
     //     return '<span class="' + className + ' swiper-pagination__point' + '">' + "</span>";
     //   },
+    // // },
+    // navigation: {
+    //   nextEl: ".control-slider-next",
+    //   prevEl: ".control-slider-prev",
     // },
-    navigation: {
-      nextEl: ".control-slider-next",
-      prevEl: ".control-slider-prev",
-    },
   })
 })

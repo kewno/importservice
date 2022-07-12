@@ -70,9 +70,16 @@
   .main-menu-elem {
     &__href {
       color: var(--black);
+    }
+    svg {
+      path {
+        stroke: var(--black);
+      }
+    }
+    &:hover {
       svg {
         path {
-          stroke: var(--black);
+          stroke: var(--red);
         }
       }
     }

@@ -1,0 +1,8 @@
+mixin checkboxElem(text, id)
+  .checkbox-elem
+    input(type='checkbox', id= id).checkbox-elem__check
+    label(for= id).checkbox-elem__label= text
+    .checkbox-elem__mark
+      <svg width="30" height="23" viewBox="0 0 30 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 14.5703L8 21.5703L28.5 1.07031" stroke="#AB2421" stroke-width="2" stroke-linejoin="round"/>
+      </svg>
