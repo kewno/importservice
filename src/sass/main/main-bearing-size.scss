@@ -1,0 +1,31 @@
+.main-bearing-size {
+  max-width: 1407px;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  background: var(--white);
+  min-height: 600px; //499px
+  //margin-top: 100px;
+  padding-top: 100px;
+  box-sizing: border-box;
+}
+.main-bearing-size-wrap-text {
+  max-width: 561px;
+  width: 100%;
+  margin: 118px 150px 0 0;
+  &__headline {
+    font-weight: 300;
+    font-size: 78px;
+    line-height: 92px;
+    margin: 0 0 2px;
+    color: var(--black);
+  }
+  &__text {
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 60px;
+    text-transform: uppercase;
+    margin: 0;
+    color: var(--grey-light);
+  }
+}

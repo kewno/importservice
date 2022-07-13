@@ -1,0 +1,12 @@
+include ../main/main-mailing-form
+
+mixin mainMailing
+  .wrap-main-mailing
+    .container__1920
+      .main-mailing
+        .main-mailing__left-block
+          .mailing-headline Профессиональный инжиниринг и высокое качество продукции
+          .mailing-text О чем бы вы хотели узнать из нашей ежемесячной рассылки? Выберите интересную тему и оставьте свой емайл
+          +mainMailingForm
+        .main-mailing__right-block
+          img(src='../../images/mailing.png').mailing-logo

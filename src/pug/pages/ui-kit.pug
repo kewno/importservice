@@ -8,6 +8,7 @@ include ../ui/pop-up
 include ../ui/input-elem
 include ../ui/main-menu
 include ../ui/checkbox-elem
+include ../ui/review
 include ../main/main-slaider
 include ../main/main-bearing
 
@@ -92,6 +93,8 @@ body
       +inputElem('type', 'Введите ваше имя', 'input-elem_success', 'success', null)
 
   .ui-kit-wrap-slider
-    +mainSlaider()
+    +mainSlaider(['slider-1.png'], null)
   .ui-kit-wrap-bearing
     +mainBearing()
+  .ui-kit-wrap-reviews
+    +review('reviews-5.png')

@@ -1,0 +1,38 @@
+.footer-bottom {
+  max-width: 1161px;
+}
+
+
+.footer-bottom-bottom {
+  display: flex;
+  justify-content: space-between;
+  &__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: var(--grey-black);
+    opacity: 0.6;
+    a {
+      text-decoration: underline;
+      padding-left: 8px;
+      color: var(--grey-black);
+      font-size: 16px;
+    }
+  }
+}
+
+.wrap-amado {
+  display: flex;
+  align-items: center;
+  &__name {
+    margin: 0 9px 0 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: var(--grey-black);
+    opacity: 0.6;
+  }
+  &__logo {
+
+  }
+}

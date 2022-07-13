@@ -1,0 +1,11 @@
+include ../ui/main-menu-vertical
+include ../ui/btn
+
+mixin mainMenuFooter(menu, className)
+  nav(class=`main-menu ${className}`)
+    ul.main-menu-list
+      each el in menu
+        li.main-menu-elem
+          a(href= href).main-menu-elem__href= el.name
+    //.header-search
+

@@ -1,0 +1,17 @@
+include ../ui/checkbox-elem
+include ../ui/btn
+include ../ui/input-elem
+
+mixin mainMailingForm
+  .main-mailing-form
+    .main-mailing-form__wrap-input-btn
+      .main-mailing-wrap-input
+        +inputElem('email', 'Введите ваш e-mail', null, null, null)
+      .main-mailing-wrap-btn
+        +btn('Подписаться', 'btn_red', '/')
+    p.main-mailing-form__text Нажимая на кнопку «Подписаться», я даю согласие на обработку персональных данных
+    .main-mailing-form__wrap-checkbox
+      +checkboxElem('Товарные позиции со скидкой в этом месяце', 'check-1')
+      +checkboxElem('Обучение и вебинары от поставщиков продукции', 'check-2')
+      +checkboxElem('Информация о техническом сервисе и обслуживании', 'check-3')
+      +checkboxElem('Новости промтеха и новые технологии', 'check-4')

@@ -1,15 +1,19 @@
-mixin newsElem(href, headline, text, date, image)
+mixin newsElem(href, btn, headline, text, date, image, className)
   if image != null
-    div(style=`background: url('../../images/${image}') center 100% no-repeat;`).news-elem
-      a(href= href).news-elem__href Обзор
+    div(class=`news-elem ${className}`, style=`background: url('../../images/${image}') center 100% no-repeat;`)
+      .news-elem-wrap-href
+        a(href= href).news-elem__href= btn
       h3.news-elem__headline= headline
-      p.news-elem__text= text
-      p.news-elem__date= date
+      if className !== 'news-elem-big'
+        p.news-elem__text= text
+        p.news-elem__date= date
   else
-    .news-elem
-      a(href= href).news-elem__href Обзор
+    div(class=`${className}`).news-elem
+      .news-elem-wrap-href
+        a(href= href).news-elem__href= btn
       h3.news-elem__headline= headline
-      p.news-elem__text= text
-      p.news-elem__date= date
+      if className !== 'news-elem-big'
+        p.news-elem__text= text
+        p.news-elem__date= date
 
       //style=`background: url('../../images/${image}') no-repeat;`

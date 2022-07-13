@@ -1,0 +1,34 @@
+.main-mailing-form {
+  &__wrap-input-btn {
+    display: flex;
+    //* {
+    //  display: inline-block;
+    //}
+    margin-top: 20px;
+    max-width: 890px;
+    align-items: center;
+  }
+  &__text {
+    margin: 9px 0 30px;
+    font-size: 14px;
+    line-height: 26px;
+    letter-spacing: 0.02em;
+  }
+  &__wrap-checkbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.main-mailing-wrap-input {
+  //max-width: 672.91px;
+  //width: 100%;
+  width: 672.91px;
+}
+
+.main-mailing-wrap-btn {
+  max-width: 247.37px;
+  width: 100%;
+  transform: translateX(-31px);
+}

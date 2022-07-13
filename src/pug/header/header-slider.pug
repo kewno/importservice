@@ -1,4 +1,5 @@
 include ../ui/arrow
+include ./header-info
 
 mixin headerSlider()
   //div(class=`container-slider ${typeSlider}`)
@@ -8,6 +9,9 @@ mixin headerSlider()
         img(src='../../images/header-slide-1.png').swiper-slide__image
       .swiper-slide
         img(src='../../images/header-slide-1.png').swiper-slide__image
+    .wrap-header-info
+      .container__2920
+        +headerInfo()
     .wrap-control-header-slider
       .control-header-slider
         .control-header-slider-prev

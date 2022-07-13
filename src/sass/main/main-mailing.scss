@@ -1,0 +1,37 @@
+.wrap-main-mailing {
+  background: var(--bej);
+  padding: 101px 0 94px;
+  //width: 100%;
+}
+.main-mailing {
+  max-width: 1520px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  &__left-block {
+    max-width: 890px;
+    //width: 100%;
+  }
+  &__right-block {
+
+  }
+}
+
+.mailing-headline {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 47px;
+  margin: 0 0 20px;
+}
+.mailing-text {
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  margin: 0;
+}
+
+.mailing-logo {
+
+}

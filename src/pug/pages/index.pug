@@ -1,5 +1,14 @@
 //include ../ui/pop-up
 include ../header/header
+include ../main/main-bearing-size
+include ../main/main-bearing
+include ../main/main-slaider
+include ../main/main-mailing
+include ../main/main-reviews
+include ../main/main-news
+
+
+include ../footer/footer
 
 doctype html
 html(lang="en")
@@ -11,3 +20,16 @@ head
 
 body.main-page
   +header()
+  .main-page__block
+    +mainBearingSize()
+    .main-container-bearing
+      +mainBearing()
+  //.main-wrap-slider
+  +mainSlaider(['slider-1.png', 'slider-1.png'], null)
+  //+mainSlaider(['slider-2.png', 'slider-2.png'], 'container-slider_reverse')
+  //+mainSlaider(['slider-3.png', 'slider-3.png'], null)
+  //+mainSlaider(['slider-4.png', 'slider-4.png'], 'container-slider_reverse')
+  +mainReviews(['reviews-5.png','reviews-5.png','reviews-5.png','reviews-5.png','reviews-5.png','reviews-5.png','reviews-5.png','reviews-5.png','reviews-5.png','reviews-5.png','reviews-5.png','reviews-5.png','reviews-5.png','reviews-5.png','reviews-5.png','reviews-5.png','reviews-5.png','reviews-5.png','reviews-5.png','reviews-5.png'])
+  +mainNews
+  +mainMailing
+  +footer
