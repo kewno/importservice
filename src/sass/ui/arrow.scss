@@ -48,3 +48,11 @@
   }
 }
 
+.arrow_bej {
+  background: var(--bej);
+  svg {
+    path {
+      stroke: var(--black);
+    }
+  }
+}

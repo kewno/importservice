@@ -119,6 +119,11 @@ module.exports = (env, argv) => {
             to: 'images',
             noErrorOnMissing: true,
           },
+          {
+            from: 'videos',
+            to: 'videos',
+            noErrorOnMissing: true,
+          },
         ],
       }),
       new MiniCssExtractPlugin({

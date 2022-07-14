@@ -1,0 +1,15 @@
+.main-bearing-slider {
+  padding: 60px 0 0;
+}
+
+.bearing-slider {
+  position: relative;
+  .swiper-wrapper {
+    //display: flex;
+    align-items: end;
+    .swiper-slide {
+      width: auto;
+      //align-items: bottom;
+    }
+  }
+}

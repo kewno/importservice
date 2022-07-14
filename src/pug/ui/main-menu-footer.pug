@@ -1,11 +1,9 @@
 include ../ui/main-menu-vertical
 include ../ui/btn
 
-mixin mainMenuFooter(menu, className)
-  nav(class=`main-menu ${className}`)
-    ul.main-menu-list
+mixin mainMenuFooter(menu)
+  nav(class=`main-menu-footer`)
+    ul.main-menu-footer-list
       each el in menu
-        li.main-menu-elem
-          a(href= href).main-menu-elem__href= el.name
-    //.header-search
+        a(href= el.href).main-menu-footer-list__elem= el.name
 

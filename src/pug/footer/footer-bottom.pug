@@ -1,12 +1,20 @@
+include ../ui/main-menu-footer
+
 mixin footerBottom
   .footer-bottom
     .footer-bottom-top
       img(src='../../images/logo.png').footer-bottom-top__logo
       .footer-bottom-top__wrap-menu
-      img(src='../../images/search.png').footer-bottom-top__img
+        +mainMenuFooter([{href: '/', name: 'О компании'}, {href: '/', name: 'Продукция'}, {href: '/', name: 'Сервис и услуги'}, {href: '/', name: 'Контакты'}], 'menu_black')
+        a(href='/').footer-bottom-top__href
+          img(src='../../images/search.png')
     .footer-bottom-bottom
       p.footer-bottom-bottom__text © ООО «Импортсервис», 2022,
         a(href='/') Политика конфиденциальности и правила обработки данных
       .wrap-amado
         p.wrap-amado__name Создание сайта
         img(src='../../images/amado.png').wrap-amado__logo
+
+
+      //['О компании', 'Продукция', 'Сервис и услуги', 'Контакты']
+//[{href: '/', name: 'О компании'}, {href: '/', name: 'Продукция'}, {href: '/', name: 'Сервис и услуги'}, {href: '/', name: 'Контакты'}]

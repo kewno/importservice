@@ -17,6 +17,9 @@
   z-index: 2;
   background: var(--bej);
   width: 100%;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
   //transform: scaleX(100);
   //margin-bottom: 100px;
 }

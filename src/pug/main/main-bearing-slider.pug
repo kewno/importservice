@@ -1,0 +1,13 @@
+include ./main-bearing-slider-info
+include ./main-bearing-slider-slide
+
+mixin mainBearingSlider(elem)
+    .bearing-slider
+      .swiper-wrapper
+        each el in elem
+          .swiper-slide
+            +mainBearingSliderSlide(el.img, el.headline)
+      +mainBearingSliderInfo
+
+
+      //.main-bearing-slider

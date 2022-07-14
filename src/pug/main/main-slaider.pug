@@ -1,12 +1,11 @@
 include ../ui/arrow
 include ./main-slaider-slide
+include  ./main-slaider-information
 
-mixin mainSlaider(elem, typeSlider)
+mixin mainSlaider(elem, typeSlider, arrow, classInformation, svgElem, headline, text)
   div(class=`container-slider ${typeSlider}`)
     .slider-left-block
-      .slider-left-block__wrap-text
-        h2.slider-headline WMS — система управления складом на 3000 м2
-        p.slider-text максимально быстрая сборка заказа и низкая себестоимость
+      +mainSlaiderInformation(classInformation, svgElem, headline, text)
     .slider-right-block
       .slider
         .swiper-wrapper
@@ -17,9 +16,9 @@ mixin mainSlaider(elem, typeSlider)
               +mainSlaiderSlide(el, null)
         .control-slider
           .control-slider-prev
-            +arrow('arrow_red')
+            +arrow(`${arrow[0]}`)
           .control-slider-next
-            +arrow('arrow_white arrow_right')
+            +arrow(`${arrow[1]}`)
 
             //.control-slider__arrow_slider__arrow_left.control-slider__arrow_left
               //.control-slider__arrow_slider__arrow_right.control-slider__arrow_right

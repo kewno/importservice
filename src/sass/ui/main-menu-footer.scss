@@ -1,0 +1,25 @@
+.main-menu-footer {
+
+}
+.main-menu-footer-list {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+
+  &__elem {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 120%;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    margin-right: 30px;
+    color: var(--black);
+    &:hover {
+      color: var(--red);
+    }
+    &:last-child {
+      margin-right: 14px;
+    }
+  }
+}

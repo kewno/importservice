@@ -1,0 +1,37 @@
+include ./cross
+include ./arrow
+include ./play
+include ./pop-up-multimedia-video
+include ./pop-up-multimedia-slider
+
+mixin popUpMultimedia(className, date, headline)
+  div(class=`pop-up-multimedia ${className}`)
+    .pop-up-multimedia__cross
+      +cross
+    if className === 'pop-up-multimedia_video'
+      .pop-up-multimedia__play
+        +play
+    if className === 'pop-up-multimedia_video'
+      +popUpMultimediaVideo
+    else if className === 'pop-up-multimedia_slider'
+      +popUpMultimediaSlider
+    .pop-up-multimedia__wrap-bottom
+      .pop-up-multimedia-wrap-text
+        p.pop-up-multimedia-wrap-text__date=date
+        p.pop-up-multimedia-wrap-text__name=headline
+
+      if className === 'pop-up-multimedia_slider'
+        .pop-up-multimedia-wrap-control
+          .pop-up-control_prev
+            +arrow('arrow_red')
+          .pop-up-control_next
+            +arrow('arrow_white arrow_right')
+          //+arrow('arrow_red').pop-up-control_prev
+          //+arrow('arrow_white arrow_right').pop-up-control_next
+          .pop-up-multimedia-wrap-coll-slide
+            img(src='../../images/img.png').pop-up-multimedia-wrap-coll-slide__img
+            .pop-up-multimedia-slide-coll
+              p.pop-up-multimedia-slide-coll__now 5
+              p.pop-up-multimedia-slide-coll__all / 17
+
+            //pop-up-multimedia_video

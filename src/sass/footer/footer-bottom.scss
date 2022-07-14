@@ -1,7 +1,18 @@
 .footer-bottom {
   max-width: 1161px;
+  padding: 125px 0 0;
 }
 
+.footer-bottom-top {
+  display: flex;
+  align-items: center;
+  padding-bottom: 68px;
+  justify-content: space-between;
+  &__wrap-menu {
+    display: flex;
+    align-items: center;
+  }
+}
 
 .footer-bottom-bottom {
   display: flex;
