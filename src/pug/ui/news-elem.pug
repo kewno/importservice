@@ -3,17 +3,17 @@ mixin newsElem(href, btn, headline, text, date, image, className)
     div(class=`news-elem ${className}`, style=`background: url('../../images/${image}') center 100% no-repeat;`)
       .news-elem-wrap-href
         a(href= href).news-elem__href= btn
-      h3.news-elem__headline= headline
+      h3.news-elem__headline!= headline
       if className !== 'news-elem-big'
-        p.news-elem__text= text
+        p.news-elem__text!= text
         p.news-elem__date= date
   else
     div(class=`${className}`).news-elem
       .news-elem-wrap-href
         a(href= href).news-elem__href= btn
-      h3.news-elem__headline= headline
+      h3.news-elem__headline!= headline
       if className !== 'news-elem-big'
-        p.news-elem__text= text
+        p.news-elem__text!= text
         p.news-elem__date= date
 
       //style=`background: url('../../images/${image}') no-repeat;`

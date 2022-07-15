@@ -1,0 +1,28 @@
+.main-menu-burger-vertical {
+    display: none; //block
+}
+
+.main-menu-burger-vertical-list {
+  display: flex;
+  flex-direction: column;
+  margin: 19px 0 0;
+  padding: 0;
+
+  &__elem {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--black);
+    margin-bottom: 20px;
+    span {
+      display: inline-block;
+      width: 25px;
+      height: 1px;
+      background: var(--red);
+      //margin-bottom: 7px;
+      margin: 0 7px 7px 4px;
+    }
+  }
+}

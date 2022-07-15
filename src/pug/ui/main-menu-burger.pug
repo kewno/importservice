@@ -1,0 +1,19 @@
+include ../ui/main-menu-burger-vertical
+include ../ui/btn
+
+mixin mainMenuBurger(menu)
+  nav.main-menu-burger
+    ul.main-menu-burger-list
+      each el in menu
+        li.main-menu-burger-elem
+          a(href= '/').main-menu-burger-elem__href= el.name
+          if el.submenu !== null
+            <svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.5 0.5L6.20711 4.79289C5.81658 5.18342 5.18342 5.18342 4.79289 4.79289L0.5 0.5" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            +mainMenuBurgerVertical(el.submenu)
+    //.header-small-contacts
+    //  p.header-small-contacts__email zakaz@impservice.ru
+    //  p.header-small-contacts__phone +7 (342) 225-00-88
+    //  .header-small-contacts__wrap-btn
+    //    +btn('Заказать звонок', 'btn_invisible', '/')

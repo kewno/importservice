@@ -23,8 +23,13 @@
     margin: 0;
     font-weight: 400;
     font-size: 28px;
-    line-height: 140%;
-    letter-spacing: 0.02em;
+    line-height: 135%;
+    letter-spacing: 0.008em; //0.02em
+
+    span {
+      color: var(--red);
+      font-weight: 400;
+    }
   }
   &__btn {
     margin-top: 12px;

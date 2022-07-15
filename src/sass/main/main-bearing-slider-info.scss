@@ -1,6 +1,6 @@
 .wrap-main-bearing-slider-info {
   position: absolute;
-  top: 180px;
+  top: 155px;
   width: 100%;
   z-index: 2;
 }
@@ -16,27 +16,38 @@
 .main-bearing-slider-info {
   max-width: 557px;
   width: 100%;
-  padding-left: 200px;
+  padding-left: 100px;
 
   &__text {
     font-weight: 400;
     font-size: 28px;
     line-height: 140%;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.008em;
+    //letter-spacing: 0.02em;
     margin: 0;
     color: var(--black);
     span {
       color: var(--red);
+      font-weight: 500;
+      letter-spacing: 0.001em;
     }
   }
   &__wrap-buttons {
-    margin-top: 40px;
+    margin: 39px 0 0 -5px;
     display: flex;
     justify-content: space-between;
+
+    .btn {
+      height: 55px;
+      line-height: 55px;
+    }
   }
 }
 
 .main-bearing-slider-info-btn {
   max-width: 261px;
   width: 100%;
+  &:last-child {
+    max-width: 280px;
+  }
 }

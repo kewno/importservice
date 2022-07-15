@@ -1,13 +1,12 @@
 .news-elem {
   padding-left: 50.11px;
-  //background-size: 120%;
   background: rgba(0, 0, 0, 0.5);
   height: 100%;
   box-sizing: border-box;
   padding-bottom: 28px;
   display: flex;
   flex-direction: column;
-  //cursor: pointer;
+  cursor: pointer;
   transition: background-size .3s ease-in;
 
   &:hover {
@@ -15,10 +14,7 @@
   }
 
   &__href {
-    //width: 150px;
-    //height: 36px;
-    padding: 11px 19px 8px;
-    //width: auto;
+    padding: 13px 19px 9px;
     font-weight: 700;
     font-size: 12px;
     box-sizing: border-box;
@@ -30,12 +26,14 @@
     //line-height: 36px;
   }
   &__headline {
+    font-family: 'Roboto', sans-serif;
     font-weight: 700;
     font-size: 25px;
     line-height: 125%;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.0001em;
     color: var(--white);
     margin: 30px 0 0;
+    max-width: 350px;
   }
   &__text {
     font-weight: 400;
@@ -43,6 +41,7 @@
     line-height: 140%;
     color: var(--white);
     margin: 20px 0 0;
+    max-width: 355px;
   }
   &__date {
     font-weight: 700;
@@ -60,10 +59,17 @@
   display: flex;
   flex-direction: column;
   justify-content: end;
-  padding-bottom: 45px;
+  padding: 0 0 45px 64px;
 
   .news-elem__headline {
-    margin-top: 20px;
+    //font-family: 'Roboto', sans-serif;
+    margin: 25px 0 0 3px;
+    max-width: 629px;
+    font-size: 25px;
+    letter-spacing: 0.001em;
   }
 
+  .news-elem__href {
+    padding: 14px 19px 12px;
+  }
 }

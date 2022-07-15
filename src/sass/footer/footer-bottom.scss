@@ -1,12 +1,12 @@
 .footer-bottom {
   max-width: 1161px;
-  padding: 125px 0 0;
+  padding: 120px 0 0;
 }
 
 .footer-bottom-top {
   display: flex;
   align-items: center;
-  padding-bottom: 68px;
+  padding-bottom: 60px;
   justify-content: space-between;
   &__wrap-menu {
     display: flex;
@@ -17,12 +17,14 @@
 .footer-bottom-bottom {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   &__text {
     font-weight: 400;
     font-size: 16px;
     line-height: 140%;
     color: var(--grey-black);
     opacity: 0.6;
+    margin: 0;
     a {
       text-decoration: underline;
       padding-left: 8px;

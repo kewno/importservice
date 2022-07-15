@@ -1,0 +1,101 @@
+.wrap-pop-up-menu-header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+  min-height: 100vh;
+
+  &__arrow {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    z-index: 4;
+    background: var(--red);
+    padding: 12.5px 0 0 12.5px;
+    box-sizing: border-box;
+    left: 400px;
+  }
+}
+
+.pop-up-menu-header {
+  height: 100%;
+  width: 400px;
+  z-index: 4;
+  padding-top: 41px;
+  background: var(--white);
+  &__line {
+    margin: 40px 0 20px;
+  }
+}
+
+.wrap-burger-logo {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 44px 0 27px;
+
+  &__img {
+    width: 134px;
+    height: 68.68px;
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    max-width: 175px;
+    color: var(--black);
+    margin: 0;
+  }
+}
+
+.menu-burger-wrap-search {
+  margin: 42px 29px 40px 26px;
+  position: relative;
+  &__search {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    cursor: pointer;
+  }
+}
+
+.wrap-menu-burger {
+  margin-left: 29px;
+}
+
+.menu-burger-wrap-phone {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 27px 0 32px;
+  &__email {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: uppercase;
+    color: var(--black);
+    margin: 0;
+  }
+  &__phone {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: uppercase;
+    color: var(--black);
+    margin: 0;
+  }
+  &__call {
+    padding-left: 5px;
+    //color: var(--black);
+  }
+}
+
+.menu-burger-wrap-btn {
+  margin: 28px 29px;
+}
+
+.menu-burger-wrap-social {
+  display: flex;
+  justify-content: center;
+}

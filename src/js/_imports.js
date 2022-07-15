@@ -4,3 +4,4 @@ import './form';
 import './pop-up';
 import './bearing-slider';
 import './pop-up-slider';
+import './script';

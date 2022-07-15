@@ -1,18 +1,18 @@
 .header-info {
-  max-width: 746px;
+  max-width: 746px; //746
   width: 100%;
   //&__logo {
   //
   //}
   &__headline {
-    margin: 86px 0 20px;
+    margin: 84px 0 20px;
     color: var(--white);
     font-weight: 500;
     font-size: 44px;
     line-height: 52px;
   }
   &__text {
-    margin: 0 0 33px;
+    margin: 0 0 32px;
     color: var(--white);
     font-weight: 400;
     font-size: 25px;
@@ -22,5 +22,9 @@
   &__wrap-btn {
     max-width: 261px;
     width: 100%;
+    .btn {
+      height: 55px;
+      line-height: 55px;
+    }
   }
 }

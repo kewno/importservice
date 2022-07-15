@@ -5,22 +5,22 @@
 .main-news-wrap-text {
   display: flex;
   align-items: center;
-  max-width: 1526px;
+  max-width: 1520px;
   margin: 0 auto 31px;
 
   &__headline {
     font-weight: 700;
     font-size: 40px;
     line-height: 47px;
-    margin: 0 46px 0 0;
+    margin: 0 48px 0 0;
     color: var(--black);
   }
   &__href {
     font-weight: 700;
     font-size: 18px;
-    line-height: 21px;
-    margin: 0;
+    line-height: 15px;
     color: var(--red);
+    margin: 15px 0 0;
     text-decoration: none;
   }
 }

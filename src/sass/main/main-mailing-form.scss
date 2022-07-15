@@ -5,7 +5,7 @@
     //  display: inline-block;
     //}
     margin-top: 20px;
-    max-width: 890px;
+    max-width: 930px; //890px
     align-items: center;
   }
   &__text {
@@ -18,17 +18,25 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    height: 85px;
+    //align-content: space-between;
   }
 }
 
 .main-mailing-wrap-input {
-  //max-width: 672.91px;
-  //width: 100%;
-  width: 672.91px;
+  width: 712.91px; //672.91px
 }
 
 .main-mailing-wrap-btn {
   max-width: 247.37px;
   width: 100%;
-  transform: translateX(-31px);
+  transform: translateX(-31px); //-31px
+  .btn {
+    height: 55px;
+  }
+}
+
+.main-mailing-form-checkbox {
+  width: 50%;
+
 }

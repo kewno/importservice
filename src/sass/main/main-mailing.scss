@@ -1,6 +1,6 @@
 .wrap-main-mailing {
   background: var(--bej);
-  padding: 101px 0 94px;
+  padding: 101px 0 74px;
   //width: 100%;
 }
 .main-mailing {
@@ -10,7 +10,7 @@
   display: flex;
   justify-content: space-between;
   &__left-block {
-    max-width: 890px;
+    max-width: 920px; //890px
     //width: 100%;
   }
   &__right-block {
@@ -23,15 +23,17 @@
   font-size: 40px;
   line-height: 47px;
   margin: 0 0 20px;
+  max-width: 700px;
 }
 .mailing-text {
   font-weight: 400;
   font-size: 28px;
   line-height: 140%;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.025em;
   margin: 0;
+  font-family: 'Roboto', sans-serif;
 }
 
 .mailing-logo {
-
+  margin-top: -5px;
 }
