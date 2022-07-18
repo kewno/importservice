@@ -1,5 +1,6 @@
 .main-bearing-slider {
-  padding: 84.6px 0 0; //60px 0 0
+  padding: 84.6px 0 0;
+  overflow: hidden;
 }
 
 .bearing-slider {
@@ -11,5 +12,11 @@
       width: auto;
       //align-items: bottom;
     }
+  }
+}
+
+@media (max-width: 1620px) {
+  .main-bearing-slider {
+    padding: 60px 0 0;
   }
 }

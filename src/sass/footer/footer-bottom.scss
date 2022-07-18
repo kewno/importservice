@@ -18,6 +18,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 5px;
   &__text {
     font-weight: 400;
     font-size: 16px;
@@ -25,6 +26,7 @@
     color: var(--grey-black);
     opacity: 0.6;
     margin: 0;
+    letter-spacing: 0.046em;
     a {
       text-decoration: underline;
       padding-left: 8px;
@@ -47,5 +49,13 @@
   }
   &__logo {
 
+  }
+}
+
+@media (max-width: 1620px) {
+  .footer-bottom {
+    max-width: 1430px;
+    //max-width: 100%;
+    padding: 120px 0 0;
   }
 }

@@ -6,7 +6,7 @@ mixin footerTop
     .footer-top__left
       h2.footer-top-headline Связаться  с нами!
       +footerTopForm
-      .footer-top-text Пожалуйста, заполните все поля - так нам будет легче связаться с вами Нажимая на кнопку «Отправить», я даю согласие на обработку персональных данных
+      .footer-top-text!= `Пожалуйста, заполните все поля - так нам будет легче связаться с вами<br> Нажимая на кнопку «Отправить», я даю согласие на обработку персональных данных`
     .footer-top__right
       .footer-top-delivery
         img(src='../../images/24hours.png').footer-top-delivery__time

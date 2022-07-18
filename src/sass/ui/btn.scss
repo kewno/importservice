@@ -51,3 +51,11 @@
     //border: 2px solid var(--red);
   }
 }
+
+@media (max-width: 1300px) {
+  .btn {
+    height: 45px;
+    line-height: 45px;
+    font-size: 16px;
+  }
+}

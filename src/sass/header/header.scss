@@ -1,12 +1,19 @@
 .header {
   position: relative;
+  //height: auto;
   &__wrap-menu {
     position: absolute;
     z-index: 2;
     width: 100%;
     top: 50px;
-    //max-width: 1521px;
-    //width: 100%;
-    //margin: 0 auto;
+  }
+}
+
+@media (max-width: 1300px) {
+  .header {
+    //max-height: 700px;
+    &__wrap-menu {
+      top: 25px;
+    }
   }
 }

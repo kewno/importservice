@@ -1,9 +1,7 @@
 .header-info {
-  max-width: 746px; //746
+  max-width: 746px;
   width: 100%;
-  //&__logo {
-  //
-  //}
+
   &__headline {
     margin: 84px 0 20px;
     color: var(--white);
@@ -12,12 +10,13 @@
     line-height: 52px;
   }
   &__text {
-    margin: 0 0 32px;
+    margin: 0 0 31px;
     color: var(--white);
     font-weight: 400;
     font-size: 25px;
     line-height: 125%;
     letter-spacing: 0.02em;
+    font-family: Roboto, sans-serif;
   }
   &__wrap-btn {
     max-width: 261px;
@@ -25,6 +24,50 @@
     .btn {
       height: 55px;
       line-height: 55px;
+    }
+  }
+}
+
+@media (max-width: 1620px) {
+  .header-info {
+    &__text {
+      letter-spacing: 0.034em;
+    }
+  }
+}
+
+
+@media (max-width: 1300px) {
+  .header-info {
+   &__logo {
+     svg {
+       width: 214px;
+       height: 110px;
+     }
+   }
+
+    &__headline {
+      margin: 87px 0 20px;
+      //color: var(--white);
+      //font-weight: 500;
+      font-size: 36px;
+      line-height: 43px;
+      max-width: 650px;
+    }
+    &__text {
+      margin: 0 0 21px;
+      font-size: 20px;
+      line-height: 125%;
+      letter-spacing: 0.03em;
+      max-width: 650px;
+    }
+    &__wrap-btn {
+      max-width: 212px;
+      width: 100%;
+      .btn {
+        height: 45px;
+        line-height: 45px;
+      }
     }
   }
 }

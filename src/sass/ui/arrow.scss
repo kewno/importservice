@@ -4,9 +4,6 @@
   padding: 27px 0 0 38px;
   box-sizing: border-box;
   cursor: pointer;
-  //svg {
-  //  cursor: pointer;
-  //}
 }
 
 .arrow_right {
@@ -53,6 +50,19 @@
   svg {
     path {
       stroke: var(--black);
+    }
+  }
+}
+
+@media (max-width: 1300px) {
+  .arrow {
+    width: 70px;
+    height: 70px;
+    padding: 19.63px 0 0 27.41px;
+
+    svg {
+      width: 15.18px;
+      height: 30.74px;
     }
   }
 }

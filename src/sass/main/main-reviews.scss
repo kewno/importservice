@@ -6,9 +6,6 @@
   display: flex;
   flex-wrap: wrap;
   margin: -22px;
-  .review {
-    margin: 22px;
-  }
 }
 
 .wrap-headline-btn {
@@ -16,7 +13,7 @@
   margin: 0 auto 60px;
   justify-content: space-between;
   max-width: 1513px;
-  width: 100%;
+  //width: 100%;
   &__headline {
     max-width: 486px;
     width: 100%;
@@ -35,5 +32,41 @@
     margin-top: 12px;
     max-width: 326px;
     width: 100%;
+  }
+}
+
+@media (max-width: 1620px) {
+
+  .main-reviews {
+    padding: 155px 0 190px; //~140px
+  }
+
+  .wrap-headline-btn {
+    max-width: 1432px;
+
+    &__btn {
+      margin-top: 30px;
+      max-width: 326px;
+      width: 100%;
+      .btn {
+        height: 55px;
+        line-height: 50px;
+      }
+    }
+  }
+
+  .wrap-reviews-elem {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -22px 12px;
+  }
+}
+
+@media (max-width: 1500px) {
+  .wrap-reviews-elem {
+    margin: -12px -15px;
+  }
+  .wrap-headline-btn {
+    padding: 0 60px;
   }
 }

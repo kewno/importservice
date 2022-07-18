@@ -2,27 +2,6 @@ include ../ui/main-menu-vertical
 include ../ui/btn
 
 mixin mainMenu(menu, className)
-  // -
-  //   let elemMenu1 = [{text: 'О компании', href: '/'},
-  //                   {text: 'новости и акции', href: '/'},
-  //                   {text: 'Нам доверяют', href: '/'},
-  //                   {text: 'Команда', href: '/'},
-  //                   {text: 'вакансии', href: '/'},
-  //                   {text: 'Фотогалерея/Видеогалерея', href: '/'},
-  //                   {text: 'Сертификаты', href: '/'}]
-  //
-  //   let elemMenu2 = [{text: 'Продукция', href: '/'},
-  //                   {text: 'Справочная информация', href: '/'}]
-  //
-  //   let elemMenu3 = [{text: 'Сервис и услуги', href: '/'},
-  //                   {text: 'Оптимизация Технического обслуживания и ремонта оборудования', href: '/'},
-  //                   {text: 'Повышение надежности работы оборудования', href: '/'},
-  //                   {text: 'Вибродиагностика и наладка оборудования', href: '/'},
-  //                   {text: 'Ремонт и изготовление приводной техники', href: '/'},
-  //                   {text: 'Мониторинг состояния оборудования', href: '/'}]
-
-
-
   nav(class=`main-menu ${className}`)
     ul.main-menu-list
       each el in menu

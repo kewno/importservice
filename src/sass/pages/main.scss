@@ -23,3 +23,12 @@
   //transform: scaleX(100);
   //margin-bottom: 100px;
 }
+
+@media (max-width: 1300px) {
+  .main-page {
+    &__block {
+      margin-top: -70px;
+      height: 530px;
+    }
+  }
+}

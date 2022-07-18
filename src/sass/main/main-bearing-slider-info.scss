@@ -19,11 +19,11 @@
   padding-left: 100px;
 
   &__text {
+    font-family: Roboto, sans-serif;
     font-weight: 400;
     font-size: 28px;
     line-height: 140%;
     letter-spacing: 0.008em;
-    //letter-spacing: 0.02em;
     margin: 0;
     color: var(--black);
     span {
@@ -49,5 +49,23 @@
   width: 100%;
   &:last-child {
     max-width: 280px;
+  }
+}
+
+
+@media (max-width: 1620px) {
+  .main-bearing-slider-info {
+    padding-left: 85px;
+
+    &__text {
+      letter-spacing: 0.026em;
+    }
+    //&__wrap-buttons {
+      //margin: 39px 0 0 -5px;
+
+      //.btn:first-child {
+      //  margin-right: 20px;
+      //}
+    //}
   }
 }

@@ -44,6 +44,10 @@
   margin: 20px 0 0;
   color: var(--white);
   letter-spacing: 0.007em;
+
+  span {
+    color: var(--red);
+  }
 }
 
 .main-slaider-information.main-slaider-information_reverse {
@@ -120,5 +124,109 @@
   .main-slaider-information__wrap-image {
     top: -3px;
     left: 725px;
+  }
+}
+
+@media (max-width: 1620px) {
+  .main-slaider-information {
+    max-width: 845px;
+    &__wrap-text {
+      padding-right: 215px;
+    }
+    &__wrap-image {
+      position: absolute;
+      right: 690px;
+      top: 0;
+    }
+  }
+
+  .main-slaider-information.main-slaider-information_bej {
+    .main-slaider-information-text {
+      margin: 0px 0 110px;
+    }
+
+    .main-slaider-information-headline {
+      margin-bottom: 25px;
+    }
+  }
+
+  .main-slaider-information.main-slaider-information_grey {
+    .main-slaider-information__wrap-text {
+      padding: 0 247px 0 100px;
+    }
+    .main-slaider-information__wrap-image {
+      top: -40px;
+      left: 610px;
+    }
+  }
+}
+
+
+@media (max-width: 1300px) {
+  .main-slaider-information-headline {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    max-width: 380px;
+  }
+
+  .main-slaider-information-text {
+    font-size: 20px;
+  }
+
+  .main-slaider-information {
+
+    &__wrap-text {
+      padding-right: 75px;
+      padding-top: 20px;
+    }
+  }
+
+  .main-slaider-information.main-slaider-information_light-grey {
+    .main-slaider-information-headline {
+      max-width: 400px;
+    }
+
+    .main-slaider-information__wrap-text {
+      max-width: 380px; //365px
+      padding: 40px 0 0 73px;
+    }
+
+    .main-slaider-information-text {
+      max-width: 365px;
+      margin-top: 10px;
+      line-height: 120%;
+    }
+
+    .main-slaider-information__wrap-image {
+      top: 195px;
+      left: 488px;
+
+      img {
+        width: 580px;
+        height: 342.27px;
+      }
+    }
+  }
+
+  .main-slaider-information.main-slaider-information_bej {
+
+    .main-slaider-information__wrap-text {
+
+    }
+
+    .main-slaider-information-text {
+      //margin: 50px 0 45px;
+    }
+
+    .main-slaider-information__wrap-image {
+      top: 240px;
+      right: 480px;
+
+      img {
+        width: 243px;
+        height: 240px;
+      }
+    }
   }
 }

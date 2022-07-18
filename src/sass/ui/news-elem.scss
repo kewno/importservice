@@ -36,6 +36,7 @@
     max-width: 350px;
   }
   &__text {
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 140%;
@@ -71,5 +72,29 @@
 
   .news-elem__href {
     padding: 14px 19px 12px;
+  }
+}
+
+
+@media (max-width: 1940px) {
+
+}
+
+//@media (max-width: 1860px) {
+//  .news-elem.news-elem-big {
+//    height: 665px;
+//  }
+//}
+
+@media (max-width: 1620px) {
+  .news-elem.news-elem-big {
+    padding: 0 0 65px 52px;
+    .news-elem__href {
+      padding: 10px 14px 12px;
+    }
+  }
+
+  .news-elem {
+    padding-left: 30px;
   }
 }

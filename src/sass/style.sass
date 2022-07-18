@@ -18,14 +18,28 @@ body
 .container
   &__2920
     max-width: 1521px
-    width: 100%
+    //width: 100%
     margin: 0 auto
   &__1920
     max-width: 1920px
-    width: 100%
+    //width: 100%
     margin: 0 auto
     //padding: 0
 *
   font-family: Rubik, sans-serif
 
+@media (max-width: 1620px)
+  .container
+    &__2920
+      max-width: 1432px //1421px
+      padding: 0 20px
+    //&__1920
+    //  max-width: 1432px //1421px
+    //  padding: 0 20px
+
+@media (max-width: 1300px)
+  .container
+    &__2920
+      max-width: 1432px //1421px
+      padding: 0 60px
 @import './_imports'

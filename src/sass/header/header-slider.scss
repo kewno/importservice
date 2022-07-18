@@ -1,6 +1,7 @@
 .header-slider {
   z-index: 2;
   width: 100%;
+  overflow: hidden;
   .swiper-wrapper {
 
   }
@@ -31,4 +32,23 @@
 .control-header-slider {
   max-width: 1407px;
   display: flex;
+}
+
+@media (max-width: 1300px) {
+  .wrap-header-info {
+    position: absolute;
+    top: 148px;
+    z-index: 3;
+    width: 100%;
+  }
+
+  .header-slider {
+    height: 700px;
+
+    .swiper-slide {
+      &__image {
+        height: 700px;
+      }
+    }
+  }
 }

@@ -24,7 +24,7 @@
   line-height: 26px;
   letter-spacing: 0.02em;
   margin: 32px 0 0 25px;
-  max-width: 591px;
+  max-width: 610px;
 }
 
 
@@ -80,4 +80,22 @@
 
 .footer-top-wrap-text {
 
+}
+
+@media (max-width: 1620px) {
+  .footer-top {
+    &__right {
+      max-width: 470px;
+      margin-right: 20px;
+    }
+  }
+
+  .footer-top-management {
+    &__person {
+      margin: 5px 17px 0 -7px;
+    }
+  }
+  .footer-top-text {
+    margin: 34px 0 0 25px;
+  }
 }

@@ -37,3 +37,17 @@
 .mailing-logo {
   margin-top: -5px;
 }
+
+
+@media (max-width: 1620px) {
+  .wrap-main-mailing {
+    padding: 60px 74px 60px 60px;
+  }
+
+  .main-mailing {
+    max-width: 1440px;
+    &__left-block {
+      margin-left: 5px;
+    }
+  }
+}
