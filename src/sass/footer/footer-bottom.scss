@@ -39,6 +39,7 @@
 .wrap-amado {
   display: flex;
   align-items: center;
+  flex-wrap: nowrap;
   &__name {
     margin: 0 9px 0 0;
     font-weight: 400;
@@ -57,5 +58,83 @@
     max-width: 1430px;
     //max-width: 100%;
     padding: 120px 0 0;
+  }
+}
+
+@media (max-width: 1300px) {
+  .footer-bottom {
+    padding: 170px 0 0;
+  }
+}
+
+@media (max-width: 1040px) {
+  .footer-bottom {
+    padding: 120px 0 0;
+  }
+
+  .footer-bottom-top {
+    padding-bottom: 65px;
+  }
+
+  .footer-bottom-bottom {
+    padding: 0 5px;
+    &__text {
+      max-width: 550px;
+    }
+  }
+
+  .wrap-amado {
+    margin-right: 5px;
+  }
+}
+
+@media (max-width: 800px) {
+  .footer-bottom {
+    padding: 65px 0 0;
+  }
+
+  .footer-bottom-top {
+    padding-bottom: 40px;
+    &__logo {
+      width: 167px;
+      height: 86.73px;
+    }
+    &__wrap-menu {
+      align-items: start;
+    }
+  }
+  .footer-bottom-bottom {
+    align-items: start;
+    &__text {
+      max-width: 340px;
+    }
+  }
+
+}
+
+@media (max-width: 680px) {
+  .footer-bottom {
+    padding: 100px 0 0;
+  }
+
+  .footer-bottom-top {
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+    &__logo {
+      width: 144.42px;
+      height: 75px;
+      margin-bottom: 19px;
+    }
+    &__wrap-menu {
+      width: 100%;
+      flex-wrap: wrap;
+    }
+  }
+  .footer-bottom-bottom {
+    flex-wrap: wrap;
+
+  }
+  .wrap-amado {
+    margin-top: 10px;
   }
 }

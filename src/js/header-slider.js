@@ -15,5 +15,12 @@ document.addEventListener('DOMContentLoaded', () => {
       nextEl: ".control-header-slider-next",
       prevEl: ".control-header-slider-prev",
     },
+    pagination: {
+      el: ".slider-pagination",
+      clickable: true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + ' slider-pagination__point' + '">' + "</span>";
+      },
+    },
   })
 })

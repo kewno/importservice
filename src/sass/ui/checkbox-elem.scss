@@ -6,6 +6,7 @@
     display: none;
   }
   &__label {
+    display: flex;
     font-family: 'Roboto', sans-serif;
     &:before {
       content: " ";
@@ -14,8 +15,8 @@
       margin-right: 15px;
       position: relative;
       text-align: center;
-      width: 21px;
-      height: 21px;
+      width: 25.5px;
+      height: 22.5px;
       background: #FFF;
       border: 1px solid #e3e3e3;
       vertical-align: middle;
@@ -30,7 +31,7 @@
   }
   &__mark {
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
     display: none;
     border: 1.5px solid var(--red);
@@ -41,6 +42,35 @@
     svg {
       position: absolute;
       top: -8px;
+    }
+  }
+}
+
+
+@media (max-width: 1300px) {
+  .checkbox-elem {
+    &__label {
+      max-width: 369px;
+      line-height: 120%;
+    }
+  }
+}
+@media (max-width: 800px) {
+  .checkbox-elem {
+    &__label {
+      max-width: 100%;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .checkbox-elem {
+    &__label {
+      max-width: 100%;
+      letter-spacing: 0.02em;
+      &:before {
+        margin-right: 30px;
+      }
     }
   }
 }

@@ -7,7 +7,7 @@
 
 body
   min-width: 320px
-  max-width: 2920px
+  //max-width: 2920px
   margin: 0 auto
   box-sizing: border-box
   overflow-x: hidden
@@ -42,4 +42,19 @@ body
     &__2920
       max-width: 1432px //1421px
       padding: 0 60px
+
+
+
+@media (max-width: 800px)
+  .container
+    &__2920
+      max-width: 1432px
+      padding: 0 24px 0 30px
+
+@media (max-width: 500px)
+  .container
+    &__2920
+      max-width: 1432px
+      padding: 0 22px 0 20px
+
 @import './_imports'

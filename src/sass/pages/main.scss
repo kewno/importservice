@@ -1,6 +1,7 @@
 .main-page {
   ///padding-top: 68px;
   //z-index: 1;
+  position: relative;
   &__block {
     //margin-top: 372px; //772px
     display: flex;
@@ -18,7 +19,7 @@
   background: var(--bej);
   width: 100%;
   display: flex;
-  align-items: center;
+  //align-items: center;
   box-sizing: border-box;
   //transform: scaleX(100);
   //margin-bottom: 100px;
@@ -29,6 +30,24 @@
     &__block {
       margin-top: -70px;
       height: 530px;
+    }
+  }
+}
+
+@media (max-width: 1140px) {
+  .main-page {
+    &__block {
+      flex-wrap: wrap;
+      height: 100%;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .main-page {
+    &__block {
+      margin-top: -50px;
+      height: auto;
     }
   }
 }

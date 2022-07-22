@@ -69,3 +69,16 @@
     //}
   }
 }
+
+@media (max-width: 1300px) {
+  .wrap-main-bearing-slider-info {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+  }
+
+  .main-bearing-slider-info {
+    padding-left: 60px;
+  }
+}

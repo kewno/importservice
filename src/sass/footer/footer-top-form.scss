@@ -3,3 +3,16 @@
     margin-bottom: 30px;
   }
 }
+
+@media (max-width: 1300px) {
+  .footer-top-form {
+    &__input {
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      height: 55px;
+      line-height: 55px;
+    }
+  }
+}

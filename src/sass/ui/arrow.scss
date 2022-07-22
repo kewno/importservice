@@ -66,3 +66,16 @@
     }
   }
 }
+
+@media (max-width: 800px) {
+  .arrow {
+    width: 50px;
+    height: 50px;
+    padding: 14.5px 0 0 19.75px;
+
+    svg {
+      width: 10.5px;
+      height: 21px;
+    }
+  }
+}

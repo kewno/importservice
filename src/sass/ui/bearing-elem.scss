@@ -1,42 +1,20 @@
 .bearing-elem {
-  max-width: 204px; //max-width: 164px;
   cursor: pointer;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-  &:hover {
-    .bearing-elem__image {
-      //svg {
-      //  * { //path, circle, line, ellipse
-      //    stroke: var(--red);
-      //  }
-      //}
-    }
-    .bearing-elem__headline {
-      color: var(--red);
-    }
-    svg {
-      * { //path, circle, line, ellipse
-        stroke: var(--red);
-      }
-    }
-  }
-
-  &__image {
-    display: flex;
-    justify-content: center;
-    //svg {
-    //  * {
-    //    stroke: var(--red);
-    //  }
-    //}
-  }
 
 
   &__headline {
-    text-align: center;
+    text-align: left;
     font-weight: 400;
     font-size: 15px;
     line-height: 18px;
     text-transform: uppercase;
+    max-width: 152px;
+    margin: 5px 0 0;
 
     svg {
       margin-left: 5px;
@@ -44,5 +22,49 @@
         stroke: var(--black);
       }
     }
+  }
+
+  &:hover {
+    .bearing-elem__headline {
+      color: var(--red);
+      text-decoration: underline;
+    }
+    svg {
+      * { //path, circle, line, ellipse
+        stroke: var(--red);
+      }
+    }
+  }
+}
+
+@media (max-width: 1040px) {
+  .bearing-elem {
+    cursor: pointer;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    &__headline {
+      max-width: 100%;
+    }
+  }
+}
+
+@media (max-width: 530px) {
+  .bearing-elem {
+    &__image {
+      svg {
+        width: 80%;
+      }
+    }
+    //> svg {
+    //  width: 70%;
+    //  margin-left: 5px;
+    //  * {
+    //    stroke: var(--black);
+    //  }
+    //}
   }
 }
