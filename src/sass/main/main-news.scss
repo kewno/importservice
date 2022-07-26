@@ -57,7 +57,7 @@
   .main-news-wrap-text {
     max-width: 1432px;
     padding: 0 20px;
-    margin-bottom: 12px;
+    margin-bottom: 17px;
     &__headline {
       margin: 0 35px 0 0;
     }
@@ -133,10 +133,14 @@
     }
   }
 
+  .main-news-wrap-text {
+    margin: 0 auto 28px;
+  }
 }
 
 @media (max-width: 800px) {
   .main-news {
+    padding-bottom: 35px;
     &__wrap-btn {
       display: flex;
     }
@@ -171,6 +175,12 @@
 }
 
 @media (max-width: 500px) {
+  .main-news {
+    padding-bottom: 30px;
+    &__wrap-btn {
+      margin: 29px 20px 0 20px;
+    }
+  }
   .main-news-wrap-news {
     grid-template-columns: 1fr;
     grid-template-rows: 0.6fr 1fr; //0.98fr
