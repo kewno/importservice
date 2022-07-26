@@ -1,7 +1,7 @@
 import './slider';
 import './header-slider';
 import './form';
-import './pop-up';
 import './bearing-slider';
+import './pop-up';
 import './pop-up-slider';
 import './script';

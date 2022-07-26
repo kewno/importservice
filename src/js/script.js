@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
   //burger
   if (burgerMenuElements != null) {
     burgerMenuElements.forEach(function(elem) {
-      elem.onclick = () => toggleSubmenu(item);
+      elem.onclick = () => toggleSubmenu(elem);
     })
   }
 
@@ -66,4 +66,27 @@ document.addEventListener('DOMContentLoaded', () => {
     phoneClose.onclick = () => closePhonePopUp();
     phonePoint.onclick = () => openPhonePopUp();
   }
+
+  let openFullScreen = () => {
+    alert(1);
+  }
+
+  let slide = document.querySelectorAll('.slaider-slide');
+
+  if (slide != null) {
+    slide.forEach(function(elem) {
+      elem.onclick = () => openFullScreen();
+    })
+  }
+
+  // let toggleSearch = () => {
+  //   let footerMenu = document.querySelector ('.main-menu-footer');
+  //   let footerInput = document.querySelector ('.footer-bottom-wrap-input');
+  //   footerMenu.style.display = 'none';
+  //   footerInput.style.display = 'block';
+  // }
+  //
+  // let search = document.querySelector('.footer-bottom-top__href img');
+  // search.onclick = () => toggleSearch();
+
 })

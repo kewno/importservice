@@ -1,4 +1,5 @@
-mixin mainBearingSliderSlide(img, headline)
-  .main-bearing-slider-slide
+mixin mainBearingSliderSlide(img, headline, className)
+  div(class= `main-bearing-slider-slide ${className}`)
     img(src=`../../images/${img}`).main-bearing-slider-slide__img
-    p.main-bearing-slider-slide__headline= headline
+    .main-bearing-slider-slide__wrap-headline
+      p.main-bearing-slider-slide-headline!= headline

@@ -11,7 +11,22 @@
   &__wrap-menu {
     display: flex;
     align-items: center;
+    //width: 100%;
   }
+  &__href {
+    display: flex;
+    align-items: center;
+    //width: 100%;
+    img {
+      cursor: pointer;
+    }
+  }
+}
+
+.footer-bottom-wrap-input {
+  max-width: 850px;
+  width: 100%;
+  display: none;
 }
 
 .footer-bottom-bottom {

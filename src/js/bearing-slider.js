@@ -2,7 +2,7 @@ import Swiper from 'swiper';
 
 document.addEventListener('DOMContentLoaded', () => {
   new Swiper('.bearing-slider', {
-    spaceBetween: 350,
+    //spaceBetween: 50,
     slidesPerView: "auto",
     //slidesPerView: 4,
     // pagination: {
@@ -12,5 +12,9 @@ document.addEventListener('DOMContentLoaded', () => {
     //     return '<span class="' + className + ' swiper-pagination__point' + '">' + "</span>";
     //   },
     // },
+    navigation: {
+      nextEl: ".main-bearing-slider .main-bearing-slider-control__next",
+      prevEl: ".main-bearing-slider .main-bearing-slider-control__prev",
+    },
   })
 })

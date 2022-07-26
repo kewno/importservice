@@ -1,5 +1,10 @@
 .main-news {
   padding-bottom: 50px;
+
+  &__wrap-btn {
+    display: none;
+    margin: 30px 24px 0 30px;
+  }
 }
 
 .main-news-wrap-text {
@@ -20,7 +25,7 @@
     font-size: 18px;
     line-height: 15px;
     color: var(--red);
-    margin: 15px 0 0;
+    margin: 0; // 15px 0 0
     text-decoration: none;
   }
 }
@@ -52,9 +57,12 @@
   .main-news-wrap-text {
     max-width: 1432px;
     padding: 0 20px;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
     &__headline {
       margin: 0 35px 0 0;
+    }
+    &__href {
+      margin: 15px 0 0;
     }
   }
 
@@ -94,6 +102,10 @@
       grid-template-columns: 1fr;
       grid-template-rows: 1fr 1fr;
       grid-row-gap: 35px;
+      .main-news-elem:nth-child(3),
+      .main-news-elem:nth-child(4) {
+        display: none;
+      }
     }
     &__left {
       margin: 0;
@@ -102,15 +114,82 @@
 }
 
 @media (max-width: 1040px) {
+  .main-news {
+    padding-bottom: 30px;
+  }
   .main-news-wrap-news {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr; //0.98fr
+    grid-template-rows: 1fr 1.2fr; //0.98fr
     grid-row-gap: 30px;
     &__right {
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
       grid-row-gap: 30px;
       grid-column-gap: 30px;
+      .main-news-elem:nth-child(3),
+      .main-news-elem:nth-child(4) {
+        display: inline-block;
+      }
+    }
+  }
+
+}
+
+@media (max-width: 800px) {
+  .main-news {
+    &__wrap-btn {
+      display: flex;
+    }
+  }
+
+  .main-news-wrap-text {
+    padding: 0 28px;
+    &__headline {
+      margin: 0;
+    }
+    &__href {
+      display: none;
+    }
+  }
+
+
+  .main-news-wrap-news {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.5fr; //0.98fr
+    grid-row-gap: 30px;
+
+    &__right {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+
+      .main-news-elem:nth-child(3),
+      .main-news-elem:nth-child(4) {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .main-news-wrap-news {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.6fr 1fr; //0.98fr
+    grid-row-gap: 20px;
+
+    &__right {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-row-gap: 20px;
+    }
+  }
+
+  .main-news-wrap-text {
+    padding: 0 20px;
+    margin-bottom: 20px;
+
+    &__headline {
+      margin: 0;
+      font-size: 24px;
     }
   }
 }

@@ -1,7 +1,7 @@
 .main-menu {
   display: flex;
   justify-content: space-between;
-
+  z-index: 4;
   &__burder {
     display: none;
     cursor: pointer;

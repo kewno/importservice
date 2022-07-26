@@ -1,5 +1,6 @@
 include ./main-bearing-slider-info
 include ./main-bearing-slider-slide
+include ../ui/arrow
 
 mixin mainBearingSlider(elem)
   .main-bearing-slider
@@ -7,8 +8,23 @@ mixin mainBearingSlider(elem)
       .swiper-wrapper
         each el in elem
           .swiper-slide
-            +mainBearingSliderSlide(el.img, el.headline)
+            +mainBearingSliderSlide(el.img, el.headline, el.class)
       +mainBearingSliderInfo
+      img(src='../images/bearing-slide-line.png').main-bearing-slider__line
+      .main-bearing-slider-wrap-control
+        .main-bearing-slider-control
+          .main-bearing-slider-control__prev
+            +arrow('arrow_white')
+          .main-bearing-slider-control__next
+            +arrow('arrow_red arrow_right')
+
+      //+mainBearingSliderInfo
 
 
-      //.main-bearing-slider
+
+      //.main-bearing-name
+      //  each el in elem
+      //    .main-bearing-name-container-elem
+      //      +mainBearingNameElem(el.img, el.headline)
+      //
+      //    +mainBearingNameInfo
