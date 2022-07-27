@@ -9,7 +9,13 @@ mixin mainMenu(menu, className)
         <line x1="1.5" y1="16.5" x2="18.7632" y2="16.5" stroke="white" stroke-width="3" stroke-linecap="round"/>
         <line opacity="0.2" x1="1.5" y1="31.5" x2="33.5" y2="31.5" stroke="white" stroke-width="3" stroke-linecap="round"/>
       </svg>
+    if className === 'main-menu_parthers'
+      a(href='/').main-logo
+        img(src='../../images/logo-white.png').main-logo__logo
     ul.main-menu-list
+      if className === 'main-menu_parthers'
+        a(href='/')
+          img(src='../../images/logo-white.png').main-menu-list__logo
       each el in menu
         li.main-menu-elem
           a(href= href).main-menu-elem__href= el.name

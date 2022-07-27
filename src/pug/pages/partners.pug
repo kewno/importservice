@@ -3,7 +3,34 @@ include ../main/main-mailing
 include ../ui/pop-up-call
 include ../ui/main-menu
 
+include ../partners/partners-trust
+//include ../partners
+//include ../partners
+//include ../partners
+//include ../partners
+//include ../partners
+//include ../partners
+include ../partners/partners-group
 include ../footer/footer
+
+-
+  partner1 = [
+    {headline: 'НК «Роснефть»', img: 'partners-1', href: '/'},
+    {headline: 'ПАО «Газпром»', img: 'partners-2', href: '/'},
+    {headline: 'ПАО «Уралкалий»', img: 'partners-3', href: '/'},
+    {headline: 'ПАО «Уралкалий»', img: 'partners-3', href: '/'},
+    {headline: 'ПАО «Газпром»', img: 'partners-2', href: '/'},
+    {headline: 'НК «Роснефть»', img: 'partners-1', href: '/'},
+    {headline: 'ПАО «Газпром»', img: 'partners-2', href: '/'},
+    {headline: 'ПАО «Уралкалий»', img: 'partners-3', href: '/'}
+  ]
+
+  partner2 = [
+    {headline: 'НК «Роснефть»', img: 'partners-1', href: '/'},
+    {headline: 'ПАО «Газпром»', img: 'partners-2', href: '/'},
+    {headline: 'ПАО «Уралкалий»', img: 'partners-3', href: '/'},
+    {headline: 'ПАО «Уралкалий»', img: 'partners-3', href: '/'}
+  ]
 
 doctype html
 html(lang="en")
@@ -11,12 +38,19 @@ html(lang="en")
 head
   meta(charset="UTF-8")
   meta(name="viewport" content="width=device-width, initial-scale=1.0")
-  title Main
+  title Partners
 
-body.main-page
+body.partners
   //+header()
   +headerParthers()
-
+  +partnersTrust
+  .partners__wrap-partners-groups
+    +partnersGroup('Металлургия', partner1)
+    +partnersGroup('Машиностроение', partner2)
+    +partnersGroup('Энергетическая', partner1)
+    +partnersGroup('Целлюлозно-бумажная', partner2)
+    +partnersGroup('Горнодобывающая', partner2)
+    +partnersGroup('Нефтеперерабатывающая', partner1)
   +mainMailing
   +footer
   +popUpCall

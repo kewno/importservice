@@ -1,0 +1,31 @@
+.pages-pagination {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  svg {
+    margin-right: 10px;
+    * {
+      stroke: white;
+    }
+    &:last-child {
+      display: none;
+    }
+  }
+  &__img {
+    margin-right: 16px;
+  }
+  &__wrap-elems {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.pages-pagination-elem {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--white);
+  text-decoration: none;
+  margin-right: 10px;
+}

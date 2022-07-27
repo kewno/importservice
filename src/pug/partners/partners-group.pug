@@ -1,0 +1,19 @@
+include ../ui/partners-elem
+
+mixin partnersGroup(headline, elems)
+  .container__2920
+    .partners-group
+      h2.partners-group__headline= headline
+      .partners-group__wrap-elem
+        .swiper-wrapper
+          each el in elems
+            +partnersElem(el.headline, el.img, el.href)
+
+          //+partnersElem('НК «Роснефть»', 'partners-1', '/')
+          //+partnersElem('ПАО «Газпром»', 'partners-2', '/')
+          //+partnersElem('ПАО «Уралкалий»', 'partners-3', '/')
+          //+partnersElem('ПАО «Уралкалий»', 'partners-3', '/')
+          //+partnersElem('ПАО «Газпром»', 'partners-2', '/')
+          //+partnersElem('НК «Роснефть»', 'partners-1', '/')
+          //+partnersElem('ПАО «Газпром»', 'partners-2', '/')
+          //+partnersElem('ПАО «Уралкалий»', 'partners-3', '/')

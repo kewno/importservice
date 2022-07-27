@@ -1,0 +1,18 @@
+.partners-group {
+  padding-top: 121px;
+  &__headline {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    margin: 0 0 20px;
+  }
+  &__wrap-elem {
+    //display: flex;
+    //flex-wrap: wrap;
+
+    .swiper-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+}

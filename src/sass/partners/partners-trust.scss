@@ -1,0 +1,36 @@
+.partners-trust {
+  display: flex;
+  align-items: center;
+  padding: 60px 0 0 0; //padding: 60px 24px 0 30px;
+  justify-content: space-between;
+  &__headline {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 47px;
+    margin: 0;
+    color: var(--black);
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    color: var(--black);
+    margin: 20px 0 0;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.005em;
+  }
+  &__img {
+    margin-top: 20px;
+    margin-right: 148.39px;
+  }
+}
+.partners-trust-wrap-text {
+  max-width: 1000px;
+}
+
+//.partners-trust-wrap-img {
+//  width: 100%;
+//  display: flex;
+//  justify-content: start;
+//  max-width: 263px;
+//}

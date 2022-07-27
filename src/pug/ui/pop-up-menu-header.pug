@@ -12,7 +12,8 @@ mixin popUpMenuHeader(menu)
       </svg>
     .pop-up-menu-header
       .wrap-burger-logo
-        img(src='../../images/logo.png').wrap-burger-logo__img
+        a(href='/')
+          img(src='../../images/logo.png').wrap-burger-logo__img
         p.wrap-burger-logo__text крупнейший мировой дистрибьютер подшипниковой продукции
       .menu-burger-wrap-search
         +inputElem('text', 'поиск', null, null, null)
