@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let phoneBurgerPoint = document.querySelector('.menu-burger-wrap-phone__call');
 
+  let body = document.querySelector('body');
 
 
   let toggleSubmenu = (el) => {
@@ -39,10 +40,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let closeBurgerPopUp = () => {
     burgerPopUp.style.display = 'none';
+    body.style.overflow = 'inherit';
   }
 
   let openBurgerPopUp = () => {
     burgerPopUp.style.display = 'block';
+    body.style.overflow = 'hidden';
   }
 
   if (burgerClose != null && burgerPopUp != null && burgerPoint != null) {
@@ -52,13 +55,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   //phone
-
   let closePhonePopUp = () => {
     phonePopUp.style.display = 'none';
+    body.style.overflow = 'inherit';
   }
 
   let openPhonePopUp = () => {
     phonePopUp.style.display = 'flex';
+    body.style.overflow = 'hidden';
   }
 
   if (phoneClose != null && phonePopUp != null && phonePoint != null) {
@@ -67,8 +71,21 @@ document.addEventListener('DOMContentLoaded', () => {
     phonePoint.onclick = () => openPhonePopUp();
   }
 
+  let multimedia = document.querySelector('.main-page .wrap-pop-up-multimedia');
+  let multimediaClose = document.querySelector('.wrap-pop-up-multimedia .pop-up-multimedia__cross .cross');
+
   let openFullScreen = () => {
-    alert(1);
+    if (multimedia != null)
+      multimedia.style.display = 'block';
+
+   body.style.overflow = 'hidden';
+  }
+
+  let closeFullScreen = () => {
+    if (multimedia != null)
+      multimedia.style.display = 'none';
+
+    body.style.overflow = 'inherit';
   }
 
   let slide = document.querySelectorAll('.slaider-slide');
@@ -78,6 +95,9 @@ document.addEventListener('DOMContentLoaded', () => {
       elem.onclick = () => openFullScreen();
     })
   }
+
+  multimediaClose.onclick = () => closeFullScreen();
+
 
   // let toggleSearch = () => {
   //   let footerMenu = document.querySelector ('.main-menu-footer');

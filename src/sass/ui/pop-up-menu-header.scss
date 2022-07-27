@@ -116,7 +116,8 @@
     }
   }
   .pop-up-menu-header {
-    width: 362px;
+    max-width: 362px;
+    width: 100%;
     padding-top: 23px;
   }
 

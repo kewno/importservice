@@ -1,6 +1,8 @@
 .main-bearing-slider {
   padding: 60px 0 0;
   overflow: hidden;
+  //margin: 0 auto;
+  //max-width: 2920px;
   &__line {
     position: absolute;
     bottom: 40px;
@@ -10,9 +12,12 @@
 
 .bearing-slider {
   position: relative;
+  margin: 0 auto;
+  //max-width: 2920px;
   .swiper-wrapper {
     //display: flex;
     align-items: end;
+
     > *:first-child {
       margin-left: 66px;
     }
