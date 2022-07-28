@@ -1,0 +1,8 @@
+include ../ui/btn
+
+mixin errorInfo
+  .error-info
+    h1.error-info__headline 404. Страница не найдена
+    p.error-info__text Возможно, она была перемещена или вы неверно указали адрес страницы.
+    .error-info__wrap-btn
+      +btn('Перейти на главную', 'btn_invisible', '/')
