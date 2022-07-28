@@ -5,3 +5,4 @@ import './bearing-slider';
 import './pop-up';
 import './pop-up-slider';
 import './script';
+import './partners-slider';

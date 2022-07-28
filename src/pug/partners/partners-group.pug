@@ -1,3 +1,5 @@
+
+include ../ui/arrow
 include ../ui/partners-elem
 
 mixin partnersGroup(headline, elems)
@@ -5,15 +7,17 @@ mixin partnersGroup(headline, elems)
     .partners-group
       h2.partners-group__headline= headline
       .partners-group__wrap-elem
-        .swiper-wrapper
+        .wrap-elem-partners
           each el in elems
             +partnersElem(el.headline, el.img, el.href)
-
-          //+partnersElem('НК «Роснефть»', 'partners-1', '/')
-          //+partnersElem('ПАО «Газпром»', 'partners-2', '/')
-          //+partnersElem('ПАО «Уралкалий»', 'partners-3', '/')
-          //+partnersElem('ПАО «Уралкалий»', 'partners-3', '/')
-          //+partnersElem('ПАО «Газпром»', 'partners-2', '/')
-          //+partnersElem('НК «Роснефть»', 'partners-1', '/')
-          //+partnersElem('ПАО «Газпром»', 'partners-2', '/')
-          //+partnersElem('ПАО «Уралкалий»', 'partners-3', '/')
+        .partners-slider
+          .swiper-wrapper
+            each el in elems
+              .swiper-slide
+                +partnersElem(el.headline, el.img, el.href)
+          .wrap-partners-control
+            .partners-control
+              .partners-control__prev
+                +arrow('arrow_gej')
+              .partners-control__next
+                +arrow('arrow_red arrow_right')

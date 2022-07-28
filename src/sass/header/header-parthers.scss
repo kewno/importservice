@@ -36,6 +36,12 @@
 //  }
 //}
 
+@media (max-width: 800px) {
+  .header-parthers {
+    height: 300px;
+  }
+}
+
 @media (max-width: 700px) {
   .header-parthers {
     .header-contacts {
@@ -50,5 +56,11 @@
         display: none;
       }
     }
+  }
+}
+
+@media (max-width: 400px) {
+  .header-parthers {
+    height: 220px;
   }
 }

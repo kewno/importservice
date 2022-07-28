@@ -3,3 +3,19 @@
     padding-bottom: 125px; //120px
   }
 }
+
+@media (max-width: 800px) {
+  .partners {
+    &__wrap-partners-groups {
+      padding-bottom: 168px; //120px
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .partners {
+    &__wrap-partners-groups {
+      padding-bottom: 128px; //120px
+    }
+  }
+}

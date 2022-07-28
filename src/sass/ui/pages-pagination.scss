@@ -29,3 +29,24 @@
   text-decoration: none;
   margin-right: 10px;
 }
+
+
+@media (max-width: 800px) {
+  .pages-pagination {
+    margin-bottom: 35px;
+  }
+}
+
+@media (max-width: 400px) {
+  .pages-pagination-elem {
+    font-size: 14px;
+    white-space: nowrap;
+  }
+
+  .pages-pagination {
+    &__img {
+      margin-right: 10px;
+    }
+    //margin-top: 5px;
+  }
+}

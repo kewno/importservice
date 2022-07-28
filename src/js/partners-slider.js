@@ -1,9 +1,9 @@
 import Swiper from 'swiper';
 
 document.addEventListener('DOMContentLoaded', () => {
-  new Swiper('.partners-group__wrap-elem', { //partners-slider
-    //spaceBetween: 13,
-    slidesPerView: 1,
+  new Swiper('.partners-slider', { //partners-group__wrap-elem
+    spaceBetween: 30,
+    slidesPerView: 1, //slidesPerView: 1
     // pagination: {
     //   el: ".swiper-pagination",
     //   clickable: true,
@@ -12,8 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
     //   },
     // // },
     navigation: {
-      nextEl: ".control-header-slider-next",
-      prevEl: ".control-header-slider-prev",
+      nextEl: ".partners-control .partners-control__next",
+      prevEl: ".partners-control .partners-control__prev",
     },
     // pagination: {
     //   el: ".slider-pagination",
@@ -24,3 +24,19 @@ document.addEventListener('DOMContentLoaded', () => {
     // },
   })
 })
+
+//.partners-group
+//  h2.partners-group__headline= headline
+//  .partners-group__wrap-elem
+//    .swiper-wrapper
+//      each el in elems
+//        +partnersElem(el.headline, el.img, el.href)
+
+//+partnersElem('НК «Роснефть»', 'partners-1', '/')
+//+partnersElem('ПАО «Газпром»', 'partners-2', '/')
+//+partnersElem('ПАО «Уралкалий»', 'partners-3', '/')
+//+partnersElem('ПАО «Уралкалий»', 'partners-3', '/')
+//+partnersElem('ПАО «Газпром»', 'partners-2', '/')
+//+partnersElem('НК «Роснефть»', 'partners-1', '/')
+//+partnersElem('ПАО «Газпром»', 'partners-2', '/')
+//+partnersElem('ПАО «Уралкалий»', 'partners-3', '/')
