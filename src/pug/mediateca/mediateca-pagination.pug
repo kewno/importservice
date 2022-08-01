@@ -1,0 +1,12 @@
+mixin mediatecaPagination(elem)
+  - i = 0;
+  .mediateca-pagination
+    each el in elem
+      if i !== 4
+        if i === 0
+          a(class=`mediateca-pagination__elem_active`, href=`${el.href}`).mediateca-pagination__elem= el.text
+        else
+          a(href=`${el.href}`).mediateca-pagination__elem= el.text
+      else
+        span(class=`mediateca-pagination__elem_points`).mediateca-pagination__elem ...
+      - i++

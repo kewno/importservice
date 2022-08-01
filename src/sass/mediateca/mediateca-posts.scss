@@ -1,0 +1,24 @@
+.mediateca-posts {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1.73fr 1fr 1fr 1fr;
+  grid-column-gap: 24px;
+  grid-row-gap: 26px;
+  padding: 60px 0 0;
+}
+
+@media (max-width: 800px) {
+  .mediateca-posts {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 0.9fr 1fr 1fr;
+    grid-row-gap: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .mediateca-posts {
+    padding: 44px 0 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  }
+}

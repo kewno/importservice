@@ -1,0 +1,26 @@
+include ../mediateca/mediateca-posts
+include ../mediateca/mediateca-pagination
+include ../ui/btn
+
+mixin mediatecaContent
+  .mediateca-content
+    .container__2920
+      .mediateca-content__headline Фото и видеогалерея Импортсервис
+      .mediateca-content__text Система менеджмента качества IBS одобрена Lloyd’s Register Quality Assurance и признана соответствующей требованиям следующих стандартов: BS EN ISO 9001:2015; EN ISO 9001:2015; ISO 9001:2015. Сертификат соответствия NSPB0006300 издан Lloyd’s Register EMEA Санкт-Петербург от имени и по поручению Lloyd’s Register Quality Assurance Limited.
+      +mediatecaPosts([{back: 'mediateca-post-1.png', icon: 'mediateca-photo.png', headline: 'Установка подшипников', date: '12.09.2021'},
+      {back: 'mediateca-post-2.png', icon: 'mediateca-photo.png', headline: 'Склад Импортсервис', date: '12.09.2021'},
+      {back: 'mediateca-post-3.png', icon: 'mediateca-play.png', headline: 'Известный производитель подшипников ', date: '12.09.2021', type: 'mediateca-post-video'},
+      {back: 'mediateca-post-4.png', icon: 'mediateca-play.png', headline: 'Agri Disc Hub от NSK – надежность в экстремальных условиях эксплуатации', date: '12.09.2021', type: 'mediateca-post-video', className: 'mediateca-post_long'},
+      {back: 'mediateca-post-2.png', icon: 'mediateca-photo.png', headline: 'Установка подшипников', date: '12.09.2021'},
+      {back: 'mediateca-post-5.png', icon: 'mediateca-photo.png', headline: 'Установка подшипников', date: '12.09.2021', className: 'mediateca-post_high'},
+      {back: 'mediateca-post-3.png', icon: 'mediateca-play.png', headline: 'Склад Импортсервис', date: '12.09.2021', type: 'mediateca-post-video'},
+      {back: 'mediateca-post-3.png', icon: 'mediateca-play.png', headline: 'Установка подшипников', date: '12.09.2021', type: 'mediateca-post-video'},
+      {back: 'mediateca-post-2.png', icon: 'mediateca-photo.png', headline: 'Склад Импортсервис', date: '12.09.2021'},
+      {back: 'mediateca-post-3.png', icon: 'mediateca-play.png', headline: 'Установка подшипников', date: '12.09.2021', type: 'mediateca-post-video'},
+      {back: 'mediateca-post-1.png', icon: 'mediateca-photo.png', headline: 'Склад Импортсервис', date: '12.09.2021'},
+      {back: 'mediateca-post-2.png', icon: 'mediateca-photo.png', headline: 'Установка подшипников', date: '12.09.2021'}
+      ])
+      .wrap-pagination-button
+        .mediateca-wrap-btn
+          +btn('Показать еще', 'btn_white', '/')
+        +mediatecaPagination([{href:'/', text:'1'}, {href:'/', text:'2'}, {href:'/', text:'3'}, {href:'/', text:'4'}, {href:'/', text:'5'}, {href:'/', text:'9'}, {href:'/', text:'10'}])

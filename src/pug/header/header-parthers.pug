@@ -22,15 +22,15 @@ include ../ui/pages-pagination
     {name: 'Контакты', href: '/', submenu: null}
   ]
 
-mixin headerParthers
-  header.header-parthers(style=`background-image: url('../../images/header-partners.png');`)
+mixin headerParthers(back, pagination)
+  header.header-parthers(style=`background-image: url('../../images/${back}');`)
     .header__burger
       +popUpMenuHeader(menu)
     .header__wrap-menu
       .container__2920
         +mainMenu(menu, 'main-menu_parthers')
     .header-parthers__pagination
-      +pagesPagination([{href:'/', text:'О компании'}, {href:'/', text:'Наши клиенты и партнеры'}])
+      +pagesPagination(pagination)
 
 
 

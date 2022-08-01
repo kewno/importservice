@@ -1,0 +1,47 @@
+.mediateca-pagination {
+  display: flex;
+  align-items: center;
+  &__elem {
+    text-decoration: none;
+    color: var(--red);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    margin-right: 28px;
+    display: flex;
+    align-items: center;
+    &:last-child {
+      margin-right: 15px;
+    }
+    &_active {
+      background: var(--red);
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 21px;
+      margin-right: 26px;
+      width: 32px;
+      height: 32px;
+      color: var(--white);
+      //align-items: center;
+      //text-align: center;
+      justify-content: center;
+    }
+    &_points {
+      margin-left: 2px;
+    }
+  }
+}
+
+
+@media (max-width: 800px) {
+  .mediateca-pagination {
+    width: 100%;
+    justify-content: center;
+    &__elem {
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
