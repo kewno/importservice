@@ -1,0 +1,148 @@
+.header-service {
+  position: relative;
+  .header__wrap-menu {
+    top: 35px;
+  }
+}
+
+.header-service-slider {
+  overflow: hidden;
+  .swiper-wrapper {
+    .swiper-slide {
+      &__img {
+        object-fit: cover;
+        width: 100%;
+        height: 790px;
+      }
+    }
+  }
+}
+
+.service-pagination {
+  display: none;
+  margin-left: 60px;
+  &__point {
+    width: 8px;
+    height: 8px;
+    margin-right: 5px;
+    background: var(--white);
+    opacity: 0.3;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+.service-control {
+  display: flex;
+  max-width: 1521px;
+  width: 100%;
+  margin: 0 80px;
+  justify-content: flex-end;
+}
+
+.wrap-service-control {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  bottom: 2px;
+  z-index: 2;
+  width: 100%;
+  border-bottom: 4px solid var(--red);
+  align-items: center;
+}
+
+
+@media (max-width: 1300px) {
+  .header-service {
+    height: 550px;
+    .header__wrap-menu {
+      top: 20px;
+    }
+  }
+  .header-service-slider {
+    .swiper-wrapper {
+      .swiper-slide {
+        &__img {
+          height: 550px;
+        }
+      }
+    }
+  }
+
+  .service-control {
+    margin: 0 60px;
+  }
+}
+
+
+@media (max-width: 1040px) {
+  .service-pagination {
+    display: flex;
+  }
+  .header-service {
+    height: 590px;
+  }
+  .header-service-slider {
+    .swiper-wrapper {
+      .swiper-slide {
+        &__img {
+          height: 590px;
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 800px) {
+  .header-service {
+    height: 850px;
+    .header__wrap-menu {
+      top: 35px;
+    }
+  }
+  .header-service-slider {
+    .swiper-wrapper {
+      .swiper-slide {
+        &__img {
+          height: 850px;
+        }
+      }
+    }
+  }
+
+  .wrap-service-control {
+    bottom: 0;
+  }
+  .service-control {
+    margin: 0 20px;
+  }
+
+  .service-pagination {
+    margin-left: 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .header-service {
+    height: 764px;
+    .header__wrap-menu {
+      top: 20px;
+    }
+  }
+  .header-service-slider {
+    .swiper-wrapper {
+      .swiper-slide {
+        &__img {
+          height: 764px;
+        }
+      }
+    }
+  }
+
+  .service-pagination {
+    margin-left: 20px;
+  }
+}

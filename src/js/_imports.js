@@ -6,3 +6,4 @@ import './pop-up';
 import './pop-up-slider';
 import './script';
 import './partners-slider';
+import './header-service-slider';

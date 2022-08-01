@@ -1,0 +1,17 @@
+include ./service-content-cards
+
+mixin serviceContent
+  .service-content
+    .service-content-left
+      .service-content-left__headline Для высококачественного решения вопросов надежности и оптимизации стоимости владения роторного оборудования на базе компании Импортсервис была создана техническая служба со специализированными отделами по следующим отраслям:
+      +serviceContentCards([
+        {img: 'service-content-card-1.png', headline: 'Металлургия'},
+        {img: 'service-content-card-2.png', headline: 'Целлюлозно-бумажная промышленность'},
+        {back: 'grey-light', headline: 'Горнодобывающая промышленность'},
+        {img: 'service-content-card-4.png', headline: 'Энергетическая промышленность'},
+        {img: 'service-content-card-5.png', headline: 'Сельско-хозяйственная промышленность'},
+        {back: 'service-grey', headline: 'Машиностроение'},
+        {img: 'service-content-card-7.png', headline: 'Химическая и нефтехимическая промышленность'},
+        {back: 'red', headline: 'Цементная промышленность'}
+      ])
+    .service-content-right

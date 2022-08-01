@@ -1,0 +1,17 @@
+.service-content-card {
+  max-width: 405.14px;
+  height: 195.17px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  //justify-content: center;
+  &__headline {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    color:var(--white);
+    margin: 0 0 0 60px;
+  }
+}

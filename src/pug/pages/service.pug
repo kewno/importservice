@@ -1,0 +1,23 @@
+include ../header/header-parthers
+include ../main/main-mailing
+include ../ui/pop-up-call
+include ../ui/main-menu
+include ../footer/footer
+include ../header/header-service
+include ../service/service-content
+
+doctype html
+html(lang="en")
+
+head
+  meta(charset="UTF-8")
+  meta(name="viewport" content="width=device-width, initial-scale=1.0")
+  title Service
+
+body.service
+  +headerService()
+  //+headerParthers('mediateca-header.png', [{href:'/', text:'О компании'}, {href:'/', text:'Фото и видеогалерея'}])
+  +serviceContent
+  +mainMailing
+  +footer
+  +popUpCall

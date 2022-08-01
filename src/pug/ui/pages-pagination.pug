@@ -1,10 +1,9 @@
 mixin pagesPagination(elem)
-  .container__2920
-    .pages-pagination
-      img(src='../../images/home.png').pages-pagination__img
-      .pages-pagination__wrap-elems
-        each el in elem
-          a(href=`${el.href}`).pages-pagination-elem= el.text
-          <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 1L5.29289 5.29289C5.68342 5.68342 5.68342 6.31658 5.29289 6.70711L1 11" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+  .pages-pagination
+    img(src='../../images/home.png').pages-pagination__img
+    .pages-pagination__wrap-elems
+      each el in elem
+        a(href=`${el.href}`).pages-pagination-elem= el.text
+        <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1L5.29289 5.29289C5.68342 5.68342 5.68342 6.31658 5.29289 6.70711L1 11" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
