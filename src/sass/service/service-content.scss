@@ -1,0 +1,27 @@
+.service-content {
+  max-width: 1520px;
+  margin: 0 auto;
+  padding: 62px 0 100px;
+  display: flex;
+  &.sidebar {
+    padding: 62px 0 60px;
+  }
+}
+//1430px
+//1041px; service-content
+@media (max-width: 1620px) {
+  .service-content {
+    max-width: 1430px;
+    padding: 70px 0 110px;
+    &.sidebar {
+      padding: 70px 0 120px;
+    }
+  }
+}
+
+@media (max-width: 1300px) {
+  .service-content {
+    max-width: 1149px;
+    padding: 50px 0 110px;
+  }
+}

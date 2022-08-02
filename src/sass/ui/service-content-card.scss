@@ -4,7 +4,12 @@
   width: 100%;
   display: flex;
   align-items: center;
-  //justify-content: center;
+  background-size: cover;
+  cursor: pointer;
+  &:hover {
+    background-size: 110% 110%;
+  }
+
   &__headline {
     font-family: 'Roboto', sans-serif;
     font-style: normal;
@@ -13,5 +18,41 @@
     line-height: 26px;
     color:var(--white);
     margin: 0 0 0 60px;
+    display: inline;
+    max-width: 200px;
+  }
+}
+
+
+.sidebar {
+  .service-content-card {
+    height: 145px;
+    &__headline {
+      max-width: 210px;
+    }
+  }
+}
+
+@media (max-width: 1620px) {
+  .service-content-card {
+    height: 183.5px;
+  }
+
+  .sidebar {
+    .service-content-card {
+      height: 133.58px;
+    }
+  }
+}
+
+@media (max-width: 1300px) {
+  .service-content-card {
+    height: 147.44px;
+
+    &__headline {
+      font-size: 18px;
+      line-height: 26px;
+      max-width: 215px;
+    }
   }
 }

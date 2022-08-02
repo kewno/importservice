@@ -1,7 +1,11 @@
 include ./service-content-cards
+include ../ui/sidebar-manager
+include ./service-provided
+include ./service-container-double
+include ./service-logistic
 
-mixin serviceContent
-  .service-content
+mixin serviceContent(sidebar)
+  div(class=`${sidebar}`).service-content
     .service-content-left
       .service-content-left__headline Для высококачественного решения вопросов надежности и оптимизации стоимости владения роторного оборудования на базе компании Импортсервис была создана техническая служба со специализированными отделами по следующим отраслям:
       +serviceContentCards([
@@ -14,4 +18,8 @@ mixin serviceContent
         {img: 'service-content-card-7.png', headline: 'Химическая и нефтехимическая промышленность'},
         {back: 'red', headline: 'Цементная промышленность'}
       ])
+      +serviceProvided
+      +serviceContainerDouble
+      +serviceLogistic
     .service-content-right
+      +sidebarManager

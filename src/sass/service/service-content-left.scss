@@ -1,0 +1,28 @@
+.service-content-left {
+  width: 100%;
+  &__headline {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 140%;
+    letter-spacing: 0.03em;
+  }
+}
+
+
+.sidebar {
+  .service-content-left {
+    &__headline {
+      max-width: 1000px;
+    }
+  }
+}
+
+//@media (max-width: 1300px) {
+//  .service-content-left {
+//    &__headline {
+//
+//    }
+//  }
+//}

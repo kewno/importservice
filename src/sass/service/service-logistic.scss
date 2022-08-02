@@ -1,0 +1,39 @@
+.service-logistic {
+  padding-top: 125px;
+
+  &__headline {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 47px;
+    margin: 0 0 30px;
+  }
+  &__elements {
+    display: flex;
+    justify-content: space-between;
+    //width: 1130px;
+  }
+}
+
+.sidebar {
+  .service-logistic {
+    padding-top: 60px;
+  }
+}
+
+@media (max-width: 1620px) {
+  .service-logistic {
+    padding-top: 85px;
+
+    &__elements {
+      .logistic-elem {
+        &:nth-child(1) {
+          max-width: 330px;
+        }
+        &:nth-child(4) {
+          max-width: 250px;
+        }
+      }
+    }
+  }
+}

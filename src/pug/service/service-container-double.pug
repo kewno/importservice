@@ -1,0 +1,10 @@
+include ./service-double
+
+mixin serviceContainerDouble
+  .service-container-double
+    +serviceDouble('Оптимизация технического обслуживания и ремонта оборудования', '', 'service-double-1.png', '/', '')
+    +serviceDouble('Повышение надежности работы оборудования', 'service-double-red', 'service-double-2.png', '/', 'service-double-reverse')
+    +serviceDouble('Вибродиагностика и наладка оборудования', '', 'service-double-3.png', '/')
+    +serviceDouble('Ремонт и изготовление приводной техники', 'service-double-grey', 'service-double-4.png', '/', 'service-double-reverse')
+    +serviceDouble('Мониторинг состояния оборудования', '', 'service-double-5.png', '/')
+//headline, className, image

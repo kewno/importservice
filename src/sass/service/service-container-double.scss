@@ -1,0 +1,23 @@
+.service-container-double {
+  display: flex;
+  flex-direction: column;
+  padding-top: 120px;
+}
+
+.sidebar {
+  .service-container-double {
+    padding-top: 60px;
+  }
+}
+
+@media (max-width: 1620px) {
+  .service-container-double {
+    padding-top: 70px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .service-container-double {
+    padding-top: 110px;
+  }
+}

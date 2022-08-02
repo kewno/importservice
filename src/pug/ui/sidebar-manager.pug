@@ -1,0 +1,43 @@
+mixin sidebarManager
+  .sidebar-manager
+    .manager
+      .manager-slider
+        .swiper-wrapper
+          .swiper-slide
+            img(src='../../images/manager-slider-slide.png').swiper-slide__img
+          .swiper-slide
+            img(src='../../images/manager-slider-slide.png').swiper-slide__img
+          .swiper-slide
+            img(src='../../images/manager-slider-slide.png').swiper-slide__img
+
+      .manager-description
+        p.manager-description__head ваш персональный менеджер
+        h3.manager-description__headline Павел Бычков
+        p.manager-description__text Начальник отдела поддержки клиентов
+        .wrap-manager-info
+          .manager-info
+            .manager-info__phone +7 (342) 256 59 24
+            .manager-info__date Пн-Пт: с 9.00 до 18.00
+          .manager-info-icon
+            img(src='../../images/manager-phone.png')
+        div.manager-description-useful
+          p.manager-description-useful__headline Чем может быть полезен?
+          .manager-description-useful__arrow
+            <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M11 1L6.70711 5.29289C6.31658 5.68342 5.68342 5.68342 5.29289 5.29289L1 1" stroke="#AB2421" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        .manager-slider-conrol
+          .manager-slider-conrol__pagination
+          .manager-slider-conrol__line
+          .manager-slider-conrol-arrow
+            .manager-slider-conrol-arrow__prev
+              <svg width="13" height="24" viewBox="0 0 13 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.0479 1.90234L1.76629 11.2971C1.38146 11.6866 1.38146 12.3132 1.76629 12.7027L11.0479 22.0975" stroke="#BDBDBD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            .manager-slider-conrol-arrow__next
+              <svg width="13" height="24" viewBox="0 0 13 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.0479 1.90234L1.76629 11.2971C1.38146 11.6866 1.38146 12.3132 1.76629 12.7027L11.0479 22.0975" stroke="#BDBDBD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+    .specialists
+      h3.specialists__headline Наши специалисты оперативно ответят на все ваши вопросы
+      p.specialists__text Для каждого клиента прикрепляется персональный менеджер отдела продаж и  операционист по обработке любых входящих запросов.

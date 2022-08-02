@@ -1,0 +1,40 @@
+.logistic-elem {
+  max-width: 235px; //216
+  &__image {
+
+  }
+}
+
+.logistic-elem-wrap-image {
+  height: 86px;
+  display: flex;
+  align-items: flex-end;
+  //align-items: center;
+}
+
+.logistic-elem-texts {
+  &__headline {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    margin: 15px 0 5px;
+    color: var(--black);
+  }
+  &__text {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    margin: 0;
+    color: var(--black);
+  }
+}
+
+@media (max-width: 1620px) {
+  .logistic-elem {
+    max-width: 315px;
+  }
+}

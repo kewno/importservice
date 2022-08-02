@@ -1,3 +1,31 @@
 .service-content-cards {
+  display: grid;
+  grid-template-columns: 1.08fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-column-gap: 0;
+  grid-row-gap: 0;
+  margin-top: 30px;
+}
 
+.sidebar {
+  .service-content-cards {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 1620px) {
+  .service-content-cards {
+    margin-top: 17px;
+  }
+  .sidebar {
+    .service-content-cards {
+      margin-top: 27px;
+    }
+  }
+}
+
+@media (max-width: 1300px) {
+  .service-content-cards {
+    margin-top: 30px;
+  }
 }

@@ -1,0 +1,20 @@
+.service-content-right {
+  display: none;
+}
+
+.sidebar {
+  .service-content-right {
+    margin: 5px 0 0 26px;
+    display: flex;
+  }
+}
+
+
+@media (max-width: 1620px) {
+  .sidebar {
+    .service-content-right {
+      margin: -15px 0 0 26px;
+      display: flex;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+include ../ui/logistic-elem
+
+mixin serviceLogistic
+  .service-logistic
+    .service-logistic__headline Логистика
+    .service-logistic__elements
+      +logisticElem('logistic-elem-1.png', 'Собственный автопарк', 'Грузовые машины, грузоподъемностью до 5 тонн с доставкой до склада покупателя груза от 1 кг.')
+      +logisticElem('logistic-elem-2.png', 'Наемный транспорт', 'Привлечение наемного транспорта с доставкой до склада покупателя грузов от 1 кг')
+      +logisticElem('logistic-elem-3.png', 'Отправка через ТК', 'Отправки сборными грузами через ТК: Деловые Линии, ПЭК, ДПД, Байкал и другие с экспедированием до склада покупателя и межтерминальные перевозки')
+      +logisticElem('logistic-elem-4.png', 'Авиа доставка', 'Осуществление экспресс (авиа) доставок')
+
+      //img, headline, text

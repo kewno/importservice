@@ -1,0 +1,47 @@
+.provide {
+  display: flex;
+  &__img {
+    align-self: flex-start;
+  }
+}
+
+.provide-wrap-text {
+  margin-left: 25px;
+  max-width: 390px;
+  &__hedline {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    margin: 0 0 10px;
+  }
+  &__text {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    margin: 0;
+  }
+}
+
+.sidebar {
+  .provide-wrap-text {
+    //max-width: 300px;
+    &__hedline {
+      margin: 0 0 7px;
+      max-width: 310px;
+    }
+    &__text {
+      max-width: 250px;
+      letter-spacing: 0.02em;
+    }
+  }
+}
+
+@media (max-width: 1620px) {
+  //provide
+  .provide-wrap-text {
+    max-width: 280px;
+  }
+}

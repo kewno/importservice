@@ -1,0 +1,7 @@
+mixin logisticElem(img, headline, text)
+  .logistic-elem
+    .logistic-elem-wrap-image
+      img(src=`../../images/${img}`).logistic-elem__image
+    .logistic-elem-texts
+      h4.logistic-elem-texts__headline= headline
+      p.logistic-elem-texts__text= text
