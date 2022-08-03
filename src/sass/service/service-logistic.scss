@@ -37,3 +37,177 @@
     }
   }
 }
+
+@media (max-width: 1300px) {
+  .service-logistic {
+    padding-top: 105px;
+
+    &__headline {
+      font-size: 32px;
+      line-height: 38px;
+    }
+
+    &__elements {
+      .logistic-elem {
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4) {
+          max-width: 240px;
+        }
+      }
+    }
+  }
+
+  .sidebar {
+    .service-logistic {
+      padding-top: 80px;
+
+      &__elements {
+        flex-wrap: wrap;
+        .logistic-elem {
+          &:nth-child(1),
+          &:nth-child(2),
+          &:nth-child(3),
+          &:nth-child(4) {
+            max-width: 330px;
+          }
+          &:nth-child(1) {
+            margin-bottom: 40px;
+          }
+        }
+        //* > {
+        //  width: 100%;
+        //  max-width: 300px; //50%
+        //}
+      }
+    }
+  }
+}
+
+
+@media (max-width: 1100px) {
+  .service-logistic {
+    padding-top: 75px;
+    &__elements {
+      flex-wrap: wrap;
+      .logistic-elem {
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4) {
+          max-width: 380px;
+        }
+        &:nth-child(1) {
+          margin-bottom: 40px;
+        }
+      }
+    }
+  }
+
+  .sidebar {
+    .service-logistic {
+      padding-top: 110px; //75
+      &__elements {
+        flex-wrap: wrap;
+        .logistic-elem {
+          &:nth-child(1),
+          &:nth-child(2),
+          &:nth-child(3),
+          &:nth-child(4) {
+            max-width: 380px;
+          }
+          &:nth-child(1) {
+            margin-bottom: 40px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 800px) {
+  .service-logistic {
+
+    &__headline {
+      margin-bottom: 40px;
+    }
+    &__elements {
+      .logistic-elem {
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4) {
+          max-width: 350px;
+        }
+        &:nth-child(1) {
+          margin-bottom: 50px;
+        }
+      }
+    }
+  }
+
+  .sidebar {
+    .service-logistic {
+      &__elements {
+        .logistic-elem {
+          &:nth-child(1),
+          &:nth-child(2),
+          &:nth-child(3),
+          &:nth-child(4) {
+            max-width: 350px;
+          }
+          &:nth-child(1) {
+            margin-bottom: 50px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 765px) {
+  .service-logistic {
+    padding-top: 60px;
+    &__headline {
+      font-size: 24px;
+      line-height: 28px;
+    }
+    &__elements {
+      .logistic-elem {
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4) {
+          margin-bottom: 40px;
+        }
+        &:nth-child(1) {
+          margin-bottom: 25px;
+        }
+      }
+    }
+  }
+
+  .sidebar {
+    .service-logistic {
+      padding-top: 60px;
+      &__headline {
+        font-size: 24px;
+        line-height: 28px;
+      }
+      &__elements {
+        .logistic-elem {
+          &:nth-child(2),
+          &:nth-child(3),
+          &:nth-child(4) {
+            margin-bottom: 40px;
+          }
+          &:nth-child(1) {
+            margin-bottom: 25px;
+          }
+        }
+      }
+    }
+  }
+}

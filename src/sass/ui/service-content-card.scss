@@ -55,4 +55,58 @@
       max-width: 215px;
     }
   }
+
+  .sidebar {
+    .service-content-card {
+      height: 191.13px;
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .service-content-card {
+    max-width: 464px;
+    height: 223.53px;
+  }
+
+  .sidebar {
+    .service-content-card {
+      max-width: 464px;
+      height: 223.53px;
+    }
+  }
+}
+
+
+@media (max-width: 800px) {
+  .service-content-card {
+    max-width: 378.5px;
+    height: 182.34px;
+  }
+
+  .sidebar {
+    .service-content-card {
+      max-width: 378.5px;
+      height: 182.34px;
+    }
+  }
+}
+
+
+@media (max-width: 530px) {
+  .service-content-card {
+    max-width: 480px;
+    height: 153px;
+
+    &__headline {
+      margin-left: 50px;
+    }
+  }
+
+  .sidebar {
+    .service-content-card {
+      max-width: 480px;
+      height: 153px;
+    }
+  }
 }
