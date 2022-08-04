@@ -1,0 +1,22 @@
+.products-logistics {
+  padding-top: 150px;
+  &__headline {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 47px;
+    color: var(--black);
+    margin: 0 0 55px;
+  }
+}
+
+.products-logistics-wrap-provide {
+  display: flex;
+  justify-content: space-between;
+}
+
+.products-logistics-wrap-logistic {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}

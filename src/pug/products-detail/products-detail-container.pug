@@ -1,0 +1,34 @@
+include ../ui/sidebar-manager
+include ./products-detail-range
+include ./products-detail-brands
+include ./products-logistics
+
+
+mixin productsDetailContainer
+  -
+    let elem = [
+      {headline: 'Радиальные шарикоподшипники', text: 'Подшипники могут использоваться в условиях больших радиальных нагрузок и высоких частот вращения.'},
+      {headline: 'Корпусные подшипники', text: 'Подшипники могут использоваться в условиях больших радиальных нагрузок и высоких частот вращения.'},
+      {headline: 'Радиально-упорные подшипники', text: 'Подшипники могут использоваться в условиях больших радиальных нагрузок и высоких частот вращения.'},
+      {headline: 'Самоустанавливающиеся шарикоподшипники', text: 'Подшипники могут использоваться в условиях больших радиальных нагрузок и высоких частот вращения.'},
+      {headline: 'Упорные шарикоподшипники', text: 'Подшипники могут использоваться в условиях больших радиальных нагрузок и высоких частот вращения.'},
+      {headline: 'Упорно-радиальные шарикоподшипники', text: 'Подшипники могут использоваться в условиях больших радиальных нагрузок и высоких частот вращения.'}
+    ]
+
+    let elems = ['products-detail-brands-1.png', 'products-detail-brands-2.png', 'products-detail-brands-3.png', 'products-detail-brands-4.png', 'products-detail-brands-5.png', 'products-detail-brands-6.png', 'products-detail-brands-7.png']
+  .container__2920
+    .products-detail-container
+      .products-detail-container-left
+        p.products-detail-container-left__text.products-detail-container-left__text_top Эти подшипники подходят для любых областей применения: металлургия, обрабатывающие станки, автомобили (КПП, компрессоры кондиционеров и др.), горнодобывающая отрасль (грохоты), целлюлозно-бумажная промышленность и т.д.
+        p.products-detail-container-left__text Подшипники могут использоваться в условиях больших радиальных нагрузок и высоких частот вращения.
+        .products-detail-container-left__line
+        +productsDetailRange(elem)
+        +productsDetailBrands(elems)
+        +productsLogistics()
+      .products-detail-container-right
+        +sidebarManager
+
+      //range
+//['products-detail-brands-1.png', 'products-detail-brands-2.png', 'products-detail-brands-3.png', 'products-detail-brands-4.png', 'products-detail-brands-5.png', 'products-detail-brands-6.png', 'products-detail-brands-7.png',
+//'products-detail-brands-1.png', 'products-detail-brands-2.png', 'products-detail-brands-3.png', 'products-detail-brands-4.png', 'products-detail-brands-5.png', 'products-detail-brands-6.png', 'products-detail-brands-7.png',
+//'products-detail-brands-1.png', 'products-detail-brands-2.png', 'products-detail-brands-3.png', 'products-detail-brands-4.png', 'products-detail-brands-5.png', 'products-detail-brands-6.png', 'products-detail-brands-7.png']

@@ -1,0 +1,19 @@
+.products-detail-header-info {
+  position: absolute;
+  //top: 100px;
+  z-index: 2;
+  bottom: 80px;
+
+  &__headline {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 47px;
+    color: var(--white);
+    margin: 0;
+  }
+
+  .pages-pagination {
+    margin-bottom: 25px;
+  }
+}

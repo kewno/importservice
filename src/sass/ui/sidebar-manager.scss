@@ -242,12 +242,23 @@
 }
 
 
-@media (max-width: 800px)  {
+@media (max-width: 800px)  { //swiper-slide
   .manager-description {
     max-width: 366px;
     padding: 0 0 22px 40px;
   }
 
+  .manager-slider {
+    .swiper-wrapper {
+      .swiper-slide {
+        &__img {
+          width: 360px;
+          //height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
   .specialists {
     padding: 40px 22px 33px 65px;
     &__headline {

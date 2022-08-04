@@ -1,0 +1,24 @@
+.products-detail-container-left {
+  margin-right: 24px;
+
+  &__text {
+    max-width: 1040px;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 0.01em;
+    &_top {
+      margin: 0 0 10px;
+    }
+  }
+
+  &__line {
+    width: 225px;
+    height: 4px;
+    background: var(--red);
+    margin-top: 36px;
+  }
+}

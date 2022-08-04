@@ -1,0 +1,30 @@
+.pdf-elem {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  &__icon {
+
+  }
+}
+
+.pdf-elem-wrap-text {
+  margin-left: 18px;
+  &__headline {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    color: var(--black);
+    margin: 2px 0 0;
+  }
+  &__size {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: var(--grey-size);
+    margin: 0;
+  }
+}

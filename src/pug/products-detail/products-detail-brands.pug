@@ -1,0 +1,24 @@
+include ../ui/brand
+
+mixin productsDetailBrands(elems)
+  .products-detail-brands
+    h2.products-detail-brands__headline Мы работаем с брендами
+    .products-detail-brands-slider
+      .swiper-wrapper
+        each el in elems
+          .swiper-slide
+            +brand(el)
+
+      .wrap-brands-slider-control
+        .brands-slider-pagination
+
+        .brands-slider-line
+        .brands-slider-control
+          .brands-slider-control__elem.brands-slider-control__elem_prev
+            <svg width="13" height="24" viewBox="0 0 13 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M11.0479 1.90234L1.76629 11.2971C1.38146 11.6866 1.38146 12.3132 1.76629 12.7027L11.0479 22.0975" stroke="#BDBDBD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          .brands-slider-control__elem.brands-slider-control__elem_next
+            <svg width="13" height="24" viewBox="0 0 13 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M11.0479 1.90234L1.76629 11.2971C1.38146 11.6866 1.38146 12.3132 1.76629 12.7027L11.0479 22.0975" stroke="#BDBDBD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>

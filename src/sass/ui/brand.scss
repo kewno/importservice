@@ -1,0 +1,19 @@
+.brand {
+  width: 138.54px;
+  height: 138.54px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--grey-white);
+  cursor: pointer;
+
+  &__img {
+    filter: grayscale(100%);
+  }
+
+  &:hover {
+    .brand__img {
+      filter: grayscale(0%);
+    }
+  }
+}

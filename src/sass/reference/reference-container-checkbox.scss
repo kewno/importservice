@@ -1,0 +1,80 @@
+.reference-container-checkbox {
+  display: flex;
+  flex-wrap: wrap;
+  //align-items: center;
+
+  &__elem {
+    margin-right: 15px;
+    &:first-child {
+      margin-bottom: 17px;
+    }
+  }
+
+  &__reset {
+    margin: 0 0 0 4px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 200%;
+    color: #BDBDBD
+  }
+}
+
+
+@media (max-width: 1363px) {
+  .reference-container-checkbox {
+
+    &__reset {
+      margin: 10px 0 0 4px;
+    }
+  }
+}
+
+@media (max-width: 1300px) {
+  .reference-container-checkbox {
+    &__elem {
+      &:nth-child(8) {
+        margin-bottom: 17px;
+      }
+    }
+
+    &__reset {
+      margin: 0 0 0 4px;
+    }
+  }
+}
+
+@media (max-width: 1165px) {
+  .reference-container-checkbox {
+    &__reset {
+      margin: 10px 0 0 4px;
+    }
+  }
+}
+
+
+@media (max-width: 1100px) {
+  .reference-container-checkbox {
+    &__reset {
+      margin: 0 0 0 4px;
+    }
+  }
+}
+
+
+@media (max-width: 500px) {
+  .reference-container-checkbox {
+    &__elem {
+      margin-right: 5px;
+      margin-bottom: 10px;
+      &:first-child {
+        margin-bottom: inherit;
+      }
+      &:nth-child(8) {
+        margin-bottom: inherit;
+      }
+    }
+  }
+}

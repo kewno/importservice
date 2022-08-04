@@ -1,0 +1,14 @@
+include ../ui/logistic-elem
+include ../ui/provide
+
+mixin productsLogistics()
+  .products-logistics
+    .products-logistics__headline Хорошо выстроенная логистика
+    .products-logistics-wrap-provide
+      +provide('provide-1.png', 'Доставка за 24 часа', 'Доставки от пермского и новосибирского склада за 24 часа (300 км)')
+      +provide('provide-2.png', 'Консигнационные склады', 'Возможность открытия консигнационного склада на вашем предприятии')
+    .products-logistics-wrap-logistic
+        +logisticElem('logistic-elem-1.png', 'Собственный автопарк', 'Грузовые машины, грузоподъемностью до 5 тонн с доставкой до склада покупателя груза от 1 кг.')
+        +logisticElem('logistic-elem-2.png', 'Наемный транспорт', 'Привлечение наемного транспорта с доставкой до склада покупателя грузов от 1 кг')
+        +logisticElem('logistic-elem-3.png', 'Отправка через ТК', 'Отправки сборными грузами через ТК: Деловые Линии, ПЭК, ДПД, Байкал и другие с экспедированием до склада покупателя и межтерминальные перевозки')
+        +logisticElem('logistic-elem-4.png', 'Авиа доставка', 'Осуществление экспресс (авиа) доставок')

@@ -1,20 +1,58 @@
 include ./reference-container-checkbox
+include ./reference-container-pdf
+include ../ui/sidebar-manager
+
 
 mixin referenceContent
-  .reference-content
-    .reference-content-left
-      +referenceContainerCheckbox([
-        {id: 'pnh1', text: 'SKF'},
-        {id: 'pnh2', text: 'FAG'},
-        {id: 'pnh3', text: 'CRAFT Bearings'},
-        {id: 'pnh4', text: 'NSK'},
-        {id: 'pnh5', text: 'NTN SNR EUROPE'},
-        {id: 'pnh6', text: 'LUK'},
-        {id: 'pnh7', text: 'INA'},
-        {id: 'pnh8', text: 'PEER'},
-        {id: 'pnh9', text: 'LOCTITE'},
-        {id: 'pnh10', text: 'VBF'},
-        {id: 'pnh11', text: 'АПЗ-20 (UBP)'},
-        {id: 'pnh12', text: 'TIMKEN'}
-      ])
-    .reference-content-right
+  .container__2920
+    .reference-content
+      .reference-content-left
+        h1.reference-content-left__headline Справочная информация
+        p.reference-content-left__text В этом разделе можно скачать каталоги представленных  на сайте производителей, а так же техническую и иную соответствующую информацию.
+
+        +referenceContainerCheckbox([
+          {id: 'pnh1', text: 'SKF'},
+          {id: 'pnh2', text: 'FAG'},
+          {id: 'pnh3', text: 'CRAFT Bearings'},
+          {id: 'pnh4', text: 'NSK'},
+          {id: 'pnh5', text: 'NTN SNR EUROPE'},
+          {id: 'pnh6', text: 'LUK'},
+          {id: 'pnh7', text: 'INA'},
+          {id: 'pnh8', text: 'PEER'},
+          {id: 'pnh9', text: 'LOCTITE'},
+          {id: 'pnh10', text: 'VBF'},
+          {id: 'pnh11', text: 'АПЗ-20 (UBP)'},
+          {id: 'pnh12', text: 'TIMKEN'}
+        ])
+
+        +referenceContainerPdf('reference-pdf-img-1.png', 'Fischers Aktien-Gesellschaft', [{href: '/', headline: 'Каталог подшипников 2022', size: '12.25'},
+          {href: '/', headline: 'Каталог подшипников 2022', size: '12.25'},
+          {href: '/', headline: 'Каталог подшипников 2022', size: '12.25'},
+          {href: '/', headline: 'Технический регламент', size: '12.25'},
+          {href: '/', headline: 'Технический регламент', size: '12.25'},
+          {href: '/', headline: 'Технический регламент', size: '12.25'}])
+        +referenceContainerPdf('reference-pdf-img-2.png', 'TIMKEN', [{href: '/', headline: 'Каталог подшипников 2022', size: '12.25'},
+          {href: '/', headline: 'Каталог подшипников 2022', size: '12.25'},
+          {href: '/', headline: 'Каталог подшипников 2022', size: '12.25'},
+          {href: '/', headline: 'Технический регламент', size: '12.25'},
+          {href: '/', headline: 'Технический регламент', size: '12.25'},
+          {href: '/', headline: 'Технический регламент', size: '12.25'}])
+        +referenceContainerPdf('reference-pdf-img-3.png', 'SKF', [{href: '/', headline: 'Каталог подшипников 2022', size: '12.25'},
+          {href: '/', headline: 'Каталог подшипников 2022', size: '12.25'},
+          {href: '/', headline: 'Каталог подшипников 2022', size: '12.25'},
+          {href: '/', headline: 'Технический регламент', size: '12.25'},
+          {href: '/', headline: 'Технический регламент', size: '12.25'},
+          {href: '/', headline: 'Технический регламент', size: '12.25'}])
+        +referenceContainerPdf('reference-pdf-img-4.png', 'Nippon Seiko Kabushiki Kaisha', [{
+          href: '/', headline: 'Каталог подшипников 2022',
+          size: '12.25'
+        },
+          {href: '/', headline: 'Каталог подшипников 2022', size: '12.25'},
+          {href: '/', headline: 'Каталог подшипников 2022', size: '12.25'},
+          {href: '/', headline: 'Технический регламент', size: '12.25'},
+          {href: '/', headline: 'Технический регламент', size: '12.25'},
+          {href: '/', headline: 'Технический регламент', size: '12.25'}])
+      .reference-content-right
+        +sidebarManager
+
+      //headline, size
