@@ -17,3 +17,15 @@
     }
   }
 }
+
+@media (max-width: 500px) {
+  .brand {
+    width: 76.47px;
+    height: 76.47px;
+
+    &__img {
+      width: 40.86px;
+      height: 17.62px;
+    }
+  }
+}

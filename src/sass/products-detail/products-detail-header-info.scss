@@ -17,3 +17,24 @@
     margin-bottom: 25px;
   }
 }
+
+
+@media (max-width: 800px) {
+  .products-detail-header-info {
+    bottom: 70px;
+
+    &__headline {
+      font-size: 36px;
+      line-height: 43px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .products-detail-header-info {
+    &__headline {
+      font-size: 26px;
+      line-height: 33px;
+    }
+  }
+}

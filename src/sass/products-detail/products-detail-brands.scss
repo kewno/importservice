@@ -1,7 +1,6 @@
 .products-detail-brands {
   padding-top: 175px;
-  overflow: hidden;
-  //width: auto;
+  max-width: 1125.77px;
   &__headline {
     font-weight: 700;
     font-size: 40px;
@@ -13,10 +12,28 @@
 
 .products-detail-brands-slider {
   overflow: hidden;
-
+  max-width: 1125px;
   .swiper-wrapper {
     .swiper-slide {
       width: auto;
+    }
+  }
+}
+
+.brands-slider-pagination {
+  display: flex;
+  align-items: center;
+  .service-pagination__point {
+    width: 9px;
+    height: 9px;
+    margin-right: 20px;
+    box-sizing: border-box;
+    border: 1px solid var(--control-grey);
+    &.swiper-pagination-bullet-active {
+      width: 12px;
+      height: 12px;
+      background: var(--black);
+      border: 1px solid var(--black);
     }
   }
 }
@@ -33,6 +50,19 @@
   &__elem {
     align-items: center;
     display: flex;
+    cursor: pointer;
+    svg {
+      * {
+        stroke: var(--black);
+      }
+    }
+    &.swiper-button-disabled {
+      svg {
+        * {
+          stroke: var(--control-grey);
+        }
+      }
+    }
     &_next {
       margin: 0 15px 0 40px;
       transform: rotate(180deg);
@@ -44,5 +74,40 @@
   width: 100%;
   height: 1px;
   background: #BDBDBD;
-  margin: 0 20px 0; // 10px
+  margin: 0 20px 0; //10px
+}
+
+
+@media (max-width: 800px) {
+  .products-detail-brands {
+    padding-top: 60px;
+    &__headline {
+      font-size: 32px;
+      line-height: 38px;
+    }
+  }
+
+  .wrap-brands-slider-control {
+    margin-top: 40px;
+  }
+}
+
+//@media (max-width: 700px) {
+//  .products-logistics-wrap-logistic
+//}
+//products-logistics-wrap-logistic
+
+@media (max-width: 500px) {
+  .products-detail-brands {
+    padding-top: 140px; //60
+    &__headline {
+      font-size: 24px;
+      line-height: 28px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .wrap-brands-slider-control {
+    margin-top: 20px;
+  }
 }

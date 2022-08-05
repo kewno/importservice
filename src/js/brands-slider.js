@@ -2,25 +2,29 @@ import Swiper from 'swiper';
 
 document.addEventListener('DOMContentLoaded', () => {
   new Swiper('.products-detail-brands-slider', {
-    spaceBetween: 20,//26
+    spaceBetween: 22,//26
     slidesPerView: "auto",
-    // pagination: {
-    //   el: ".swiper-pagination",
-    //   clickable: true,
-    //   renderBullet: function (index, className) {
-    //     return '<span class="' + className + ' swiper-pagination__point' + '">' + "</span>";
-    //   },
-    // // },
+    slidesPerGroup: 7,
+
+    breakpoints: {
+      600: {
+        spaceBetween: 4,
+        slidesPerView: "auto",
+        slidesPerGroup: 5,
+      }
+    },
+
     navigation: {
-      nextEl: ".control-header-slider-next",
-      prevEl: ".control-header-slider-prev",
+      nextEl: ".products-detail-brands .brands-slider-control__elem_next",
+      prevEl: ".products-detail-brands .brands-slider-control__elem_prev",
     },
     pagination: {
-      el: ".service-pagination",
+      el: ".products-detail-brands .brands-slider-pagination",
       clickable: true,
       renderBullet: function (index, className) {
         return '<span class="' + className + ' service-pagination__point' + '">' + "</span>";
       },
+      dynamicMainBullets: 3,
     },
   })
 })

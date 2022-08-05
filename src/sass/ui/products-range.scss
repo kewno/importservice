@@ -1,9 +1,9 @@
 .products-range {
   width: 100%;
-  max-width: 360px;
-  height: 304px;
+  //max-width: 360px;
+  min-height: 304px;
   background: var(--bej);
-  padding: 45px 0 0 28px;
+  padding: 45px 10px 0 28px;
   box-sizing: border-box;
 
   &__headline {
@@ -13,6 +13,8 @@
     font-size: 24px;
     line-height: 28px;
     margin: 0 0 20px;
+    //display: inline-block;
+    //word-break:break-all;
   }
   &__text {
     color: var(--black);
@@ -24,3 +26,28 @@
     margin: 0;
   }
 }
+
+
+@media (max-width: 1620px) {
+  .products-range {
+    &__headline {
+      word-break: break-all;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .products-range {
+    &__headline {
+      //word-break: inherit;
+    }
+  }
+}
+
+//@media (max-width: 500px) {
+//  .products-range {
+//    &__headline {
+//      word-break: inherit;
+//    }
+//  }
+//}
