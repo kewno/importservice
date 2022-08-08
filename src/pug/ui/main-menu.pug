@@ -1,8 +1,8 @@
 include ../ui/main-menu-vertical
 include ../ui/btn
 
-mixin mainMenu(menu, className)
-  nav(class=`main-menu ${className}`)
+mixin mainMenu(menu, className, theme, logo)
+  nav(class=`main-menu ${className} ${theme}`)
     .main-menu__burder
       <svg width="35" height="33" viewBox="0 0 35 33" fill="none" xmlns="http://www.w3.org/2000/svg">
         <line x1="1.5" y1="1.5" x2="33.5" y2="1.5" stroke="white" stroke-width="3" stroke-linecap="round"/>
@@ -11,11 +11,17 @@ mixin mainMenu(menu, className)
       </svg>
     if className === 'main-menu_parthers'
       a(href='/').main-logo
-        img(src='../../images/logo-white.png').main-logo__logo
+        if logo !== undefined
+          img(src=`../../images/${logo}`).main-logo__logo
+        else
+          img(src='../../images/logo-white.png').main-logo__logo
     ul.main-menu-list
       if className === 'main-menu_parthers'
         a(href='/')
-          img(src='../../images/logo-white.png').main-menu-list__logo
+          if logo !== undefined
+            img(src=`../../images/${logo}`).main-logo__logo
+          else
+            img(src='../../images/logo-white.png').main-logo__logo
       each el in menu
         li.main-menu-elem
           a(href= href).main-menu-elem__href= el.name

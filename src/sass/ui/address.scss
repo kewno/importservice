@@ -1,0 +1,36 @@
+.address {
+  &__headline {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    margin: 0 0 23px;
+    color: var(--black);
+  }
+  &__address {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    color: var(--black);
+    margin: 0;
+  }
+  &__phone {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    color: var(--black);
+    margin: 13px 0 11px;
+  }
+  &__email {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    color: var(--red);
+    margin: 0;
+  }
+}

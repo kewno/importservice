@@ -1,0 +1,38 @@
+include ../ui/sidebar-manager
+include ../ui/address
+include ../ui/requisites
+include ../ui/block-image
+include ./contacts-form
+include ../footer/footer-top
+
+mixin contactsContainer
+  .container__2920
+    .contacts-container
+      .contacts-container-left
+        h1.contacts-container-left__headline ООО «ИМПОРТСЕРВИС»
+
+        .contacts-container-address
+          .contacts-container-address__elem
+            +address('Пермь', '614088, Россия, Пермь, ул. Космонавта Леонова, 75', '+7 (342) 225-00-88', 'bearing.perm@gmail.com')
+          .contacts-container-address__elem
+            +address('Новосибирск', '614088, Россия, Новосибирск 100', '+7 (342) 225-00-88', 'bearing.perm@gmail.com')
+
+        .contacts-container-wrap-requisites
+          +requisites('Скачать реквизиты компании')
+        .contacts-container__wrap-contacts
+          +footerTop
+
+        .contacts-container-wrap-block-image
+          +blockImage('Наши специалисты оперативно ответят на все ваши вопросы. Для каждого клиента прикрепляется персональный менеджер отдела продаж и  операционист по обработке любых входящих запросов.')
+        .contacts-container__wrap-manager
+          +sidebarManager
+          //.contacts-container-left__wrap-requisites
+        .contacts-container__wrap-contacts-form
+          +contactsForm
+          //.footer-top__left
+            h2.footer-top-headline Связаться  с нами!
+            +footerTopForm
+            .footer-top-text!= `Пожалуйста, заполните все поля - так нам будет легче связаться с вами<br> Нажимая на кнопку «Отправить», я даю согласие на обработку персональных данных`
+
+      .contacts-container-right
+        +sidebarManager

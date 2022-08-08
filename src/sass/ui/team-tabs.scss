@@ -1,0 +1,121 @@
+.team-tabs {
+  display: flex;
+  //border-bottom: 3px solid #E0E0E0;
+  position: relative;
+
+  &__line {
+    height: 3px;
+    width: 100%;
+    background: var(--grey-line);
+    position: absolute;
+    bottom: 0;
+  }
+
+  &__elem {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    margin: 0 60px 0 0;
+    cursor: pointer;
+    border-bottom: 7px solid var(--red);
+    z-index: 2;
+    letter-spacing: 0.012em;
+    &:last-child {
+      margin-right: 0;
+    }
+    &_active {
+      border-bottom: 7px solid var(--red);
+    }
+  }
+
+  &__headline {
+    display: none;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+  }
+}
+
+
+.team-tabs-menu {
+  display: none;
+  position: relative;
+  margin: 0 0 0 14px;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 140%;
+  color: var(--black);
+  border-bottom: 2px solid var(--red);
+  cursor: pointer;
+
+  &__arrow {
+    margin-left: 10px;
+  }
+
+  &:hover + .team-tabs-submenu {
+    display: block;
+  }
+
+}
+
+.team-tabs-submenu {
+  display: none;
+  margin: 0;
+  position: absolute;
+  top: 32px;
+  left: 65px;
+  z-index: 3;
+  background: var(--bej);
+  padding: 11px 27px 0 12px;
+
+  &:hover {
+    display: block;
+  }
+
+  &__elem {
+    margin: 0 0 10px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+@media (max-width: 1300px) {
+  .team-tabs {
+    &__elem {
+      margin: 0 20px 0 0;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .team-tabs {
+    align-items: center;
+    position: relative;
+    &__elem {
+      display: none;
+    }
+    &__line {
+      display: none;
+    }
+    &__headline {
+      display: block;
+    }
+  }
+
+  .team-tabs-menu {
+    display: block;
+  }
+}

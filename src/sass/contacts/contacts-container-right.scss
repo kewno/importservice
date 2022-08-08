@@ -1,0 +1,9 @@
+.contacts-container-right {
+  margin-top: 10px;
+}
+
+@media (max-width: 800px) {
+  .contacts-container-right {
+    display: none;
+  }
+}

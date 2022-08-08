@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   z-index: 4;
-  &__burder {
+  .main-menu__burder { //&__burder
     display: none;
     cursor: pointer;
   }
@@ -84,7 +84,16 @@
 }
 
 
-.main-menu_black {
+.main-menu.main-menu_black {
+  //border: 2px solid red;
+  .main-menu__burder {
+    svg {
+      * {
+        opacity: 1;
+        stroke: var(--black);
+      }
+    }
+  }
   .main-menu-elem {
     &__href {
       color: var(--black);
@@ -113,6 +122,14 @@
       .btn {
         color: var(--black);
         border-color: var(--black);
+      }
+    }
+
+    &__phone-image {
+      svg {
+        * {
+          stroke: var(--black);
+        }
       }
     }
   }
@@ -144,7 +161,7 @@
 
 @media (max-width: 1100px) {
   .main-menu {
-    &__burder {
+    .main-menu__burder { //&__burder
       display: block;
     }
   }

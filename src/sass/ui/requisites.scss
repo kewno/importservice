@@ -1,0 +1,18 @@
+.requisites {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  &__img {
+
+  }
+  &__headline {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    border-bottom: 2px dashed var(--red);
+    margin: 0 0 0 15px;
+    color: var(--black);
+  }
+}

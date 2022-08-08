@@ -1,0 +1,37 @@
+.contacts {
+  &__wrap-footer {
+    margin: 20px auto 0; //-60px
+    max-width: 1170px;
+    padding: 0 350px 90px 20px;
+    //margin-top: -60px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .contacts {
+    &__wrap-footer {
+      padding: 0 50px 90px 20px;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .contacts {
+    &__wrap-footer {
+      //padding-top: 50px;
+      padding: 50px 20px 90px 20px;
+      margin: 0 auto 0;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .contacts {
+    &__wrap-footer {
+      padding: 60px 20px 65px 20px;
+      .footer-bottom {
+        padding: 120px 0 0;
+      }
+    }
+  }
+}
