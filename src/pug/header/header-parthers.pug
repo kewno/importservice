@@ -22,20 +22,23 @@ include ../ui/pages-pagination
     {name: 'Контакты', href: '/', submenu: null}
   ]
 
-mixin headerParthers(back, pagination)
+mixin headerParthers(back, pagination, theme, logo)
   header.header-parthers(style=`background-image: url('../../images/${back}');`)
     .header__burger
       +popUpMenuHeader(menu)
     .header__wrap-menu
       .container__2920
-        +mainMenu(menu, 'main-menu_parthers')
+        if theme !== undefined && logo !== undefined
+          +mainMenu(menu, 'main-menu_parthers', theme, logo)
+        else
+          +mainMenu(menu, 'main-menu_parthers')
     .header-parthers__pagination
       .container__2920
         +pagesPagination(pagination)
 
 
 
-    //header.header
+    //header.header menu, className, theme, logo (main-menu_black, )
       .header__burger
         //+popUpMenuHeader(menu)
       .header__wrap-menu

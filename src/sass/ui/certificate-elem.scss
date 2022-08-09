@@ -1,0 +1,131 @@
+.wrap-certificate-elem {
+  border: 1px solid var(--partners-bord);
+  max-width: 472px;
+  //width: 100%;
+  height: 790px;
+  box-sizing: border-box;
+  padding: 46.79px 43.97px 28px;
+  //margin: 25px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 31%;
+  margin: 0 0 50px;
+
+  &__href {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--grey-light);
+    margin: 0 auto;
+    display: inline-block;
+    text-decoration: none;
+
+    svg {
+      margin-left: 7px;
+      margin-bottom: 3px;
+    }
+  }
+
+  &:hover {
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+
+    .wrap-certificate-elem__href {
+      color: var(--red);
+    }
+  }
+}
+
+.certificate-elem {
+  &__img {
+    display: block;
+    width: 100%;
+  }
+  &__icon {
+    display: block;
+    margin: 15px 0 0;
+  }
+  &__headline {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    color: var(--black);
+    margin: 20px 0 10px;
+  }
+  &__text {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: var(--black);
+    margin: 0 0 0;
+  }
+}
+
+@media (max-width: 1100px) {
+  .wrap-certificate-elem {
+    width: 48%;
+  }
+}
+
+@media (max-width: 800px) {
+  .wrap-certificate-elem {
+    border: 1px solid var(--partners-bord);
+    max-width: 350px; //353px
+    //width: 100%;
+    height: 790px;
+    margin: 0 0 20px;
+    padding: 46.79px 32.88px 28px;
+  }
+  .certificate-elem {
+    &__img {
+      max-width: 100%;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .wrap-certificate-elem {
+    max-width: 600px;
+    width: 100%;
+    padding: 31.75px 29.81px 28px;
+  }
+
+  .certificate-elem { //536px
+    &__img {
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .wrap-certificate-elem {
+    min-height: 536px;
+    height: 100%;
+
+    &__href {
+      margin-top: 10px;
+    }
+  }
+
+  .certificate-elem {
+    &__img {
+      width: 260.38px;
+      height: 217.76px;
+    }
+
+    &__headline {
+      font-size: 24px;
+      line-height: 28px;
+    }
+
+    &__text {
+
+    }
+  }
+}

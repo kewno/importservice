@@ -1,0 +1,38 @@
+include ../header/header-parthers
+include ../main/main-mailing
+include ../ui/pop-up-call
+include ../ui/main-menu
+include ../footer/footer
+include ../service/service-content
+include ../certificates/certificates-content
+include ../ui/pop-up-multimedia
+
+doctype html
+html(lang="en")
+
+head
+  meta(charset="UTF-8")
+  meta(name="viewport" content="width=device-width, initial-scale=1.0")
+  title Certificates
+
+body.certificates
+  +headerParthers('header-certificates.png', [{href:'/', text:'О компании'}, {href:'/', text:'Сертификаты'}], 'main-menu_black', 'logo-black.png')
+  +certificatesContent([
+    {
+      img: 'certificate-6.png',
+      icon: 'certificate-icon-6.png',
+      headline: 'Deutsche Kugellagerfabrik GmbH',
+      text: 'В 2012г. компании Импортсервис был присвоен статус дистрибьютора компании Kugel und Rollenlagerwerk Leipzig Gmbh  (Германия).',
+      href: {text: 'www.krw.de', href: '/'}
+    },
+    {img: 'certificate-1.png', icon: 'certificate-icon-1.png', headline: 'NSK Ltd', text: 'Компания Импортсервис в 2007г. получила статус  официального авторизованного дистрибьютора NSK LTD (Япония) на территории Российской Федерации.', href: {text: 'www.nskeurope.ru', href: '/'}},
+    {img: 'certificate-2.png', icon: 'certificate-icon-2.png', headline: 'SKF', text: 'В 2012г. компании Импортсервис был присвоен статус дистрибьютора компании Kugel und Rollenlagerwerk Leipzig Gmbh  (Германия).', href: {text: 'www.skf.com/ru', href: '/'}},
+    {img: 'certificate-3.png', icon: 'certificate-icon-3.png', headline: 'Italcuscinetti S.P.A (Бренд ISB)', text: 'Компания Импортсервис в 2007г. получила статус  официального авторизованного дистрибьютора NSK LTD (Япония) на территории Российской Федерации.', href: {text: 'www.isb-industries.com/en/', href: '/'}},
+    {img: 'certificate-4.png', icon: 'certificate-icon-4.png', headline: 'Timken', text: 'Компания Импортсервис в 2007г. получила статус  официального авторизованного дистрибьютора NSK LTD (Япония) на территории Российской Федерации.', href: {text: 'www.timken.com/ru/', href: '/'}},
+    {img: 'certificate-5.png', icon: 'certificate-icon-5.png', headline: 'ZVL Slovakia', text: 'В 2012г. компании Импортсервис был присвоен статус дистрибьютора компании Kugel und Rollenlagerwerk Leipzig Gmbh  (Германия).', href: {text: 'www.krw.de', href: '/'}}
+    ])
+  +mainMailing
+  +footer
+  +popUpCall
+  +popUpMultimedia('pop-up-multimedia_slider', '10,09,2021', 'Известный производитель подшипников')
+  //certificates

@@ -11,6 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let phoneBurgerPoint = document.querySelector('.menu-burger-wrap-phone__call');
 
+  let certificates = document.querySelector('.wrap-certificate-elem');
+
+
   let body = document.querySelector('body');
 
 
@@ -66,12 +69,11 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if (phoneClose != null && phonePopUp != null && phonePoint != null) {
-
     phoneClose.onclick = () => closePhonePopUp();
     phonePoint.onclick = () => openPhonePopUp();
   }
 
-  let multimedia = document.querySelector('.main-page .wrap-pop-up-multimedia');
+  let multimedia = document.querySelector('.wrap-pop-up-multimedia'); //.main-page .wrap-pop-up-multimedia
   let multimediaClose = document.querySelector('.wrap-pop-up-multimedia .pop-up-multimedia__cross .cross');
 
   let openFullScreen = () => {
@@ -99,7 +101,14 @@ document.addEventListener('DOMContentLoaded', () => {
   if (multimediaClose !== null)
     multimediaClose.onclick = () => closeFullScreen();
 
-
+  // certificate pop-up для открытия
+  let certificate = document.querySelectorAll('.wrap-certificate-elem');
+  
+  if (certificate != null) {
+    certificate.forEach(function(elem) {
+      elem.onclick = () => openFullScreen();
+    })
+  }
   // let toggleSearch = () => {
   //   let footerMenu = document.querySelector ('.main-menu-footer');
   //   let footerInput = document.querySelector ('.footer-bottom-wrap-input');
