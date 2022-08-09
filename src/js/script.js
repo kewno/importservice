@@ -96,7 +96,8 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   }
 
-  multimediaClose.onclick = () => closeFullScreen();
+  if (multimediaClose !== null)
+    multimediaClose.onclick = () => closeFullScreen();
 
 
   // let toggleSearch = () => {
