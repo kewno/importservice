@@ -103,12 +103,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // certificate pop-up для открытия
   let certificate = document.querySelectorAll('.wrap-certificate-elem');
-  
+
   if (certificate != null) {
     certificate.forEach(function(elem) {
       elem.onclick = () => openFullScreen();
     })
   }
+
+
+  //cloose filter
+  let popUpFilter = document.querySelector('.pop-up-filter');
+  let crossPopUpFilter = document.querySelector('.pop-up-filter .pop-up-filter-head__cross');
+
+  // news-content-settings-burger
+
+  crossPopUpFilter.onclick = (e) => {
+    popUpFilter.style.display = 'none';
+    console.log(e.target);
+  }
+
+  //open filter
+  let openBurger = document.querySelector('.news-content-settings-burger');
+  openBurger.onclick = (e) => {
+    console.log(e.target.className);
+    if (e.target.className === 'news-content-settings-burger') { // || e.target.className === 'news-content-settings-burger__headline'
+
+    } //news-content-settings-burger
+    //popUpFilter.style.display = 'flex';
+  }
+
+
   // let toggleSearch = () => {
   //   let footerMenu = document.querySelector ('.main-menu-footer');
   //   let footerInput = document.querySelector ('.footer-bottom-wrap-input');

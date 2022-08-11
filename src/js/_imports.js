@@ -9,3 +9,4 @@ import './partners-slider';
 import './header-service-slider';
 import './manager-slider';
 import './brands-slider';
+import './news-slider';

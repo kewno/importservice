@@ -15,6 +15,7 @@ include ../ui/review
 include ../main/main-slaider
 include ../main/main-bearing
 include ../ui/pop-up-accessories
+include ../ui/check-slide
 
 
 -
@@ -53,6 +54,9 @@ body
   //pop-up-multimedia_video pop-up-multimedia_slider
   .ui-kit-wrap-menu
     +mainMenu(menu)
+
+  .ui-wrap-check-slide
+    +checkSlide('ass')
 
   .ui-kit-wrap-arrows
     +arrow('arrow_red arrow_right')
@@ -108,4 +112,5 @@ body
   .ui-kit-wrap-reviews
     +review('reviews-5.png')
 
-+popUpAccessories('accessories-1.png', 'Подшипники и комплектующие')
+
+//+popUpAccessories('accessories-1.png', 'Подшипники и комплектующие')

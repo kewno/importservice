@@ -1,0 +1,42 @@
+.check-slide {
+  width: 60px;
+  position: relative;
+  cursor: pointer;
+  &__label {
+    display: inline-block;
+    height: 30px;
+    width: 100%;
+    //max-width: 100px;
+    border: 1.4px solid var(--red);
+    border-radius: 33px;
+    background: var(--red); //--white
+    box-sizing: border-box;
+    cursor: pointer;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: var(--white);
+      border-radius: 50px;
+      top: 5px;
+      left: 6px;
+    }
+  }
+  &__check {
+    display: none;
+  }
+
+  &__check:checked + &__label {
+    background: var(--white);
+
+    //.check-slide__label {
+      &::after {
+        right: 6px;
+        left: inherit;
+        background: var(--red);
+      }
+    //}
+  }
+}

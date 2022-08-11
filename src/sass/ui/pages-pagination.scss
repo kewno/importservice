@@ -21,6 +21,7 @@
       margin-right: 10px;
     }
   }
+
 }
 
 .pages-pagination-elem {
@@ -37,7 +38,10 @@
     * {
       stroke: white;
     }
+  }
 
+  &:hover {
+    opacity: 0.8;
   }
 }
 

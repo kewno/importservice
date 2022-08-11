@@ -1,0 +1,26 @@
+include ../ui/news-elem-white
+include ../ui/btn
+include ../news/news-content-settings
+include ../news/news-content-settings-burger
+include ../mediateca/mediateca-pagination
+
+mixin newsContent(elemCheck, elemOption, elemNews)
+  .container__2920
+    .news-content
+      .news-container-wrap-check
+        +newsContentSettings(elemCheck, elemOption)
+        +newsContentSettingsBurger(elemCheck, elemOption)
+      .news-container-elems
+        each el in elemNews
+          .news-container-elems__elem
+            +newsElemWhite(el.href, el.btn, el.headline, el.text, el.date, el.image)
+      .content-pagination-button
+        .content-wrap-btn
+          +btn('Показать еще', 'btn_white', '/')
+        +mediatecaPagination([{href: '/', text: '1'}, {href: '/', text: '2'}, {href: '/', text: '3'}, {
+          href: '/',
+          text: '4'
+        }, {href: '/', text: '5'}, {href: '/', text: '9'}, {href: '/', text: '10'}])
+
+
+      //el.href, el.btn, el.headline, el.text, el.date, el.image

@@ -1,0 +1,40 @@
+.pop-up-filter {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: var(--white);
+  width: 100%;
+  max-width: 800px;
+  padding: 30px 30px 20px 20px;
+  box-sizing: border-box;
+  z-index: 4;
+}
+
+.pop-up-filter-head {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 35px;
+
+  &__headline {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 140%;
+    text-align: center;
+  }
+}
+
+.pop-up-filter-checked {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+
+  &__elem {
+    display: flex;
+    align-items: center;
+    margin: 0 10px 15px 0;
+  }
+}
