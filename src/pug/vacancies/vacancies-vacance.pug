@@ -1,0 +1,18 @@
+include ../ui/vacance-elem
+include ../mediateca/mediateca-pagination
+
+mixin vacanciesVacance(elem)
+  .vacancies-vacance
+    h2.vacancies-vacance__headline Открытые вакансии
+    .vacancies-vacance-container
+      each el in elem
+        .vacancies-vacance-container__elem
+          +vacanceElem(el.headline, el.text, el.btn, el.href)
+    .vacancies-vacance-pagination
+      .vacancies-wrap-btn
+        +btn('Показать еще', 'btn_white', '/')
+      +mediatecaPagination([{href: '/', text: '1'}, {href: '/', text: '2'}, {href: '/', text: '3'}, {
+        href: '/',
+        text: '4'
+      }, {href: '/', text: '5'}, {href: '/', text: '9'}, {href: '/', text: '10'}])
+//headline, text, btn, href

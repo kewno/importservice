@@ -1,0 +1,127 @@
+.vacancies-vacance {
+  padding: 120px 0 0;
+  &__headline {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 43px;
+    color: var(--black);
+    margin: 0 0 60px;
+  }
+}
+
+.vacancies-vacance-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  &__elem {
+    width: 31.7%;
+    margin-bottom: 30px;
+  }
+}
+
+.vacancies-vacance-pagination {
+  display: flex;
+  max-width: 680px;
+  justify-content: space-between;
+  margin-left: auto;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.vacancies-wrap-btn {
+  width: 247.37px;
+}
+
+
+@media (max-width: 1320px) {
+  .vacancies-vacance-container {
+    &__elem {
+      width: 49.3%;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .vacancies-vacance {
+    padding: 60px 0 0;
+
+    &__headline {
+      margin: 0 0 43px;
+    }
+  }
+
+  .vacancies-vacance-container {
+    margin: 0 -16px 0 0;
+    &__elem {
+      margin-bottom: 20px;
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3) {
+        display: none;
+      }
+    }
+  }
+
+
+  .vacancies-vacance-pagination {
+    display: flex;
+    max-width: 100%;
+    margin-top: 45px;
+    flex-direction: column;
+  }
+
+  .vacancies-wrap-btn {
+    width: 247.37px;
+    margin-bottom: 25px;
+    .btn {
+      height: 50px;
+      font-size: 18px;
+    }
+  }
+}
+
+@media (max-width: 610px) {
+  .vacancies-vacance-container {
+    margin: 0;
+    &__elem {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .vacancies-vacance-container {
+    margin: 0 -24px 0 -20px;
+
+    &__elem {
+      margin-bottom: 18px;
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+  .vacancies-vacance {
+    padding: 50px 0 0;
+
+    &__headline {
+      margin: 0 0 33px;
+    }
+  }
+
+  .vacancies-vacance-pagination {
+    margin-top: 55px;
+  }
+
+  .vacancies-wrap-btn {
+    width: 247.37px;
+    margin-bottom: 20px;
+    .btn {
+      height: 55px;
+      line-height: 55px;
+      font-size: 18px;
+    }
+  }
+}

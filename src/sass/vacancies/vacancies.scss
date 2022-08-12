@@ -1,0 +1,13 @@
+.vacancies {
+  &__wrap-sidebar {
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .vacancies {
+    &__wrap-sidebar {
+      display: flex;
+    }
+  }
+}

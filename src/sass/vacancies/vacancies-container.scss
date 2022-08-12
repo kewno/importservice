@@ -1,0 +1,24 @@
+.vacancies-container {
+  display: flex;
+  &__left {
+    margin-right: 23px;
+    width: 100%;
+    max-width: 1132px;
+  }
+  &__right {
+    transform: translateY(-57px);
+  }
+}
+
+
+@media (max-width: 1100px) {
+  .vacancies-container {
+    &__left {
+      margin: 0;
+      max-width: 1132px;
+    }
+    &__right {
+      display: none;
+    }
+  }
+}

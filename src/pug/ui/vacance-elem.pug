@@ -1,0 +1,14 @@
+include ../ui/btn
+
+mixin vacanceElem(headline, text, btn, href)
+  .vacance-elem
+    a(href= href.href).vacance-elem__href= href.text
+    h2.vacance-elem__headline= headline
+    p.vacance-elem__text= text
+    .vacance-elem__btn
+      +btn('Отправить резюме', 'btn_white', `${btn.href}`)
+    //.vacance-elem-wrap-btn
+      .vacance-elem-wrap-btn__btn
+        +btn('Отправить резюме', 'btn_white', `${btn.href}`)
+    //.vacance-elem__btn
+      +btn('Отправить резюме', 'btn_white', `${btn.href}`)

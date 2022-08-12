@@ -1,4 +1,4 @@
-mixin sidebarManager
+mixin sidebarManager(head, headline, text, phone, date, specialists)
   .sidebar-manager
     .manager
       .manager-slider
@@ -11,13 +11,13 @@ mixin sidebarManager
             img(src='../../images/manager-slider-slide.png').swiper-slide__img
 
       .manager-description
-        p.manager-description__head ваш персональный менеджер
-        h3.manager-description__headline Павел Бычков
-        p.manager-description__text Начальник отдела поддержки клиентов
+        p.manager-description__head= head
+        h3.manager-description__headline= headline
+        p.manager-description__text= text
         .wrap-manager-info
           .manager-info
-            .manager-info__phone +7 (342) 256 59 24
-            .manager-info__date Пн-Пт: с 9.00 до 18.00
+            .manager-info__phone= phone
+            .manager-info__date= date
           .manager-info-icon
             img(src='../../images/manager-phone.png')
         div.manager-description-useful
@@ -38,6 +38,7 @@ mixin sidebarManager
               <svg width="13" height="24" viewBox="0 0 13 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M11.0479 1.90234L1.76629 11.2971C1.38146 11.6866 1.38146 12.3132 1.76629 12.7027L11.0479 22.0975" stroke="#BDBDBD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
+    if specialists === true
     .specialists
       h3.specialists__headline Наши специалисты оперативно ответят на все ваши вопросы
       p.specialists__text Для каждого клиента прикрепляется персональный менеджер отдела продаж и  операционист по обработке любых входящих запросов.

@@ -1,0 +1,74 @@
+.pop-up-vacancies-resume {
+  &__headline {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    color: var(--black);
+    margin: 0 0 20px;
+  }
+}
+.pop-up-vacancies-blank {
+  display: flex;
+  justify-content: space-between;
+  background: var(--bej);
+  box-sizing: border-box;
+  padding: 26px 37px 31px 25px;
+
+  &__text {
+    max-width: 350px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    margin: 0;
+  }
+}
+
+.pop-up-vacancies-blank-elem {
+  &__img {
+
+  }
+  &__name {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    color: var(--red);
+    margin: 5px 0 0;
+  }
+  &__size {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--grey-text);
+    margin: 0;
+  }
+}
+
+
+@media (max-width: 800px) {
+  .pop-up-vacancies-blank {
+    padding: 42px 44px 38px 25px;
+
+    &__text {
+      max-width: 420px;
+    }
+  }
+
+  .pop-up-vacancies-blank-elem {
+    margin-top: -5px;
+  }
+}
+
+@media (max-width: 700px) {
+  .pop-up-vacancies-blank {
+    flex-wrap: wrap;
+
+    &__text {
+      margin-bottom: 20px;
+    }
+  }
+}

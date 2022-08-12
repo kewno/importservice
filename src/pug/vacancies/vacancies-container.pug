@@ -1,0 +1,10 @@
+include ./vacancies-content
+include ../ui/sidebar-manager
+
+mixin vacanciesContainer(elemVacance)
+  .container__2920
+    .vacancies-container
+      .vacancies-container__left
+        +vacanciesContent(elemVacance)
+      .vacancies-container__right
+        +sidebarManager('менедже по работе с персоналом', 'Жанна Иванова', 'Начальник отдела работы по персоналу', '+7 (342) 256 59 24', 'olgaolga@email.ru', false)

@@ -1,0 +1,68 @@
+include ../ui/btn
+include ../ui/pop-up-vacancies-data
+include ../ui/pop-up-vacancies-list
+include ../ui/pop-up-vacancies-resume
+include ../ui/pop-up-vacancies-form
+
+mixin popUpVacancies(headline)
+  div(style=`background: url("../../images/back-black.png") repeat center center;`).wrap-pop-up-vacancies
+    .pop-up-vacancies
+      .pop-up-vacancies-head
+        h2.pop-up-vacancies-head__headline Подробности
+        img(src=`../../images/cross.png`).pop-up-vacancies-head__cross
+      //.pop-up-vacancies-body
+      h3.pop-up-vacancies__headline= headline
+      .pop-up-vacancies__wrap-data
+        +popUpVacanciesData({
+          arrName: ['Работодатель:', 'Место работы:', 'Регион:', 'Режим работы:', 'Дата публикации:'],
+          arrValue: ['Компания «ИМПОРТСЕРВИС»', 'г. Пермь, ул. Ленина, д.3', 'Пермский край', 'Постоянная работа', '24.02.2021']
+        })
+
+      .pop-up-vacancies__wrap-list
+        +popUpVacanciesList('Обязанности', ['Разработка аналоговой электроники',
+          'Трассировка печатных плат',
+          'Подбор компонентов для электронных схем',
+          'Симуляция работы',
+          'Сборка и отладка печатных плат',
+          'Проведение испытаний разработанных плат'])
+
+      .pop-up-vacancies__wrap-list
+        +popUpVacanciesList('Требования', ['Опытный пользователь ПК',
+          'Умение работать в ПО по проектированию печатных плат (желательно Altium Designer)',
+          'Желательно умение работать в системах моделирования электрических',
+          'Чтение технической документации на английском языке',
+          'Опыт разработки аналоговой электроники',
+          'Опыт трассировки печатных плат'])
+
+      .pop-up-vacancies__wrap-list
+        +popUpVacanciesList('Условия', ['Постоянная работа, полный день, работа на территории работодателя.',
+          'График работы с 8-00 до 17-00,5/2.',
+          'Работа в стабильной, современной, динамично развивающейся компании.',
+          'Достойный уровень заработной платы.',
+          'Своевременная выплата заработной платы.',
+          'Оклад + премия.'])
+
+      .pop-up-vacancies__wrap-resume
+        +popUpVacanciesResume
+        //h2.pop-up-vacancies-resume__headline Отправить резюме
+        //.pop-up-vacancies-blank
+          p.pop-up-vacancies-blank__text Если у Вас нет готового резюме, скачайте бланк резюме, заполните необходимые поля и отправьте его нам через форму
+          .pop-up-vacancies-blank-elem
+            img(src='../../images/download-file.png').pop-up-vacancies-blank-elem__img
+            p.pop-up-vacancies-blank-elem__name Бланк резюме
+            p.pop-up-vacancies-blank-elem__size 0.23 MB (.doc)
+
+      .pop-up-vacancies__wrap-form
+        +popUpVacanciesForm()
+
+      //form.pop-up-vacancies-form
+      //  .pop-up-vacancies-form__input
+      //    +inputElem()
+      //  .pop-up-vacancies-form__input
+      //    +inputElem()
+      //  .pop-up-vacancies-form-fail
+      //    .pop-up-vacancies-form-fail__btn
+      //      +btn()
+      //  .pop-up-vacancies-form__btn
+      //    +btn()
+      //  p.pop-up-vacancies-form__description Пожалуйста, заполните все поля - так нам будет легче связаться с вами Нажимая на кнопку «Отправить», я даю согласие на обработку персональных данных

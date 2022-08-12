@@ -1,0 +1,93 @@
+//vacancies
+include ../header/header-parthers
+include ../main/main-mailing
+include ../ui/pop-up-call
+include ../ui/pop-up-vacancies
+include ../ui/main-menu
+include ../footer/footer
+include ../vacancies/vacancies-container
+include ../vacancies/vacancies-news
+include ../ui/sidebar-manager
+
+doctype html
+html(lang="en")
+-
+  let elemNews = [
+    {
+      href: '/',
+      btn: 'акция',
+      headline: 'Скидки до 30% на остатки на складе',
+      date: '11.09.2021',
+      image: 'news-white-3.png'
+    },
+    {
+      href: '/',
+      btn: 'новости',
+      headline: 'Новые тахометры SKF расширяют возможности по сбору данных для...',
+      text: 'Уникальный ультразвуковой прибор, способный «слышать» звук пластичной смазки, заполняющей подшипник, повышает точность',
+      date: '12.09.2021',
+    },
+    {
+      href: '/',
+      btn: 'обзор',
+      headline: 'Agri Disc Hub от NSK – надежность в экстремальных условиях...',
+      date: '11.09.2021',
+      image: 'news-white-1.png'
+    },
+    {
+      href: '/',
+      btn: 'спецпредложение',
+      headline: 'Ультразвуковой прибор повышает точность повторного смазывания',
+      text: 'SKF добавила в свой ассортимент базового оборудования для мониторинга состояния три новых портативных ',
+      date: '12.09.2021',
+    },
+  ]
+  let elemVacance = [
+    {headline: 'Ведущий специалист отдела снабжения со знанием английского языка', text: 'от 30 000 до 50 000 руб.', btn: {href: '/', text: 'Отправить резюме'}, href: {href: '/', text: 'отдел снабжения'}},
+    {headline: 'Менеджер по снабжению', text: 'от 30 000 до 50 000 руб.', btn: {href: '/', text: 'Отправить резюме'}, href: {href: '/', text: 'отдел снабжения'}},
+    {headline: 'Ведущий инженер-конструктор', text: 'от 30 000 до 50 000 руб.', btn: {href: '/', text: 'Отправить резюме'}, href: {href: '/', text: 'основное производство'}},
+    {
+      headline: 'Ведущий специалист отдела снабжения со знанием английского языка',
+      text: 'от 30 000 до 50 000 руб.',
+      btn: {href: '/', text: 'Отправить резюме'},
+      href: {href: '/', text: 'отдел снабжения'}
+    },
+    {
+      headline: 'Менеджер по снабжению',
+      text: 'от 30 000 до 50 000 руб.',
+      btn: {href: '/', text: 'Отправить резюме'},
+      href: {href: '/', text: 'отдел снабжения'}
+    },
+    {
+      headline: 'Ведущий инженер-конструктор',
+      text: 'от 30 000 до 50 000 руб.',
+      btn: {href: '/', text: 'Отправить резюме'},
+      href: {href: '/', text: 'основное производство'}
+    },
+    {headline: 'Ведущий специалист отдела снабжения со знанием английского языка', text: 'от 30 000 до 50 000 руб.', btn: {href: '/', text: 'Отправить резюме'}, href: {href: '/', text: 'отдел снабжения'}},
+    {headline: 'Менеджер по снабжению', text: 'от 30 000 до 50 000 руб.', btn: {href: '/', text: 'Отправить резюме'}, href: {href: '/', text: 'отдел снабжения'}},
+    {headline: 'Ведущий инженер-конструктор', text: 'от 30 000 до 50 000 руб.', btn: {href: '/', text: 'Отправить резюме'}, href: {href: '/', text: 'основное производство'}}]
+head
+  meta(charset="UTF-8")
+  meta(name="viewport" content="width=device-width, initial-scale=1.0")
+  title Vacancies
+
+body.vacancies
+  +headerParthers('header-vacancies.png', [{href:'/', text:'О компании'}, {href:'/', text:'Вакансии'}])
+  +vacanciesContainer(elemVacance, elemNews)
+  +vacanciesNews(elemNews)
+  .vacancies__wrap-sidebar
+    .container__2920
+      +sidebarManager('менедже по работе с персоналом', 'Жанна Иванова', 'Начальник отдела работы по персоналу', '+7 (342) 256 59 24', 'olgaolga@email.ru', false)
+
+  +mainMailing
+  +footer
+  +popUpCall
+  +popUpVacancies('Ведущий инженер-конструктор', 'Компания «ИМПОРТСЕРВИС»', 'г. Пермь, ул. Ленина, д.3', 'Пермский край', 'Постоянная работа', '24.02.2021')
+
+
+
+
+
+
+

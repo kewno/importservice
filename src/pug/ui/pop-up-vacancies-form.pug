@@ -1,0 +1,26 @@
+include ../ui/btn
+include ../ui/input-elem
+
+
+mixin popUpVacanciesForm
+  form.pop-up-vacancies-form
+    .pop-up-vacancies-form__input
+      +inputElem('type', 'Введите ваше имя', null, null, null)
+    .pop-up-vacancies-form__input
+      +inputElem('type', 'Введите ваш телефон', null, null, null)
+    .pop-up-vacancies-form-put-fail
+      p.pop-up-vacancies-form-put-fail__headline Прикрепленый файл
+      .pop-up-vacancies-form-put-fail-icons
+        img(src='../../images/file-doc.png').pop-up-vacancies-form-put-fail-icons__file
+        p.pop-up-vacancies-form-put-fail-icons__text Мое резюме
+        img(src='../../images/dell.png').pop-up-vacancies-form-put-fail-icons__dell
+    .pop-up-vacancies-form-fail
+      .pop-up-vacancies-form-fail__btn
+        +btn('Выберите файл', 'btn_white')
+      .pop-up-vacancies-form-fail-texts
+        p.pop-up-vacancies-form-fail-texts__headline Прикрепите файл  с резюме
+        p.pop-up-vacancies-form-fail-texts__text Файл с резюме в формате: doc, docx, rtf, pdf
+    .pop-up-vacancies-form__btn
+      +btn('Отправить', 'btn_red')
+    p.pop-up-vacancies-form__description Пожалуйста, заполните все поля - так нам будет легче связаться с вами Нажимая на кнопку «Отправить», я даю согласие на обработку персональных данных
+

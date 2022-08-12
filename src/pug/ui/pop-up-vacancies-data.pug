@@ -1,0 +1,8 @@
+mixin popUpVacanciesData(elem)
+  .pop-up-vacancies-data
+    .pop-up-vacancies-data-names
+      each el in elem.arrName
+        p.pop-up-vacancies-data-names__elem= el
+    .pop-up-vacancies-data-data
+      each el in elem.arrValue
+        p.pop-up-vacancies-data-data__elem= el
