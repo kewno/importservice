@@ -1,0 +1,13 @@
+include ../ui/btn
+
+mixin serviceDetailServices
+  .service-detail-services
+    .service-detail-services-texts
+      p.service-detail-services-texts__text Наши специалисты оперативно ответят на все ваши вопросы. Для каждого клиента прикрепляется персональный менеджер отдела продаж и  операционист по обработке любых входящих запросов.
+      .service-detail-services-texts-button
+        .service-detail-services-texts-button__btn_red
+          +btn('Оставить заявку', 'btn_red', '/')
+        .service-detail-services-texts-button__btn_invisible
+          +btn('К списку услуг', 'btn_invisible', '/')
+    .service-detail-services__img
+      img(src='../../images/block-image.png')

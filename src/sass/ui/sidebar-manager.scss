@@ -21,6 +21,7 @@
 
 
 .manager-description {
+  position: relative;
   padding: 0 0 22px 33px;
   background: var(--bej);
   &__head {
@@ -54,9 +55,6 @@
     color: var(--black);
     max-width: 290px;
   }
-  //&__useful {
-  //
-  //}
 }
 
 .manager-description-useful {
@@ -109,7 +107,7 @@
   cursor: pointer;
 }
 
-.manager-slider-conrol { //border: 2px solid #BDBDBD;
+.manager-slider-conrol {
   margin-top: 40px;
   display: flex;
   align-items: center;
@@ -139,16 +137,53 @@
     }
   }
   &__line {
-    width: 158px;
+    width: 100%;
+    max-width: 158px;
     height: 1px;
     background: var(--control-grey);
     margin-top: 1px;
   }
 }
 
+.manager-description-pop-up {
+  position: absolute;
+  background: var(--red);
+  z-index: 2;
+  left: 0;
+  width: 100%;
+  top: 305px;
+}
+.manager-description-pop-up-list {
+  margin: 0;
+  padding: 26px 0;
+  width: 100%;
+  &__elem {
+    color: var(--white);
+    padding-left: 45px;
+    position: relative;
+    margin: 0 0 27px;
+
+    &:last-child {
+      margin: 0;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 30px;
+      top: 5px;
+      border-radius: 50px;
+      width: 6px;
+      height: 6px;
+      background: var(--white);
+    }
+  }
+}
+
+
 .manager-slider-conrol-arrow {
   display: flex;
-  //align-items: center;
+
   > * {
     cursor: pointer;
     display: flex;
@@ -156,7 +191,7 @@
 
     svg {
       * {
-        stroke: var(--control-grey);
+        stroke: var(--black);
       }
     }
   }
@@ -164,7 +199,7 @@
   .swiper-button-disabled {
     svg {
       * {
-        stroke: var(--black);
+        stroke: var(--control-grey);
       }
     }
   }
@@ -210,16 +245,18 @@
   }
 
   .manager-slider {
-    width: 360px;
+    //width: 360px;
     height: 396px;
+    width: 50%;//width: 40%;
     .swiper-wrapper {
-      width: 360px;
+      max-width: 360px;
       .swiper-slide {
         height: 396px;
         width: 100%;
         &__img {
           height: 396px;
-          object-fit: contain;
+          object-fit: cover;
+          //max-width: 100%;
         }
       }
     }
@@ -227,9 +264,20 @@
 
   .manager-description {
     max-width: 530px; //510px
-    width: 100%;
-    padding: 0 0 22px 70px;
+    //width: 100%;
+    width: 50%;//width: 70%;
+    padding: 0 10px 22px 34px;//padding: 0 0 22px 70px;
     box-sizing: border-box;
+  }
+
+  .manager-description-pop-up {
+    top: 0;
+    height: 100%;
+  }
+
+  .manager-description-pop-up-list {
+    margin: 0;
+    padding: 56px 0 0;
   }
 
   .specialists {
@@ -245,7 +293,7 @@
 @media (max-width: 800px)  { //swiper-slide
   .manager-description {
     max-width: 366px;
-    padding: 0 0 22px 40px;
+    padding: 0 10px 22px 34px;
   }
 
   .manager-slider {
@@ -266,27 +314,78 @@
       margin: 0 0 15px;
     }
   }
+
+  .manager-info-icon {
+    padding-right: 10px;
+    //cursor: pointer;
+  }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 675px) {
+  .sidebar-manager {
+    max-width: 700px;
+    width: 100%;
+  }
+
   .manager {
-    display: inline-block;
-    //flex-wrap: nowrap;
+    flex-direction: column;
+    //width: 100%;
   }
 
-  .sidebar-manager {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  .manager-slider {
+    width: 100%;
+    max-width: 680px;
+    .swiper-wrapper {
+      .swiper-slide {
+        &__img {
+          width: 100%;
+          max-width: 680px;
+        }
+      }
+    }
   }
-}
 
-@media (max-width: 500px) {
+  .manager-description-pop-up {
+    top: 305px;
+    height: inherit;
+  }
+  .manager-description-pop-up-list {
+    //margin: 0;
+    padding: 26px 0;
+  }
+
+  .manager-description {
+    width: 100%;
+    max-width: 680px;
+  }
+
+  .manager-slider-conrol {
+    &__line {
+      max-width: 558px;
+      margin-right: 10px;
+    }
+  }
+
   .specialists {
-    padding: 36px 10px 43px 10px;
-  }
-
-  .sidebar-manager {
-    max-width: 100%;
+    padding: 36px 22px 43px 33px;
   }
 }
+
+//@media (max-width: 700px) {
+//  .manager {
+//    display: inline-block;
+//    //flex-wrap: nowrap;
+//  }
+//
+//  .sidebar-manager {
+//    display: flex;
+//    flex-wrap: wrap;
+//    justify-content: center;
+//  }
+//}
+
+//@media (max-width: 420px) {
+//  .sidebar-manager {
+//    margin: 0 -22px 0 -20px;
+//  }
+//}

@@ -14,6 +14,15 @@ mixin sidebarManager(head, headline, text, phone, date, specialists)
         p.manager-description__head= head
         h3.manager-description__headline= headline
         p.manager-description__text= text
+        .manager-description-pop-up
+          ul.manager-description-pop-up-list
+            p.manager-description-pop-up-list__elem Подбор аналога
+            p.manager-description-pop-up-list__elem Информация о наличии на складе
+            p.manager-description-pop-up-list__elem Стоимость (цена)
+            p.manager-description-pop-up-list__elem Срок поставки
+            p.manager-description-pop-up-list__elem Сервисное обслуживание
+            p.manager-description-pop-up-list__elem REP – партнёрство
+            p.manager-description-pop-up-list__elem Оформление договорных обязательств
         .wrap-manager-info
           .manager-info
             .manager-info__phone= phone

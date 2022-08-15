@@ -1,0 +1,11 @@
+mixin serviceDetailArticle(id, headline, text)
+  .service-detail-article
+    h3.service-detail-article__number= `${id}.`
+    .service-detail-article-texts
+      h3.service-detail-article-texts__headline= headline
+      if text.length > 1
+        each el in text
+          p.service-detail-article-texts__text.service-detail-article-texts__text_list= el
+      else
+        p.service-detail-article-texts__text= text
+      //p.service-detail-article-texts= text

@@ -1,0 +1,19 @@
+include ../ui/arrow
+
+mixin serviceDetailSlider(pagination)
+  .service-detail-slider
+    .slider
+      .swiper-wrapper
+        .swiper-slide
+          img(src='../../images/service-detail-slider-1.png').swiper-slide__image
+        .swiper-slide
+          img(src='../../images/service-detail-slider-1.png').swiper-slide__image
+      .service-detail-navigation
+        .service-detail-navigation-pagination
+          each el in pagination
+            .service-detail-navigation-pagination__elem
+              img(src=`../../images/${el}`)
+        .service-detail-navigation__prev
+          +arrow('arrow_white')
+        .service-detail-navigation__next
+          +arrow('arrow_red arrow_right')

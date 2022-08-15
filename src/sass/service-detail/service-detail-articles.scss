@@ -1,0 +1,45 @@
+.service-detail-articles {
+  &__elem {
+    margin: 53px 0 0; //margin: 60px 0 0; 58px
+    padding-right: 10px;
+
+    &:first-child {
+      margin: 31px 0 0;
+    }
+  }
+
+  &__line {
+    width: 225px;
+    height: 4px;
+    background: var(--red);
+    margin-top: 50px;
+  }
+}
+
+
+@media (max-width: 800px) {
+  .service-detail-articles {
+    &__elem {
+      margin: 39px 0 0;
+    }
+  }
+}
+
+
+@media (max-width: 500px) {
+  .service-detail-articles {
+    &__elem {
+      margin: 17px 0 0; //29px 0 0
+      padding-right: 0;
+
+      &:first-child {
+        margin: 38px 0 0;
+      }
+    }
+
+    &__line {
+      margin-top: 30px;
+    }
+  }
+}
+//

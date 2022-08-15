@@ -1,0 +1,8 @@
+include ../ui/service-detail-article
+
+mixin serviceDetailArticles(elem)
+  .service-detail-articles
+    each el in elem
+      .service-detail-articles__elem
+        +serviceDetailArticle(el.id, el.headline, el.text)
+    .service-detail-articles__line
