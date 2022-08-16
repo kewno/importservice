@@ -1,0 +1,57 @@
+include ../ui/sidebar-manager
+include ../ui/block-image
+include ../ui/quote
+include ./news-detail-article
+include ../ui/tables
+include ../service-detail/service-detail-slider
+
+mixin newsDetailContent(sidebar)
+  -
+    elem = [
+      {
+        headline: 'D-диаметр, мм',
+        rows: ['6', '8', '10', '20']
+      },
+      {
+        headline: 'L-длина, мм',
+        rows: ['250-800', '250-1200', '250-1600', '250-2000']
+      },
+      {
+        headline: 'Тип штуцера',
+        rows: ['-', '-', '-', '-']
+      },
+      {
+        headline: 'НСХ',
+        rows: ['ТХА (К), ТХК (L), ТЖК (J)']
+      },
+      {
+        headline: 'И/H',
+        rows: ['И - изолированный рабочий спай,<br> Н-неизлированный рабочий спай']
+      },
+      {
+        headline: 'Материал чехла',
+        rows: ['А - сталь 12х18Н10Т,<br> В - сталь 10х23Н18,<br> С - сталь ХНх45Ю (для D 10,20)']
+      },
+    ]
+
+  .container__2920
+    div(class=`${sidebar}`).news-detail-content
+      .news-detail-content-left
+        p.news-detail-content-left__date 11.09.2021
+        h1.news-detail-content-left__headline Ультразвуковой прибор повышает точность повторного смазывания
+        p.news-detail-content-left__text.news-detail-content-left__text_top Если Вы заинтересованы в перспективной работе, которая позволит раскрыть Ваши навыки и потенциал, пожалуйста, пришлите нам своё подробное резюме. Наши двери открыты для специалистов любого уровня, а также для молодых и целеустремленных людей, желающих пройти обучение по рабочим специальностям, с последующим трудоустройством в компании.
+        p.news-detail-content-left__text Каждое резюме будет внимательно рассмотрено. В случае заинтересованности Вашей кандидатурой, с Вами свяжется представитель компании.
+
+        .news-detail-content-left__wrap-slider
+          +serviceDetailSlider(['service-detail-pag-6.png', 'service-detail-pag-5.png', 'service-detail-pag-4.png', 'service-detail-pag-3.png', 'service-detail-pag-2.png', 'service-detail-pag-1.png'])
+        .news-detail-content-left__wrap-block
+          +blockImage('Цитата в тексте мы доверяем водоочистным сооружениям, которые поставляют нам питьевую воду, и верим, что пищевая промышленность защитит нас от аллергенов и бактерий.  ')
+        .news-detail-content-left__wrap-article
+          +newsDetailArticle
+        .news-detail-content-left__wrap-quote
+          +quote('Если Вы заинтересованы в перспективной работе, которая позволит раскрыть Ваши навыки и потенциал, пожалуйста, пришлите нам своё подробное резюме. Наши двери открыты для специалистоподробное резюме. Наши двери открыты для специалистов', 'Иван Иванов,  директор ООО Ласточка')
+        .news-detail-content-left__wrap-tables
+          +tables('Пример Заголовка 3', elem)
+
+      .news-detail-content-right
+        +sidebarManager('ваш персональный менеджер', 'Павел Бычков', 'Начальник отдела поддержки клиентов', '+7 (342) 256 59 24', 'Пн-Пт: с 9.00 до 18.00')

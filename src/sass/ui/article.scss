@@ -1,0 +1,47 @@
+.article {
+
+  &__headline {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    color: var(--red);
+    margin: 0 0 10px;
+  }
+}
+
+.article-list {
+  margin: 0;
+  padding-left: 22px;
+  &__elem {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    margin: 0 0 10px;
+  }
+}
+
+@media (max-width: 1040px) {
+  .article {
+    &__headline {
+      margin: 0 0 15px;
+    }
+  }
+
+  .article-list {
+    &__elem {
+      margin: 0 0 11px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .article {
+    &__headline {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+}

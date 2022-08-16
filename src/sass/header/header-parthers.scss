@@ -40,9 +40,23 @@
   }
 }
 
+@media (max-width: 1040px) {
+  .news-detail {
+    .header-parthers {
+      height: 490px;
+    }
+  }
+}
+
 @media (max-width: 800px) {
   .header-parthers {
     height: 300px;
+  }
+
+  .news-detail {
+    .header-parthers {
+      height: 300px;
+    }
   }
 }
 
@@ -69,5 +83,11 @@
 @media (max-width: 400px) {
   .header-parthers {
     height: 220px;
+  }
+
+  .news-detail {
+    .header-parthers {
+      height: 220px;
+    }
   }
 }

@@ -1,0 +1,6 @@
+mixin article(headline, elem)
+  .article
+    h3.article__headline= headline
+    ul.article-list
+      each el in elem
+        li.article-list__elem= el

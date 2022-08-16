@@ -47,6 +47,85 @@
   }
 }
 
+@media (max-width: 1620px) {
+  .service-detail-slider {
+    max-width: 1040px;
+    .slider {
+      .swiper-wrapper {
+        .swiper-slide {
+          max-width: 1040px;
+          height: 600px;
+
+          &__image {
+            height: 100%; //652px
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1300px) {
+  .service-detail-slider {
+    max-width: 762px;
+    .slider {
+      .swiper-wrapper {
+        .swiper-slide {
+          max-width: 762px;
+          height: 438px;
+
+          &__image {
+            height: 100%; //652px
+          }
+        }
+      }
+    }
+  }
+
+  .service-detail-navigation {
+    height: 70px;
+    .arrow {
+      height: 70px;
+      width: 70px;
+      svg {
+        width: 17.35px;
+        height: 35.12px;
+      }
+    }
+  }
+
+  .service-detail-navigation-pagination {
+    &__elem {
+      width: 65.05px;
+      height: 60px;
+
+      img {
+        width: 65.05px;
+        height: 70px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1040px) {
+  //width: 891px;
+  //height: 512px;
+  .service-detail-slider {
+    max-width: 891px;
+    .slider {
+      .swiper-wrapper {
+        .swiper-slide {
+          max-width: 891px;
+          height: 512px;
+
+          &__image {
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}
 
 @media (max-width: 800px) {
   .service-detail-slider {
@@ -65,29 +144,29 @@
     }
   }
 
-  .service-detail-navigation {
-    height: 80px;
-    .arrow {
-      height: 80px;
-      width: 80px;
-      svg {
-        width: 17.35px;
-        height: 35.12px;
-      }
-    }
-  }
-
-  .service-detail-navigation-pagination {
-    &__elem {
-      width: 76.05px;
-      height: 80px;
-
-      img {
-        width: 76.05px;
-        height: 80px;
-      }
-    }
-  }
+  //.service-detail-navigation {
+  //  height: 80px;
+  //  .arrow {
+  //    height: 80px;
+  //    width: 80px;
+  //    svg {
+  //      width: 17.35px;
+  //      height: 35.12px;
+  //    }
+  //  }
+  //}
+  //
+  //.service-detail-navigation-pagination {
+  //  &__elem {
+  //    width: 76.05px;
+  //    height: 80px;
+  //
+  //    img {
+  //      width: 76.05px;
+  //      height: 80px;
+  //    }
+  //  }
+  //}
 }
 
 

@@ -1,0 +1,13 @@
+mixin tables(headline, elem)
+  .tables
+    h3.tables__headline Пример Заголовка 3
+    .tables-table
+      each el in elem
+        .tables-table-column
+          p.tables-table-column__headline= el.headline
+          each e in el.rows
+            p.tables-table-column__row!= e
+          else
+            p.tables-table-column__row!= el.rows
+    .tables__line
+

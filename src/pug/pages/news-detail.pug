@@ -1,0 +1,66 @@
+//news-detail
+include ../header/header-parthers
+include ../main/main-mailing
+include ../ui/pop-up-call
+include ../ui/main-menu
+include ../footer/footer
+include ../header/header-service
+include ../news-detail/news-detail-content
+include ../vacancies/vacancies-news
+include ../service-detail/service-detail-slider
+include ../ui/sidebar-manager
+
+
+doctype html
+html(lang="en")
+
+-
+  let elemNews = [
+    {
+      href: '/',
+      btn: 'акция',
+      headline: 'Скидки до 30% на остатки на складе',
+      date: '11.09.2021',
+      image: 'news-white-3.png'
+    },
+    {
+      href: '/',
+      btn: 'новости',
+      headline: 'Новые тахометры SKF расширяют возможности по сбору данных для...',
+      text: 'Уникальный ультразвуковой прибор, способный «слышать» звук пластичной смазки, заполняющей подшипник, повышает точность',
+      date: '12.09.2021',
+    },
+    {
+      href: '/',
+      btn: 'обзор',
+      headline: 'Agri Disc Hub от NSK – надежность в экстремальных условиях...',
+      date: '11.09.2021',
+      image: 'news-white-1.png'
+    },
+    {
+      href: '/',
+      btn: 'спецпредложение',
+      headline: 'Ультразвуковой прибор повышает точность повторного смазывания',
+      text: 'SKF добавила в свой ассортимент базового оборудования для мониторинга состояния три новых портативных ',
+      date: '12.09.2021',
+    },
+  ]
+
+head
+  meta(charset="UTF-8")
+  meta(name="viewport" content="width=device-width, initial-scale=1.0")
+  title News detail
+
+body.news-detail.news-detail_sidebar
+  //+headerService() ('sidebar')
+  +headerParthers('header-news-detail.png', [{href:'/', text:'О компании'}, {href:'/', text:'Новости'}, {href:'/', text:'Подробно'}])
+  +newsDetailContent('sidebar')
+  +vacanciesNews(elemNews)
+  .news-detail__wrap-manager
+    +sidebarManager('ваш персональный менеджер', 'Павел Бычков', 'Начальник отдела поддержки клиентов', '+7 (342) 256 59 24', 'Пн-Пт: с 9.00 до 18.00')
+
+  +mainMailing
+  +footer
+  +popUpCall
+  //+serviceDetailSlider(['service-detail-pag-6.png', 'service-detail-pag-5.png', 'service-detail-pag-4.png', 'service-detail-pag-3.png', 'service-detail-pag-2.png', 'service-detail-pag-1.png'])
+
