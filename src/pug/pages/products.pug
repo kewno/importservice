@@ -6,7 +6,7 @@ include ../footer/footer
 include ../header/header-service
 include ../service/service-content
 include ../header/header-products-detail
-include ../products-detail/products-detail-container
+include ../products/products-container
 
 doctype html
 html(lang="en")
@@ -14,12 +14,12 @@ html(lang="en")
 head
   meta(charset="UTF-8")
   meta(name="viewport" content="width=device-width, initial-scale=1.0")
-  title ProductsDetail
+  title Products
 
-body.products-detail
+body.products
   //+headerService()
-  +headerProductsDetail(['header-products-detail.png', 'header-products-detail.png', 'header-products-detail.png'], [{href: '/', text: 'Продукция'}, {href: '/', text: 'Подшипники качения'}], 'Роликовые подшипники')
-  +productsDetailContainer()
+  +headerProductsDetail(['header-products.png', 'header-products.png', 'header-products.png'], [{href: '/', text: 'Продукция'}], 'Каталог продукции')
+  +productsContainer()
   //+headerParthers('reference-header.png', [{href:'/', text:'Продукция'}, {href:'/', text:'Справочная информация'}]) sidebar //('sidebar')
 
   +mainMailing

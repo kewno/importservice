@@ -1,0 +1,159 @@
+.products-container {
+  display: flex;
+}
+
+.products-container-right {
+  margin: 50px 0 0 26px;
+}
+
+.products-container-left {
+  padding: 50px 0 75px;
+  //flex-shrink: 2;
+  //width: 100%;
+  max-width: 1140px;
+  &__text {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 135%;
+    letter-spacing: 0.03em;
+    margin: 0;
+    max-width: 1040px;
+  }
+
+  &__line {
+    width: 225px;
+    height: 4px;
+    background: var(--red);
+    margin: 30px 0 49px;
+  }
+
+  &__wrap-logistic {
+    margin: -70px 0 0;
+  }
+}
+
+
+.products-container-left-industries {
+  padding-top: 70px;
+  &__headline {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 47px;
+    margin: 0;
+  }
+
+  &__text {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    margin: 20px 0 37px;
+  }
+
+  .service-content-card {
+    height: 145px;
+    &__headline {
+      font-size: 16px;
+      line-height: 26px;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+//@media (max-width: 1300px) {
+//  .products-container-left-industries {
+//
+//    &__cards {
+//
+//    }
+//  }
+//}
+
+@media (max-width: 1100px) {
+  .products-container {
+    flex-direction: column;
+  }
+
+  .products-container-right {
+    margin: 0;
+  }
+}
+
+
+@media (max-width: 800px) {
+  .products-container {
+    padding: 0 0 70px;
+  }
+
+  .products-container-left {
+    padding: 25px 0 102px;
+
+    &__text {
+      line-height: 139%;
+      letter-spacing: 0.03em;
+    }
+
+    &__line {
+      margin: 30px 0 60px;
+    }
+
+    &__wrap-logistic {
+      margin: -50px 0 0;
+    }
+  }
+
+  .products-container-left-industries {
+    padding-top: 63px;
+    &__headline {
+      font-size: 32px;
+      line-height: 38px;
+    }
+
+    &__text {
+      line-height: 26px;
+      margin: 12px 0 29px;
+      max-width: 670px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .products-container-left {
+    padding: 30px 0 87px;
+
+    &__text {
+
+    }
+
+    &__line {
+      margin: 31px 0 50px;
+    }
+
+    &__wrap-logistic {
+      margin: -30px 0 0;
+    }
+  }
+
+  .products-container-left-industries {
+    padding-top: 50px;
+    &__headline {
+      font-size: 24px;
+      line-height: 28px;
+    }
+    &__text {
+      line-height: 26.5px;
+      margin: 12px 0 20px;
+    }
+  }
+
+  .products-container-right {
+    margin: 0 -22px 0 -20px;
+  }
+}

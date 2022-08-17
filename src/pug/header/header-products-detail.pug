@@ -1,6 +1,6 @@
 include ../products-detail/products-detail-header-info
 
-mixin headerProductsDetail
+mixin headerProductsDetail(elem, pagination, headline)
   header.header-products-detail
     .header__burger
       +popUpMenuHeader(menu)
@@ -9,10 +9,9 @@ mixin headerProductsDetail
         +mainMenu(menu, 'main-menu_parthers')
     .header-service-slider
       .swiper-wrapper
-        .swiper-slide(style)
-          img(src='../../images/header-products-detail.png').swiper-slide__img
-        .swiper-slide
-          img(src='../../images/header-products-detail.png').swiper-slide__img
+        each el in elem
+          .swiper-slide
+            img(src=`../../images/${el}`).swiper-slide__img
       //+serviceHeaderInfo()
       .wrap-service-control
         .service-pagination
@@ -22,4 +21,10 @@ mixin headerProductsDetail
             +arrow('arrow_white')
           .service-control_next
             +arrow('arrow_red arrow_right')
-      +productsDetailHeaderInfo
+      +productsDetailHeaderInfo(pagination, headline)
+
+
+      //.swiper-slide
+        img(src='../../images/header-products-detail.png').swiper-slide__img
+      //.swiper-slide
+        img(src='../../images/header-products-detail.png').swiper-slide__img

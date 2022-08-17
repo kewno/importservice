@@ -1,0 +1,7 @@
+mixin productsCard(img, back, headline)
+  if img !== undefined
+    .products-card(style=`background-image: url('../../images/${img}'); background-repeat: no-repeat;`)
+      h3.products-card__headline= headline
+  else
+    .products-card(style=`background: var(--${back});`)
+      h3.products-card__headline= headline

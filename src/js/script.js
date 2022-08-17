@@ -116,22 +116,44 @@ document.addEventListener('DOMContentLoaded', () => {
   let crossPopUpFilter = document.querySelector('.pop-up-filter .pop-up-filter-head__cross');
 
   // news-content-settings-burger
-
-  crossPopUpFilter.onclick = (e) => {
-    popUpFilter.style.display = 'none';
-    console.log(e.target);
+  if (crossPopUpFilter != null && crossPopUpFilter != null) {
+    crossPopUpFilter.onclick = (e) => {
+      popUpFilter.style.display = 'none';
+      //console.log(e.target);
+    }
   }
 
   //open filter
   let openBurger = document.querySelector('.news-content-settings-burger');
-  openBurger.onclick = (e) => {
-    console.log(e.target.className);
-    if (e.target.className === 'news-content-settings-burger') { // || e.target.className === 'news-content-settings-burger__headline'
+  if (openBurger != null) {
+    openBurger.onclick = (e) => {
+      console.log(e.target.className);
+      if (e.target.className === 'news-content-settings-burger') { // || e.target.className === 'news-content-settings-burger__headline'
 
-    } //news-content-settings-burger
-    //popUpFilter.style.display = 'flex';
+      } //news-content-settings-burger
+      //popUpFilter.style.display = 'flex';
+    }
   }
 
+
+  //sidebar-popup
+  let markOpenPopUpSidebar = document.querySelector('.manager-description-useful');
+  let popUpSidebar = document.querySelector('.manager-description-pop-up');
+  let popUpSidebarStatus = false;
+
+  if (markOpenPopUpSidebar != null || popUpSidebar != null) {
+    //console.log(markOpenPopUpSidebar);
+    markOpenPopUpSidebar.onclick = () => {
+      //alert(popUpSidebarStatus);
+      if (popUpSidebarStatus === false) {
+        popUpSidebarStatus = true;
+        popUpSidebar.style.display = 'block';
+      } else if (popUpSidebarStatus === true) {
+          popUpSidebarStatus = false;
+          popUpSidebar.style.display = 'none';
+      }
+    }
+  }
 
   // let toggleSearch = () => {
   //   let footerMenu = document.querySelector ('.main-menu-footer');

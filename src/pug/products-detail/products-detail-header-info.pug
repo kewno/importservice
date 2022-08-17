@@ -1,5 +1,5 @@
-mixin productsDetailHeaderInfo
+mixin productsDetailHeaderInfo(pagination, headline)
   .container__2920
     .products-detail-header-info
-      +pagesPagination([{href: '/', text: 'Продукция'}, {href: '/', text: 'Подшипники качения'}])
-      h2.products-detail-header-info__headline Роликовые подшипники
+      +pagesPagination(pagination)
+      h2.products-detail-header-info__headline= headline
