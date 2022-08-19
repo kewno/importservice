@@ -1,0 +1,127 @@
+.company-slider-info {
+  //background: var(--red);
+  max-width: 710px; //750px
+  padding: 0 20px 30px 100px; //padding: 0 20px 30px 80px;
+  &__headline {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 47px;
+    margin: 0 0 16px;
+    color: var(--white);
+  }
+
+  &_bej {
+    .container-company-slider__wrap-info {
+      background: var(--bej);
+    }
+  }
+
+  &_grey {
+    .container-company-slider__wrap-info {
+      background: var(--grey-light);
+    }
+  }
+}
+
+.reverse {
+  .company-slider-info {
+    padding: 0 100px 30px 20px; // null
+
+    &__headline {
+      color: var(--black);
+    }
+  }
+}
+
+.company-slider-info-texts {
+  &__text {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    color: var(--white);
+    margin: 0 0 14px;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &__bold {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    color: var(--white);
+    margin: 18px 0 0;
+    //max-width: 700px;
+  }
+}
+
+.reverse {
+  .company-slider-info-texts {
+    &__text {
+      color: var(--black);
+    }
+  }
+}
+
+
+@media (max-width: 1100px) {
+  .company-slider-info { //532px
+    padding: 0 20px 30px 80px;
+
+    &__headline {
+      font-size: 32px;
+      line-height: 38px;
+    }
+
+    &_grey {
+
+      .container-company-slider__wrap-info {
+        min-height: 480px;
+      }
+    }
+  }
+
+  .reverse {
+    .company-slider-info {
+      padding: 0 20px 30px 80px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .company-slider-info {
+    padding: 0 40px 0 72px;
+
+    &__headline {
+      font-size: 24px;
+      line-height: 28px;
+    }
+
+    &__text {
+
+    }
+
+    &_red {
+      .container-company-slider__wrap-info {
+        min-height: 829px;
+      }
+    }
+
+    &_bej {
+      .container-company-slider__wrap-info {
+        min-height: 840px;
+      }
+    }
+
+    &_grey {
+      .container-company-slider__wrap-info {
+        min-height: 626px;
+      }
+    }
+  }
+}

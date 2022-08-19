@@ -1,0 +1,67 @@
+//company
+include ../main/main-mailing
+include ../ui/pop-up-call
+include ../header/header-service
+include ../header/header-contacts
+include ../footer/footer
+include ../company/company-container
+
+doctype html
+html(lang="en")
+
+head
+  meta(charset="UTF-8")
+  meta(name="viewport" content="width=device-width, initial-scale=1.0")
+  title Company
+
+body.company
+  +headerContacts('header-company.png', {btn: 'Смотреть видео', headline: 'Крупнейший дистрибьютор подшипниковой продукции премиум-брендов в России под управлением WMS', link: [{href: '/', text: 'О компании'}]})
+  +companyContainer()
+  //+contactsContainer
+  //+headerService()
+  //+headerProductsDetail()
+  //+productsDetailContainer()
+  //+headerParthers('reference-header.png', [{href:'/', text:'Продукция'}, {href:'/', text:'Справочная информация'}]) sidebar //('sidebar')
+  +companySlider(
+    ['company-slider-1.png', 'company-slider-1.png', 'company-slider-1.png'],
+    {
+      type: '',
+      headline: 'Безопасность',
+      texts: [
+        'Наша продукция - основа безопасностипредприятия и его бесперебойной работы. Несмотря на то, что мы являемся дистрибьютерами продукции, мы отвечаем заее качество и становимся вашим партнером взащите интересов компании при наличии производственного брака.',
+        'Для обеспечения полной безопасности нашихпартнеров в 2020 году мы создалисобственный высокотехнологичныйобучающего центра для технических службпредприятий-заказчиков.'],
+      bold: [
+        'Все 15 000 видов продукции соответствуют требованиям ГОСТ 520 - 20II, ISO 9001 - 2008'
+      ]
+    },
+    'company-slider-info_red')
+  +companySlider(
+    ['company-slider-2.png', 'company-slider-2.png', 'company-slider-2.png'],
+    {
+      type: '',
+      headline: 'Забота',
+      texts: ['Забота для нас начинается c теплого приема и комфортных переговоров, включает в себя полноетехническое сопровождение процесса покупки продукции и не заканчивается после продажи.',
+        'Мы предоставляем полный цикл сервиса потехническому обслуживанию предприятий-партнеров и всей поставленной продукции.',
+        'Вам не нужно будет думать об обслуживании и ремонте — всю операционную работу мы берем на себя.',
+        'Также как мы заботимся о партнерах, мы заботимся и о наших сотрудниках: в новом современное офисном пространстве для них открыты тренажерный зал,  эргономичнаязона отдыха и питания.'],
+    },
+    'company-slider-info_bej',
+    'reverse')
+  +companySlider(
+    ['company-slider-3.png', 'company-slider-3.png', 'company-slider-3.png'],
+    {
+      type: '',
+      headline: 'Экологичность',
+      texts: [
+        'Загрязнение окружающей среды — серьезный фактор риска для будущего нашей планеты. Как крупная международная компания мы считаем себя обязанными вносить свой вклад вразвитие экологичных проектов и сохранение здоровья людей.',
+        'На наших 5000 м2 офисного пространства мыследим за использованием биоразлагаемыхматериалов, обогащаем кислородом и влагой воздух благодаря фитостенам для сохранения здоровья наших сотрудников.',
+      ]
+    },
+    'company-slider-info_grey'
+  )
+  +mainMailing
+  +footer()
+  //.contacts__wrap-footer
+    +footerTop
+    +footerBottom()
+  +popUpCall

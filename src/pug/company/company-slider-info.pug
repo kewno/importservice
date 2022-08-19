@@ -1,0 +1,9 @@
+mixin companySliderInfo(headline, texts, bold)
+  .company-slider-info
+    h2.company-slider-info__headline= headline
+    .company-slider-info-texts
+      //p= texts[0]
+      each el in texts
+        p.company-slider-info-texts__text= el
+      if bold !== null
+        h3.company-slider-info-texts__bold= bold

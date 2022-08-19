@@ -1,0 +1,8 @@
+mixin companyYears(img, headline, bold, text)
+  .company-years
+    if img !== null
+      .company-years-img
+        img(src=`../../images/${img}`).company-years-img__img
+    h3.company-years__headline= headline
+    p.company-years__text_bold= bold
+    p.company-years__text= text

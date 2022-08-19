@@ -1,0 +1,31 @@
+.company-container {
+  padding: 55px 0 0;
+
+  &__wrap-range {
+    padding: 60px 0 55px;
+  }
+
+  &__wrap-values {
+    padding: 60px 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .company-container {
+    padding: 70px 0 0;
+
+    &__wrap-range {
+      padding: 45px 0 50px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .company-container {
+    padding: 40px 0 0;
+
+    &__wrap-values {
+      padding: 55px 0 72px;
+    }
+  }
+}

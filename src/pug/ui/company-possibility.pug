@@ -1,0 +1,14 @@
+mixin companyPossibility(type, img, headline, texts, lists)
+  div(class=`${type}`).company-possibility
+    img(src=`../../images/${img}`).company-possibility__img
+    .company-possibility-content
+      h2.company-possibility__headline= headline
+      if texts !== null
+        .company-possibility-texts
+          each el in texts
+            p.company-possibility-texts__text= el
+
+      if lists !== null
+        .company-possibility-lists
+          each el in lists
+            p.company-possibility-lists__list= el

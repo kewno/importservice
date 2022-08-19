@@ -10,4 +10,5 @@ import './header-service-slider';
 import './manager-slider';
 import './brands-slider';
 import './news-slider';
+import './company-slider';
 import './service-detail-slider'

@@ -1,0 +1,60 @@
+.company-possibilitys {
+  &__headline {
+    margin: 0;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 47px;
+    color: var(--black);
+    max-width: 660px;
+  }
+}
+
+.company-possibilitys-container {
+  padding: 130px 0 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+@media (max-width: 1300px) {
+  .company-possibilitys-container {
+    flex-wrap: wrap;
+    justify-content: space-around;//space-between
+  }
+}
+
+@media (max-width: 900px) {
+  .company-possibilitys-container {
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 800px) {
+  .company-possibilitys {
+    &__headline {
+      font-size: 32px;
+      line-height: 38px;
+      max-width: 530px;
+    }
+  }
+}
+
+@media (max-width: 680px) {
+  .company-possibilitys-container {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .company-possibilitys {
+    &__headline {
+      font-size: 24px;
+      line-height: 28px;
+      max-width: 280px;
+    }
+  }
+
+  .company-possibilitys-container {
+    padding: 105px 0 0;
+  }
+}
