@@ -1,8 +1,86 @@
+include ./pop-up-accessories-list
+
 mixin popUpAccessories(headImg, headline)
-  div(style=`background: url("../../images/back-black.png") repeat center center;`).wrap-pop-up-accessories black fon
-    .pop-up-accessories white fon
+  div(style=`background: url("../../images/back-black.png") repeat center center;`).wrap-pop-up-accessories
+    .pop-up-accessories
       .pop-up-accessories-head
         img(src=`../../images/${headImg}`).pop-up-accessories-head__img
         h2.pop-up-accessories-head__headline= headline
-    //.accessories-wrap-cross
+        img(src='../../images/cross.png').pop-up-accessories-head__cross
 
+      .pop-up-accessories-container
+        .pop-up-accessories-content
+          .pop-up-accessories-content-img
+            img(src='../../images/accessories-content-1.png').pop-up-accessories-content__img
+          h3.pop-up-accessories-content__headline Гидравлические инструменты для монтажа и демонтажа
+      .pop-up-accessories-container
+        .pop-up-accessories-content
+          .pop-up-accessories-content-img
+            img(src='../../images/accessories-content-2.png').pop-up-accessories-content__img
+          h3.pop-up-accessories-content__headline Механические инструменты для монтажа и демонтажа
+      .pop-up-accessories-container
+        .pop-up-accessories-content
+          .pop-up-accessories-content-img
+            img(src='../../images/accessories-content-3.png').pop-up-accessories-content__img
+          h3.pop-up-accessories-content__headline Нагреватели для монтажа и демонтажа
+      .pop-up-accessories-container
+        .pop-up-accessories-content
+          .pop-up-accessories-content-img
+            img(src='../../images/accessories-content-4.png').pop-up-accessories-content__img
+          h3.pop-up-accessories-content__headline Инструменты для выверки соосности
+
+
+
+
+      .pop-up-accessories-elem
+        .pop-up-accessories-elem-left
+          .pop-up-accessories-elem-left-wrap-img
+            img(src=`../../images/accessories-1-1.png`).pop-up-accessories-elem-left__img
+          h3.pop-up-accessories-elem-left__headline Подшипники качения
+        .pop-up-accessories-elem-right
+          .pop-up-accessories-elem-right-list
+            +popUpAccessoriesList('accessories-1-1-1.png', 'Шарикоподшипники', null)
+            +popUpAccessoriesList('accessories-1-1-1.png', 'Роликоподшипники', ['Радиальные шарикоподшипники',
+              'Корпусные подшипники',
+              'Радиально-упорные подшипники',
+              'Самоустанавливающиеся шарикоподшипники',
+              'Упорные шарикоподшипники',
+              'Упорно-радиальные шарикоподшипники']
+            )
+            +popUpAccessoriesList('accessories-1-1-1.png', 'Принадлежности подшипников', null)
+            +popUpAccessoriesList('accessories-1-1-1.png', 'Подшипники - опорные ролики', null)
+
+      .pop-up-accessories-elem
+        .pop-up-accessories-elem-left
+          .pop-up-accessories-elem-left-wrap-img
+            img(src=`../../images/accessories-1-2.png`).pop-up-accessories-elem-left__img
+          h3.pop-up-accessories-elem-left__headline Подшипниковые узлы и корпуса
+        .pop-up-accessories-elem-right
+          .pop-up-accessories-elem-right-list
+            +popUpAccessoriesList('accessories-1-1-1.png', 'Шарикоподшипниковые узлы', null)
+            +popUpAccessoriesList('accessories-1-1-1.png', 'Корпуса подшипников', null)
+
+      //без элементов
+      .pop-up-accessories-elem
+        .pop-up-accessories-elem-left
+          .pop-up-accessories-elem-left-wrap-img
+            img(src=`../../images/accessories-1-3.png`).pop-up-accessories-elem-left__img
+          h3.pop-up-accessories-elem-left__headline Опорно-поворотные устройства
+        .pop-up-accessories-elem-right
+          //.pop-up-accessories-elem-right-list
+            +popUpAccessoriesList('accessories-1-1-1.png', 'Шарикоподшипниковые узлы', null)
+            +popUpAccessoriesList('accessories-1-1-1.png', 'Корпуса подшипников', null)
+
+      .pop-up-accessories-elem
+        .pop-up-accessories-elem-left
+          .pop-up-accessories-elem-left-wrap-img
+            img(src=`../../images/accessories-1-3.png`).pop-up-accessories-elem-left__img
+          h3.pop-up-accessories-elem-left__headline Подшипники скольжения
+        .pop-up-accessories-elem-right
+          .pop-up-accessories-elem-right-list
+            +popUpAccessoriesList('accessories-1-1-1.png', 'Сферические подшипники скольжения и наконечники штоков', null)
+            +popUpAccessoriesList('accessories-1-1-1.png', 'Втулки', null)
+
+
+    .pop-up-accessories-cross
+      img(src='../../images/cross-white.png').pop-up-accessories-cross__img

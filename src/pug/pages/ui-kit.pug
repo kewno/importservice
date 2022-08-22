@@ -52,6 +52,8 @@ body
   //+popUpCall
   //+popUpMultimedia('pop-up-multimedia_slider', '10,09,2021', 'Известный производитель подшипников')
   //pop-up-multimedia_video pop-up-multimedia_slider
+  +popUpAccessories('accessories-1.png', 'Подшипники \n' +
+  '  и комплектующие')
   .ui-kit-wrap-menu
     +mainMenu(menu)
 
@@ -105,7 +107,7 @@ body
     .ui-kit-wrap-inputs__input
       +inputElem('type', 'Введите ваше имя', 'input-elem_success', 'success', null)
 
-  .ui-kit-wrap-slider
+  //.ui-kit-wrap-slider
     +mainSlaider(['slider-1.png', 'slider-1.png'], null, ['arrow_red', 'arrow_white arrow_right'], null, 'main-slaider-slide-1.png', 'WMS — система управления складом на 3000 м2', 'максимально быстрая сборка заказа и низкая себестоимость')
   .ui-kit-wrap-bearing
     +mainBearing()

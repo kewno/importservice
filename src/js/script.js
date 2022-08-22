@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let crossPopUpFilter = document.querySelector('.pop-up-filter .pop-up-filter-head__cross');
 
   // news-content-settings-burger
-  if (crossPopUpFilter != null && crossPopUpFilter != null) {
+  if (crossPopUpFilter !== null && popUpFilter !== null) {
     crossPopUpFilter.onclick = (e) => {
       popUpFilter.style.display = 'none';
       //console.log(e.target);
@@ -153,6 +153,51 @@ document.addEventListener('DOMContentLoaded', () => {
           popUpSidebar.style.display = 'none';
       }
     }
+  }
+
+  //pop-up подшипников
+  //pop-up-accessories-head__cross
+  let popUpAccessories = document.querySelector('.wrap-pop-up-accessories');
+  let popUpAccessoriesHeadCross = document.querySelector('.pop-up-accessories-head__cross');
+
+  let popUpAccessoriesCross = document.querySelector('.pop-up-accessories-cross');
+
+  let closePopUpAccessories = () => {
+    popUpAccessories.style.display = 'none';
+  }
+
+  if (popUpAccessories !== null || popUpAccessoriesHeadCross !== null) {
+    popUpAccessoriesHeadCross.onclick = closePopUpAccessories;
+    popUpAccessoriesCross.onclick = closePopUpAccessories;
+  }
+
+  let openListPopUp = (e) => {
+    console.log(e.target.className + "  " + e.target.parentNode.className);
+    //e.target конечный элемент
+    //e.currentTarget родитель кликнутого
+
+    let className = e.currentTarget.className;
+    //parentNode
+    if (e.target === 'pop-up-accessories-list-texts' || e.target.parentNode.className === 'pop-up-accessories-list-texts') {
+      let list =  document.querySelector(`.${e.target.parentNode.className} .pop-up-accessories-list-list`);
+      alert(1);
+      if (list.style.display === 'none') {
+        list.style.display = 'flex';
+      } else  {
+        list.style.display = 'none';
+      }
+    }
+
+  }
+
+  let listsPopUp = document.querySelectorAll('.pop-up-accessories-list');
+  //pop-up-accessories-list-texts - картинка с текстом для click
+  //pop-up-accessories-list-list - open list
+
+  if (listsPopUp !== null) {
+    listsPopUp.forEach(function(elem) {
+      elem.onclick = (e) => openListPopUp(e);
+    })
   }
 
   // let toggleSearch = () => {
