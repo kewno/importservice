@@ -6,6 +6,7 @@
   top: 0;
   right: 0;
   z-index: 4;
+  display: none;
 }
 
 .pop-up-vacancies {
@@ -59,6 +60,7 @@
 
   &__cross {
     margin-bottom: 7px;
+    cursor: pointer;
   }
 }
 

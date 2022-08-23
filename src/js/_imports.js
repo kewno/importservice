@@ -12,3 +12,4 @@ import './brands-slider';
 import './news-slider';
 import './company-slider';
 import './service-detail-slider'
+import './header-products-slider'

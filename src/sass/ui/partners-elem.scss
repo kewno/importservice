@@ -96,6 +96,21 @@
   }
 }
 
+@media (max-width: 850px) {
+  .partners-elem {
+    &:nth-child(2) {
+      margin-top: 20px;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .partners-elem {
+    &:nth-child(2) {
+      margin-top: inherit;
+    }
+  }
+}
 
 @media (max-width: 740px) {
   .partners-elem {

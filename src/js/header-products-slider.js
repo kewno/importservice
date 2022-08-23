@@ -1,8 +1,8 @@
-//service-detail-slider
+//header-products-slider
 import Swiper from 'swiper';
 
 document.addEventListener('DOMContentLoaded', () => {
-  new Swiper('.service-detail-slider .slider', {
+  new Swiper('.header-service-slider', {
     //spaceBetween: 13,
     slidesPerView: 1,
     // pagination: {
@@ -13,8 +13,15 @@ document.addEventListener('DOMContentLoaded', () => {
     //   },
     // // },
     navigation: {
-      nextEl: ".service-detail-navigation__next",
-      prevEl: ".service-detail-navigation__prev",
+      nextEl: ".service-control_next",
+      prevEl: ".service-control_prev",
+    },
+    pagination: {
+      el: ".service-pagination",
+      clickable: true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + ' service-pagination__point' + '">' + "</span>";
+      },
     },
   })
 })

@@ -16,3 +16,14 @@
     color: var(--black);
   }
 }
+
+
+@media (max-width: 500px) {
+  .requisites {
+
+    &__headline {
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+}

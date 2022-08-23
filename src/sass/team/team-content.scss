@@ -5,22 +5,28 @@
 .container-team-elems {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   margin: 36px -25px -25px;
   &__elem {
     //max-width: ;
     overflow: hidden;
-    margin: 25px;
+    margin: 25px 0;
     max-width: 472px;
-    //width: 29%;
+    width: 33%;
     min-height: 841px;
+
+    &:hover {
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.9);
+    }
   }
 }
 
 @media (max-width: 1620px) {
   .container-team-elems {
     //margin: 36px -25px -25px;
+    padding: 0 20px;
     &__elem {
-      width: 29%;
+      width: 32%;
     }
   }
 }
@@ -28,8 +34,9 @@
 @media (max-width: 1300px) {
   .container-team-elems {
     margin: 36px auto -25px;
+    padding: 0;
     &__elem {
-      width: 45%;
+      width: 48%;
     }
   }
 }
@@ -38,7 +45,6 @@
   .container-team-elems {
     margin: 36px auto -25px;
     &__elem {
-      width: 100%;
       height: 714px;
       max-width: 920px;
       margin: 0 0 30px; //height: 714px;
@@ -49,6 +55,10 @@
 @media (max-width: 800px) {
   .container-team-elems {
     margin: 20px auto 0;
+
+    &__elem {
+      width: 100%;
+    }
   }
   .team-content {
     padding: 30px 0 110px;

@@ -2,6 +2,7 @@
   height: 879px;
   background: var(--grey);
   position: relative;
+  overflow: hidden;
 
   &__wrap-image {
     width: 100%;

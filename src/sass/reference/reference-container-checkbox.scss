@@ -4,10 +4,12 @@
   //align-items: center;
 
   &__elem {
-    margin-right: 15px;
-    &:first-child {
-      margin-bottom: 17px;
-    }
+    //margin-right: 15px;
+    //margin-bottom: 17px;
+    margin: 0 15px 17px 0;
+    //&:first-child {
+    //  margin-bottom: 17px;
+    //}
   }
 
   &__reset {
@@ -34,11 +36,11 @@
 
 @media (max-width: 1300px) {
   .reference-container-checkbox {
-    &__elem {
-      &:nth-child(8) {
-        margin-bottom: 17px;
-      }
-    }
+    //&__elem {
+    //  &:nth-child(8) {
+    //    margin-bottom: 17px;
+    //  }
+    //}
 
     &__reset {
       margin: 0 0 0 4px;
@@ -49,7 +51,7 @@
 @media (max-width: 1165px) {
   .reference-container-checkbox {
     &__reset {
-      margin: 10px 0 0 4px;
+      margin: 5px 0 0 4px; //10px 0 0 4px;
     }
   }
 }

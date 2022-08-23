@@ -37,7 +37,7 @@
         stroke: var(--red);
       }
     }
-    .main-menu-vertical {
+    .main-menu-vertical { // z-index - повысить
       display: block;
     }
   }
@@ -142,6 +142,13 @@
     margin: 0;
     &__logo {
       margin-right: 30px;
+    }
+
+    .main-menu-elem {
+      .main-menu-vertical {
+        top: 25px;
+        z-index: 5;
+      }
     }
   }
 

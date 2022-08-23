@@ -80,6 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (multimedia != null)
       multimedia.style.display = 'block';
 
+    //alert(1);
    body.style.overflow = 'hidden';
   }
 
@@ -111,9 +112,11 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
+  //news
   //cloose filter
   let popUpFilter = document.querySelector('.pop-up-filter');
   let crossPopUpFilter = document.querySelector('.pop-up-filter .pop-up-filter-head__cross');
+  let openPopUpFilter = document.querySelector('.news-content-settings-burger');
 
   // news-content-settings-burger
   if (crossPopUpFilter !== null && popUpFilter !== null) {
@@ -122,18 +125,26 @@ document.addEventListener('DOMContentLoaded', () => {
       //console.log(e.target);
     }
   }
-
-  //open filter
-  let openBurger = document.querySelector('.news-content-settings-burger');
-  if (openBurger != null) {
-    openBurger.onclick = (e) => {
-      console.log(e.target.className);
-      if (e.target.className === 'news-content-settings-burger') { // || e.target.className === 'news-content-settings-burger__headline'
-
-      } //news-content-settings-burger
-      //popUpFilter.style.display = 'flex';
+  //console.log(openPopUpFilter);
+  if (openPopUpFilter !== null) {
+    openPopUpFilter.onclick = (e) => {
+      console.log(e.target); //.className .pop-up-filter-head-cross__img
+      if (e.target.className !== 'pop-up-filter-head-cross__img')
+        popUpFilter.style.display = 'block';
     }
   }
+
+  //open filter
+  // let openBurger = document.querySelector('.news-content-settings-burger');
+  // if (openBurger != null) {
+  //   openBurger.onclick = (e) => {
+  //     console.log(e.target.className);
+  //     if (e.target.className === 'news-content-settings-burger') { // || e.target.className === 'news-content-settings-burger__headline'
+  //
+  //     } //news-content-settings-burger
+  //     //popUpFilter.style.display = 'flex';
+  //   }
+  // }
 
 
   //sidebar-popup
@@ -142,7 +153,6 @@ document.addEventListener('DOMContentLoaded', () => {
   let popUpSidebarStatus = false;
 
   if (markOpenPopUpSidebar != null || popUpSidebar != null) {
-    //console.log(markOpenPopUpSidebar);
     markOpenPopUpSidebar.onclick = () => {
       //alert(popUpSidebarStatus);
       if (popUpSidebarStatus === false) {
@@ -155,9 +165,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  //bearing pop up
+  let popUpAccessories = document.querySelector('.wrap-pop-up-accessories');
+  let bearingElem = document.querySelectorAll('.bearing-elem');
+
+  let openBearingPopUp = () => {
+    popUpAccessories.style.display = 'flex';
+    //console.log(bearingPopUp);
+  }
+
+  if (bearingElem != null) {
+    bearingElem.forEach(function(elem) {
+      elem.onclick = () => openBearingPopUp();
+    })
+  }
+
   //pop-up подшипников
   //pop-up-accessories-head__cross
-  let popUpAccessories = document.querySelector('.wrap-pop-up-accessories');
+
   let popUpAccessoriesHeadCross = document.querySelector('.pop-up-accessories-head__cross');
 
   let popUpAccessoriesCross = document.querySelector('.pop-up-accessories-cross');
@@ -172,7 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   let openListPopUp = (e) => {
-    console.log(e.target.className + "  " + e.target.parentNode.className);
+    //console.log(e.target.className + "  " + e.target.parentNode.className);
     //e.target конечный элемент
     //e.currentTarget родитель кликнутого
 
@@ -210,4 +235,28 @@ document.addEventListener('DOMContentLoaded', () => {
   // let search = document.querySelector('.footer-bottom-top__href img');
   // search.onclick = () => toggleSearch();
 
+  //mediateca open slider
+  let mediatecaElem = document.querySelectorAll('.mediateca-post');
+  //console.log(mediatecaElem);
+  if (mediatecaElem != null) {
+    mediatecaElem.forEach(function(elem) {
+      elem.onclick = () => openFullScreen();
+    })
+  }
+
+
+  //vacancies
+  let popUpVacancies = document.querySelector('.wrap-pop-up-vacancies');
+  let popUpVacanciesCross = document.querySelector('.wrap-pop-up-vacancies .pop-up-vacancies-head__cross');
+  console.log(popUpVacancies);
+  if (popUpVacanciesCross !== null || popUpVacancies !== null) {
+    popUpVacanciesCross.onclick = () => {
+      popUpVacancies.style.display = 'none';
+    }
+  }
+
+  //open bearing pop-up
+
+
+  //wrap-pop-up-vacancies
 })

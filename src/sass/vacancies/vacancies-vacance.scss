@@ -16,6 +16,11 @@
   &__elem {
     width: 31.7%;
     margin-bottom: 30px;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.9);
+    }
   }
 }
 
