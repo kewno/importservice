@@ -1,7 +1,0 @@
-include ../ui/mediatca-post
-
-mixin mediatecaPosts(elem)
-  .mediateca-posts
-    each el in elem
-      +mediatecaPost(el.back, el.icon, el.headline, el.date, el.type, el.className)
-

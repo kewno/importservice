@@ -1,0 +1,11 @@
+include vacancies-vacance
+include vacancies-news
+
+mixin vacanciesContent(elemVacance)
+  .vacancies-content
+    h1.vacancies-content__headline Компания «Импортсервис» уверенно развивается!
+    p.vacancies-content__text Если Вы заинтересованы в перспективной работе, которая позволит раскрыть Ваши навыки и потенциал, пожалуйста, пришлите нам своё подробное резюме. Наши двери открыты для специалистов любого уровня, а также для молодых и целеустремленных людей, желающих пройти обучение по рабочим специальностям, с последующим трудоустройством в компании.
+    p.vacancies-content__text Каждое резюме будет внимательно рассмотрено. В случае заинтересованности Вашей кандидатурой, с Вами свяжется представитель компании.
+    .vacancies-content__line
+    +vacanciesVacance(elemVacance)
+    .vacancies-content__line.vacancies-content__line_bottom

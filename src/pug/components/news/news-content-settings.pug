@@ -1,0 +1,19 @@
+include ../../ui/check-slide
+
+mixin newsContentSettings(elemCheck, elemOption)
+  .news-content-settings
+    .news-content-settings-checkeds
+      each el in elemCheck
+        .news-content-settings-checkeds__elem
+          +checkSlide(el.id)
+          p.check-slide-text= el.text
+    .news-content-settings-falls
+      p.news-content-settings-falls__name Год:
+      p.news-content-settings-falls__option Все
+        span
+          <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2 -5.24537e-07L7 5L12 -8.74228e-08L14 1L7 8L-4.37114e-08 0.999999L2 -5.24537e-07Z" fill="#4D4D4D"/>
+          </svg>
+      ui.news-content-settings-falls-options
+        each el in elemOption
+          p.news-content-settings-falls-options__elem= el.name

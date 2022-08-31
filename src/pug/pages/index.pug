@@ -1,16 +1,16 @@
 //include ../ui/pop-up
-include ../header/header
-include ../main/main-bearing-size
-include ../main/main-bearing
-include ../main/main-slaider
-include ../main/main-mailing
-include ../main/main-bearing-slider
-include ../main/main-reviews
-include ../main/main-news
+include ../components/header/header
+include ../components/main/main-bearing-size
+include ../components/main/main-bearing
+include ../components/main/main-slaider
+include ../components/main/main-mailing
+include ../components/main/main-bearing-slider
+include ../components/main/main-reviews
+include ../components/main/main-news
 include ../ui/pop-up-call
 include ../ui/pop-up-multimedia
 include ../ui/pop-up-accessories
-include ../footer/footer
+include ../components/footer/footer
 
 doctype html
 html(lang="en")
@@ -40,4 +40,3 @@ body.main-page
   +popUpCall
   +popUpMultimedia('pop-up-multimedia_slider', '10,09,2021', 'Известный производитель подшипников')
   +popUpAccessories('accessories-1.png', 'Подшипники и комплектующие')
-//(headImg, headline)

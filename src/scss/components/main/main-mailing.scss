@@ -1,0 +1,248 @@
+.wrap-main-mailing {
+  background: var(--bej);
+  padding: 101px 0 74px;
+}
+.main-mailing {
+  max-width: 1520px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  &__wrap-text {
+    max-width: 900px;
+  }
+}
+
+.main-mailing-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mailing-headline {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 47px;
+  margin: 0 0 20px;
+  max-width: 700px;
+}
+.mailing-text {
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 140%;
+  letter-spacing: 0.025em;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+.main-mailing-form {
+  &__wrap-input-btn {
+    display: flex;
+    margin-top: 20px; //20
+    max-width: 930px; //890px
+    align-items: center;
+  }
+  &__text {
+    margin: 9px 0 30px;
+    font-size: 14px;
+    line-height: 26px;
+    letter-spacing: 0.02em;
+  }
+  &__wrap-checkbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 85px;
+  }
+}
+
+.main-mailing-wrap-input {
+  width: 712.91px;
+}
+
+.main-mailing-wrap-btn {
+  max-width: 247.37px;
+  width: 100%;
+  transform: translateX(-31px);
+  .btn {
+    height: 55px;
+    line-height: 55px;
+  }
+}
+
+.main-mailing-form-checkbox {
+  width: 50%;
+}
+
+@media (max-width: 1620px) {
+  .wrap-main-mailing {
+    padding: 100px 74px 75px 80px;
+  }
+
+  .main-mailing {
+    max-width: 1440px;
+    &__left-block {
+      margin-left: 5px;
+    }
+  }
+}
+
+@media (max-width: 1300px) {
+  .wrap-main-mailing {
+    padding: 60px 60px 60px 60px;
+  }
+
+  .mailing-headline {
+    font-size: 32px;
+    line-height: 38px;
+    max-width: 550px;
+    margin: 0 0 15px;
+  }
+  .mailing-text {
+    font-size: 20px;
+    line-height: 125%;
+    max-width: 620px;
+  }
+  .mailing-logo {
+    width: 147px;
+  }
+
+
+  .main-mailing-form {
+    &__wrap-input-btn {
+      max-width: 795px;
+      margin-top: 5px;
+    }
+    &__text {
+      margin: 9px 0 40px;
+    }
+    &__wrap-checkbox {
+      max-width: 830px;
+      height: auto;
+    }
+  }
+
+  .main-mailing-wrap-btn {
+    max-width: 227.33px;
+  }
+
+  .main-mailing-form-checkbox:first-child {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 1040px) {
+  .mailing-text {
+    font-size: 16px;
+    line-height: 125%;
+    max-width: 520px;
+    letter-spacing: 0.01em;
+  }
+
+
+  .main-mailing-form {
+    max-width: 635px;
+    &__wrap-input-btn {
+      margin-top: 0;
+    }
+  }
+  .main-mailing-wrap-btn {
+    max-width: 210px;
+  }
+}
+
+@media (max-width: 800px) {
+  .wrap-main-mailing {
+    padding: 60px 24px 60px 30px;
+  }
+  .mailing-logo {
+    width: 87.72px;
+  }
+  .mailing-headline {
+    margin: 0 0 17px;
+  }
+
+
+  .main-mailing-form {
+    max-width: 100%;
+    &__wrap-input-btn {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 15px;
+    }
+    &__wrap-checkbox {
+      flex-wrap: wrap;
+    }
+    &__text {
+      margin-bottom: 20px;
+    }
+  }
+
+  .main-mailing-wrap-input {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+  .main-mailing-wrap-btn {
+    max-width: 100%;
+    width: 100%;
+    transform: translateX(0px);
+    .btn {
+      height: 55px;
+      line-height: 55px;
+    }
+  }
+  .main-mailing-form-checkbox {
+    width: 100%;
+    margin-bottom: 25px;
+    &:first-child {
+      margin-bottom: 25px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .wrap-main-mailing {
+    padding: 25px 20px 65px;
+  }
+
+  .main-mailing-top {
+    flex-wrap: wrap;
+  }
+
+  .main-mailing-iso {
+    order: -1;
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    margin-bottom: 25px;
+  }
+
+  .mailing-headline {
+    font-size: 24px;
+    line-height: 28px;
+    margin: 0 0 11px;
+  }
+
+  .mailing-text {
+    max-width: 300px;
+    line-height: 135%;
+  }
+
+
+
+  .main-mailing-form {
+    &__text {
+      margin: 20px 0 33px;
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+  .main-mailing-form-checkbox {
+    margin-bottom: 32px;
+  }
+}

@@ -1,0 +1,40 @@
+.sidebar {
+  .quote {
+    max-width: 940px;
+  }
+}
+
+.quote {
+  display: flex;
+  align-items: flex-start;
+  max-width: 1230px;
+  &__img {
+
+  }
+}
+
+.quote-texts {
+  padding: 30px 0 0;
+  &__headline {
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    margin: 0;
+  }
+  &__line {
+    width: 53px;
+    height: 3px;
+    background: var(--red);
+    margin: 15px 0 13px;
+  }
+  &__signature {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: var(--grey-2);
+  }
+}

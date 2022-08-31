@@ -1,0 +1,8 @@
+include ../../ui/reference-checkbox
+
+mixin referenceContainerCheckbox(elem)
+  .reference-container-checkbox
+    each el in elem
+      .reference-container-checkbox__elem
+        +referenceCheckbox(el.id, el.text)
+    p.reference-container-checkbox__reset Сбросить фильтр

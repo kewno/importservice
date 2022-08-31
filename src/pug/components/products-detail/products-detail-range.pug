@@ -1,0 +1,9 @@
+include ../../ui/products-range
+
+mixin productsDetailRange(elem)
+  .products-detail-range
+    h3.products-detail-range__headline Наш ассортимент
+    .products-detail-range-elements
+      each el in elem
+        //.products-detail-range-elements__elem
+        +productsRange(el.headline, el.text)

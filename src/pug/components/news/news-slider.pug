@@ -1,0 +1,27 @@
+include ../../ui/news-elem
+include ../../ui/arrow
+
+mixin newsSlider(elem)
+  .wrap-news-slider
+    .container__2920
+      h2.wrap-news-slider__headline Главноe
+
+    .news-slider
+      .swiper-wrapper
+        each el in elem
+          .swiper-slide
+            .swiper-slide__content
+              +newsElem(el.href, el.btn, el.headline, el.text, el.date, el.image, el.className)
+      .wrap-news-slider-control
+        .news-slider-control
+          .news-slider-control_prev
+            +arrow('arrow_white')
+          .news-slider-control_next
+            +arrow('arrow_red arrow_right')
+
+
+
+        //+newsElem('/', 'Ультразвуковой прибор повышает точность повторного смазывания', 'Уникальный ультразвуковой прибор, способный «слышать» звук пластичной смазки, заполняющей подшипник, повышает...', '01.01.22', 'news-elem.png')
+          //each el in elem
+            .swiper-slide
+              newsElem(href, btn, headline, text, date, image, className)

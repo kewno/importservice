@@ -1,0 +1,16 @@
+include ../mediateca/mediateca-pagination
+include ../../ui/search-elem
+
+mixin searchContent(elem)
+  .container__2920
+    .search-content
+      h1.search-content__headline Результаты поиска
+      .search-content-wrap-search
+        +inputElem('type', 'Введите запрос', null, null, null)
+        img(src=`../../images/search.png`).search-content-wrap-search__glass
+      each el in elem
+        +searchElem(el.id, el.headline, el.text, el.pagination)
+      .search-content-wrap-pagination
+        .search-content-wrap-btn
+          +btn('Показать еще', 'btn_white', '/')
+        +mediatecaPagination([{href:'/', text:'1'}, {href:'/', text:'2'}, {href:'/', text:'3'}, {href:'/', text:'4'}, {href:'/', text:'5'}, {href:'/', text:'9'}, {href:'/', text:'10'}])

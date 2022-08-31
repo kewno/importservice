@@ -1,0 +1,35 @@
+include ../../ui/pop-up-menu-header
+include ../../ui/pages-pagination
+include ../error/error-info
+-
+  let menu = [{name: 'о компании', href: '/',
+    submenu: [{text: 'О компании', href: '/'},
+      {text: 'новости и акции', href: '/'},
+      {text: 'Нам доверяют', href: '/'},
+      {text: 'Команда', href: '/'},
+      {text: 'вакансии', href: '/'},
+      {text: 'Фотогалерея/Видеогалерея', href: '/'},
+      {text: 'Сертификаты', href: '/'}]},
+    {name: 'Продукция', href: '/',
+      submenu: [{text: 'Продукция', href: '/'},
+        {text: 'Справочная информация', href: '/'}]},
+    {name: 'сервис и услуги', href: '/',
+      submenu: [{text: 'Сервис и услуги', href: '/'},
+        {text: 'Оптимизация Технического обслуживания и ремонта оборудования', href: '/'},
+        {text: 'Повышение надежности работы оборудования', href: '/'},
+        {text: 'Вибродиагностика и наладка оборудования', href: '/'},
+        {text: 'Ремонт и изготовление приводной техники', href: '/'},
+        {text: 'Мониторинг состояния оборудования', href: '/'}]},
+    {name: 'Контакты', href: '/', submenu: null}
+  ]
+
+mixin headerErrors
+  header.header-errors
+    .header__burger
+      +popUpMenuHeader(menu)
+    .header__wrap-menu
+      .container__2920
+        +mainMenu(menu, 'main-menu_parthers')
+        +errorInfo
+    .header-errors__wrap-image
+      img(src='../../images/logo404.png')

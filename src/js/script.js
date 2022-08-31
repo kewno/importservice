@@ -28,16 +28,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  if (phonePoint != null) {
+  if (phonePoint ) {
     phonePoint.forEach(function(elem) {
-      elem.onclick = () => openPhonePopUp();
+      elem.addEventListener("click", () =>  openPhonePopUp())
     })
   }
 
   //burger
-  if (burgerMenuElements != null) {
+  if (burgerMenuElements) {
     burgerMenuElements.forEach(function(elem) {
-      elem.onclick = () => toggleSubmenu(elem);
+      elem.addEventListener("click", () =>  toggleSubmenu(elem))
     })
   }
 
@@ -51,9 +51,9 @@ document.addEventListener('DOMContentLoaded', () => {
     body.style.overflow = 'hidden';
   }
 
-  if (burgerClose != null && burgerPopUp != null && burgerPoint != null) {
-    burgerClose.onclick = () => closeBurgerPopUp();
-    burgerPoint.onclick = () => openBurgerPopUp();
+  if (burgerClose && burgerPopUp && burgerPoint) {
+    burgerClose.addEventListener("click", () =>  closeBurgerPopUp())
+    burgerPoint.addEventListener("click", () =>  openBurgerPopUp())
   }
 
 
@@ -68,24 +68,26 @@ document.addEventListener('DOMContentLoaded', () => {
     body.style.overflow = 'hidden';
   }
 
-  if (phoneClose != null && phonePopUp != null && phonePoint != null) {
-    phoneClose.onclick = () => closePhonePopUp();
-    phonePoint.onclick = () => openPhonePopUp();
+  if (phoneClose && phonePopUp && phonePoint) {
+    phoneClose.addEventListener("click", () =>  closePhonePopUp())
+    //phonePoint.addEventListener("click", () =>  openPhonePopUp())
+    phonePoint.forEach(function(elem) {
+      elem.addEventListener("click", () =>  openPhonePopUp())
+    })
   }
 
   let multimedia = document.querySelector('.wrap-pop-up-multimedia'); //.main-page .wrap-pop-up-multimedia
   let multimediaClose = document.querySelector('.wrap-pop-up-multimedia .pop-up-multimedia__cross .cross');
 
   let openFullScreen = () => {
-    if (multimedia != null)
+    if (multimedia)
       multimedia.style.display = 'block';
 
-    //alert(1);
    body.style.overflow = 'hidden';
   }
 
   let closeFullScreen = () => {
-    if (multimedia != null)
+    if (multimedia)
       multimedia.style.display = 'none';
 
     body.style.overflow = 'inherit';
@@ -93,21 +95,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let slide = document.querySelectorAll('.slaider-slide');
 
-  if (slide != null) {
+  if (slide) {
     slide.forEach(function(elem) {
-      elem.onclick = () => openFullScreen();
+      elem.addEventListener("click", () =>  openFullScreen())
     })
   }
 
-  if (multimediaClose !== null)
-    multimediaClose.onclick = () => closeFullScreen();
+  if (multimediaClose)
+    multimediaClose.addEventListener("click", () =>  closeFullScreen())
 
   // certificate pop-up для открытия
   let certificate = document.querySelectorAll('.wrap-certificate-elem');
 
-  if (certificate != null) {
+  if (certificate) {
     certificate.forEach(function(elem) {
-      elem.onclick = () => openFullScreen();
+      elem.addEventListener("click", () =>  openFullScreen())
     })
   }
 
@@ -119,26 +121,30 @@ document.addEventListener('DOMContentLoaded', () => {
   let openPopUpFilter = document.querySelector('.news-content-settings-burger');
 
   // news-content-settings-burger
-  if (crossPopUpFilter !== null && popUpFilter !== null) {
-    crossPopUpFilter.onclick = (e) => {
+  if (crossPopUpFilter && popUpFilter) {
+    // crossPopUpFilter.onclick = (e) => {
+    //   popUpFilter.style.display = 'none';
+    // }
+    crossPopUpFilter.addEventListener("click", (e) => {
       popUpFilter.style.display = 'none';
-      //console.log(e.target);
-    }
+    })
   }
-  //console.log(openPopUpFilter);
-  if (openPopUpFilter !== null) {
-    openPopUpFilter.onclick = (e) => {
-      console.log(e.target); //.className .pop-up-filter-head-cross__img
+
+  if (openPopUpFilter) {
+    // openPopUpFilter.onclick = (e) => {
+    //   if (e.target.className !== 'pop-up-filter-head-cross__img')
+    //     popUpFilter.style.display = 'block';
+    // }
+    crossPopUpFilter.addEventListener("click", (e) => {
       if (e.target.className !== 'pop-up-filter-head-cross__img')
         popUpFilter.style.display = 'block';
-    }
+    })
   }
 
   //open filter
   // let openBurger = document.querySelector('.news-content-settings-burger');
-  // if (openBurger != null) {
+  // if (openBurger) {
   //   openBurger.onclick = (e) => {
-  //     console.log(e.target.className);
   //     if (e.target.className === 'news-content-settings-burger') { // || e.target.className === 'news-content-settings-burger__headline'
   //
   //     } //news-content-settings-burger
@@ -152,17 +158,26 @@ document.addEventListener('DOMContentLoaded', () => {
   let popUpSidebar = document.querySelector('.manager-description-pop-up');
   let popUpSidebarStatus = false;
 
-  if (markOpenPopUpSidebar != null || popUpSidebar != null) {
-    markOpenPopUpSidebar.onclick = () => {
-      //alert(popUpSidebarStatus);
+  if (markOpenPopUpSidebar || popUpSidebar) {
+    markOpenPopUpSidebar.addEventListener("click", () => {
       if (popUpSidebarStatus === false) {
         popUpSidebarStatus = true;
         popUpSidebar.style.display = 'block';
       } else if (popUpSidebarStatus === true) {
-          popUpSidebarStatus = false;
-          popUpSidebar.style.display = 'none';
+        popUpSidebarStatus = false;
+        popUpSidebar.style.display = 'none';
       }
-    }
+    })
+
+    // markOpenPopUpSidebar.onclick = () => {
+    //   if (popUpSidebarStatus === false) {
+    //     popUpSidebarStatus = true;
+    //     popUpSidebar.style.display = 'block';
+    //   } else if (popUpSidebarStatus === true) {
+    //       popUpSidebarStatus = false;
+    //       popUpSidebar.style.display = 'none';
+    //   }
+    // }
   }
 
   //bearing pop up
@@ -171,12 +186,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let openBearingPopUp = () => {
     popUpAccessories.style.display = 'flex';
-    //console.log(bearingPopUp);
   }
 
-  if (bearingElem != null) {
+  if (bearingElem) {
     bearingElem.forEach(function(elem) {
-      elem.onclick = () => openBearingPopUp();
+      elem.addEventListener("click", () => openBearingPopUp());
     })
   }
 
@@ -191,13 +205,14 @@ document.addEventListener('DOMContentLoaded', () => {
     popUpAccessories.style.display = 'none';
   }
 
-  if (popUpAccessories !== null || popUpAccessoriesHeadCross !== null) {
-    popUpAccessoriesHeadCross.onclick = closePopUpAccessories;
-    popUpAccessoriesCross.onclick = closePopUpAccessories;
+  if (popUpAccessories || popUpAccessoriesHeadCross) {
+    // popUpAccessoriesHeadCross.onclick = closePopUpAccessories;
+    // popUpAccessoriesCross.onclick = closePopUpAccessories;
+    popUpAccessoriesHeadCross.addEventListener("click", () => closePopUpAccessories());
+    popUpAccessoriesCross.addEventListener("click", () => closePopUpAccessories());
   }
 
   let openListPopUp = (e) => {
-    //console.log(e.target.className + "  " + e.target.parentNode.className);
     //e.target конечный элемент
     //e.currentTarget родитель кликнутого
 
@@ -205,7 +220,6 @@ document.addEventListener('DOMContentLoaded', () => {
     //parentNode
     if (e.target === 'pop-up-accessories-list-texts' || e.target.parentNode.className === 'pop-up-accessories-list-texts') {
       let list =  document.querySelector(`.${e.target.parentNode.className} .pop-up-accessories-list-list`);
-      alert(1);
       if (list.style.display === 'none') {
         list.style.display = 'flex';
       } else  {
@@ -219,9 +233,10 @@ document.addEventListener('DOMContentLoaded', () => {
   //pop-up-accessories-list-texts - картинка с текстом для click
   //pop-up-accessories-list-list - open list
 
-  if (listsPopUp !== null) {
+  if (listsPopUp) {
     listsPopUp.forEach(function(elem) {
-      elem.onclick = (e) => openListPopUp(e);
+      //elem.onclick = (e) => openListPopUp(e);
+      elem.addEventListener("click", (e) => openListPopUp(e));
     })
   }
 
@@ -237,10 +252,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   //mediateca open slider
   let mediatecaElem = document.querySelectorAll('.mediateca-post');
-  //console.log(mediatecaElem);
-  if (mediatecaElem != null) {
+  if (mediatecaElem) {
     mediatecaElem.forEach(function(elem) {
-      elem.onclick = () => openFullScreen();
+      elem.addEventListener("click", () => openFullScreen());
     })
   }
 
@@ -248,11 +262,12 @@ document.addEventListener('DOMContentLoaded', () => {
   //vacancies
   let popUpVacancies = document.querySelector('.wrap-pop-up-vacancies');
   let popUpVacanciesCross = document.querySelector('.wrap-pop-up-vacancies .pop-up-vacancies-head__cross');
-  console.log(popUpVacancies);
-  if (popUpVacanciesCross !== null || popUpVacancies !== null) {
-    popUpVacanciesCross.onclick = () => {
-      popUpVacancies.style.display = 'none';
-    }
+  if (popUpVacanciesCross || popUpVacancies) {
+    popUpVacanciesCross.addEventListener("click", () => {
+      //popUpVacancies.style.display = 'none';
+      popUpVacancies.classList.add('wrap-pop-up-vacancies_none');
+      //popUpVacancies.className ='.wrap-pop-up-vacancies_none';
+    });
   }
 
   //open bearing pop-up

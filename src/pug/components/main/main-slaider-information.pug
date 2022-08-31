@@ -1,0 +1,13 @@
+include ../../ui/btn
+
+mixin mainSlaiderInformation(className, img, headline, text)
+  div(class=`main-slaider-information ${className}`)
+    .main-slaider-information__wrap-image
+      img(src=`../../images/${img}`)
+      //!= svgElem
+    .main-slaider-information__wrap-text
+      h2.main-slaider-information-headline!= headline
+      p.main-slaider-information-text!= text
+      if `${className}`.includes('main-slaider-information_grey')
+        .main-slaider-information-wrap-btn
+          +btn('Оставить заявку', 'btn_invisible', '/')

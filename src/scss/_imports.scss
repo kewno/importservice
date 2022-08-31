@@ -1,0 +1,174 @@
+//header
+@import 'components/header/header';
+@import 'components/header/header-parthers';
+@import 'components/header/header-slider';
+@import 'components/header/header-info';
+@import 'components/header/header-errors';
+@import 'components/header/header-service';
+@import 'components/header/header-products-detail';
+
+
+//ui
+@import 'ui/arrow';
+@import 'ui/social';
+@import 'ui/btn';
+@import 'ui/cross';
+@import 'ui/play';
+@import 'ui/news-elem';
+@import 'ui/pop-up';
+@import 'ui/input-elem';
+@import 'ui/main-menu';
+@import 'ui/bearing-elem';
+@import 'ui/checkbox-elem';
+@import 'ui/review';
+@import 'ui/pop-up-multimedia';
+@import 'ui/pop-up-call';
+@import 'ui/pop-up-menu-header';
+@import 'ui/pages-pagination';
+@import 'ui/partners-elem';
+@import 'ui/mediateca-post';
+@import 'ui/service-content-card';
+@import 'ui/sidebar-manager';
+@import 'ui/provide';
+@import 'ui/logistic-elem';
+@import 'ui/reference-checkbox';
+@import 'ui/pdf-elem';
+@import 'ui/products-range';
+@import 'ui/brand';
+@import 'ui/block-image';
+@import 'ui/address';
+@import 'ui/requisites';
+@import 'ui/team-elem';
+@import 'ui/team-tabs';
+@import 'ui/search-elem';
+@import 'ui/certificate-elem';
+@import 'ui/pop-up-accessories';
+@import 'ui/check-slide';
+@import 'ui/pop-up-filter';
+@import 'ui/vacance-elem';
+@import 'ui/pop-up-vacancies';
+@import 'ui/service-detail-article';
+@import 'ui/article';
+@import 'ui/quote';
+@import 'ui/tables';
+@import 'ui/range';
+@import 'ui/company-possibility';
+@import 'ui/company-years';
+
+//main
+@import 'components/main/main-slaider';
+@import 'components/main/main-bearing';
+@import 'components/main/main-mailing';
+@import 'components/main/main-reviews';
+@import 'components/main/main-news';
+
+
+//service-detail
+@import 'pages/service-detail';
+@import 'components/service-detail/service-detail-content';
+@import 'components/service-detail/service-detail-articles';
+@import 'components/service-detail/service-detail-slider';
+@import 'components/service-detail/service-detail-services';
+
+
+//products products-container
+@import 'components/products/products-container';
+@import 'components/products/products-card';
+
+
+//news-detail
+@import 'components/news-detail/news-detail';
+
+
+//news
+@import 'components/news/news-slider';
+@import 'components/news/news-content';
+
+
+//company
+@import 'pages/company';
+@import 'components/company/company-container';
+@import 'components/company/company-range';
+@import 'components/company/company-possibilitys';
+@import 'components/company/company-values';
+@import 'components/company/company-slider';
+@import 'components/company/company-slider-info';
+@import 'components/company/company-dates';
+
+
+//vacancies
+@import 'components/vacancies/vacancies-content';
+@import 'components/vacancies/vacancies-vacance';
+@import 'components/vacancies/vacancies-news';
+@import 'components/vacancies/vacancies-container';
+
+
+//products-detail
+@import 'components/products-detail/products-detail-container';
+@import 'components/products-detail/products-detail-range';
+@import 'components/products-detail/products-detail-brands';
+@import 'components/products-detail/products-logistics';
+@import 'components/products-detail/products-detail-header-info';
+
+
+//team
+@import 'components/team/team-content';
+
+
+//contacts
+@import 'components/contacts/contacts-header-info';
+@import 'components/contacts/contacts-container';
+@import 'components/contacts/contacts-form';
+
+
+//reference
+@import 'components/reference/reference-content';
+@import 'components/reference/reference-container-checkbox';
+@import 'components/reference/reference-container-pdf';
+
+
+//certificates
+@import 'components/certificates/certificates-content';
+
+
+//search
+@import 'components/search/search-content';
+
+
+//service
+@import 'components/service/service-header-info';
+@import 'components/service/service-content';
+@import 'components/service/service-provided';
+@import 'components/service/service-container-double';
+@import 'components/service/service-double';
+@import 'components/service/service-logistic';
+
+
+//partners
+@import 'components/partners/partners-trust';
+@import 'components/partners/partners-group';
+
+
+//mediateca
+@import 'components/mediateca/mediateca-content';
+@import 'components/mediateca/mediateca-posts';
+@import 'components/mediateca/mediateca-pagination';
+
+
+//@import error
+@import 'components/error/error-info';
+
+
+//pages
+@import 'pages/ui-kit';
+@import 'pages/main';
+@import 'pages/partners';
+@import 'pages/products-detail';
+@import 'pages/contacts';
+@import 'pages/search';
+
+
+//footer
+@import 'components/footer/footer';
+@import 'components/footer/footer-top';
+@import 'components/footer/footer-bottom';

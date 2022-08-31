@@ -1,0 +1,6 @@
+include ../../ui/service-content-card
+
+mixin serviceContentCards(elem)
+  .service-content-cards
+    each el in elem
+      +serviceContentCard(el.img, el.back, el.headline)

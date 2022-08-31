@@ -1,0 +1,26 @@
+include ../../ui/company-years
+
+mixin companyDates(elem)
+  .company-dates
+    h2.company-dates__headline Более
+      span &nbsp20 лет&nbsp
+      | на рынке высокого качества
+    .company-dates__first-elem
+      +companyYears(null, '2001', 'Основание компании Импортсервис', null)
+    div(style=`background-image: url('../../images/company-dates__1520.png'); background-repeat: no-repeat;`).company-dates__back
+      .company-dates-elements
+        each el in elem
+          .company-dates-elements__elem
+            +companyYears(el.img, el.headline, el.bold, el.text)
+    div(style=`background-image: url('../../images/company-dates__780.png'); background-repeat: no-repeat;`).company-dates__back_780
+      .company-dates-elements
+        each el in elem
+          .company-dates-elements__elem
+            +companyYears(el.img, el.headline, el.bold, el.text)
+    div(style=`background-image: url('../../images/company-dates__500.png'); background-repeat: no-repeat;`).company-dates__back_500
+      .company-dates-elements
+        each el in elem
+          .company-dates-elements__elem
+            +companyYears(el.img, el.headline, el.bold, el.text)
+            //+companyYears({img: null, headline: '2001', bold: 'Основание компании Импортсервис', text: null})
+            //{img: null, headline: '2001', bold: 'Основание компании Импортсервис', text: null}

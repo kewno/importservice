@@ -1,0 +1,37 @@
+include ../../ui/sidebar-manager
+include ../../ui/range
+include ../products-detail/products-logistics
+include ../service/service-content-cards
+include products-card
+
+-
+  let cards = [
+    {img: 'service-content-card-1.png', headline: 'Металлургия'},
+    {img: 'service-content-card-2.png', headline: 'Целлюлозно-бумажная промышленность'},
+    {back: 'grey-light', headline: 'Горнодобывающая промышленность'},
+    {img: 'service-content-card-4.png', headline: 'Энергетическая промышленность'},
+    {img: 'service-content-card-5.png', headline: 'Сельско-хозяйственная промышленность'},
+    {back: 'service-grey', headline: 'Машиностроение'},
+    {img: 'service-content-card-7.png', headline: 'Химическая и нефтехимическая промышленность'},
+    {back: 'red', headline: 'Цементная промышленность'}
+  ]
+
+mixin productsContainer
+  .container__2920
+    .products-container
+      .products-container-left
+        p.products-container-left__text Группа компаний УралПодшипникПермь и Импортсервис является одним из крупнейших поставщиков подшипниковой продукции импортного и отечественного производства в России
+        .products-container-left__line
+        .products-container-left__wrap-range
+          +range
+        .products-container-left-industries
+          h2.products-container-left-industries__headline В разных отраслях
+          p.products-container-left-industries__text Для высококачественного решения вопросов надежности и оптимизации стоимости владения роторного оборудования на базе компании Импортсервис была создана техническая служба со специализированными отделами по следующим отраслям:
+          .products-container-left-industries__cards
+            each el in cards
+              +productsCard(el.img, el.back, el.headline)
+
+        .products-container-left__wrap-logistic
+          +productsLogistics()
+      .products-container-right
+        +sidebarManager('ваш персональный менеджер', 'Павел Бычков', 'Начальник отдела поддержки клиентов', '+7 (342) 256 59 24', 'Пн-Пт: с 9.00 до 18.00')

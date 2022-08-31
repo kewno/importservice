@@ -1,0 +1,137 @@
+.contacts-container {
+  display: flex;
+  padding: 55px 0 70px;
+  &__wrap-contacts {
+    display: none;
+  }
+
+  &__wrap-manager {
+    display: none;
+  }
+}
+
+.contacts-container-left {
+  margin-right: 26px;
+  max-width: 1131px;
+  width: 100%;
+
+  &__headline {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 47px;
+    margin: 0;
+  }
+}
+
+.contacts-container-address {
+  display: flex;
+  justify-content: space-between;
+  max-width: 920px;
+  margin-top: 60px;
+  &__elem {
+
+  }
+}
+
+.contacts-container-wrap-requisites {
+  margin-top: 60px;
+}
+
+.contacts-container-wrap-block-image {
+  padding-top: 60px;
+}
+
+.contacts-container-right {
+  margin-top: 10px;
+}
+
+
+@media (max-width: 1100px) {
+  .contacts-container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 800px) {
+  .contacts-container {
+    padding: 75px 0 70px;
+    &__wrap-contacts {
+      display: block;
+    }
+
+    &__wrap-manager {
+      display: block;
+      .specialists {
+        display: none;
+      }
+    }
+
+    &__wrap-manager {
+      padding-top: 45px;
+    }
+
+    &__wrap-contacts-form {
+      display: none;
+    }
+  }
+
+  .contacts-container-left {
+    &__headline {
+      font-size: 36px;
+      line-height: 43px;
+    }
+  }
+
+  .contacts-container-address {
+    margin-top: 55px;
+    &__elem {
+      max-width: 45%;
+    }
+  }
+
+  .contacts-container-wrap-requisites {
+    margin: 50px 0 75px 0;
+  }
+
+  .contacts-container-wrap-block-image {
+    padding-top: 40px;
+  }
+
+  .contacts-container-right {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .contacts-container {
+    padding: 65px 0 70px;
+
+    &__wrap-manager {
+      padding-top: 40px;
+    }
+  }
+
+  .contacts-container-left {
+    &__headline {
+      font-size: 26.5px;
+      line-height: 33px;
+    }
+  }
+
+  .contacts-container-address {
+    margin-top: 45px;
+    display: flex;
+    flex-direction: column;
+
+    &__elem {
+      max-width: 100%;
+      &:first-child {
+        margin-bottom: 35px;
+      }
+    }
+  }
+
+  .contacts-container-wrap-requisites {
+    margin: 40px 0 60px 0;
+  }
+}

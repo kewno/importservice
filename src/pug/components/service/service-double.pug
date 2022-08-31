@@ -1,0 +1,18 @@
+include ../../ui/btn
+
+mixin serviceDouble(headline, className, image, href, reverse)
+  div(class=`${reverse} ${className}`).service-double
+    .service-double-text
+      h2.service-double-text__headline= headline
+      .service-double-wrap-buttons
+        .service-double-wrap-buttons__btn
+          if className === 'service-double-red'
+            +btn('Оставить заявку', 'btn_invisible', '/')
+          else if className === 'service-double-grey'
+            +btn('Оставить заявку', 'btn_white', '/')
+          else
+            +btn('Оставить заявку', 'btn_red', '/')
+        a(href=`${href}`).service-double-wrap-buttons__href Подробнее
+    .service-double-image(style=`background-image: url('../../images/${image}'); background-repeat: no-repeat;`)
+      //img(src=`../../images/${image}`).service-double-image__image
+//button_white
