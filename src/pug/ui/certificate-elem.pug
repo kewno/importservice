@@ -3,8 +3,8 @@ include ../ui/pop-up-multimedia
 mixin certificateElem(img, icon, headline, text, href)
   .wrap-certificate-elem
     .certificate-elem
-      img(src=`../../images/${img}`).certificate-elem__img
-      img(src=`../../images/${icon}`).certificate-elem__icon
+      img(src=`../../images/certificate/${img}`).certificate-elem__img
+      img(src=`../../images/certificate/${icon}`).certificate-elem__icon
       h3.certificate-elem__headline= headline
       p.certificate-elem__text= text
     a(href=`${href.href}`).wrap-certificate-elem__href= href.text

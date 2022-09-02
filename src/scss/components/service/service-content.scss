@@ -146,8 +146,8 @@
 
   .sidebar {
     .service-content-right {
-      width: 100%;
-      margin: 0;
+      //width: 100%;
+      margin: 0 60px;
       padding-top: 120px;
     }
   }
@@ -170,10 +170,21 @@
   .sidebar {
     .service-content-right {
       padding-top: 70px;
+      margin: 0 24px 0 30px;
     }
   }
 }
 
+@media (max-width: 700px) {
+  .sidebar {
+    margin: 0;
+    .service-content-right {
+      padding-top: 50px;
+      margin: 0;
+      width: 100%;
+    }
+  }
+}
 
 @media (max-width: 530px) {
   .service-content-cards {
@@ -198,6 +209,7 @@
     padding: 40px 0 70px;
     &.sidebar {
       padding: 40px 0 70px;
+      margin: 0;
     }
   }
 

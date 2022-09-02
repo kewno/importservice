@@ -1,17 +1,10 @@
-mixin popUpAccessoriesList(img, headline, elems)
+mixin popUpAccessoriesList(img, headline, elems = null)
   .pop-up-accessories-list
     .pop-up-accessories-list-texts
-      img(src=`../../images/${img}`).pop-up-accessories-list-texts__img
+      img(src=`../../images/ui/${img}`).pop-up-accessories-list-texts__img
       h4.pop-up-accessories-list-texts__headline= headline
-      //if elems !== null
-      img(src='../../images/pop-up-arrow.png').pop-up-accessories-list-texts__arrow
-    if elems !== null
+      img(src='../../images/ui/pop-up-arrow.png').pop-up-accessories-list-texts__arrow
+    if elems
       .pop-up-accessories-list-list
           each el in elems
             a(href='/').pop-up-accessories-list-list__elem= el
-      //a(href='/').pop-up-accessories-list-list__elem Радиальные шарикоподшипники
-      //a(href='/').pop-up-accessories-list-list__elem Корпусные подшипники
-      //a(href='/').pop-up-accessories-list-list__elem Радиально-упорные подшипники
-      //a(href='/').pop-up-accessories-list-list__elem Самоустанавливающиеся шарикоподшипники
-      //a(href='/').pop-up-accessories-list-list__elem Упорные шарикоподшипники
-      //a(href='/').pop-up-accessories-list-list__elem Упорно-радиальные шарикоподшипники

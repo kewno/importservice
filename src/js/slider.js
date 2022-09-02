@@ -17,6 +17,13 @@ document.addEventListener('DOMContentLoaded', () => {
       nextEl: ".service-detail-navigation__next",
       prevEl: ".service-detail-navigation__prev",
     },
+    pagination: {
+      el: ".service-detail-navigation-pagination",
+      clickable: true,
+      renderBullet: function (index, className) {
+        return '<div class="' + className + ' service-detail-navigation-pagination__elem' + '">' + '<img alt="pagination" src="../../images/service/service-detail-pag-6.png"/>' + "</div>";
+      },
+    },
   })
 })
 

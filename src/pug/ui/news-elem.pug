@@ -1,6 +1,6 @@
-mixin newsElem(href, btn, headline, text, date, image, className)
-  if image != null
-    div(class=`news-elem ${className}`, style=`background-image: url('../../images/${image}'); background-repeat: no-repeat;`)
+mixin newsElem(href, btn, headline, text, date, image = null, className)
+  if image
+    div(class=`news-elem ${className}`, style=`background-image: url('../../images/news/${image}'); background-repeat: no-repeat;`)
       .news-elem-wrap-href
         a(href= href).news-elem__href= btn
       h3.news-elem__headline!= headline

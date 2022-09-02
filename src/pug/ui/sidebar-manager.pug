@@ -4,18 +4,20 @@ mixin sidebarManager(head, headline, text, phone, date, specialists)
       .manager-slider
         .swiper-wrapper
           .swiper-slide
-            img(src='../../images/manager-slider-slide.png').swiper-slide__img
+            img(src='../../images/ui/manager-slider-slide.png').swiper-slide__img
           .swiper-slide
-            img(src='../../images/manager-slider-slide.png').swiper-slide__img
+            img(src='../../images/ui/manager-slider-slide.png').swiper-slide__img
           .swiper-slide
-            img(src='../../images/manager-slider-slide.png').swiper-slide__img
+            img(src='../../images/ui/manager-slider-slide.png').swiper-slide__img
 
       .manager-description
         p.manager-description__head= head
         h3.manager-description__headline= headline
         p.manager-description__text= text
-        .manager-description-pop-up
+        .manager-description-pop-up.manager-description-pop-up_none
           ul.manager-description-pop-up-list
+            img(src='../../images/ui/cross-white.png').manager-description-pop-up-list__cross
+
             p.manager-description-pop-up-list__elem Подбор аналога
             p.manager-description-pop-up-list__elem Информация о наличии на складе
             p.manager-description-pop-up-list__elem Стоимость (цена)
@@ -28,7 +30,7 @@ mixin sidebarManager(head, headline, text, phone, date, specialists)
             .manager-info__phone= phone
             .manager-info__date= date
           .manager-info-icon
-            img(src='../../images/manager-phone.png')
+            img(src='../../images/ui/manager-phone.png')
         div.manager-description-useful
           p.manager-description-useful__headline Чем может быть полезен?
           .manager-description-useful__arrow

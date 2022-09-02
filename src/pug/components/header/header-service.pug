@@ -27,7 +27,7 @@ include ../../ui/main-menu
 
 mixin headerService
   header.header-service
-    .header__burger
+    .header__burger.header__burger_none
       +popUpMenuHeader(menu)
     .header__wrap-menu
       .container__2920
@@ -35,9 +35,9 @@ mixin headerService
     .header-service-slider
       .swiper-wrapper
         .swiper-slide
-          img(src='../../images/header-service.png').swiper-slide__img
+          img(src='../../images/header/header-service.png').swiper-slide__img
         .swiper-slide
-          img(src='../../images/header-service.png').swiper-slide__img
+          img(src='../../images/header/header-service.png').swiper-slide__img
       +serviceHeaderInfo()
       .wrap-service-control
         .service-pagination

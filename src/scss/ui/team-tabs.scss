@@ -28,6 +28,10 @@
     &_active {
       border-bottom: 7px solid var(--red);
     }
+
+    &:hover {
+      opacity: 0.8;
+    }
   }
 
   &__headline {

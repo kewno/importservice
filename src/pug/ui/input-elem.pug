@@ -1,8 +1,8 @@
-mixin inputElem(type, placeholder, className, status, popUpText)
+mixin inputElem(type, placeholder, className = null, status = null, popUpText = null)
   div(class= `input-elem ${className}`)
     input(type= type, placeholder= placeholder).input-elem__input
 
-    if popUpText !== null
+    if popUpText
       .input-elem__pop-up= popUpText
 
     if status === 'error'
@@ -15,7 +15,3 @@ mixin inputElem(type, placeholder, className, status, popUpText)
         <svg width="30" height="23" viewBox="0 0 30 23" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M1 14.5L8 21.5L28.5 1" stroke="#6FCF97" stroke-width="2" stroke-linejoin="round"/>
         </svg>
-    else
-
-        //if status === 'input-elem_error'
-        ////span.input-elem__placeholder= placeholder

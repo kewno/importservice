@@ -2,7 +2,7 @@ include ../../ui/pdf-elem
 
 mixin referenceContainerPdf(img, headline, elem)
   .reference-container-pdf
-    img(src=`../../images/${img}`).reference-container-pdf__img
+    img(src=`../../images/reference/${img}`).reference-container-pdf__img
     h2.reference-container-pdf__headline= headline
     .reference-container-pdf-elements
       each el in elem

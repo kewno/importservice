@@ -1,9 +1,13 @@
 .wrap-pop-up-multimedia {
-  display: none;
+  display: block;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 10;
+
+  &_none {
+    display: none;
+  }
 }
 
 .pop-up-multimedia {
@@ -27,6 +31,10 @@
     top: 38%;
     justify-content: center;
     z-index: 2;
+
+    &_none {
+      display: none;
+    }
   }
   &__wrap-bottom {
     height: 100px;

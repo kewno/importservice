@@ -1,7 +1,7 @@
 mixin searchElem(id, headline, text, pagination)
   .search-elem
     h2.search-elem__headline!= id+ `. ` + headline
-    p.search-elem__text= text
+    p.search-elem__text!= text
     .search-elem-pagination
       .search-elem-pagination__wrap-elems
         each el in pagination

@@ -5,14 +5,14 @@ mixin serviceDetailSlider(pagination)
     .slider
       .swiper-wrapper
         .swiper-slide
-          img(src='../../images/service-detail-slider-1.png').swiper-slide__image
+          img(src='../../images/service/service-detail-slider-1.png').swiper-slide__image
         .swiper-slide
-          img(src='../../images/service-detail-slider-1.png').swiper-slide__image
+          img(src='../../images/service/service-detail-slider-1.png').swiper-slide__image
       .service-detail-navigation
         .service-detail-navigation-pagination
-          each el in pagination
+          //each el in pagination
             .service-detail-navigation-pagination__elem
-              img(src=`../../images/${el}`)
+              img(src=`../../images/service/${el}`)
         .service-detail-navigation__prev
           +arrow('arrow_white')
         .service-detail-navigation__next

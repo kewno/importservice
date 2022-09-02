@@ -25,11 +25,11 @@ include ../error/error-info
 
 mixin headerErrors
   header.header-errors
-    .header__burger
+    .header__burger.header__burger_none
       +popUpMenuHeader(menu)
     .header__wrap-menu
       .container__2920
         +mainMenu(menu, 'main-menu_parthers')
         +errorInfo
     .header-errors__wrap-image
-      img(src='../../images/logo404.png')
+        img(src='../../images/ui/logo404.png')

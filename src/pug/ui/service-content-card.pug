@@ -1,6 +1,6 @@
-mixin serviceContentCard(img, back, headline)
-  if img !== undefined
-    .service-content-card(style=`background-image: url('../../images/${img}'); background-repeat: no-repeat;`)
+mixin serviceContentCard(img = null, back, headline)
+  if img
+    .service-content-card(style=`background-image: url('../../images/service/${img}'); background-repeat: no-repeat;`)
       h3.service-content-card__headline= headline
   else
     .service-content-card(style=`background: var(--${back});`)

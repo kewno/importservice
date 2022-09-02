@@ -8,6 +8,10 @@
     font-size: 24px;
     line-height: 26px;
     margin: 0 0 30px;
+
+    span {
+      color: var(--red);
+    }
   }
   &__text {
     color: var(--black);
@@ -17,6 +21,10 @@
     font-size: 18px;
     line-height: 26px;
     margin: -3px 0 23px;
+
+    span {
+      color: var(--red);
+    }
   }
 
   &:last-child {
@@ -51,6 +59,10 @@
   color: var(--grey-1);
   text-decoration: none;
   margin-right: 10px;
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 @media (max-width: 550px) {

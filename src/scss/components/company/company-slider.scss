@@ -64,6 +64,12 @@
     flex-wrap: wrap;
     height: auto;
 
+    &.reverse {
+      .container-company-slider__wrap-info {
+        justify-content: flex-start;
+      }
+    }
+
     &__wrap-info {
       background: var(--red);
       width: 100%;

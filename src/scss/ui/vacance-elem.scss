@@ -56,6 +56,13 @@
   }
 }
 
+@media (max-width: 1100px) {
+  .vacance-elem {
+    max-width: 100%;
+  }
+}
+
+
 @media (max-width: 500px) {
   .vacance-elem {
     min-height: 273px;
@@ -65,16 +72,3 @@
     }
   }
 }
-
-//.vacance-elem-wrap-btn {
-//  margin: auto auto 0;
-//
-//  &__btn {
-//    width: 265px;
-//    //width: 100%;
-//    .btn {
-//      height: 40px;
-//      line-height: 40px;
-//    }
-//  }
-//}

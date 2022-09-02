@@ -1,7 +1,7 @@
 include ../ui/main-menu-vertical
 include ../ui/btn
 
-mixin mainMenu(menu, className, theme, logo)
+mixin mainMenu(menu, className, theme, logo = null)
   nav(class=`main-menu ${className} ${theme}`)
     .main-menu__burder
       <svg width="35" height="33" viewBox="0 0 35 33" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -11,17 +11,17 @@ mixin mainMenu(menu, className, theme, logo)
       </svg>
     if className === 'main-menu_parthers'
       a(href='/').main-logo
-        if logo !== undefined
-          img(src=`../../images/${logo}`).main-logo__logo
+        if logo
+          img(src=`../../images/ui/${logo}`).main-logo__logo
         else
-          img(src='../../images/logo-white.png').main-logo__logo
+          img(src='../../images/ui/logo-white.png').main-logo__logo
     ul.main-menu-list
       if className === 'main-menu_parthers'
         a(href='/')
-          if logo !== undefined
-            img(src=`../../images/${logo}`).main-logo__logo
+          if logo
+            img(src=`../../images/ui/${logo}`).main-logo__logo
           else
-            img(src='../../images/logo-white.png').main-logo__logo
+            img(src='../../images/ui/logo-white.png').main-logo__logo
       each el in menu
         li.main-menu-elem
           a(href= href).main-menu-elem__href= el.name
@@ -30,8 +30,6 @@ mixin mainMenu(menu, className, theme, logo)
               <path d="M10.5 0.5L6.20711 4.79289C5.81658 5.18342 5.18342 5.18342 4.79289 4.79289L0.5 0.5" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
             +mainMenuVertical(el.submenu)
-      //.main-menu-list__search
-        img(src='../images/search.png')
     .header-contacts
       p.header-contacts__email zakaz@impservice.ru
       p.header-contacts__phone +7 (342) 225-00-88
@@ -42,20 +40,3 @@ mixin mainMenu(menu, className, theme, logo)
         </svg>
       .header-contacts__wrap-btn
         +btn('Заказать звонок', 'btn_invisible', '/')
-
-
-    //nav(class=`main-menu ${className}`)
-    //  ul.main-menu-list
-    //    each el in menu
-    //      li.main-menu-elem
-    //        a(href= href).main-menu-elem__href= el.name
-    //        if el.submenu !== null
-    //          <svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-    //          <path d="M10.5 0.5L6.20711 4.79289C5.81658 5.18342 5.18342 5.18342 4.79289 4.79289L0.5 0.5" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"/>
-    //          </svg>
-    //          +mainMenuVertical(el.submenu)
-    //  .header-contacts
-    //    p.header-contacts__email zakaz@impservice.ru
-    //    p.header-contacts__phone +7 (342) 225-00-88
-    //    .header-contacts__wrap-btn
-    //      +btn('Заказать звонок', 'btn_invisible', '/')

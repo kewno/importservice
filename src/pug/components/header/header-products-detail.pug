@@ -2,7 +2,7 @@ include ../products-detail/products-detail-header-info
 
 mixin headerProductsDetail(elem, pagination, headline)
   header.header-products-detail
-    .header__burger
+    .header__burger.header__burger_none
       +popUpMenuHeader(menu)
     .header__wrap-menu
       .container__2920
@@ -11,7 +11,7 @@ mixin headerProductsDetail(elem, pagination, headline)
       .swiper-wrapper
         each el in elem
           .swiper-slide
-            img(src=`../../images/${el}`).swiper-slide__img
+            img(src=`../../images/header/${el}`).swiper-slide__img
       //+serviceHeaderInfo()
       .wrap-service-control
         .service-pagination

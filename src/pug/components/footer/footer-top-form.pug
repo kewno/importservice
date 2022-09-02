@@ -2,11 +2,11 @@ include ../../ui/input-elem
 include ../../ui/btn
 
 mixin footerTopForm
-  .footer-top-form
+  form(type=`POST`).footer-top-form
     .footer-top-form__input
-      +inputElem('type', 'Введите ваше имя', null, null, null)
+      +inputElem('type', 'Введите ваше имя', 'input_name')
     .footer-top-form__input
-      +inputElem('type', 'Ваш телефон', null, null, null)
+      +inputElem('type', 'Ваш телефон', 'input_phone')
     .footer-top-form__input
-      +inputElem('type', 'Введите ваш e-mail', null, null, null)
-    +btn('Отправить', 'btn_red', '/')
+      +inputElem('type', 'Введите ваш e-mail', 'input_mail')
+    +btn('Отправить', 'btn_red')

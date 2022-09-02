@@ -1,9 +1,9 @@
 mixin popUpFilter(elemCheck, elemOption)
-  .pop-up-filter
+  .pop-up-filter.pop-up-filter_none
     .pop-up-filter-head
       h2.pop-up-filter-head__headline Фильтр
       .pop-up-filter-head__cross
-        img(src='../../images/cross.png').pop-up-filter-head-cross__img
+        img(src='../../images/ui/cross.png').pop-up-filter-head-cross__img
         //<svg width="25" height="25" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd" d="M20.939 25.8008L2.0305 44.7093C0.909088 45.8307 0.909086 47.6489 2.0305 48.7703C3.15192 49.8917 4.97009 49.8917 6.09151 48.7703L25 29.8618L43.9085 48.7703C45.0299 49.8917 46.8481 49.8917 47.9695 48.7703C49.0909 47.6489 49.0909 45.8307 47.9695 44.7093L29.061 25.8008L47.9695 6.89229C49.0909 5.77088 49.0909 3.9527 47.9695 2.83128C46.8481 1.70987 45.0299 1.70987 43.9085 2.83128L25 21.7398L6.09151 2.83129C4.97009 1.70987 3.15192 1.70987 2.0305 2.83128C0.909087 3.9527 0.909087 5.77087 2.0305 6.89229L20.939 25.8008Z" fill="#AB2421"/>
         </svg>
@@ -23,6 +23,3 @@ mixin popUpFilter(elemCheck, elemOption)
         ui.news-content-settings-falls-options
           each el in elemOption
             p.news-content-settings-falls-options__elem= el.name
-
-
-          //pop-up-filter-option-menu __elem

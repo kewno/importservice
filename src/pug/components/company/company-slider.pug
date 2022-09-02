@@ -6,7 +6,7 @@ mixin companySlider(elem, info, className, reverse)
       .swiper-wrapper
         each el in elem
           .swiper-slide
-            img(src=`../../images/${el}`).swiper-slide__img
+            img(src=`../../images/company/${el}`).swiper-slide__img
       //+mainBearingSliderInfo
       //img(src='../images/bearing-slide-line.png').main-bearing-slider__line
       .company-slider-wrap-control
@@ -14,6 +14,24 @@ mixin companySlider(elem, info, className, reverse)
           .company-slider-control__prev
             +arrow('arrow_white')
           .company-slider-control__next
+            +arrow('arrow_red arrow_right')
+    .container-company-slider__wrap-info
+      +companySliderInfo(info.headline, info.texts, info.bold)
+
+mixin companySlider(elem, info, className, reverse)
+  div(class=`${className} ${reverse}`).container-company-slider
+    .company-slider
+      .swiper-wrapper
+        each el in elem
+          .swiper-slide
+            img(src=`../../images/company/${el}`).swiper-slide__img
+      //+mainBearingSliderInfo
+      //img(src='../images/bearing-slide-line.png').main-bearing-slider__line
+      .company-slider__wrapper
+        .company-slider__control
+          .company-slider__control-prev
+            +arrow('arrow_white')
+          .company-slider__control-next
             +arrow('arrow_red arrow_right')
     .container-company-slider__wrap-info
       +companySliderInfo(info.headline, info.texts, info.bold)

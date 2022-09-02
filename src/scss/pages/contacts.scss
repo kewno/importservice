@@ -6,6 +6,9 @@
     //margin-top: -60px;
   }
 }
+.contacts-header-info {
+  z-index: 3;
+}
 
 @media (max-width: 1300px) {
   .contacts {
@@ -18,7 +21,6 @@
 @media (max-width: 800px) {
   .contacts {
     &__wrap-footer {
-      //padding-top: 50px;
       padding: 50px 20px 90px 20px;
       margin: 0 auto 0;
     }

@@ -1,6 +1,6 @@
-mixin newsElemBig(href, headline, image)
-  if image != null
-    div(style=`background: url('../../images/${image}') center 100% no-repeat;`).news-elem-big
+mixin newsElemBig(href, headline, image = null)
+  if image
+    div(style=`background: url('../../images/news/${image}') center 100% no-repeat;`).news-elem-big
       a(href= href).news-elem-big__href Обзор
       h3.news-elem-big__headline= headline
   else

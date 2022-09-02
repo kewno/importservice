@@ -2,12 +2,14 @@
   top: 0;
   position: absolute;
   width: 100%;
-  height: 100vh; //100%
-  //background: var(--black);
-  //opacity: 0.9;
+  height: 100vh;
   z-index: 10;
-  display: none;
+  display: flex;
   justify-content: end;
+
+  &_none {
+    display: none;
+  }
 }
 
 .pop-up-call {
@@ -65,7 +67,9 @@
     }
   }
 }
-
+//@include tablet {
+//
+//}
 @media (max-width: 500px) {
   .pop-up-call {
     padding: 40px 20px 0 20px;

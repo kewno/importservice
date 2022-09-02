@@ -23,8 +23,8 @@ include ../../ui/pages-pagination
   ]
 
 mixin headerParthers(back, pagination, theme, logo)
-  header.header-parthers(style=`background-image: url('../../images/${back}');`)
-    .header__burger
+  header.header-parthers(style=`background-image: url('../../images/header/${back}');`)
+    .header__burger.header__burger_none
       +popUpMenuHeader(menu)
     .header__wrap-menu
       .container__2920

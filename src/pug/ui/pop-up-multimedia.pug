@@ -5,7 +5,7 @@ include ./pop-up-multimedia-video
 include ./pop-up-multimedia-slider
 
 mixin popUpMultimedia(className, date, headline)
-  .wrap-pop-up-multimedia
+  .wrap-pop-up-multimedia.wrap-pop-up-multimedia_none
     div(class=`pop-up-multimedia ${className}`)
       .pop-up-multimedia__cross
         +cross
@@ -30,7 +30,7 @@ mixin popUpMultimedia(className, date, headline)
             //+arrow('arrow_red').pop-up-control_prev
             //+arrow('arrow_white arrow_right').pop-up-control_next
             .pop-up-multimedia-wrap-coll-slide
-              img(src='../../images/img.png').pop-up-multimedia-wrap-coll-slide__img
+              img(src='../../images/ui/img.png').pop-up-multimedia-wrap-coll-slide__img
               .pop-up-multimedia-slide-coll
                 p.pop-up-multimedia-slide-coll__now 5
                 p.pop-up-multimedia-slide-coll__all / 17

@@ -1,9 +1,9 @@
-mixin newsElemWhite(href, btn, headline, text, date, image)
+mixin newsElemWhite(href, btn, headline, text, date, image = null)
   .news-elem-white
     .news-elem-white-href
       a(href= href).news-elem-white-href__elem= btn
-    if image !== undefined
-      img(src=`../../images/${image}`).news-elem-white__img
+    if image
+      img(src=`../../images/news/${image}`).news-elem-white__img
     h2.news-elem-white__headline= headline
     if text !== ''
       p.news-elem-white__text= text

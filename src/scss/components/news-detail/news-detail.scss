@@ -368,6 +368,9 @@
   .news-detail-content {
     flex-direction: column;
   }
+  //.news-detail-content-right {
+  //  margin: 0 60px;
+  //}
 }
 
 
@@ -548,7 +551,7 @@
 @media (max-width: 800px) {
   .news-detail.news-detail_sidebar {
     .news-detail__wrap-manager {
-      margin: -20px 0 75px;
+      margin: -20px 24px 75px 30px; //-20px 0 75px
       display: flex;
     }
   }

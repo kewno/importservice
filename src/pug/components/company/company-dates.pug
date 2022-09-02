@@ -7,17 +7,17 @@ mixin companyDates(elem)
       | на рынке высокого качества
     .company-dates__first-elem
       +companyYears(null, '2001', 'Основание компании Импортсервис', null)
-    div(style=`background-image: url('../../images/company-dates__1520.png'); background-repeat: no-repeat;`).company-dates__back
+    div(style=`background-image: url('../../images/company/company-dates__1520.png'); background-repeat: no-repeat;`).company-dates__back
       .company-dates-elements
         each el in elem
           .company-dates-elements__elem
             +companyYears(el.img, el.headline, el.bold, el.text)
-    div(style=`background-image: url('../../images/company-dates__780.png'); background-repeat: no-repeat;`).company-dates__back_780
+    div(style=`background-image: url('../../images/company/company-dates__780.png'); background-repeat: no-repeat;`).company-dates__back_780
       .company-dates-elements
         each el in elem
           .company-dates-elements__elem
             +companyYears(el.img, el.headline, el.bold, el.text)
-    div(style=`background-image: url('../../images/company-dates__500.png'); background-repeat: no-repeat;`).company-dates__back_500
+    div(style=`background-image: url('../../images/company/company-dates__500.png'); background-repeat: no-repeat;`).company-dates__back_500
       .company-dates-elements
         each el in elem
           .company-dates-elements__elem

@@ -4,11 +4,11 @@ include ../../ui/input-elem
 
 mixin mainMailingForm
   .main-mailing-form
-    .main-mailing-form__wrap-input-btn
+    form(type='POST').main-mailing-form__wrap-input-btn
       .main-mailing-wrap-input
-        +inputElem('email', 'Введите ваш e-mail', null, null, null)
+        +inputElem('text', 'Введите ваш e-mail', null, null, null)
       .main-mailing-wrap-btn
-        +btn('Подписаться', 'btn_red', '/')
+        +btn('Подписаться', 'btn_red')
     p.main-mailing-form__text Нажимая на кнопку «Подписаться», я даю согласие на обработку персональных данных
     .main-mailing-form__wrap-checkbox
       .main-mailing-form-checkbox

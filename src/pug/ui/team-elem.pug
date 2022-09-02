@@ -1,7 +1,6 @@
 mixin teamElem(img, name, department, phone, email, text)
-  .team-elem(style=`background-image: url('../../images/${img}'); background-repeat: no-repeat;)`)
-    //img(`../../images/${img}`).team-elem__img
-    img(src='../../images/team-elem-back.png').team-elem__back
+  .team-elem(style=`background-image: url('../../images/team/${img}'); background-repeat: no-repeat;)`)
+    img(src='../../images/team/team-elem-back.png').team-elem__back
     .team-elem-wrap-text
       h3.team-elem-wrap-text__headline= name
       p.team-elem-wrap-text__department= department

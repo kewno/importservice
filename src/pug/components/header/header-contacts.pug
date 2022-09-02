@@ -26,7 +26,7 @@ include ../../ui/arrow
 
 mixin headerContacts(back, info)
   header.header-service
-    .header__burger
+    .header__burger.header__burger_none
       +popUpMenuHeader(menu)
     .header__wrap-menu
       .container__2920
@@ -35,9 +35,9 @@ mixin headerContacts(back, info)
     .header-service-slider
       .swiper-wrapper
         .swiper-slide
-          img(src=`../../images/${back}`).swiper-slide__img
+          img(src=`../../images/header/${back}`).swiper-slide__img
         .swiper-slide
-          img(src=`../../images/${back}`).swiper-slide__img
+          img(src=`../../images/header/${back}`).swiper-slide__img
       +contactsHeaderInfo(info)
       .wrap-service-control
         .service-pagination

@@ -7,7 +7,7 @@ mixin searchContent(elem)
       h1.search-content__headline Результаты поиска
       .search-content-wrap-search
         +inputElem('type', 'Введите запрос', null, null, null)
-        img(src=`../../images/search.png`).search-content-wrap-search__glass
+        img(src=`../../images/ui/search.png`).search-content-wrap-search__glass
       each el in elem
         +searchElem(el.id, el.headline, el.text, el.pagination)
       .search-content-wrap-pagination

@@ -1,5 +1,5 @@
-mixin btn(text, className, href)
-  if href == null
-    button(class=`btn ${className}`)= text
+mixin btn(text, className, href = null)
+  if !href
+    button(class=`btn ${className}`, type=`submit`)= text
   else
     a(class=`btn ${className}`, href= href)= text

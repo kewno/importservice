@@ -9,7 +9,11 @@
     top: 50px;
   }
   &__burger {
-    display: none;
+    display: block;
+
+    &_none {
+      display: none;
+    }
   }
 }
 
@@ -23,9 +27,9 @@
 }
 @media (max-width: 1100px) {
   .header {
-    &__burger {
-      display: none;
-    }
+    //&__burger {
+    //  display: none;
+    //}
 
     &__wrap-menu {
       top: 30px;
