@@ -170,7 +170,7 @@
 
 
   .main-bearing-size-wrap-text {
-    transform: translateX(220px);
+    //transform: translateX(220px);
     background: var(--white);
     z-index: 3;
 
@@ -194,8 +194,8 @@
     max-width: 745px;
   }
   .main-bearing-size-wrap-text {
-    transform: translateX(0);
-    padding: 0;
+    //transform: translateX(0);
+    padding: 0 0 0 20px;
     margin: 118px 105px 0 0;
     z-index: 2;
     &__headline {

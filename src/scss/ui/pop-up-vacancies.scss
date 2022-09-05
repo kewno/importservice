@@ -7,6 +7,7 @@
   right: 0;
   z-index: 4;
   display: block;
+  //overflow-y: scroll;
 
   &_none {
     display: none;
@@ -18,10 +19,12 @@
   background: var(--white);
   width: 640px;
   min-height: 100vh;
-  height: auto;
+  //height: auto;
+  height: 100%;
   margin-left: auto;
   box-sizing: border-box;
   padding: 36px 0 50px 48px;
+  overflow-y: scroll; //scroll auto
 
   &__headline {
     font-style: normal;

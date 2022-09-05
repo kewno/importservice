@@ -289,7 +289,8 @@
   .main-slaider-information {
     &__wrap-image {
       top: -40px;
-      left: -220px;
+      right: 560px;
+      //left: -220px;
 
       img {
         width: 345.08px;
@@ -448,9 +449,9 @@
       max-width: 500px;
     }
     .main-slaider-information__wrap-image {
-      left: 0;
+      //left: 0;
       top: 110px;
-      right: -300px;
+      left: 1200px;//right: -220px;//right: -300px;
       display: flex;
       justify-content: end;
 
@@ -502,8 +503,8 @@
     .main-slaider-information__wrap-image {
       top: -30px;
 
-      left: inherit;
-      right: -110px;
+      //left: inherit;
+      left: 750px;//right: -110px;
 
       img {
         width: 293.37px;
@@ -554,7 +555,7 @@
     .main-slaider-information__wrap-image {
       left: 0;
       top: 110px;
-      right: -300px;
+      right: -480px;
 
       img {
         width: 502.05px;
@@ -605,7 +606,7 @@
       top: -20px;
 
       left: inherit;
-      right: -80px;
+      right: -120px;
 
       img {
         width: 218px;

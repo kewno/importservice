@@ -42,13 +42,26 @@
 		src: $src;
 	}
 }
-@mixin tablet {
+
+@mixin xl-max {
+  @media screen and (max-width: 1940px) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media screen and (max-width: 1600px) {
+    @content;
+  }
+}
+
+@mixin lg {
   @media screen and (max-width: 1300px) {
     @content;
   }
 }
 
-@mixin tablet {
+@mixin md {
   @media screen and (max-width: 1100px) {
     @content;
   }
@@ -60,7 +73,13 @@
   }
 }
 
-@mixin tablet {
+@mixin sm {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin xs {
   @media screen and (max-width: 500px) {
     @content;
   }

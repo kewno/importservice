@@ -1,13 +1,25 @@
 .vacancies {
   &__wrap-sidebar {
     display: none;
+
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1100px) {
   .vacancies {
     &__wrap-sidebar {
       display: flex;
+      margin-bottom: 67px;
+      //border: 2px solid red;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .vacancies {
+    &__wrap-sidebar {
+      display: flex;
+      margin-bottom: 24px;
     }
   }
 }

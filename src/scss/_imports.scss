@@ -64,7 +64,6 @@
 
 
 //service-detail
-@import 'pages/service-detail';
 @import 'components/service-detail/service-detail-content';
 @import 'components/service-detail/service-detail-articles';
 @import 'components/service-detail/service-detail-slider';
@@ -86,7 +85,6 @@
 
 
 //company
-@import 'pages/company';
 @import 'components/company/company-container';
 @import 'components/company/company-range';
 @import 'components/company/company-possibilitys';
@@ -166,6 +164,9 @@
 @import 'pages/products-detail';
 @import 'pages/contacts';
 @import 'pages/search';
+@import 'pages/vacancies';
+@import 'pages/service-detail';
+@import 'pages/company';
 
 
 //footer

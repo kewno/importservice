@@ -13,44 +13,80 @@
   color: var(--white);
   box-sizing: border-box;
   cursor: pointer;
-}
 
-.btn_red {
-  background: var(--red);
-  color: var(--white);
 
-  &:hover {
-    border: 1px solid var(--red);
-    color: var(--red);
+  &_red {
+    background: var(--red);
+    color: var(--white);
+
+    &:hover {
+      border: 1px solid var(--red);
+      color: var(--red);
+      background: var(--white);
+    }
+  }
+
+  &_white {
     background: var(--white);
+    color: var(--black);
+    border: 2px solid var(--black);
+    line-height: 46px;
+
+    &:hover {
+      background: var(--white);
+      color: var(--red);
+      border: 2px solid var(--red);
+    }
+  }
+
+  &_invisible {
+    background: none;
+    color: var(--white);
+    border: 2px solid var(--white);
+    line-height: 46px;
+
+    &:hover {
+      background: var(--back-button);
+      color: var(--red);
+    }
   }
 }
 
-.btn_white {
-  background: var(--white);
-  color: var(--black);
-  border: 2px solid var(--black);
-  line-height: 46px;
-
-  &:hover {
-    background: var(--white);
-    color: var(--red);
-    border: 2px solid var(--red);
-  }
-}
-
-.btn_invisible {
-  background: none;
-  color: var(--white);
-  border: 2px solid var(--white);
-  line-height: 46px;
-
-  &:hover {
-    background: var(--back-button);
-    color: var(--red);
-    //border: 2px solid var(--red);
-  }
-}
+//.btn_red {
+//  background: var(--red);
+//  color: var(--white);
+//
+//  &:hover {
+//    border: 1px solid var(--red);
+//    color: var(--red);
+//    background: var(--white);
+//  }
+//}
+//
+//.btn_white {
+//  background: var(--white);
+//  color: var(--black);
+//  border: 2px solid var(--black);
+//  line-height: 46px;
+//
+//  &:hover {
+//    background: var(--white);
+//    color: var(--red);
+//    border: 2px solid var(--red);
+//  }
+//}
+//
+//.btn_invisible {
+//  background: none;
+//  color: var(--white);
+//  border: 2px solid var(--white);
+//  line-height: 46px;
+//
+//  &:hover {
+//    background: var(--back-button);
+//    color: var(--red);
+//  }
+//}
 
 @media (max-width: 1300px) {
   .btn {

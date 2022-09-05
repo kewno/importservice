@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 document.addEventListener('DOMContentLoaded', () => {
-  new Swiper('.partners-slider', { //partners-group__wrap-elem
+  new Swiper('.partners-slider', {
     spaceBetween: 30,
     slidesPerView: 1,
     navigation: {
@@ -138,7 +138,20 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 })
 
+
+//func
+let arrowSlider = (slider, [arrowNext, arrowPrev]) => {
+  return new Swiper('.header-service-slider', {
+    slidesPerView: 1,
+    navigation: {
+      nextEl: ".header-service-slider .service-control .service-control_next",
+      prevEl: ".header-service-slider .service-control .service-control_prev",
+    },
+  })
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+  arrowSlider('.header-service-slider', ['.service-control_next', '.service-control_prev'])
   new Swiper('.products-detail-brands-slider', {
     spaceBetween: 22,//26
     slidesPerView: "auto",

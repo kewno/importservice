@@ -2,16 +2,11 @@ include main-mailing-form
 
 mixin mainMailing
   .wrap-main-mailing
-    .container__1920
-      .main-mailing
-        .main-mailing-top
-          .main-mailing__wrap-text
-            .mailing-headline Профессиональный инжиниринг и высокое качество продукции
-            .mailing-text О чем бы вы хотели узнать из нашей ежемесячной рассылки? Выберите интересную тему и оставьте свой емайл
-          .main-mailing-iso
-            img(src='../../images/ui/ellipse.png').mailing-logo
-        +mainMailingForm
-
-        //.main-mailing__right-block ellipse.png mailing.png
-          img(src='../../images/mailing.png').mailing-logo
-            .main-mailing__left-block
+    .main-mailing
+      .main-mailing-top
+        .main-mailing__wrap-text
+          .mailing-headline Профессиональный инжиниринг и высокое качество продукции
+          .mailing-text О чем бы вы хотели узнать из нашей ежемесячной рассылки? Выберите интересную тему и оставьте свой емайл
+        .main-mailing-iso
+          img(src='../../images/ui/ellipse.png').mailing-logo
+      +mainMailingForm

@@ -4,11 +4,12 @@
   top: 0;
   background: var(--white);
   width: 100%;
-  max-width: 800px;
+  max-width: 1000px;
   padding: 30px 30px 20px 20px;
   box-sizing: border-box;
   z-index: 4;
   display: block;
+  height: 100vh;
 
   &_none {
     display: none;
@@ -29,6 +30,10 @@
     font-size: 18px;
     line-height: 140%;
     text-align: center;
+  }
+
+  &__cross {
+    cursor: pointer;
   }
 }
 

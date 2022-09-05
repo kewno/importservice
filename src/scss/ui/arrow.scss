@@ -11,55 +11,105 @@
   &:hover {
     opacity: 0.7;
   }
-}
 
-.arrow_right {
-  transform: rotate(180deg);
-}
+  &_right {
+    transform: rotate(180deg);
+  }
 
-.arrow_red {
-  background: var(--red);
-  svg {
-    path {
-      stroke: var(--white);
+  &_red {
+    background: var(--red);
+    svg {
+      path {
+        stroke: var(--white);
+      }
+    }
+  }
+
+  &_white {
+    background: var(--white);
+    svg {
+      path {
+        stroke: var(--black);
+      }
+    }
+  }
+
+  &_bej {
+    background: var(--bej);
+    svg {
+      path {
+        stroke: var(--black);
+      }
+    }
+  }
+
+  &_grey {
+    background: var(--grey);
+    svg {
+      path {
+        stroke: var(--white);
+      }
+    }
+  }
+
+
+  &_grey-light {
+    background: var(--grey-light);
+    svg {
+      path {
+        stroke: var(--white);
+      }
     }
   }
 }
 
-.arrow_white {
-  background: var(--white);
-  svg {
-    path {
-      stroke: var(--black);
-    }
-  }
-}
+//.arrow_right {
+//  transform: rotate(180deg);
+//}
+//
+//.arrow_red {
+//  background: var(--red);
+//  svg {
+//    path {
+//      stroke: var(--white);
+//    }
+//  }
+//}
 
-.arrow_grey {
-  background: var(--grey);
-  svg {
-    path {
-      stroke: var(--white);
-    }
-  }
-}
-.arrow_grey-light {
-  background: var(--grey-light);
-  svg {
-    path {
-      stroke: var(--white);
-    }
-  }
-}
+//.arrow_white {
+//  background: var(--white);
+//  svg {
+//    path {
+//      stroke: var(--black);
+//    }
+//  }
+//}
 
-.arrow_bej {
-  background: var(--bej);
-  svg {
-    path {
-      stroke: var(--black);
-    }
-  }
-}
+//.arrow_grey {
+//  background: var(--grey);
+//  svg {
+//    path {
+//      stroke: var(--white);
+//    }
+//  }
+//}
+//.arrow_grey-light {
+//  background: var(--grey-light);
+//  svg {
+//    path {
+//      stroke: var(--white);
+//    }
+//  }
+//}
+
+//.arrow_bej {
+//  background: var(--bej);
+//  svg {
+//    path {
+//      stroke: var(--black);
+//    }
+//  }
+//}
 
 @media (max-width: 1300px) {
   .arrow {

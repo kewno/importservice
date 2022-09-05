@@ -1,5 +1,11 @@
 .sidebar-manager {
   max-width: 365px;
+  //position: absolute;
+  //top: 0px;
+  top: 100px;
+  position: sticky;
+  //height: auto;
+  //top: 20px;
 }
 
 .manager {
@@ -12,9 +18,6 @@
     .swiper-slide {
       width: auto;
       height: 300px;
-      //center
-      //display: flex;
-      //justify-content: center;
 
       &__img {
         width: 100%;
@@ -44,7 +47,6 @@
     color: var(--white);
     margin: 0;
     padding: 8px 19px;
-    //max-width: 252px;
     box-sizing: border-box;
     position: absolute;
   }

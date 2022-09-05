@@ -23,8 +23,9 @@ document.addEventListener('DOMContentLoaded', () => {
     body.className = 'body_inherit';
   }
 
-  let openPopUp = (el, className) => {
+  let openPopUp = (el, className, attr = null) => {
     el.classList.remove(className);
+    //attr ? el.firstChild.classList.add(attr) : null; для главного слайдера pop-up
     body.className = 'body_hidden';
   }
 
@@ -41,18 +42,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  if (phonePoint ) {
-    phonePoint.forEach(function(elem) {
-      elem.addEventListener("click", () =>  openPopUp(phonePopUp, 'wrap-pop-up-call_none'));
-    })
-  }
+  phonePoint?.forEach(function(elem) {
+    elem.addEventListener("click", () =>  openPopUp(phonePopUp, 'wrap-pop-up-call_none'));
+  })
 
   //burger
-  if (burgerMenuElements) {
-    burgerMenuElements.forEach(function(elem) {
-      elem.addEventListener("click", () =>  toggleSubmenu(elem))
-    })
-  }
+  burgerMenuElements?.forEach(function(elem) {
+    elem.addEventListener("click", () =>  toggleSubmenu(elem))
+  })
 
   // let closeBurgerPopUp = () => {
   //   burgerPopUp.classList.add('header__burger_none');
@@ -108,39 +105,60 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let slide = document.querySelectorAll('.slaider-slide');
 
-  if (slide) {
-    slide.forEach(function(elem) {
-      elem.addEventListener("click", () => openPopUp(multimedia, 'wrap-pop-up-multimedia_none'));
+  //if (slide) {
+    slide?.forEach(function(elem) {
+      //debugger
+      //slaider-slide  slaider-slide__play
+      let slide = elem.querySelector('.slaider-slide__play');
+      if (slide)
+        elem.addEventListener("click", () => openPopUp(multimedia, 'wrap-pop-up-multimedia_none', 'pop-up-multimedia_video'));
+      else
+        elem.addEventListener("click", () => openPopUp(multimedia, 'wrap-pop-up-multimedia_none', 'pop-up-multimedia_slider'));
+      //elem.addEventListener("click", () => openPopUp(multimedia, 'wrap-pop-up-multimedia_none'));
     })
-  }
+  //}
 
-  if (multimediaClose)
-    multimediaClose.addEventListener("click", () =>  closePopUp(multimedia, 'wrap-pop-up-multimedia_none'));
+  multimediaClose?.addEventListener("click", () =>  closePopUp(multimedia, 'wrap-pop-up-multimedia_none'));
 
   // certificate pop-up для открытия
   let certificate = document.querySelectorAll('.wrap-certificate-elem');
 
-  if (certificate) {
-    certificate.forEach(function(elem) {
-      elem.addEventListener("click", () =>  openPopUp(multimedia, 'wrap-pop-up-multimedia_none'));
-    })
-  }
+  certificate?.forEach(function(elem) {
+    elem.addEventListener("click", () =>  openPopUp(multimedia, 'wrap-pop-up-multimedia_none'));
+  })
 
   //news
   //cloose filter
   let popUpFilter = document.querySelector('.pop-up-filter');
   let openPopUpFilter = document.querySelector('.news-content-settings-burger');
 
+  let checboxElems = document.querySelector('.news-content-settings .news-content-settings-checkeds');
+  let falsElems = document.querySelector('.news-content-settings .news-content-settings-falls');
 
   if (openPopUpFilter || popUpFilter) {
     openPopUpFilter.addEventListener("click", (e) => {
       //alert(e.target.className);
-      if (e.target.className !== 'pop-up-filter-head-cross__img')
+      if (e.target.className !== 'pop-up-filter-head-cross__img') {
+        //checboxElems.classList.add('news-content-settings-checkeds_none');
+        //falsElems.classList.add('news-content-settings-falls_none');
         popUpFilter.classList.remove('pop-up-filter_none');
-      else
+      }
+      else {
         popUpFilter.classList.add('pop-up-filter_none');
+      }
     })
   }
+
+  popUpFilter?.addEventListener("click", (e)=> {
+   //if (e.target.className !== 'pop-up-filter-head-cross__img')
+      //popUpFilter.classList.remove('pop-up-filter_none');
+    //else
+    if (e.target.className === 'pop-up-filter-head-cross__img') {
+      popUpFilter.classList.add('pop-up-filter_none');
+      //checboxElems.classList.remove('news-content-settings-checkeds_none');
+      //falsElems.classList.remove('news-content-settings-falls_none');
+    }
+  })
 
 
   //sidebar-popup
@@ -170,12 +188,9 @@ document.addEventListener('DOMContentLoaded', () => {
   let bearingElem = document.querySelectorAll('.bearing-elem');
 
 
-  if (bearingElem) {
-    //debugger
-    bearingElem.forEach(function(elem) {
-      elem.addEventListener("click", () => openPopUp(popUpAccessories, 'wrap-pop-up-accessories_none'));
-    })
-  }
+  bearingElem?.forEach(function(elem) {
+    elem.addEventListener("click", () => openPopUp(popUpAccessories, 'wrap-pop-up-accessories_none'));
+  })
 
   //pop-up подшипников
   //pop-up-accessories-head__cross
@@ -207,11 +222,9 @@ document.addEventListener('DOMContentLoaded', () => {
   //pop-up-accessories-list-texts - картинка с текстом для click
   //pop-up-accessories-list-list - open list
 
-  if (listsPopUp) {
-    listsPopUp.forEach(function(elem) {
-      elem.addEventListener("click", (e) => openListPopUp(e));
-    })
-  }
+  listsPopUp?.forEach(function(elem) {
+    elem.addEventListener("click", (e) => openListPopUp(e));
+  })
 
   // let toggleSearch = () => {
   //   let footerMenu = document.querySelector ('.main-menu-footer');
@@ -225,11 +238,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   //mediateca open slider
   let mediatecaElem = document.querySelectorAll('.mediateca-post');
-  if (mediatecaElem) {
-    mediatecaElem.forEach(function(elem) {
-      elem.addEventListener("click", () => openFullScreen());
-    })
-  }
+  mediatecaElem?.forEach(function(elem) {
+    elem.addEventListener("click", () => openFullScreen());
+  })
 
 
   //vacancies
@@ -238,11 +249,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let vacancies = document.querySelectorAll('.vacance-elem');
 
-  if (vacancies) {
-    vacancies.forEach(function(elem) {
-      elem.addEventListener("click", ()=> openPopUp(popUpVacancies, 'wrap-pop-up-vacancies_none'));
-    })
-  }
+
+  vacancies?.forEach(function(elem) {
+    elem.addEventListener("click", ()=> openPopUp(popUpVacancies, 'wrap-pop-up-vacancies_none'));
+  })
+
 
   if (popUpVacanciesCross || popUpVacancies) {
     popUpVacanciesCross.addEventListener("click", () => {
@@ -306,7 +317,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let formConnect = document.querySelector('.footer-top-form');
     formConnect?.addEventListener('submit', (e) => {
       e.preventDefault();
-      //let mail = document.querySelector('.main-mailing-wrap-input .input-elem__input');
       let name = document.querySelector('.footer-top-form .input_name .input-elem__input'); //input_phone
       let mail = document.querySelector('.footer-top-form .input_mail .input-elem__input');
       let phone = document.querySelector('.footer-top-form .input_phone .input-elem__input');
@@ -325,8 +335,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let formCall = document.querySelector('.pop-up-call .footer-top-form');
     formCall?.addEventListener('submit', (e) => {
       e.preventDefault();
-      //let mail = document.querySelector('.main-mailing-wrap-input .input-elem__input');
-      let name = document.querySelector('.pop-up-call .footer-top-form .input_name .input-elem__input'); //input_phone
+      let name = document.querySelector('.pop-up-call .footer-top-form .input_name .input-elem__input');
       let mail = document.querySelector('.pop-up-call .footer-top-form .input_mail .input-elem__input');
       let phone = document.querySelector('.pop-up-call .footer-top-form .input_phone .input-elem__input');
 
@@ -340,4 +349,17 @@ document.addEventListener('DOMContentLoaded', () => {
       else
         alert('send');
     })
+
+
+  // ui-kit (pop-up с уведомлением)
+  let popUpContainer = document.querySelector('.container-pop-up');
+  let popUpArrow = document.querySelector('.container-pop-up .pop-up__image');
+
+  popUpContainer?.addEventListener("click", () => {
+    popUpContainer.classList.remove('container-pop-up_none')
+  })
+
+  popUpArrow?.addEventListener("click", () => {
+    popUpContainer.classList.remove('container-pop-up_none')
+  })
 })
