@@ -19,14 +19,14 @@
 }
 
 
-@media (max-width: 1300px) {
+@include lg {
   .reference-container-pdf-elements {
     grid-column-gap: 20px;
   }
 }
 
 
-@media (max-width: 800px) {
+@include tablet {
   .reference-container-pdf {
     margin-top: 70px;
 
@@ -42,7 +42,7 @@
   }
 }
 
-@media (max-width: 500px) {
+@include sm {
   .reference-container-pdf {
     margin-top: 40px;
 

@@ -1,5 +1,5 @@
 .news-content {
-  padding: 125px 0 60px; //120px
+  padding: 125px 0 60px;
 }
 
 .news-container-elems {
@@ -31,6 +31,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  &_none {
+    display: none;
+  }
 }
 
 .news-content-settings-checkeds {
@@ -139,7 +143,7 @@
 }
 
 
-@media (max-width: 1300px) {
+@include lg {
   .news-container-elems {
     &__elem {
       width: 32%;
@@ -147,7 +151,7 @@
   }
 }
 
-@media (max-width: 900px) {
+@include tablet {
   .news-content {
     padding: 50px 0 60px;
   }
@@ -204,7 +208,7 @@
   }
 }
 
-@media (max-width: 600px) {
+@include sm { // 600
   .news-container-elems {
     &__elem {
       width: 100%;
@@ -213,7 +217,7 @@
 }
 
 
-@media (max-width: 500px) {
+@include sm {
   .news-content {
     padding: 40px 0;
   }

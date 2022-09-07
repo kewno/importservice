@@ -3,36 +3,24 @@
 @import './_mixins.scss';
 @import 'fonts';
 
-// common styles
-
-//.elem {
-//  &_none {
-//    display: none;
-//    border: 2px solid red;
-//  }
-//}
-
 body {
   min-width: 320px;
   margin: 0 auto;
   box-sizing: border-box;
   overflow-x: hidden;
   font-family: Roboto, serif;
-  //&_hidden {
-  //  overflow: hidden;
-  //}
-  //&_inherit {
-  //  overflow: inherit;
-  //}
 }
 
-.body_hidden {
-  overflow: hidden;
+.body {
+  &_hidden {
+    overflow: hidden;
+  }
+
+  &_inherit {
+    overflow: inherit;
+  }
 }
 
-.body_inherit {
-  overflow: inherit;
-}
 
 .container {
   &__2920 {
@@ -44,6 +32,12 @@ body {
 * {
   font-family: Rubik, sans-serif;
   transition: all 0.3s;
+}
+
+
+.swiper-pagination-bullet {
+  border-radius: 50px;
+  cursor: pointer;
 }
 
 @media (max-width: 1620px) {
@@ -58,7 +52,7 @@ body {
 @media (max-width: 1300px) {
   .container {
     &__2920 {
-      max-width: 1432px; //1421px
+      max-width: 1432px;
       padding: 0 60px;
     }
   }

@@ -1,7 +1,6 @@
 .container-company-slider {
   display: flex;
   height: 620px;
-  //margin: 0 -199.5px;
 
   &.reverse {
     flex-direction: row-reverse;
@@ -55,8 +54,7 @@
 }
 
 
-@media (max-width: 1100px) {
-
+@include md {
   .company-slider-control {
     padding: 0 26px 0 35px;
   }
@@ -83,7 +81,7 @@
   }
 }
 
-@media (max-width: 500px) {
+@include sm {
   .container-company-slider {
 
     .company-slider {

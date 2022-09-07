@@ -1,6 +1,6 @@
 .service-detail-articles {
   &__elem {
-    margin: 53px 0 0; //margin: 60px 0 0; 58px
+    margin: 53px 0 0;
     padding-right: 10px;
 
     &:first-child {
@@ -17,7 +17,7 @@
 }
 
 
-@media (max-width: 800px) {
+@include tablet {
   .service-detail-articles {
     &__elem {
       margin: 39px 0 0;
@@ -25,11 +25,10 @@
   }
 }
 
-
-@media (max-width: 500px) {
+@include sm {
   .service-detail-articles {
     &__elem {
-      margin: 17px 0 0; //29px 0 0
+      margin: 17px 0 0;
       padding-right: 0;
 
       &:first-child {
@@ -42,4 +41,3 @@
     }
   }
 }
-//

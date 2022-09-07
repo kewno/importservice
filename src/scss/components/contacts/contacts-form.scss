@@ -24,13 +24,7 @@
   max-width: 610px;
 }
 
-//.footer-top__right
-
-@media (max-width: 800px) {
-  .contacts-form {
-
-  }
-
+@include tablet {
   .contacts-form-right {
     display: block;
   }

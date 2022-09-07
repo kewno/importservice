@@ -1,10 +1,10 @@
 mixin popUpAccessoriesList(img, headline, elems = null)
   .pop-up-accessories-list
     .pop-up-accessories-list-texts
-      img(src=`../../images/ui/${img}`).pop-up-accessories-list-texts__img
+      div.pop-up-accessories-list-texts__img!= img
       h4.pop-up-accessories-list-texts__headline= headline
       img(src='../../images/ui/pop-up-arrow.png').pop-up-accessories-list-texts__arrow
     if elems
-      .pop-up-accessories-list-list
+      .pop-up-accessories-list-list.pop-up-accessories-list-list_none
           each el in elems
             a(href='/').pop-up-accessories-list-list__elem= el

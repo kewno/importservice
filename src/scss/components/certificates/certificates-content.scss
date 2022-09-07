@@ -7,8 +7,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    //margin: -25px;
-    //margin: 0 auto;
   }
 }
 
@@ -50,14 +48,14 @@
 }
 
 
-@media (max-width: 1100px) {
+@include md{
   .certificates-content-head {
     flex-wrap: wrap;
   }
 }
 
 
-@media (max-width: 800px) {
+@include tablet {
   .certificates-content {
     padding: 30px 0 127px;
 
@@ -80,7 +78,7 @@
 
 }
 
-@media (max-width: 500px) {
+@include sm {
   .certificates-content {
     padding: 30px 0;
   }

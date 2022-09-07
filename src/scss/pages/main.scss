@@ -1,31 +1,21 @@
 .main-page {
-  ///padding-top: 68px;
-  //z-index: 1;
   position: relative;
   &__block {
-    //margin-top: 372px; //772px
     display: flex;
-    //background: var(--bej);
     z-index: -1;
-    //position: relative;
-    margin-top: -100px; //-105px
+    margin-top: -100px;
   }
 }
 
 .main-container-bearing {
-  //position: absolute;
-  //top: 0px;
   z-index: 2;
   background: var(--bej);
   width: 100%;
   display: flex;
-  //align-items: center;
   box-sizing: border-box;
-  //transform: scaleX(100);
-  //margin-bottom: 100px;
 }
 
-@media (max-width: 1300px) {
+@include lg {
   .main-page {
     &__block {
       margin-top: -70px;
@@ -34,7 +24,7 @@
   }
 }
 
-@media (max-width: 1140px) {
+@include md {
   .main-page {
     &__block {
       flex-wrap: wrap;
@@ -43,7 +33,7 @@
   }
 }
 
-@media (max-width: 800px) {
+@include tablet {
   .main-page {
     &__block {
       margin-top: -50px;

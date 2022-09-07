@@ -1,4 +1,3 @@
-//include ../header/header-parthers
 include ../components/main/main-mailing
 include ../ui/pop-up-call
 include ../components/contacts/contacts-container
@@ -7,8 +6,6 @@ include ../components/header/header-service
 include ../components/service/service-content
 include ../components/header/header-contacts
 include ../components/footer/footer-top
-//include ../header/header-products-detail
-//include ../products-detail/products-detail-container
 
 doctype html
 html(lang="en")
@@ -21,14 +18,10 @@ head
 body.contacts
   +headerContacts('header-contacts.png', {btn: 'Открыть карту', headline: 'Наши контакты', link: [{href: '/', text: 'Контакты'}]})
   +contactsContainer
-  //+headerService()
-  //+headerProductsDetail()
-  //+productsDetailContainer()
-  //+headerParthers('reference-header.png', [{href:'/', text:'Продукция'}, {href:'/', text:'Справочная информация'}]) sidebar //('sidebar')
 
   +mainMailing
   .contacts__wrap-footer
     +footerTop
     +footerBottom()
-  //+footer
+
   +popUpCall

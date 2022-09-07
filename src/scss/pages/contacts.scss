@@ -1,16 +1,15 @@
 .contacts {
   &__wrap-footer {
-    margin: 20px auto 0; //-60px
+    margin: 20px auto 0;
     max-width: 1170px;
     padding: 0 350px 90px 20px;
-    //margin-top: -60px;
   }
 }
 .contacts-header-info {
   z-index: 3;
 }
 
-@media (max-width: 1300px) {
+@include lg {
   .contacts {
     &__wrap-footer {
       padding: 0 50px 90px 20px;
@@ -18,7 +17,7 @@
   }
 }
 
-@media (max-width: 800px) {
+@include tablet {
   .contacts {
     &__wrap-footer {
       padding: 50px 20px 90px 20px;
@@ -27,7 +26,7 @@
   }
 }
 
-@media (max-width: 500px) {
+@include sm {
   .contacts {
     &__wrap-footer {
       padding: 60px 20px 65px 20px;

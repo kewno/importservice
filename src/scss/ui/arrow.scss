@@ -1,7 +1,6 @@
 .arrow {
   width: 100px;
   height: 100px;
-  //padding: 27px 0 0 38px;
   box-sizing: border-box;
   cursor: pointer;
   display: flex;
@@ -63,59 +62,11 @@
   }
 }
 
-//.arrow_right {
-//  transform: rotate(180deg);
-//}
-//
-//.arrow_red {
-//  background: var(--red);
-//  svg {
-//    path {
-//      stroke: var(--white);
-//    }
-//  }
-//}
 
-//.arrow_white {
-//  background: var(--white);
-//  svg {
-//    path {
-//      stroke: var(--black);
-//    }
-//  }
-//}
-
-//.arrow_grey {
-//  background: var(--grey);
-//  svg {
-//    path {
-//      stroke: var(--white);
-//    }
-//  }
-//}
-//.arrow_grey-light {
-//  background: var(--grey-light);
-//  svg {
-//    path {
-//      stroke: var(--white);
-//    }
-//  }
-//}
-
-//.arrow_bej {
-//  background: var(--bej);
-//  svg {
-//    path {
-//      stroke: var(--black);
-//    }
-//  }
-//}
-
-@media (max-width: 1300px) {
+@include lg {
   .arrow {
     width: 70px;
     height: 70px;
-    //padding: 19.63px 0 0 27.41px;
 
     svg {
       width: 15.18px;
@@ -124,11 +75,10 @@
   }
 }
 
-@media (max-width: 800px) {
+@include tablet {
   .arrow {
     width: 50px;
     height: 50px;
-    //padding: 14.5px 0 0 19.75px;
 
     svg {
       width: 10.5px;

@@ -1,7 +1,6 @@
 .company-slider-info {
-  //background: var(--red);
-  max-width: 710px; //750px
-  padding: 0 20px 30px 100px; //padding: 0 20px 30px 80px;
+  max-width: 710px;
+  padding: 0 20px 30px 100px;
   &__headline {
     font-style: normal;
     font-weight: 700;
@@ -56,7 +55,6 @@
     line-height: 28px;
     color: var(--white);
     margin: 18px 0 0;
-    //max-width: 700px;
   }
 }
 
@@ -69,8 +67,8 @@
 }
 
 
-@media (max-width: 1100px) {
-  .company-slider-info { //532px
+@include md {
+  .company-slider-info {
     padding: 0 20px 30px 80px;
 
     &__headline {
@@ -93,17 +91,13 @@
   }
 }
 
-@media (max-width: 500px) {
+@include sm {
   .company-slider-info {
     padding: 0 40px 0 72px;
 
     &__headline {
       font-size: 24px;
       line-height: 28px;
-    }
-
-    &__text {
-
     }
 
     &_red {

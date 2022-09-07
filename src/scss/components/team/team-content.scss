@@ -7,8 +7,8 @@
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 36px -25px -25px;
+
   &__elem {
-    //max-width: ;
     overflow: hidden;
     margin: 25px 0;
     max-width: 472px;
@@ -21,9 +21,8 @@
   }
 }
 
-@media (max-width: 1620px) {
+@include xl {
   .container-team-elems {
-    //margin: 36px -25px -25px;
     padding: 0 20px;
     &__elem {
       width: 32%;
@@ -31,7 +30,7 @@
   }
 }
 
-@media (max-width: 1300px) {
+@include lg {
   .container-team-elems {
     margin: 36px auto -25px;
     padding: 0;
@@ -41,18 +40,18 @@
   }
 }
 
-@media (max-width: 1150px) {
+@include md {
   .container-team-elems {
     margin: 36px auto -25px;
     &__elem {
       height: 714px;
       max-width: 920px;
-      margin: 0 0 30px; //height: 714px;
+      margin: 0 0 30px;
     }
   }
 }
 
-@media (max-width: 800px) {
+@include tablet {
   .container-team-elems {
     margin: 20px auto 0;
 
@@ -65,13 +64,13 @@
   }
 }
 
-@media (max-width: 500px) {
+@include sm {
   .container-team-elems {
     &__elem {
       width: 100%;
       height: auto;
       max-width: 920px;
-      margin: 0 0 30px; //height: 714px;
+      margin: 0 0 30px;
       min-height: 780px;
     }
   }

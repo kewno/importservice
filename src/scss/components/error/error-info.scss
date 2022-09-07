@@ -15,7 +15,6 @@
     font-weight: 400;
     font-size: 25px;
     line-height: 125%;
-    /* or 31px */
     margin: 10px 0 25px;
     color: var(--white);
     letter-spacing: 0.03em;
@@ -31,9 +30,9 @@
 }
 
 
+
 @media (max-width: 600px) {
   .error-info {
-    //margin-top: 55px;
     max-width: 240px;
     margin: 70px auto 0;
     padding-left: 20px;
@@ -43,9 +42,6 @@
     }
     &__text {
       font-size: 18px;
-    }
-    &__wrap-btn {
-
     }
   }
 }

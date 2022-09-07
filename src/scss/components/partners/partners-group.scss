@@ -1,6 +1,5 @@
 .partners-group {
   padding-top: 121px;
-  //overflow: hidden;
   &__headline {
     font-style: normal;
     font-weight: 400;
@@ -8,10 +7,8 @@
     margin: 0 0 20px;
   }
   &__wrap-elem {
-    //display: flex;
-    //flex-wrap: wrap;
 
-    .wrap-elem-partners { //swiper-wrapper
+    .wrap-elem-partners {
       display: flex;
       flex-wrap: wrap;
 
@@ -20,37 +17,24 @@
 }
 
 .partners-slider {
-  display: none; //partners-slider
+  display: none;
   position: relative;
-  //width: 100%;
-  //width: auto;
-  .swiper-wrapper {
-    //width: 6000px;
-  }
 }
 
-//width: 353px;
-//height: 264px;
-@media (max-width: 1620px) {
+@include xl {
   .partners-group {
     &__wrap-elem {
-      //display: flex;
-      //flex-wrap: wrap;
-
-      .wrap-elem-partners { //swiper-wrapper
-        justify-content: space-around; //space-between
+      .wrap-elem-partners {
+        justify-content: space-around;
       }
     }
   }
 }
 
-@media (max-width: 800px) {
+@include tablet {
   .partners-group {
     margin: 0 -15px 0 -6px;
-    padding-top: 62px; //50px
-    //&:first-child {
-    //  padding-top: 50px;
-    //}
+    padding-top: 62px;
   }
 }
 
@@ -72,9 +56,6 @@
       }
     }
   }
-}
-
-@media (max-width: 740px) {
 
   .wrap-partners-control {
     position: absolute;
@@ -93,10 +74,10 @@
   .partners-slider {
     margin: 0 -10px 0 -17px;
   }
-
 }
 
-@media (max-width: 400px) {
+
+@include xs {
   .partners-group {
     padding-top: 50px;
     &__headline {
@@ -107,11 +88,7 @@
     }
   }
 
-
-
   .partners-control {
     margin-right: 20px;
   }
 }
-
-//@media (max-width: 400px) { partners-slider

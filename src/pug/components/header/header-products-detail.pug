@@ -12,7 +12,6 @@ mixin headerProductsDetail(elem, pagination, headline)
         each el in elem
           .swiper-slide
             img(src=`../../images/header/${el}`).swiper-slide__img
-      //+serviceHeaderInfo()
       .wrap-service-control
         .service-pagination
 
@@ -23,8 +22,3 @@ mixin headerProductsDetail(elem, pagination, headline)
             +arrow('arrow_red arrow_right')
       +productsDetailHeaderInfo(pagination, headline)
 
-
-      //.swiper-slide
-        img(src='../../images/header-products-detail.png').swiper-slide__img
-      //.swiper-slide
-        img(src='../../images/header-products-detail.png').swiper-slide__img

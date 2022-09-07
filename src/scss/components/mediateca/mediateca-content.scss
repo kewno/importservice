@@ -32,7 +32,7 @@
 }
 
 
-@media (max-width: 800px) {
+@include tablet {
   .mediateca-content {
     padding: 30px 0 71px;
     &__headline {
@@ -60,7 +60,7 @@
   }
 }
 
-@media (max-width: 500px) {
+@include sm {
   .mediateca-content {
     padding: 30px 0 80px;
     &__headline {

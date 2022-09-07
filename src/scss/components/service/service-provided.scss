@@ -23,7 +23,7 @@
 }
 
 
-@media (max-width: 1620px) {
+@include xl {
   .service-provided {
     padding: 70px 0 0 0;
     &__elements {
@@ -37,7 +37,7 @@
   }
 }
 
-@media (max-width: 1300px) {
+@include lg {
   .service-provided {
     padding: 90px 0 0 0;
     &__headline {
@@ -56,7 +56,7 @@
 }
 
 
-@media (max-width: 1100px) {
+@include md {
   .service-provided {
     padding: 40px 0 0 0;
 
@@ -73,7 +73,7 @@
 }
 
 
-@media (max-width: 800px) {
+@include tablet {
   .service-provided {
     padding: 75px 0 0 0;
 
@@ -94,7 +94,7 @@
 }
 
 
-@media (max-width: 500px) {
+@include sm {
   .service-provided {
     padding: 60px 0 0 0;
     &__headline {

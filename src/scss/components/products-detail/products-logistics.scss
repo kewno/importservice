@@ -22,17 +22,13 @@
 }
 
 
-@media (max-width: 1620px) {
-  .products-logistics-wrap-provide {
-
-  }
-
+@include xl {
   .products-logistics-wrap-logistic {
     flex-wrap: wrap;
   }
 }
 
-@media (max-width: 800px) {
+@include tablet {
   .products-logistics {
     padding-top: 110px;
 
@@ -63,7 +59,7 @@
   }
 }
 
-@media (max-width: 500px) {
+@include sm {
   .products-logistics-wrap-provide {
     flex-wrap: wrap;
 

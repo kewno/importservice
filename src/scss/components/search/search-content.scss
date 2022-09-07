@@ -33,11 +33,10 @@
 
 .search-content-wrap-btn {
   width: 247.37px;
-  //margin: 0 auto;
 }
 
 
-@media (max-width: 550px) {
+@include sm {
   .search-content {
     padding: 30px 0 84px;
 

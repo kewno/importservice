@@ -156,7 +156,7 @@
 
 
 
-@media (max-width: 1620px) {
+@include xl {
   .news-elem.news-elem-big {
     padding: 0 0 65px 52px;
     height: 865.72px;
@@ -170,7 +170,7 @@
   }
 }
 
-@media (max-width: 1360px) {
+@include lg {
   .news-elem {
     &__href {
       margin-left: 5px;
@@ -194,7 +194,7 @@
   }
 }
 
-@media (max-width: 1040px) {
+@include md {
   .news-elem.news-elem-big {
     max-width: 100%;
     height: 624px;
@@ -226,7 +226,7 @@
   }
 }
 
-@media (max-width: 800px) {
+@include tablet {
 
   .news-elem {
     padding-left: 30px;
@@ -242,7 +242,7 @@
 }
 
 
-@media (max-width: 500px) {
+@include sm {
   .news-elem {
     height: 350px;
     padding-left: 20px;

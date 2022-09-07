@@ -4,7 +4,7 @@
     font-style: normal;
     font-weight: 700;
     font-size: 44px;
-    line-height: 53px; //60px
+    line-height: 53px;
     text-transform: uppercase;
     margin: 0;
   }
@@ -35,14 +35,10 @@
   border: 1px solid var(--grey-4);
   border-radius: 83.5px;
   background: var(--white);
-
-  &__img {
-
-  }
 }
 
 
-@media (max-width: 1620px) {
+@include xl {
   .company-years {
     &__headline {
       font-size: 36px;

@@ -5,9 +5,6 @@
   .swiper-wrapper {
     .swiper-slide {
       box-sizing: border-box;
-      &:hover {
-
-      }
     }
   }
 }
@@ -26,17 +23,17 @@
     position: absolute;
     display: flex;
     bottom: 0;
-    right: -1px; //0
+    right: -1px;
   }
 }
 
 .slider-left-block {
-  width: 52%; //51% 51.5% 52.5%
+  width: 52%;
   z-index: 2;
 }
 
 .slider-right-block {
-  width: 48%; //49% 48.5% 47.5%
+  width: 48%;
   position: relative;
 }
 
@@ -50,7 +47,7 @@
 .slider-slide {
   &__image {
     width: 100%;
-    object-fit: cover; //cover
+    object-fit: cover;
     height: 100%;
     transform: scale(1);
     &:hover {
@@ -217,14 +214,14 @@
   }
 }
 
-@media (max-width: 1620px) {
+@include xl {
   .slider-left-block {
-    width: 53%; //51% 51.5% 51.75%
+    width: 53%;
     z-index: 2;
   }
 
   .slider-right-block {
-    width: 47%; //49% 48.5% 48.25%
+    width: 47%;
     position: relative;
   }
 
@@ -262,7 +259,7 @@
   }
 }
 
-@media (max-width: 1300px) {
+@include lg {
   .container-slider {
     height: 500px;
   }
@@ -290,7 +287,6 @@
     &__wrap-image {
       top: -40px;
       right: 560px;
-      //left: -220px;
 
       img {
         width: 345.08px;
@@ -305,7 +301,7 @@
     }
 
     .main-slaider-information__wrap-text {
-      max-width: 380px; //365px
+      max-width: 380px;
       padding: 40px 0 0 73px;
     }
 
@@ -327,10 +323,6 @@
   }
 
   .main-slaider-information.main-slaider-information_bej {
-
-    .main-slaider-information__wrap-text {
-
-    }
 
     .main-slaider-information-text {
       margin: 0 0 95px;
@@ -381,7 +373,7 @@
   }
 }
 
-@media (max-width: 1040px) {
+@include md {
   .container-slider {
     flex-wrap: wrap;
     height: 100%;
@@ -449,9 +441,8 @@
       max-width: 500px;
     }
     .main-slaider-information__wrap-image {
-      //left: 0;
       top: 110px;
-      left: 1200px;//right: -220px;//right: -300px;
+      left: 1200px;
       display: flex;
       justify-content: end;
 
@@ -503,8 +494,7 @@
     .main-slaider-information__wrap-image {
       top: -30px;
 
-      //left: inherit;
-      left: 750px;//right: -110px;
+      left: 750px;
 
       img {
         width: 293.37px;
@@ -514,7 +504,7 @@
   }
 }
 
-@media (max-width: 800px) {
+@include tablet {
   .container-slider {
     .control-slider {
       right: 20px;

@@ -16,20 +16,18 @@
 }
 
 
-@media (max-width: 1300px) {
+@include lg {
   .company-possibilitys-container {
     flex-wrap: wrap;
-    justify-content: space-around;//space-between
+    justify-content: space-around;
   }
 }
 
-@media (max-width: 900px) {
+@include tablet {
   .company-possibilitys-container {
     justify-content: space-between;
   }
-}
 
-@media (max-width: 800px) {
   .company-possibilitys {
     &__headline {
       font-size: 32px;
@@ -45,7 +43,7 @@
   }
 }
 
-@media (max-width: 500px) {
+@include sm{
   .company-possibilitys {
     &__headline {
       font-size: 24px;

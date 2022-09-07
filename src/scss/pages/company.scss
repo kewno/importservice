@@ -15,7 +15,7 @@
   }
 }
 
-@media (max-width: 800px) {
+@include tablet {
   .company {
     .contacts-header-info {
       max-width: 710px;
@@ -30,11 +30,9 @@
   }
 }
 
-@media (max-width: 500px) {
+@include sm {
   .company {
     .contacts-header-info {
-      //max-width: 710px;
-      //width: 100%;
       padding-right: 35px;
 
       &__headline {

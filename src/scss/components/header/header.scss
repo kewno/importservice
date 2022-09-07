@@ -1,10 +1,9 @@
 .header {
   position: relative;
-  //height: auto;
-  //z-index: -1;
+
   &__wrap-menu {
     position: absolute;
-    z-index: 2;
+    z-index: 5;
     width: 100%;
     top: 50px;
   }
@@ -17,20 +16,16 @@
   }
 }
 
-@media (max-width: 1300px) {
+@include lg {
   .header {
-
     &__wrap-menu {
       top: 25px;
     }
   }
 }
-@media (max-width: 1100px) {
-  .header {
-    //&__burger {
-    //  display: none;
-    //}
 
+@include md {
+  .header {
     &__wrap-menu {
       top: 30px;
     }

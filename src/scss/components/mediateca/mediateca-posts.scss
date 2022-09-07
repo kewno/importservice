@@ -7,7 +7,7 @@
   padding: 60px 0 0;
 }
 
-@media (max-width: 800px) {
+@include tablet {
   .mediateca-posts {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 0.9fr 1fr 1fr;
@@ -15,7 +15,7 @@
   }
 }
 
-@media (max-width: 500px) {
+@include sm {
   .mediateca-posts {
     padding: 44px 0 0;
     grid-template-columns: 1fr;

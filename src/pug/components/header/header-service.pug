@@ -3,28 +3,6 @@ include ../service/service-header-info
 include ../../ui/pop-up-menu-header
 include ../../ui/main-menu
 
-// -
-//   let menu = [{name: 'о компании', href: '/',
-//     submenu: [{text: 'О компании', href: '/'},
-//       {text: 'новости и акции', href: '/'},
-//       {text: 'Нам доверяют', href: '/'},
-//       {text: 'Команда', href: '/'},
-//       {text: 'вакансии', href: '/'},
-//       {text: 'Фотогалерея/Видеогалерея', href: '/'},
-//       {text: 'Сертификаты', href: '/'}]},
-//     {name: 'Продукция', href: '/',
-//       submenu: [{text: 'Продукция', href: '/'},
-//         {text: 'Справочная информация', href: '/'}]},
-//     {name: 'сервис и услуги', href: '/',
-//       submenu: [{text: 'Сервис и услуги', href: '/'},
-//         {text: 'Оптимизация Технического обслуживания и ремонта оборудования', href: '/'},
-//         {text: 'Повышение надежности работы оборудования', href: '/'},
-//         {text: 'Вибродиагностика и наладка оборудования', href: '/'},
-//         {text: 'Ремонт и изготовление приводной техники', href: '/'},
-//         {text: 'Мониторинг состояния оборудования', href: '/'}]},
-//     {name: 'Контакты', href: '/', submenu: null} main-menu_parthers main-menu_service
-//   ]
-
 mixin headerService
   header.header-service
     .header__burger.header__burger_none
@@ -47,6 +25,3 @@ mixin headerService
             +arrow('arrow_white')
           .service-control_next
             +arrow('arrow_red arrow_right')
-
-          //+arrow('arrow_grey-light arrow_right')
-            +arrow('arrow_grey arrow_right')

@@ -38,7 +38,7 @@
 }
 
 
-@media (max-width: 1320px) {
+@include lg {
   .vacancies-vacance-container {
     &__elem {
       width: 49.3%;
@@ -47,7 +47,7 @@
   }
 }
 
-@media (max-width: 800px) {
+@include tablet {
   .vacancies-vacance {
     padding: 60px 0 0;
 
@@ -86,7 +86,7 @@
   }
 }
 
-@media (max-width: 610px) {
+@media (max-width: 650px) {
   .vacancies-vacance-container {
     margin: 0;
     &__elem {
@@ -97,7 +97,7 @@
   }
 }
 
-@media (max-width: 500px) {
+@include sm {
   .vacancies-vacance-container {
     margin: 0 -24px 0 -20px;
 

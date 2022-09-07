@@ -30,14 +30,14 @@
       text-decoration: underline;
     }
     svg {
-      * { //path, circle, line, ellipse
+      * {
         stroke: var(--red);
       }
     }
   }
 }
 
-@media (max-width: 1040px) {
+@include md {
   .bearing-elem {
     cursor: pointer;
     text-align: left;
@@ -59,12 +59,5 @@
         width: 80%;
       }
     }
-    //> svg {
-    //  width: 70%;
-    //  margin-left: 5px;
-    //  * {
-    //    stroke: var(--black);
-    //  }
-    //}
   }
 }

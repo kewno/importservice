@@ -22,7 +22,7 @@
   }
 }
 
-@media (max-width: 800px) {
+@include tablet {
   .block-image {
     padding: 55px 10px 54px 22px;
 

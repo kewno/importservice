@@ -2,14 +2,18 @@
   width: 100%;
   height: 100%;
   min-height: 360px;
-  padding: 0 0 31px 30px; //grid-column: span 3;
+  padding: 0 0 31px 30px;
   box-sizing: border-box;
   position: relative;
   z-index: 1;
   cursor: pointer;
-  background-size: cover;
+  background-size: 100% 100%;
+  transition: background-size .5s ease-in;
+  background-position: center;
+
   &:hover {
     background-size: 110% 110%;
+    object-position: center;
     .mediateca-post__back {
       display: none;
     }
@@ -48,7 +52,6 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  //margin-top: auto;
   height: 100%;
   z-index: 3;
 
@@ -71,7 +74,7 @@
 }
 
 
-@media (max-width: 800px) {
+@include tablet {
   .mediateca-post {
     min-height: 387px;
 
@@ -94,7 +97,7 @@
   }
 }
 
-@media (max-width: 500px) {
+@include sm {
   .mediateca-post {
     padding: 0 20px 20px 20px;
     &:nth-child(4),

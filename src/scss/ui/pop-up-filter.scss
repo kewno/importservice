@@ -1,5 +1,5 @@
 .pop-up-filter {
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   background: var(--white);
@@ -7,7 +7,7 @@
   max-width: 1000px;
   padding: 30px 30px 20px 20px;
   box-sizing: border-box;
-  z-index: 4;
+  z-index: 6;
   display: block;
   height: 100vh;
 

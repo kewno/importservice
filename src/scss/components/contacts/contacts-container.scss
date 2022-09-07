@@ -46,13 +46,13 @@
 }
 
 
-@media (max-width: 1100px) {
+@include md {
   .contacts-container {
     flex-direction: column;
   }
 }
 
-@media (max-width: 800px) {
+@include tablet {
   .contacts-container {
     padding: 75px 0 70px;
     &__wrap-contacts {
@@ -102,7 +102,7 @@
   }
 }
 
-@media (max-width: 500px) {
+@include sm {
   .contacts-container {
     padding: 65px 0 70px;
 

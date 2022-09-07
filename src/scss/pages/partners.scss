@@ -1,21 +1,21 @@
 .partners {
   &__wrap-partners-groups {
-    padding-bottom: 125px; //120px
+    padding-bottom: 125px;
   }
 }
 
-@media (max-width: 800px) {
+@include tablet {
   .partners {
     &__wrap-partners-groups {
-      padding-bottom: 168px; //120px
+      padding-bottom: 168px;
     }
   }
 }
 
-@media (max-width: 400px) {
+@include xs {
   .partners {
     &__wrap-partners-groups {
-      padding-bottom: 128px; //120px
+      padding-bottom: 128px;
     }
   }
 }

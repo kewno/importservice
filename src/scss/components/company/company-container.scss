@@ -10,7 +10,7 @@
   }
 }
 
-@media (max-width: 800px) {
+@include tablet {
   .company-container {
     padding: 70px 0 0;
 
@@ -20,7 +20,7 @@
   }
 }
 
-@media (max-width: 500px) {
+@include sm {
   .company-container {
     padding: 40px 0 0;
 

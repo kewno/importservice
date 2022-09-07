@@ -83,7 +83,7 @@
 }
 
 
-@media (max-width: 1620px) {
+@include xl {
   .footer-top {
     &__right {
       max-width: 470px;
@@ -101,7 +101,7 @@
   }
 }
 
-@media (max-width: 1300px) {
+@include lg {
   .footer-top-headline {
     font-size: 32px;
     line-height: 38px;
@@ -167,7 +167,7 @@
 }
 
 
-@media (max-width: 1040px) {
+@include md {
   .footer-top {
     &__left {
       max-width: 603px;
@@ -206,7 +206,7 @@
   }
 }
 
-@media (max-width: 800px) {
+@include tablet {
   .footer-top {
     flex-wrap: wrap;
     &__left {
@@ -239,7 +239,7 @@
   }
 
   .footer-top-delivery {
-    margin-top: 0; //55px
+    margin-top: 0;
     &__time {
       margin-bottom: 20px;
     }
@@ -255,7 +255,6 @@
 
 @media (max-width: 680px) {
   .footer-top {
-    //flex-wrap: wrap;
 
     &__right {
       flex-wrap: wrap;

@@ -1,7 +1,7 @@
 .partners-trust {
   display: flex;
   align-items: center;
-  padding: 60px 0 0 0; //padding: 60px 24px 0 30px;
+  padding: 60px 0 0 0;
   justify-content: space-between;
   &__headline {
     font-weight: 700;
@@ -21,8 +21,6 @@
   }
   &__img {
     margin: 20px 148.39px 0 0;
-    //margin-top: 20px;
-    //margin-right: 148.39px;
   }
 }
 .partners-trust-wrap-text {
@@ -33,7 +31,7 @@
 }
 
 
-@media (max-width: 1300px) {
+@include lg {
   .partners-trust {
     &__img {
       margin: 20px 0 0 0;
@@ -41,7 +39,7 @@
   }
 }
 
-@media (max-width: 800px) {
+@include tablet {
   .partners-trust {
     padding: 27px 0 0 0;
     margin-bottom: -10px;
@@ -52,7 +50,7 @@
   }
 }
 
-@media (max-width: 500px) {
+@include sm {
   .partners-trust {
     padding: 30px 0 0 0;
     &__headline {
@@ -66,8 +64,6 @@
     &__text {
       font-size: 18px;
       line-height: 120%;
-      /* or 22px */
-
       letter-spacing: 0.02em;
     }
   }
@@ -79,14 +75,8 @@
   }
 }
 
-@media (max-width: 400px) {
+@include xs {
   .partners-trust {
     margin-bottom: 0;
   }
 }
-//.partners-trust-wrap-img { 32px
-//  width: 100%;
-//  display: flex;
-//  justify-content: start;
-//  max-width: 263px;
-//}

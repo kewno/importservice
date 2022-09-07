@@ -6,10 +6,9 @@
     display: inline-block;
     height: 30px;
     width: 100%;
-    //max-width: 100px;
     border: 1.4px solid var(--red);
     border-radius: 33px;
-    background: var(--red); //--white
+    background: var(--red);
     box-sizing: border-box;
     cursor: pointer;
 
@@ -31,12 +30,10 @@
   &__check:checked + &__label {
     background: var(--white);
 
-    //.check-slide__label {
       &::after {
         right: 6px;
         left: inherit;
         background: var(--red);
       }
-    //}
   }
 }

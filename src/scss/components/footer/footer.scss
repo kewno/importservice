@@ -1,28 +1,28 @@
 .footer {
-  max-width: 1520px; //1541px 1520px
+  max-width: 1520px;
   margin: 0 auto;
   padding: 90px 60px 68px;
 }
 
-@media (max-width: 1620px) {
+@include xl {
   .footer {
     max-width: 1440px;
   }
 }
 
-@media (max-width: 1300px) {
+@include lg {
   .footer {
     padding: 60px 60px 78px;
   }
 }
 
-@media (max-width: 800px) {
+@include tablet {
   .footer {
     padding: 55px 24px 42px 30px;
   }
 }
 
-@media (max-width: 680px) {
+@include sm {
   .footer {
     padding: 60px 20px 30px;
   }

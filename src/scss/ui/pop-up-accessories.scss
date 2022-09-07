@@ -1,10 +1,12 @@
 .wrap-pop-up-accessories {
-  position: absolute;
+  //position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   max-width: 100vw;
   width: 100%;
   min-height: 100vh;
+
   z-index: 10;
   display: flex;
 
@@ -15,13 +17,18 @@
 
 .pop-up-accessories {
   background: var(--white);
-  height: 100%;
+  //height: 100%;
+  height: 100vh;
+  //max-height: 100vh;
   max-width: 1331px;
   width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .pop-up-accessories-elem {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   padding: 70px 100px 0 189px;
   border-bottom: 1px solid var(--grey-5);
   min-height: 186px;
@@ -137,10 +144,21 @@
   display: flex;
   align-items: center;
   cursor: pointer;
+  transition: all 0.5s;
 
-  &_none {
-    display: none;
+  &_active {
+    color: var(--red);
+
+    svg {
+      * {
+        stroke: var(--red);
+      }
+    }
   }
+
+  //&_none {
+  //  display: none;
+  //}
 
   &__headline {
     margin: 0 0 0 15px;
@@ -160,6 +178,10 @@
   display: flex;
   flex-direction: column;
   margin: 10px 0 0 57px;
+
+  &_none {
+    display: none;
+  }
 
   &__elem {
     display: inline-block;
@@ -194,6 +216,8 @@
   .pop-up-accessories-elem {
     padding: 60px 10px 60px 20px;
     min-height: 160px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 70px 1fr;
 
     &:last-child {
       padding: 60px 0 60px 20px;
@@ -256,6 +280,7 @@
   }
   .pop-up-accessories-list-texts {
     margin: 40px 0 0;
+
   }
 }
 

@@ -50,7 +50,7 @@
 }
 
 @mixin xl {
-  @media screen and (max-width: 1600px) {
+  @media screen and (max-width: 1620px) {
     @content;
   }
 }
@@ -62,7 +62,7 @@
 }
 
 @mixin md {
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: 1140px) { //1100px
     @content;
   }
 }
@@ -80,7 +80,7 @@
 }
 
 @mixin xs {
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 400px) {
     @content;
   }
 }

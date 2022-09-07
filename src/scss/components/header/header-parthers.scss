@@ -10,14 +10,14 @@
   }
 }
 
-@media (max-width: 1300px) {
+@include lg {
   .header-parthers,
   .header-errors,
   .header-service,
   .header-products-detail {
     .header-contacts {
       margin-left: 20px;
-      max-width: 360px; //360px
+      max-width: 360px;
       &__phone {
         display: none;
       }
@@ -29,7 +29,7 @@
   }
 }
 
-@media (max-width: 1100px) {
+@include md {
   .header-parthers,
   .header-errors,
   .header-service,
@@ -38,9 +38,7 @@
       max-width: 420px;
     }
   }
-}
 
-@media (max-width: 1040px) {
   .news-detail {
     .header-parthers {
       height: 490px;
@@ -48,7 +46,8 @@
   }
 }
 
-@media (max-width: 800px) {
+
+@include tablet {
   .header-parthers {
     height: 300px;
   }
@@ -66,7 +65,6 @@
   .header-service,
   .header-products-detail {
     .header-contacts {
-      //max-width: 430px;
       margin-left: 0;
       width: auto;
 
@@ -80,7 +78,7 @@
   }
 }
 
-@media (max-width: 400px) {
+@include xs {
   .header-parthers {
     height: 220px;
   }

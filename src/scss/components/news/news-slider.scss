@@ -39,7 +39,7 @@
   }
 }
 
-@media (max-width: 1040px) {
+@include md {
   .news-slider {
     .swiper-wrapper {
       .swiper-slide {
@@ -59,7 +59,7 @@
   }
 }
 
-@media (max-width: 800px) {
+@include tablet {
   .wrap-news-slider {
     position: relative;
     padding: 40px 0 0;
@@ -70,7 +70,7 @@
   }
 }
 
-@media (max-width: 500px) {
+@include sm {
   .wrap-news-slider {
     padding: 20px 0 0;
 
@@ -79,9 +79,7 @@
       line-height: 28px;
     }
   }
-}
 
-@media (max-width: 500px) {
   .news-slider {
     .swiper-wrapper {
       .swiper-slide {

@@ -52,43 +52,8 @@
   }
 }
 
-//.btn_red {
-//  background: var(--red);
-//  color: var(--white);
-//
-//  &:hover {
-//    border: 1px solid var(--red);
-//    color: var(--red);
-//    background: var(--white);
-//  }
-//}
-//
-//.btn_white {
-//  background: var(--white);
-//  color: var(--black);
-//  border: 2px solid var(--black);
-//  line-height: 46px;
-//
-//  &:hover {
-//    background: var(--white);
-//    color: var(--red);
-//    border: 2px solid var(--red);
-//  }
-//}
-//
-//.btn_invisible {
-//  background: none;
-//  color: var(--white);
-//  border: 2px solid var(--white);
-//  line-height: 46px;
-//
-//  &:hover {
-//    background: var(--back-button);
-//    color: var(--red);
-//  }
-//}
 
-@media (max-width: 1300px) {
+@include lg {
   .btn {
     height: 45px;
     line-height: 45px;

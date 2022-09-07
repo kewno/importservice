@@ -10,13 +10,13 @@
   }
 }
 
-@media (max-width: 1620px) {
+@include xl {
   .service-container-double {
     padding-top: 70px;
   }
 }
 
-@media (max-width: 1300px) {
+@include lg {
   .service-container-double {
     padding-top: 110px;
   }
@@ -28,7 +28,7 @@
   }
 }
 
-@media (max-width: 1100px) {
+@include md {
   .service-container-double {
     padding-top: 65px;
   }
@@ -40,7 +40,7 @@
   }
 }
 
-@media (max-width: 800px) {
+@include tablet {
   .service-container-double {
     padding-top: 75px;
     margin: 0 -15px 0 -28px;
@@ -53,7 +53,7 @@
 }
 
 
-@media (max-width: 500px) {
+@include sm {
   .service-container-double {
     padding-top: 65px;
     margin: 0 -20px 0;

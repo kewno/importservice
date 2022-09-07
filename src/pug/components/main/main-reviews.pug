@@ -3,7 +3,6 @@ include ../../ui/review
 
 mixin mainReviews(elem)
   .main-reviews
-    //.container__1920
     .wrap-headline-btn
       h2.wrap-headline-btn__headline!= 'За <span>20 лет работы</span> нам доверилось более 1000 крупнейших компаний России'
       .wrap-headline-btn__btn
@@ -11,6 +10,3 @@ mixin mainReviews(elem)
     .wrap-reviews-elem
       each el in elem
         +review(el)
-
-
-        //span 20 лет работы

@@ -52,7 +52,7 @@
 }
 
 
-@media (max-width: 1000px) {
+@include md{
   .company-range {
     flex-wrap: wrap;
     padding: 41px 20px 30px 23px;
@@ -67,7 +67,7 @@
   }
 }
 
-@media (max-width: 500px) {
+@include sm {
   .company-range {
     padding: 4px 20px 30px 23px;
   }
@@ -98,7 +98,7 @@
 }
 
 
-@media (max-width: 410px) {
+@include xs {
   .company-range {
     margin: 0 -15px;
   }

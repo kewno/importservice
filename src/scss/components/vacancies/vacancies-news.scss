@@ -41,7 +41,7 @@
   display: none;
 }
 
-@media (max-width: 1300px) {
+@include lg {
   .vacancies-news-container {
     &__elem {
       width: 32%;
@@ -52,7 +52,7 @@
   }
 }
 
-@media (max-width: 800px) {
+@include tablet {
   .vacancies-news-container {
     margin: 0 -26px 0 -30px;
     &__elem {
@@ -86,7 +86,7 @@
   }
 }
 
-@media (max-width: 500px) {
+@include sm {
   .vacancies-news {
     padding: 40px 0 60px;
   }

@@ -8,8 +8,6 @@ mixin footerBottom
       .footer-bottom-top__wrap-menu
         +mainMenuFooter([{href: '/', name: 'О компании'}, {href: '/', name: 'Продукция'}, {href: '/', name: 'Сервис и услуги'}, {href: '/', name: 'Контакты'}], 'menu_black')
         .footer-bottom-top__href
-          //.footer-bottom-wrap-input
-            +inputElem('type', 'поиск', null, null, null)
           img(src='../../images/ui/search.png')
     .footer-bottom-bottom
       p.footer-bottom-bottom__text © ООО «Импортсервис», 2022,
@@ -17,7 +15,3 @@ mixin footerBottom
       .wrap-amado
         p.wrap-amado__name Создание сайта
         img(src='../../images/ui/amado.png').wrap-amado__logo
-
-
-      //['О компании', 'Продукция', 'Сервис и услуги', 'Контакты']
-//[{href: '/', name: 'О компании'}, {href: '/', name: 'Продукция'}, {href: '/', name: 'Сервис и услуги'}, {href: '/', name: 'Контакты'}]

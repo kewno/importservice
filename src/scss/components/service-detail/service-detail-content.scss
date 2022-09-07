@@ -6,8 +6,6 @@
 .service-detail-content-left {
   padding: 50px 0 60px;
   margin-right: 32px;
-  //max-width: 1131px;
-  //width: 75%; // 100
 
   &__headline {
     margin: 0;
@@ -29,11 +27,9 @@
 
 .service-detail-content-right {
   transform: translateY(-63px);
-  //width: 100%;
-  //width: 365px;
 }
 
-@media (max-width: 1100px) {
+@include md {
   .service-detail-content {
     flex-wrap: wrap;
   }
@@ -49,7 +45,7 @@
   }
 }
 
-@media (max-width: 800px) {
+@include tablet {
   .service-detail-content-left {
     padding: 30px 0 0;
 
@@ -73,13 +69,8 @@
   }
 }
 
-@media (max-width: 675px) {
-  .service-detail-content-right {
-    width: 100%;
-  }
-}
 
-@media (max-width: 500px) {
+@include sm {
   .service-detail-content {
     padding: 0 0 60px;
   }
@@ -97,11 +88,6 @@
 
   .service-detail-content-right {
     margin-top: 50px;
+    width: 100%;
   }
-}
-
-@media (max-width: 420px) {
-  //.service-detail-content-right {
-  //  margin: 0 -22px 0 -20px;
-  //}
 }

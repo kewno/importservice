@@ -6,7 +6,6 @@
     font-size: 40px;
     line-height: 47px;
     margin: 0 0 30px;
-     //display: inline-block;
   }
 }
 
@@ -17,14 +16,9 @@
   grid-row-gap: 22px;
   grid-column-gap: 26px;
   max-width: 100%;
-  &__elem {
-
-  }
 }
 
-
-//products-detail-range-elements
-@media (max-width: 800px) {
+@include tablet {
   .products-detail-range {
     padding: 60px 0 0;
     &__headline {
@@ -40,7 +34,7 @@
   }
 }
 
-@media (max-width: 500px) {
+@include sm {
   .products-detail-range {
     padding: 50px 0 0;
     &__headline {

@@ -1,15 +1,14 @@
 .service-double {
-  //display: flex;
   display: grid;
   grid-template-columns: 1.12fr 0.98fr;
   height: 510px;
+
   &.service-double-reverse {
     grid-template-columns: 0.98fr 1.12fr;
     .service-double-text {
       order: 1;
       padding-left: 134px;
     }
-    //flex-direction: row-reverse;
   }
   &.service-double-red {
     .service-double-text {
@@ -94,15 +93,13 @@
     height: 420px;
 
     &.service-double-reverse {
-      //grid-template-columns: 0.98fr 1.12fr;
       .service-double-text {
-        //order: 1;
         padding-left: 75px;
       }
     }
   }
   .service-double-text {
-    padding-left: 50px; //197.19px
+    padding-left: 50px;
   }
   .service-double-wrap-buttons {
     &__btn {
@@ -112,7 +109,7 @@
   }
 }
 
-@media (max-width: 1620px) {
+@include xl {
   .service-double {
     height: 480px;
     &.service-double-reverse {
@@ -152,14 +149,13 @@
     .service-double-text {
       padding-left: 100px;
       &__headline {
-        //margin: 0 0 30px;
       }
     }
   }
 }
 
 
-@media (max-width: 1300px) {
+@include lg {
   .service-double {
     height: 426.32px;
     &.service-double-reverse {
@@ -189,7 +185,7 @@
   }
 }
 
-@media (max-width: 1100px) {
+@include md {
   .service-double {
     height: 330.8px;
 
@@ -220,7 +216,7 @@
   }
 }
 
-@media (max-width: 800px) {
+@include tablet {
   .service-double {
     display: flex;
     flex-direction: column;
@@ -267,7 +263,7 @@
   }
 }
 
-@media (max-width: 500px) {
+@include sm {
   .service-double {
     height: 744px;
   }
@@ -285,14 +281,10 @@
     .service-double-text {
       height: 364px;
       padding: 0 30px;
-      &__headline {
-        //max-width: 270px;
-      }
     }
   }
 
   .service-double-wrap-buttons{
-    //max-width: 300px;
     width: auto;
     flex-wrap: wrap;
     margin-right: 0;

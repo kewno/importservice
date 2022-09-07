@@ -5,7 +5,6 @@ include  main-slaider-information
 
 mixin mainSlaider(elem, typeSlider, arrow, classInformation, svgElem, headline, text)
   div(class=`container-slider ${typeSlider}`)
-    //+popUpMultimedia('pop-up-multimedia_slider', '10,09,2021', 'Известный производитель подшипников')
     .slider-left-block
       +mainSlaiderInformation(classInformation, svgElem, headline, text)
     .slider-right-block
@@ -22,6 +21,3 @@ mixin mainSlaider(elem, typeSlider, arrow, classInformation, svgElem, headline, 
           .control-slider-next
             +arrow(`${arrow[1]}`)
 
-
-            //.control-slider__arrow_slider__arrow_left.control-slider__arrow_left
-              //.control-slider__arrow_slider__arrow_right.control-slider__arrow_right

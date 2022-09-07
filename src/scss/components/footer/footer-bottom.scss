@@ -11,12 +11,10 @@
   &__wrap-menu {
     display: flex;
     align-items: center;
-    //width: 100%;
   }
   &__href {
     display: flex;
     align-items: center;
-    //width: 100%;
     img {
       cursor: pointer;
     }
@@ -63,26 +61,23 @@
     color: var(--grey-black);
     opacity: 0.6;
   }
-  &__logo {
 
-  }
 }
 
-@media (max-width: 1620px) {
+@include xl {
   .footer-bottom {
     max-width: 1430px;
-    //max-width: 100%;
     padding: 120px 0 0;
   }
 }
 
-@media (max-width: 1300px) {
+@include lg {
   .footer-bottom {
     padding: 160px 0 0;
   }
 }
 
-@media (max-width: 1040px) {
+@include md {
   .footer-bottom {
     padding: 120px 0 0;
   }
@@ -103,7 +98,7 @@
   }
 }
 
-@media (max-width: 800px) {
+@include tablet {
   .footer-bottom {
     padding: 65px 0 0;
   }

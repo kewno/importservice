@@ -1,23 +1,15 @@
 .service-detail-slider {
-  //max-width: 100%;
-  //max-width: 1131px;
   width: 100%;
   overflow: hidden;
   .slider {
-    //overflow: hidden;
     max-width: 1131px;
     position: relative;
-   // max-width: 1131px;
     .swiper-wrapper {
       .swiper-slide {
-        //max-width: 1131px;
-        //max-width: 800px;
         width: 100%;
         height: 652px;
         &__image {
           width: 100%;
-          //max-width: 1131px;
-          //width: auto; //100%
         }
       }
     }
@@ -32,8 +24,6 @@
   bottom: 0;
   z-index: 3;
   height: 100px;
-  //background: var(--black);
-  //opacity: 0.5;
 }
 
 .service-detail-navigation-pagination {
@@ -52,7 +42,7 @@
   }
 }
 
-@media (max-width: 1620px) {
+@include xl {
   .service-detail-slider {
     max-width: 1040px;
     .slider {
@@ -62,7 +52,7 @@
           height: 600px;
 
           &__image {
-            height: 100%; //652px
+            height: 100%;
           }
         }
       }
@@ -70,7 +60,7 @@
   }
 }
 
-@media (max-width: 1300px) {
+@include lg {
   .service-detail-slider {
     max-width: 762px;
     .slider {
@@ -80,7 +70,7 @@
           height: 438px;
 
           &__image {
-            height: 100%; //652px
+            height: 100%;
           }
         }
       }
@@ -112,9 +102,7 @@
   }
 }
 
-@media (max-width: 1040px) {
-  //width: 891px;
-  //height: 512px;
+@include md {
   .service-detail-slider {
     max-width: 891px;
     .slider {
@@ -132,7 +120,7 @@
   }
 }
 
-@media (max-width: 800px) {
+@include tablet {
   .service-detail-slider {
     max-width: 726px;
     .slider {
@@ -141,41 +129,17 @@
           max-width: 726px;
 
           &__image {
-            //object-fit: contain;
-            height: 100%; //652px
+            height: 100%;
           }
         }
       }
     }
   }
 
-  //.service-detail-navigation {
-  //  height: 80px;
-  //  .arrow {
-  //    height: 80px;
-  //    width: 80px;
-  //    svg {
-  //      width: 17.35px;
-  //      height: 35.12px;
-  //    }
-  //  }
-  //}
-  //
-  //.service-detail-navigation-pagination {
-  //  &__elem {
-  //    width: 76.05px;
-  //    height: 80px;
-  //
-  //    img {
-  //      width: 76.05px;
-  //      height: 80px;
-  //    }
-  //  }
-  //}
 }
 
 
-@media (max-width: 500px) {
+@include sm {
   .service-detail-slider {
     max-width: 320px;
     height: 320px;
@@ -185,7 +149,7 @@
           max-width: 320px;
           height: 320px;
           &__image {
-            height: 100%; //652px
+            height: 100%;
           }
         }
       }

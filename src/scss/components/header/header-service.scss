@@ -27,11 +27,11 @@
     margin-right: 5px;
     background: var(--white);
     opacity: 0.3;
-  }
-}
 
-.swiper-pagination-bullet-active {
-  opacity: 1;
+    &.swiper-pagination-bullet-active {
+      opacity: 1;
+    }
+  }
 }
 
 .service-control {
@@ -54,7 +54,7 @@
 }
 
 
-@media (max-width: 1300px) {
+@include lg {
   .header-service {
     height: 550px;
     .header__wrap-menu {
@@ -77,7 +77,7 @@
 }
 
 
-@media (max-width: 1040px) {
+@include md {
   .service-pagination {
     display: flex;
   }
@@ -96,7 +96,7 @@
 }
 
 
-@media (max-width: 800px) {
+@include tablet {
   .header-service {
     height: 850px;
     .header__wrap-menu {
@@ -125,7 +125,7 @@
   }
 }
 
-@media (max-width: 500px) {
+@include sm {
   .header-service {
     height: 764px;
     .header__wrap-menu {

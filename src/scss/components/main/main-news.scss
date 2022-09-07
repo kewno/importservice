@@ -27,7 +27,7 @@
     font-size: 18px;
     line-height: 15px;
     color: var(--red);
-    margin: 0; // 15px 0 0
+    margin: 0;
     text-decoration: none;
   }
 }
@@ -54,7 +54,7 @@
   height: 408px;
 }
 
-@media (max-width: 1620px) {
+@include xl {
 
   .main-news-wrap-text {
     max-width: 1432px;
@@ -73,7 +73,7 @@
   }
 }
 
-@media (max-width: 1300px) {
+@include lg {
   .main-news {
     padding-bottom: 35px;
   }
@@ -115,13 +115,13 @@
   }
 }
 
-@media (max-width: 1040px) {
+@include md {
   .main-news {
     padding-bottom: 30px;
   }
   .main-news-wrap-news {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1.2fr; //0.98fr
+    grid-template-rows: 1fr 1.2fr;
     grid-row-gap: 30px;
     &__right {
       grid-template-columns: 1fr 1fr;
@@ -140,7 +140,7 @@
   }
 }
 
-@media (max-width: 800px) {
+@include tablet {
   .main-news {
     padding-bottom: 35px;
     &__wrap-btn {
@@ -161,7 +161,7 @@
 
   .main-news-wrap-news {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 0.5fr; //0.98fr
+    grid-template-rows: 1fr 0.5fr;
     grid-row-gap: 30px;
 
     &__right {
@@ -176,7 +176,7 @@
   }
 }
 
-@media (max-width: 500px) {
+@include sm {
   .main-news {
     padding-bottom: 30px;
     &__wrap-btn {
@@ -185,7 +185,7 @@
   }
   .main-news-wrap-news {
     grid-template-columns: 1fr;
-    grid-template-rows: 0.6fr 1fr; //0.98fr
+    grid-template-rows: 0.6fr 1fr;
     grid-row-gap: 20px;
 
     &__right {

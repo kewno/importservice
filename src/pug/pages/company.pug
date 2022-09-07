@@ -17,11 +17,6 @@ head
 body.company
   +headerContacts('header-company.png', {btn: 'Смотреть видео', headline: 'Крупнейший дистрибьютор подшипниковой продукции премиум-брендов в России под управлением WMS', link: [{href: '/', text: 'О компании'}]})
   +companyContainer()
-  //+contactsContainer
-  //+headerService()
-  //+headerProductsDetail()
-  //+productsDetailContainer()
-  //+headerParthers('reference-header.png', [{href:'/', text:'Продукция'}, {href:'/', text:'Справочная информация'}]) sidebar //('sidebar')
   +companySlider(
     ['company-slider-1.png', 'company-slider-1.png', 'company-slider-1.png'],
     {
@@ -61,7 +56,5 @@ body.company
   )
   +mainMailing
   +footer()
-  //.contacts__wrap-footer
-    +footerTop
-    +footerBottom()
+
   +popUpCall

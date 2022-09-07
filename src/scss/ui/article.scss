@@ -23,7 +23,7 @@
   }
 }
 
-@media (max-width: 1040px) {
+@include md {
   .article {
     &__headline {
       margin: 0 0 15px;
@@ -37,7 +37,7 @@
   }
 }
 
-@media (max-width: 500px) {
+@include sm {
   .article {
     &__headline {
       font-size: 20px;

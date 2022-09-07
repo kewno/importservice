@@ -1,16 +1,118 @@
-import Swiper from 'swiper';
+import  {Swiper,  Autoplay, EffectFade, Navigation, Pagination, Thumbs } from 'swiper';
+Swiper.use([ EffectFade, Navigation, Pagination, Thumbs]);
+
+let arrowSlider = ({slider, perView = 1, next = null, prev = null, pagination = null, spaceBetween= 0}) => {
+  //debugger
+  if (next && prev && pagination) {
+    return new Swiper(`.${slider}`, {
+      slidesPerView: `${perView}`,
+      spaceBetween: spaceBetween,
+      navigation: {
+        nextEl: `${next}`,
+        prevEl: `${prev}`,
+      },
+      pagination: {
+        el: `.${pagination.el}`,
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + ` ${pagination.className}` + '">' + "</span>";
+        },
+      }
+    })
+  }
+  else if (next && prev) {
+    return new Swiper(`.${slider}`, {
+      slidesPerView: `${perView}`,
+      spaceBetween: spaceBetween,
+      navigation: {
+        nextEl: `${next}`,
+        prevEl: `${prev}`,
+      }
+    })
+  }
+  else if (pagination) {
+    return new Swiper(`.${slider}`, {
+      slidesPerView: `${perView}`,
+      spaceBetween: spaceBetween,
+      pagination: {
+        el: `.${pagination.el}`,
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + ` ${pagination.className}` + '">' + "</span>";
+        },
+      },
+    })
+  }
+  else {
+    return new Swiper(`.${slider}`, {
+      slidesPerView: `${perView}`
+    })
+  }
+}
+
 
 document.addEventListener('DOMContentLoaded', () => {
-  new Swiper('.slider', {
-    slidesPerView: 1,
-    navigation: {
-      nextEl: ".control-slider-next",
-      prevEl: ".control-slider-prev",
-    },
+  arrowSlider({
+    slider: 'slider',
+    perView: 1,
+    next: '.control-slider-next',
+    prev: '.control-slider-prev'
   })
-})
 
-document.addEventListener('DOMContentLoaded', () => {
+  arrowSlider({
+    slider: 'header-slider',
+    perView: 1,
+    next: '.control-header-slider-next',
+    prev: '.control-header-slider-prev',
+    pagination: {
+      el : 'service-pagination',
+      className: 'service-pagination__point'
+    }
+  })
+
+  arrowSlider({
+    slider: 'pop-up-slider',
+    next: '.pop-up-multimedia__wrap-bottom .pop-up-control_next',
+    prev: '.pop-up-multimedia__wrap-bottom .pop-up-control_prev'
+  })
+
+  arrowSlider({
+    slider: 'bearing-slider',
+    perView: 'auto',
+    next: '.main-bearing-slider .main-bearing-slider-control__next',
+    prev: '.main-bearing-slider .main-bearing-slider-control__prev'
+  })
+  //header-products-slider
+  arrowSlider({
+    slider: 'header-service-slider',
+    perView: 1,
+    next: '.service-control_next',
+    prev: '.service-control_prev',
+    pagination: {
+      el: 'service-pagination',
+      className: 'service-pagination__point'
+    }
+  })
+
+  arrowSlider({
+    slider: 'news-slider',
+    perView: 'auto',
+    spaceBetween: 30,
+    next: '.news-slider-control .news-slider-control_next',
+    prev: '.news-slider-control .news-slider-control_prev',
+  })
+
+  arrowSlider({
+    slider: 'manager-slider',
+    perView: 1,
+    next: '.manager .manager-slider-conrol-arrow__next',
+    prev: '.manager .manager-slider-conrol-arrow__prev',
+    pagination: {
+      el: 'manager .manager-slider-conrol__pagination',
+      className: 'service-pagination__point'
+    }
+  })
+
   new Swiper('.service-detail-slider .slider', {
     slidesPerView: 1,
     navigation: {
@@ -25,133 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
       },
     },
   })
-})
 
-document.addEventListener('DOMContentLoaded', () => {
-  new Swiper('.pop-up-slider', {
-    slidesPerView: 1,
-    navigation: {
-      nextEl: ".pop-up-multimedia__wrap-bottom .pop-up-control_next",
-      prevEl: ".pop-up-multimedia__wrap-bottom .pop-up-control_prev",
-    },
-  })
-})
-
-document.addEventListener('DOMContentLoaded', () => {
-  new Swiper('.partners-slider', {
-    spaceBetween: 30,
-    slidesPerView: 1,
-    navigation: {
-      nextEl: ".partners-control .partners-control__next",
-      prevEl: ".partners-control .partners-control__prev",
-    },
-  })
-})
-
-document.addEventListener('DOMContentLoaded', () => {
-  new Swiper('.news-slider', {
-    spaceBetween: 30,
-    slidesPerView: 'auto',
-    navigation: {
-      nextEl: ".news-slider-control .news-slider-control_next",
-      prevEl: ".news-slider-control .news-slider-control_prev",
-    },
-  })
-})
-
-document.addEventListener('DOMContentLoaded', () => {
-  new Swiper('.manager-slider', {
-    slidesPerView: 1,
-    navigation: {
-      nextEl: ".manager .manager-slider-conrol-arrow__next",
-      prevEl: ".manager .manager-slider-conrol-arrow__prev",
-    },
-    pagination: {
-      el: ".manager .manager-slider-conrol__pagination",
-      clickable: true,
-      renderBullet: function (index, className) {
-        return '<span class="' + className + ' service-pagination__point' + '">' + "</span>";
-      },
-    },
-  })
-})
-
-document.addEventListener('DOMContentLoaded', () => {
-  new Swiper('.header-slider', {
-    slidesPerView: 1,
-    navigation: {
-      nextEl: ".control-header-slider-next",
-      prevEl: ".control-header-slider-prev",
-    },
-    pagination: {
-      el: ".slider-pagination",
-      clickable: true,
-      renderBullet: function (index, className) {
-        return '<span class="' + className + ' slider-pagination__point' + '">' + "</span>";
-      },
-    },
-  })
-})
-
-document.addEventListener('DOMContentLoaded', () => {
-  new Swiper('.header-service-slider', {
-    slidesPerView: 1,
-    navigation: {
-      nextEl: ".control-header-slider-next",
-      prevEl: ".control-header-slider-prev",
-    },
-    pagination: {
-      el: ".service-pagination",
-      clickable: true,
-      renderBullet: function (index, className) {
-        return '<span class="' + className + ' service-pagination__point' + '">' + "</span>";
-      },
-    },
-  })
-})
-
-document.addEventListener('DOMContentLoaded', () => {
-  new Swiper('.header-products-slider', {
-    slidesPerView: 1,
-    navigation: {
-      nextEl: ".service-control_next",
-      prevEl: ".service-control_prev",
-    },
-    pagination: {
-      el: ".service-pagination",
-      clickable: true,
-      renderBullet: function (index, className) {
-        return '<span class="' + className + ' service-pagination__point' + '">' + "</span>";
-      },
-    },
-  })
-})
-
-
-document.addEventListener('DOMContentLoaded', () => {
-  new Swiper('.company-slider', {
-    slidesPerView: 1,
-    navigation: {
-      nextEl: ".company-slider .company-slider-control__next",
-      prevEl: ".company-slider .company-slider-control__prev",
-    },
-  })
-})
-
-
-//func
-let arrowSlider = (slider, [arrowNext, arrowPrev]) => {
-  return new Swiper('.header-service-slider', {
-    slidesPerView: 1,
-    navigation: {
-      nextEl: ".header-service-slider .service-control .service-control_next",
-      prevEl: ".header-service-slider .service-control .service-control_prev",
-    },
-  })
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-  arrowSlider('.header-service-slider', ['.service-control_next', '.service-control_prev'])
   new Swiper('.products-detail-brands-slider', {
     spaceBetween: 22,//26
     slidesPerView: "auto",
@@ -176,17 +152,6 @@ document.addEventListener('DOMContentLoaded', () => {
         return '<span class="' + className + ' service-pagination__point' + '">' + "</span>";
       },
       dynamicMainBullets: 3,
-    },
-  })
-})
-
-
-document.addEventListener('DOMContentLoaded', () => {
-  new Swiper('.bearing-slider', {
-    slidesPerView: "auto",
-    navigation: {
-      nextEl: ".main-bearing-slider .main-bearing-slider-control__next",
-      prevEl: ".main-bearing-slider .main-bearing-slider-control__prev",
     },
   })
 })
