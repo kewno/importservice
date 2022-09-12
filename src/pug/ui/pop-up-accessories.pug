@@ -2,7 +2,7 @@ include ./pop-up-accessories-list
 
 mixin popUpAccessories(headImg, headline)
   div(style=`background: url("../../images/ui/back-black.png") repeat center center;`).wrap-pop-up-accessories.wrap-pop-up-accessories_none
-    .pop-up-accessories
+    .pop-up-accessories(data-simplebar)
       .pop-up-accessories-head
         img(src=`../../images/ui/${headImg}`).pop-up-accessories-head__img
         h2.pop-up-accessories-head__headline= headline

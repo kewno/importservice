@@ -1,3 +1,5 @@
+include ./pop-up-multimedia-video
+
 mixin popUpMultimediaSlider
   .pop-up-multimedia-slider
     .pop-up-slider
@@ -6,3 +8,5 @@ mixin popUpMultimediaSlider
           img(src='../../images/ui/pop-up-slide-1.jpg').swiper-slide__image
         .swiper-slide
           img(src='../../images/ui/pop-up-slide-1.jpg').swiper-slide__image
+        .swiper-slide
+          +popUpMultimediaVideo

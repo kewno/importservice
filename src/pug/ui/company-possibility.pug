@@ -1,7 +1,7 @@
 mixin companyPossibility(type, img, headline, texts = null, lists = null)
   div(class=`${type}`).company-possibility
     img(src=`../../images/company/${img}`).company-possibility__img
-    .company-possibility-content
+    .company-possibility-content(data-simplebar)
       h2.company-possibility__headline= headline
       if texts
         .company-possibility-texts

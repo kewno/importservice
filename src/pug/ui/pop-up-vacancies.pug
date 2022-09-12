@@ -6,7 +6,7 @@ include ../ui/pop-up-vacancies-form
 
 mixin popUpVacancies(headline)
   div(style=`background: url("../../images/ui/back-black.png") repeat center center;`).wrap-pop-up-vacancies.wrap-pop-up-vacancies_none
-    .pop-up-vacancies
+    .pop-up-vacancies(data-simplebar)
       .pop-up-vacancies-head
         h2.pop-up-vacancies-head__headline Подробности
         img(src=`../../images/ui/cross.png`).pop-up-vacancies-head__cross

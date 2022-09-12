@@ -3,11 +3,11 @@ include ../ui/input-elem
 
 
 mixin popUpVacanciesForm
-  form.pop-up-vacancies-form
+  form(type=`POST`).pop-up-vacancies-form
     .pop-up-vacancies-form__input
-      +inputElem('type', 'Введите ваше имя')
+      +inputElem('type', 'Введите ваше имя', 'input_name')
     .pop-up-vacancies-form__input
-      +inputElem('type', 'Введите ваш телефон')
+      +inputElem('type', 'Введите ваш телефон', 'input_phone')
     .pop-up-vacancies-form-put-fail
       p.pop-up-vacancies-form-put-fail__headline Прикрепленый файл
       .pop-up-vacancies-form-put-fail-icons

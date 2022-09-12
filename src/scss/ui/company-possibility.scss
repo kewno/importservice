@@ -7,6 +7,10 @@
   padding-right: 12px;
   padding-top: 125px;
 
+  .simplebar-content-wrapper {
+    padding-right: 12px;
+  }
+
   &__img {
     position: absolute;
     top: -72px;
@@ -64,11 +68,15 @@
     }
 
     .company-possibility-content {
-      &::-webkit-scrollbar-thumb {
-        background: var(--point-scroll-red);
+      .simplebar-scrollbar {
+        &::before { //&::-webkit-scrollbar-thumb {
+          background: var(--point-scroll-red);
+          opacity: 0.9;
+          border: 0;
+        }
       }
 
-      &::-webkit-scrollbar-track { //пространство под индикатором
+      .simplebar-track.simplebar-vertical {//&::-webkit-scrollbar-track { //пространство под индикатором
         background: var(--back-scroll-red);
       }
     }

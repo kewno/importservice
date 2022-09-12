@@ -97,6 +97,10 @@
   &.sidebar {
     .news-detail-content-right {
       display: flex;
+
+      .sidebar-manager {
+        top: 100px; //top: 100px;
+      }
     }
   }
 }

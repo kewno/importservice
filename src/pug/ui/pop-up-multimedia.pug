@@ -9,13 +9,7 @@ mixin popUpMultimedia(className, date, headline)
     div(class=`pop-up-multimedia ${className}`)
       .pop-up-multimedia__cross
         +cross
-      if className === 'pop-up-multimedia_video'
-        .pop-up-multimedia__play
-          +play
-      if className === 'pop-up-multimedia_video'
-        +popUpMultimediaVideo
-      else if className === 'pop-up-multimedia_slider'
-        +popUpMultimediaSlider
+      +popUpMultimediaSlider
       .pop-up-multimedia__wrap-bottom
         .pop-up-multimedia-wrap-text
           p.pop-up-multimedia-wrap-text__date=date

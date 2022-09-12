@@ -1,11 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-  let burgerMenuElements = document.querySelectorAll('.main-menu-burger-elem svg'); // svg
+  let burgerMenuElements = document.querySelectorAll('.main-menu-burger-elem svg');
   let burgerPoint = document.querySelector('.main-menu__burder');
   let burgerPopUp = document.querySelector('.header__burger');
-  let burgerClose = document.querySelector('.wrap-pop-up-menu-header__arrow');
 
   let phonePoint = document.querySelectorAll('#phone-image');
-  let phoneClose = document.querySelector('.pop-up-call-wrap-headline__cross');
   let phonePopUp = document.querySelector('.wrap-pop-up-call');
 
 
@@ -14,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let mailRegular = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   let phoneRegular = /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/;
 
-  let closePopUp = (el, className) => {
+  let closePopUp = (el, className, e) => {
     el.classList.add(className);
     body.className = 'body_inherit';
   }
@@ -46,31 +44,36 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 
 
-  if (burgerClose && burgerPopUp && burgerPoint) {
-    burgerClose.addEventListener("click", () =>  closePopUp(burgerPopUp, 'header__burger_none'));
-    burgerPoint.addEventListener("click", () =>  openPopUp(burgerPopUp, 'header__burger_none'));
-  }
+  let burgerMenu = document.querySelector('.wrap-pop-up-menu-header');
+  burgerMenu?.addEventListener("click", (e) =>  {
+    let target = e.target;
+    if (target.className === 'wrap-pop-up-menu-header' || target.className === 'wrap-pop-up-menu-header__arrow' || target.closest('.wrap-pop-up-menu-header__arrow'))
+      closePopUp(burgerPopUp, 'header__burger_none')
+  });
+
+  burgerPoint?.addEventListener("click", () =>  openPopUp(burgerPopUp, 'header__burger_none'));
 
 
-  if (phoneClose && phonePopUp && phonePoint) {
-    phoneClose.addEventListener("click", () =>  closePopUp(phonePopUp, 'wrap-pop-up-call_none'));
+  phonePopUp?.addEventListener('click', (e) => {
+    let target = e.target;
+    if (target.className === 'wrap-pop-up-call' || target.className === 'pop-up-call-wrap-headline__cross' || target.closest('.pop-up-call-wrap-headline__cross')) {
+      closePopUp(phonePopUp, 'wrap-pop-up-call_none');
+    }
+  })
 
-    phonePoint.forEach(function(elem) {
-      elem.addEventListener("click", () =>  openPopUp(phonePopUp, 'wrap-pop-up-call_none'));
-    })
-  }
+
+  phonePoint?.forEach(function(elem) {
+    elem.addEventListener("click", () =>  openPopUp(phonePopUp, 'wrap-pop-up-call_none'));
+  })
 
   let multimedia = document.querySelector('.wrap-pop-up-multimedia');
   let multimediaClose = document.querySelector('.wrap-pop-up-multimedia .pop-up-multimedia__cross .cross');
 
-  let slide = document.querySelectorAll('.slaider-slide');
+
+  let slide = document.querySelectorAll('.slider-right-block');
 
   slide?.forEach(function(elem) {
-    let slide = elem.querySelector('.slaider-slide__play');
-    if (slide)
-      elem.addEventListener("click", () => openPopUp(multimedia, 'wrap-pop-up-multimedia_none', 'pop-up-multimedia_video'));
-    else
-      elem.addEventListener("click", () => openPopUp(multimedia, 'wrap-pop-up-multimedia_none', 'pop-up-multimedia_slider'));
+    elem.addEventListener("click", () => openPopUp(multimedia, 'wrap-pop-up-multimedia_none', 'pop-up-multimedia_video'));
   })
 
   multimediaClose?.addEventListener("click", () =>  closePopUp(multimedia, 'wrap-pop-up-multimedia_none'));
@@ -87,17 +90,14 @@ document.addEventListener('DOMContentLoaded', () => {
   let popUpFilter = document.querySelector('.pop-up-filter');
   let openPopUpFilter = document.querySelector('.news-content-settings-burger');
 
-  //let settingsToggle = document.querySelector('.news-content-settings');
 
   openPopUpFilter?.addEventListener("click", (e) => {
     if (e.target.className !== 'pop-up-filter-head-cross__img') {
       popUpFilter.classList.remove('pop-up-filter_none');
       body.className = 'body_hidden';
-      //settingsToggle.classList.add('news-content-settings_none');
     }
     else {
       popUpFilter.classList.add('pop-up-filter_none');
-      //settingsToggle.classList.remove('news-content-settings_none');
       body.className = 'body_inherit';
     }
   })
@@ -105,7 +105,6 @@ document.addEventListener('DOMContentLoaded', () => {
   popUpFilter?.addEventListener("click", (e)=> {
     if (e.target.className === 'pop-up-filter-head-cross__img') {
       popUpFilter.classList.add('pop-up-filter_none');
-      //settingsToggle.classList.remove('news-content-settings_none');
       body.className = 'body_inherit';
     }
   })
@@ -135,23 +134,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
   //bearing pop up
   let popUpAccessories = document.querySelector('.wrap-pop-up-accessories');
+  popUpAccessories?.addEventListener("click", (e) => {
+    let target = e.target.className;
+    if (target === 'wrap-pop-up-accessories' || target === 'pop-up-accessories-cross' || target === 'pop-up-accessories-head__cross' || target === 'pop-up-accessories-cross__img') {
+      closePopUp(popUpAccessories, 'wrap-pop-up-accessories_none');
+    }
+  })
   let bearingElem = document.querySelectorAll('.bearing-elem');
 
 
   bearingElem?.forEach(function(elem) {
     elem.addEventListener("click", () => openPopUp(popUpAccessories, 'wrap-pop-up-accessories_none'));
   })
-
-  //pop-up подшипников
-  let popUpAccessoriesHeadCross = document.querySelector('.pop-up-accessories-head__cross');
-
-  let popUpAccessoriesCross = document.querySelector('.pop-up-accessories-cross');
-
-
-  if (popUpAccessories || popUpAccessoriesHeadCross) {
-    popUpAccessoriesHeadCross.addEventListener("click", () => closePopUp(popUpAccessories, 'wrap-pop-up-accessories_none'));
-    popUpAccessoriesCross.addEventListener("click", () => closePopUp(popUpAccessories, 'wrap-pop-up-accessories_none'));
-  }
 
   //mediateca open slider
   let mediatecaElem = document.querySelectorAll('.mediateca-post');
@@ -162,7 +156,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   //vacancies
   let popUpVacancies = document.querySelector('.wrap-pop-up-vacancies');
-  let popUpVacanciesCross = document.querySelector('.wrap-pop-up-vacancies .pop-up-vacancies-head__cross');
 
   let vacancies = document.querySelectorAll('.vacance-elem');
 
@@ -172,83 +165,99 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 
 
-  if (popUpVacanciesCross || popUpVacancies) {
-    popUpVacanciesCross.addEventListener("click", () => {
+  popUpVacancies?.addEventListener("click", (e) => {
+    let target = e.target.className;
+
+    if (target === 'wrap-pop-up-vacancies' || target === 'pop-up-vacancies-head__cross') {
       closePopUp(popUpVacancies, 'wrap-pop-up-vacancies_none');
-    });
-  }
+    }
+  });
 
 
   //video
   let video = document.querySelector('.pop-up-multimedia-video video');
   let videoPlay = document.querySelector('.pop-up-multimedia__play .play');
 
-    videoPlay?.addEventListener('click', () => {
-      if (!videoPlay.classList.contains('pop-up-multimedia__play_none')) {
-        video.play();
-        videoPlay.classList.add('pop-up-multimedia__play_none');
-      }
-    })
+  videoPlay?.addEventListener('click', () => {
+    if (!videoPlay.classList.contains('pop-up-multimedia__play_none')) {
+      video.play();
+      videoPlay.classList.add('pop-up-multimedia__play_none');
+    }
+  })
 
-    video?.addEventListener('click', () => {
-      if (videoPlay.classList.contains('pop-up-multimedia__play_none')) {
-        video.pause();
-        videoPlay.classList.remove('pop-up-multimedia__play_none');
-      }
-    })
+  video?.addEventListener('click', () => {
+    if (videoPlay.classList.contains('pop-up-multimedia__play_none')) {
+      video.pause();
+      videoPlay.classList.remove('pop-up-multimedia__play_none');
+    }
+  })
 
 
-    // check form
-    let formMailing = document.querySelector('.main-mailing-form__wrap-input-btn');
-    formMailing?.addEventListener('submit', (e) => {
-      e.preventDefault();
-      let mail = document.querySelector('.main-mailing-wrap-input .input-elem__input');
+  // check form
+  let formMailing = document.querySelector('.main-mailing-form__wrap-input-btn');
+  formMailing?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    let mail = document.querySelector('.main-mailing-wrap-input .input-elem__input');
 
-      if (mail.value === '')
-        alert('PopUp с текстом ПусТоЕ поле');
+    if (mail.value === '')
+      alert('PopUp с текстом ПусТоЕ поле');
+    else
+      if (mailRegular.test(mail.value))
+        alert('send');
       else
-        if (mailRegular.test(mail.value))
-          alert('send');
-        else
-          alert('invalid');
-    })
+        alert('invalid');
+  })
 
-    let formConnect = document.querySelector('.footer-top-form');
-    formConnect?.addEventListener('submit', (e) => {
-      e.preventDefault();
-      let name = document.querySelector('.footer-top-form .input_name .input-elem__input');
-      let mail = document.querySelector('.footer-top-form .input_mail .input-elem__input');
-      let phone = document.querySelector('.footer-top-form .input_phone .input-elem__input');
+  let formConnect = document.querySelector('.footer-top-form');
+  formConnect?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    let name = document.querySelector('.footer-top-form .input_name .input-elem__input');
+    let mail = document.querySelector('.footer-top-form .input_mail .input-elem__input');
+    let phone = document.querySelector('.footer-top-form .input_phone .input-elem__input');
 
-      if (name.value === '' || mail.value === '' || phone.value === '')
-        alert('PopUp с текстом Заполните все поля');
-      else
-        if (!mailRegular.test(mail.value))
-          alert('майл не верен')
-        else if (!phoneRegular.test(phone.value))
-          alert('телефон не верен')
-        else
-          alert('send');
-    })
-
-    let formCall = document.querySelector('.pop-up-call .footer-top-form');
-    formCall?.addEventListener('submit', (e) => {
-      e.preventDefault();
-      let name = document.querySelector('.pop-up-call .footer-top-form .input_name .input-elem__input');
-      let mail = document.querySelector('.pop-up-call .footer-top-form .input_mail .input-elem__input');
-      let phone = document.querySelector('.pop-up-call .footer-top-form .input_phone .input-elem__input');
-
-      if (name.value === '' || mail.value === '' || phone.value === '')
-        alert('PopUp с текстом Заполните все поля');
-      else
+    if (name.value === '' || mail.value === '' || phone.value === '')
+      alert('PopUp с текстом Заполните все поля');
+    else
       if (!mailRegular.test(mail.value))
         alert('майл не верен')
       else if (!phoneRegular.test(phone.value))
         alert('телефон не верен')
       else
         alert('send');
-    })
+  })
 
+  let formCall = document.querySelector('.pop-up-call .footer-top-form');
+  formCall?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    let name = document.querySelector('.pop-up-call .footer-top-form .input_name .input-elem__input');
+    let mail = document.querySelector('.pop-up-call .footer-top-form .input_mail .input-elem__input');
+    let phone = document.querySelector('.pop-up-call .footer-top-form .input_phone .input-elem__input');
+
+    if (name.value === '' || mail.value === '' || phone.value === '')
+      alert('PopUp с текстом Заполните все поля');
+    else
+    if (!mailRegular.test(mail.value))
+      alert('майл не верен')
+    else if (!phoneRegular.test(phone.value))
+      alert('телефон не верен')
+    else
+      alert('send');
+  })
+
+  let formVacancies = document.querySelector('.pop-up-vacancies-form');
+  formVacancies?.addEventListener('submit', (e) => {
+    e.preventDefault()
+    let name = document.querySelector('.pop-up-vacancies-form .input_name .input-elem__input');
+    let phone = document.querySelector('.pop-up-vacancies-form .input_phone .input-elem__input');
+
+    if (name.value === '' || phone.value === '')
+      alert('PopUp с текстом Заполните все поля');
+    else
+        if (!phoneRegular.test(phone.value))
+          alert('телефон не верен')
+        else
+          alert('send');
+  })
 
   // ui-kit (pop-up с уведомлением)
   let popUpContainer = document.querySelector('.container-pop-up');
@@ -278,4 +287,26 @@ document.addEventListener('DOMContentLoaded', () => {
       burger?.classList.toggle('pop-up-accessories-list-list_none');
     });
   })
+
+  // animation btn
+
+  // const buttons = document.querySelectorAll(".btn");
+  //
+  // buttons.forEach(button => {
+  //   ["mouseenter", "mouseout"].forEach(evt => {
+  //     button.addEventListener(evt, e => {
+  //       let parentOffset = button.getBoundingClientRect(),
+  //         relX = e.pageX - parentOffset.left,
+  //         relY = e.pageY - parentOffset.top;
+  //
+  //       const span = button.getElementsByTagName("span");
+  //
+  //       span[0].style.top = relY + "px";
+  //       span[0].style.left = relX + "px";
+  //     });
+  //   });
+  // });
+
 })
+
+

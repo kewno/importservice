@@ -8,3 +8,26 @@
     }
   }
 }
+
+
+@include tablet {
+  .play {
+    height: 90px;
+    width: 90px;
+    svg {
+      height: 90px;
+      width: 90px;
+    }
+  }
+}
+
+@include sm {
+  .play {
+    height: 70px;
+    width: 70px;
+    svg {
+      height: 70px;
+      width: 70px;
+    }
+  }
+}

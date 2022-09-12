@@ -1,4 +1,13 @@
-mixin popUpMultimediaVideo
+mixin popUpMultimediaVideo(type = 'video_vk')
   .pop-up-multimedia-video
-    video(controls= false)
-      source(src='../../videos/BoulevardDepo.mp4', type="video/mp4")
+    if type === 'video_device'
+      .pop-up-multimedia__play
+        +play
+      video(controls= false)
+        source(src='../../videos/BoulevardDepo.mp4', type="video/mp4")
+    else if type === 'video_yt'
+      iframe(src="https://www.youtube.com/embed/LbFV8BuibM0", title="YouTube video player", frameborder="0", allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture", allowfullscreen)
+      //<iframe src="https://www.youtube.com/embed/LbFV8BuibM0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    else if type === 'video_vk'
+      iframe(src="https://vk.com/video_ext.php?oid=177179603&id=456240202&hash=68ff73d5ae983b3d&hd=1", allow="autoplay; encrypted-media; fullscreen; picture-in-picture;", frameborder="0", allowfullscreen)
+      //<iframe src="https://vk.com/video_ext.php?oid=177179603&id=456240202&hash=68ff73d5ae983b3d&hd=1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture;" frameborder="0" allowfullscreen></iframe>

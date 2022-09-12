@@ -1,5 +1,7 @@
 mixin btn(text, className, href = null)
   if !href
     button(class=`btn ${className}`, type=`submit`)= text
+      span
   else
     a(class=`btn ${className}`, href= href)= text
+      span

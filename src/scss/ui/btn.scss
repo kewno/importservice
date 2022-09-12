@@ -14,15 +14,44 @@
   box-sizing: border-box;
   cursor: pointer;
 
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+
+  span {
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    opacity: 0.9;
+    //background-color: #00abec;
+    //-webkit-transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+    //-webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+
+  &:hover span {
+    width: 225%;
+    height: 562.5px;
+  }
+
+
 
   &_red {
     background: var(--red);
     color: var(--white);
 
+    span {
+      background: var(--white);
+    }
+
     &:hover {
       border: 1px solid var(--red);
       color: var(--red);
-      background: var(--white);
+      //background: var(--white);
     }
   }
 
@@ -45,8 +74,12 @@
     border: 2px solid var(--white);
     line-height: 46px;
 
-    &:hover {
+    span {
       background: var(--back-button);
+    }
+
+    &:hover {
+      //background: var(--back-button);
       color: var(--red);
     }
   }

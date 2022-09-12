@@ -48,6 +48,7 @@
     "core-js-compat": "^3.4.7",
     "jquery": "^3.5.1",
     "normalize.css": "^8.0.1",
+    "simplebar": "^5.3.8",
     "swiper": "^8.3.2",
     "validate-form.js": "^1.0.0"
   }
