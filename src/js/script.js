@@ -77,9 +77,27 @@ document.addEventListener('DOMContentLoaded', () => {
       let slide = content.children.item(i);
       if (slide.className.indexOf('swiper-slide-active') !== -1) active = i;
     }
+
+    let activeSlide = document.querySelector('.pop-up-multimedia-slide-coll__now');
+    let allSlide = document.querySelector('.pop-up-multimedia-slide-coll__all');
+
+    //изменение кол-ва слайдов
+    activeSlide.innerHTML = sliderMultimedia.realIndex + 1;
+    allSlide.innerHTML = '/ ' + content.children.length;
+
+    // отслеживание скрола
+
+
     popUpSlider.append(...content.children);
+
+    sliderMultimedia.on('slideChange', () => {
+      console.log(1);
+      activeSlide.innerHTML = sliderMultimedia.realIndex + 1;
+    })
+
     sliderMultimedia.slideTo(active);
     sliderMultimedia.update();
+
 
     el.classList.remove(className);
 
@@ -426,25 +444,58 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // input file
   let files = document.querySelector('input[type=file]');
+
   files?.addEventListener("change", (e) => {
-    let arr = e.target.value.split('\\');
+    let fileMap = e.target.files;
+    // if (fileMap.length > 10) {
+    //   alert("Максимум 10 файлов");
+    //   return;
+    // }
+
+    let arr = [];
+
+
+    for (let i = 0; i < fileMap.length; i++) {
+      arr.push(fileMap[i].name);
+    }
+
+    let fileBrowse = document.querySelectorAll('.pop-up-vacancies-form-put-fail-icons-elem');
+    //let collFileBrowse = 0;
+    //if (fileBrowse) collFileBrowse = fileBrowse.length
+    if (arr.length + fileBrowse.length > 10) {
+      alert("Максимум 10 файлов");
+      return;
+    }
+
 
     let containerFail = document.querySelector('.pop-up-vacancies-form-put-fail');
-    //files
-    if (files.length !== 0)
-      containerFail.classList.remove('pop-up-vacancies-form-put-fail_none');
+    containerFail.classList.remove('pop-up-vacancies-form-put-fail_none');
 
-    let name = document.querySelector('.pop-up-vacancies-form-put-fail-icons__text');
-    let fileName = arr[arr.length - 1];
-    let extension = fileName.split('.')
+    let containerElems = document.querySelector('.pop-up-vacancies-form-put-fail-icons-elems');
 
-    name.innerHTML = fileName;
-    let image = document.querySelector('.pop-up-vacancies-form-put-fail-icons__file');
-    image.src = `../../images/ui/file-${extension[1] || doc}.png`;
+    arr.forEach((el) => {
+      let elem = el.split('.');
+
+      let div = document.createElement('div');
+      div.classList.add('pop-up-vacancies-form-put-fail-icons-elem');
+      let img = document.createElement('img');
+      img.classList.add('pop-up-vacancies-form-put-fail-icons-elem__file');
+      img.src=`../../images/ui/file-${elem[elem.length - 1]}.png`;
+      //debugger
+      let p = document.createElement('p');
+      p.classList.add('pop-up-vacancies-form-put-fail-icons-elem__text');
+      p.innerHTML = elem[0];
+      div.appendChild(img);
+      div.appendChild(p);
+      containerElems.appendChild(div);
+    })
 
     let dell = document.querySelector('.pop-up-vacancies-form-put-fail-icons__dell');
 
     dell.addEventListener('click', () => {
+      while (containerElems.firstChild) {
+        containerElems.removeChild(containerElems.firstChild);
+      }
       containerFail.classList.add('pop-up-vacancies-form-put-fail_none');
     })
   })

@@ -215,6 +215,17 @@
 .pop-up-vacancies-form-put-fail-icons {
   display: flex;
   align-items: center;
+
+  &__dell {
+    cursor: pointer;
+  }
+}
+
+.pop-up-vacancies-form-put-fail-icons-elem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
   &__file {
     cursor: pointer;
     width: 30px;
@@ -228,11 +239,7 @@
     font-size: 16px;
     line-height: 140%;
   }
-  &__dell {
-    cursor: pointer;
-  }
 }
-
 
 .pop-up-vacancies-list {
   &__headline {

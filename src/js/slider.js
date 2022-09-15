@@ -74,11 +74,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   })
 
-  arrowSlider({
-    slider: 'pop-up-slider',
-    next: '.pop-up-multimedia__wrap-bottom .pop-up-control_next',
-    prev: '.pop-up-multimedia__wrap-bottom .pop-up-control_prev'
-  })
+  // arrowSlider({
+  //   slider: 'pop-up-slider',
+  //   next: '.pop-up-multimedia__wrap-bottom .pop-up-control_next',
+  //   prev: '.pop-up-multimedia__wrap-bottom .pop-up-control_prev'
+  // })
 
 
   arrowSlider({
