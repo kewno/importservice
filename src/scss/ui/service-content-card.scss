@@ -4,7 +4,6 @@
   width: 100%;
   display: flex;
   align-items: center;
-  //background-size: cover;
   cursor: pointer;
   background-size: 100% 100%;
   background-position: center;
@@ -36,7 +35,7 @@
   }
 }
 
-@media (max-width: 1620px) {
+@include xl {
   .service-content-card {
     height: 183.5px;
   }
@@ -48,7 +47,7 @@
   }
 }
 
-@media (max-width: 1300px) {
+@include lg {
   .service-content-card {
     height: 147.44px;
 
@@ -66,7 +65,7 @@
   }
 }
 
-@media (max-width: 1100px) {
+@include md {
   .service-content-card {
     max-width: 464px;
     height: 223.53px;
@@ -81,7 +80,7 @@
 }
 
 
-@media (max-width: 800px) {
+@include tablet {
   .service-content-card {
     max-width: 378.5px;
     height: 182.34px;

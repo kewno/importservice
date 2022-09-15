@@ -1,10 +1,12 @@
 import  {Swiper,  Autoplay, EffectFade, Navigation, Pagination, Thumbs } from 'swiper';
 Swiper.use([ EffectFade, Navigation, Pagination, Thumbs]);
 
+
 let arrowSlider = ({slider, perView = 1, next = null, prev = null, pagination = null, spaceBetween= 0}) => {
   //debugger
   if (next && prev && pagination) {
     return new Swiper(`.${slider}`, {
+      //modules: [Pagination, Navigation],
       slidesPerView: `${perView}`,
       spaceBetween: spaceBetween,
       navigation: {
@@ -22,6 +24,7 @@ let arrowSlider = ({slider, perView = 1, next = null, prev = null, pagination = 
   }
   else if (next && prev) {
     return new Swiper(`.${slider}`, {
+      //modules: [Navigation],
       slidesPerView: `${perView}`,
       spaceBetween: spaceBetween,
       navigation: {
@@ -32,6 +35,7 @@ let arrowSlider = ({slider, perView = 1, next = null, prev = null, pagination = 
   }
   else if (pagination) {
     return new Swiper(`.${slider}`, {
+      //modules: [Pagination],
       slidesPerView: `${perView}`,
       spaceBetween: spaceBetween,
       pagination: {
@@ -52,12 +56,12 @@ let arrowSlider = ({slider, perView = 1, next = null, prev = null, pagination = 
 
 
 document.addEventListener('DOMContentLoaded', () => {
-  arrowSlider({
-    slider: 'slider',
-    perView: 1,
-    next: '.control-slider-next',
-    prev: '.control-slider-prev'
-  })
+  // arrowSlider({
+  //   slider: 'slider',
+  //   perView: 1,
+  //   next: '.control-slider-next',
+  //   prev: '.control-slider-prev'
+  // })
 
   arrowSlider({
     slider: 'header-slider',
@@ -75,6 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
     next: '.pop-up-multimedia__wrap-bottom .pop-up-control_next',
     prev: '.pop-up-multimedia__wrap-bottom .pop-up-control_prev'
   })
+
 
   arrowSlider({
     slider: 'bearing-slider',
@@ -102,16 +107,58 @@ document.addEventListener('DOMContentLoaded', () => {
     prev: '.news-slider-control .news-slider-control_prev',
   })
 
-  arrowSlider({
-    slider: 'manager-slider',
-    perView: 1,
-    next: '.manager .manager-slider-conrol-arrow__next',
-    prev: '.manager .manager-slider-conrol-arrow__prev',
-    pagination: {
-      el: 'manager .manager-slider-conrol__pagination',
-      className: 'service-pagination__point'
-    }
+  let sliders = document.querySelectorAll('.manager-slider');
+  //console.log(sliders.closest('div')); manager-slider
+  sliders.forEach(el => {
+    //console.log(el.parentNode.parentNode.parentNode.className);
+    //console.log(`${el.parentNode.parentNode.parentNode.className} .manager-slider`);
+      arrowSlider({
+        slider: `${el.parentNode.parentNode.parentNode.className} .manager-slider`,
+        perView: 1,
+        next: '.manager .manager-slider-conrol-arrow__next',
+        prev: '.manager .manager-slider-conrol-arrow__prev',
+        pagination: {
+          el: `${el.parentNode.parentNode.parentNode.className} .manager .manager-slider-conrol__pagination`,
+          className: 'service-pagination__point'
+        }
+      })
   })
+  // sliders.forEach(el =>  {
+  //   console.log(el.className)
+  //   debugger
+  //   arrowSlider({
+  //     slider: `${el.className}`,
+  //     perView: 1,
+  //     next: '.manager .manager-slider-conrol-arrow__next',
+  //     prev: '.manager .manager-slider-conrol-arrow__prev',
+  //     pagination: {
+  //       el: 'manager .manager-slider-conrol__pagination',
+  //       className: 'service-pagination__point'
+  //     }
+  //   })
+  // });
+
+  // arrowSlider({
+  //   slider: 'news-detail__wrap-manager .manager-slider',
+  //   perView: 1,
+  //   next: '.manager .manager-slider-conrol-arrow__next',
+  //   prev: '.manager .manager-slider-conrol-arrow__prev',
+  //   pagination: {
+  //     el: 'manager .manager-slider-conrol__pagination',
+  //     className: 'service-pagination__point'
+  //   }
+  // })
+  //
+  // arrowSlider({
+  //   slider: 'manager-slider',
+  //   perView: 1,
+  //   next: '.manager .manager-slider-conrol-arrow__next',
+  //   prev: '.manager .manager-slider-conrol-arrow__prev',
+  //   pagination: {
+  //     el: 'manager .manager-slider-conrol__pagination',
+  //     className: 'service-pagination__point'
+  //   }
+  // })
 
   new Swiper('.service-detail-slider .slider', {
     slidesPerView: 1,

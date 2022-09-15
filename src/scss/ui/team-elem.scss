@@ -3,8 +3,8 @@
   width: 100%;
   position: relative;
   display: flex;
-  flex-direction: column;//
-  justify-content: flex-end;//
+  flex-direction: column;
+  justify-content: flex-end;
   background-size: cover;
   cursor: pointer;
 
@@ -13,17 +13,11 @@
     bottom: 0;
   }
 
-  &:hover {
-    //background-size: 110% 110%;
-    //box-shadow: 0 2px 15px rgba(0, 0, 0, 0.9);
-  }
 }
 .team-elem-wrap-text {
   z-index: 2;
-  padding: 0 30px 24px 47px;//padding: 493px 30px 24px 47px;
-  min-height: 324px; //348px;
-  //box-sizing: border-box;
-  //padding: 100px 0 0;
+  padding: 0 30px 24px 47px;
+  min-height: 324px;
   &__headline {
     font-style: normal;
     font-weight: 500;
@@ -71,7 +65,7 @@
 }
 
 
-@media (max-width: 1150px) {
+@include md {
   .team-elem {
     &__back {
       width: 100%;
@@ -80,19 +74,19 @@
   }
   //width: 100%;
   .team-elem-wrap-text {
-    padding: 0 30px 24px 72px;//padding: 493px 30px 24px 72px;
+    padding: 0 30px 24px 72px;
   }
 }
 
-@media (max-width: 800px) {
+@include tablet {
   .team-elem-wrap-text {
-    padding: 0 30px 24px 72px;//padding: 493px 30px 24px 72px;
+    padding: 0 30px 24px 72px;
     min-height: 224px;
     height: auto;
   }
 }
 
-@media (max-width: 500px) {
+@include sm {
   .team-elem-wrap-text {
     padding: 0 25px 24px 30px;
   }

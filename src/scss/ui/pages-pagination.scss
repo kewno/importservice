@@ -3,7 +3,7 @@
   align-items: center;
   margin-bottom: 40px;
   &__img {
-    margin-right: 16px; //5
+    margin-right: 16px;
   }
   &__wrap-elems {
     display: flex;
@@ -46,7 +46,7 @@
 }
 
 
-@media (max-width: 800px) {
+@include tablet {
   .pages-pagination {
     margin-bottom: 35px;
   }

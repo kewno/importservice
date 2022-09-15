@@ -48,11 +48,10 @@
   }
 }
 
-@media (max-width: 800px) {
+@include tablet {
   .service-detail-article-texts {
     &__text {
       margin: 5px 0 0;
-      //line-height: 26px;
       &_list {
         padding-left: 15px;
         margin: 11px 0 0;

@@ -27,10 +27,10 @@ body.main-page
     .main-container-bearing
       +mainBearing()
 
-  +mainSlaider(['slider-1.png', 'slider-1.png'], null, ['arrow_red', 'arrow_white arrow_right'], 'main-slaider-information_right', 'main-slaider-slide-1.png', 'WMS — система управления складом на 3000 м<sup>2</sup>', 'максимально быстрая сборка <br>заказа и низкая себестоимость')
-  +mainSlaider(['slider-2.png', 'slider-2.png'], 'container-slider_reverse', ['arrow_red', 'arrow_grey-light arrow_right'], 'main-slaider-information_reverse main-slaider-information_light-grey', 'main-slaider-slide-2.png', '10 консигнационных складов у крупнейших предприятий России', 'позволит вам <span>работать без простоя</span> и в течение 1 дня получать продукцию')
-  +mainSlaider(['slider-3.png', 'slider-3.png'], null, ['arrow_bej', 'arrow_red arrow_right'], 'main-slaider-information_bej', 'main-slaider-slide-3.png', '24/7 — технический сервис', 'RAP-партнерство и полное обслуживание продукции на вашем предприятии')
-  +mainSlaider(['slider-4.png', 'slider-4.png'], 'container-slider_reverse container-slider_third', ['arrow_red', 'arrow_grey arrow_right'], 'main-slaider-information_reverse main-slaider-information_grey', 'main-slaider-slide-4.png', 'Работайте<br> без остановки!', 'Про постобслуживание, сервис, гарантии, выезд специалистов и т.п. Обучим, поможем установить')
+  +mainSlaider([{img: 'slider-1.png'}, {img: 'slider-1.png', video: true}], 'container-slider--first', ['arrow_red', 'arrow_white arrow_right'], 'main-slaider-information_right', 'main-slaider-slide-1.png', 'WMS — система управления складом на 3000 м<sup>2</sup>', 'максимально быстрая сборка <br>заказа и низкая себестоимость')
+  +mainSlaider([{img: 'slider-2.png'}, {img: 'slider-2.png', video: true}], 'container-slider_reverse container-slider--second', ['arrow_red', 'arrow_grey-light arrow_right'], 'main-slaider-information_reverse main-slaider-information_light-grey', 'main-slaider-slide-2.png', '10 консигнационных складов у крупнейших предприятий России', 'позволит вам <span>работать без простоя</span> и в течение 1 дня получать продукцию')
+  +mainSlaider([{img: 'slider-3.png'}, {img: 'slider-3.png', video: true}], 'container-slider--third', ['arrow_bej', 'arrow_red arrow_right'], 'main-slaider-information_bej', 'main-slaider-slide-3.png', '24/7 — технический сервис', 'RAP-партнерство и полное обслуживание продукции на вашем предприятии')
+  +mainSlaider([{img: 'slider-4.png'}, {img: 'slider-4.png', video: true}], 'container-slider_reverse container-slider_third container-slider--fourth', ['arrow_red', 'arrow_grey arrow_right'], 'main-slaider-information_reverse main-slaider-information_grey', 'main-slaider-slide-4.png', 'Работайте<br> без остановки!', 'Про постобслуживание, сервис, гарантии, выезд специалистов и т.п. Обучим, поможем установить')
 
   +mainBearingSlider([{img: 'bearing-slide-1.png', headline: 'NTN <br>Бытовой  электроинструмент', class: 'bearing-first'}, {img: 'bearing-slide-2.png', headline: 'NSK<br> Высокоточное оборудование', class: 'bearing-second'}, {img: 'bearing-slide-3.png', headline: 'Timken<br> Промышленное оборудование', class: 'bearing-third'}, {img: 'bearing-slide-4.png', headline: 'Крупногабаритный подшипник<br> для бумажной промышленности', class: 'bearing-fourth'}])
   +mainReviews(['reviews-5.png','reviews-5.png','reviews-5.png','reviews-5.png','reviews-5.png','reviews-5.png','reviews-5.png','reviews-5.png','reviews-5.png','reviews-5.png','reviews-5.png','reviews-5.png','reviews-5.png','reviews-5.png','reviews-5.png','reviews-5.png','reviews-5.png','reviews-5.png','reviews-5.png','reviews-5.png'])
@@ -39,7 +39,4 @@ body.main-page
   +footer
   +popUpCall
   +popUpMultimedia('pop-up-multimedia_slider', '10,09,2021', 'Известный производитель подшипников')
-  //+popUpMultimedia('pop-up-multimedia_video', '10,09,2021', 'Известный производитель подшипников') 'pop-up-multimedia_video'
   +popUpAccessories('accessories-1.png', 'Подшипники и комплектующие')
-
-  //'pop-up-multimedia_slider', '10,09,2021', 'Известный производитель подшипников'

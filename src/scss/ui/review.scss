@@ -7,7 +7,6 @@
   cursor: pointer;
   border: 1px solid var(--grey-white);
   box-sizing: border-box;
-  //margin: 21px;
 
   &__img {
     filter: grayscale(100%)
@@ -23,7 +22,6 @@
   .review {
     width: 100px;
     height: 100px;
-    //margin: 15px;
 
     &__img {
       width: 64.47px;
@@ -31,15 +29,13 @@
   }
 }
 
-@media (max-width: 800px) {
+@include tablet {
   .review {
     width: 120px;
     height: 120px;
-    //margin: 16.5px;
 
     &__img {
       width: 77.37px;
-      //height: 22.89px;
     }
   }
 }
@@ -48,6 +44,5 @@
   .review {
     width: 100px;
     height: 100px;
-    //margin: 0 14px 25px;
   }
 }

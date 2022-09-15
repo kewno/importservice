@@ -8,7 +8,7 @@ mixin popUpVacanciesForm
       +inputElem('type', 'Введите ваше имя', 'input_name')
     .pop-up-vacancies-form__input
       +inputElem('type', 'Введите ваш телефон', 'input_phone')
-    .pop-up-vacancies-form-put-fail
+    .pop-up-vacancies-form-put-fail.pop-up-vacancies-form-put-fail_none
       p.pop-up-vacancies-form-put-fail__headline Прикрепленый файл
       .pop-up-vacancies-form-put-fail-icons
         img(src='../../images/ui/file-doc.png').pop-up-vacancies-form-put-fail-icons__file
@@ -16,8 +16,16 @@ mixin popUpVacanciesForm
         img(src='../../images/ui/dell.png').pop-up-vacancies-form-put-fail-icons__dell
     .pop-up-vacancies-form-fail
       .pop-up-vacancies-form-fail__btn
-        +btn('Выберите файл', 'btn_white')
-      .pop-up-vacancies-form-fail-texts
+        label
+          p.pop-up-vacancies-form__wrap-btn Прикрепить
+
+          .pop-up-vacancies-form-fail-texts
+            p.pop-up-vacancies-form-fail-texts__headline Прикрепите файл  с резюме
+            p.pop-up-vacancies-form-fail-texts__text Файл с резюме в формате: doc, docx, rtf, pdf
+          input(type='file', accept='.doc, .docx, .rtf, .pdf', id='input_file')
+        //+inputElem('file', 'Введите ваше имя', 'input_name')
+        //+btn('Выберите файл', 'btn_white')
+      //.pop-up-vacancies-form-fail-texts
         p.pop-up-vacancies-form-fail-texts__headline Прикрепите файл  с резюме
         p.pop-up-vacancies-form-fail-texts__text Файл с резюме в формате: doc, docx, rtf, pdf
     .pop-up-vacancies-form__btn

@@ -7,7 +7,7 @@ mixin popUpFilter(elemCheck, elemOption)
     .pop-up-filter-checked
       each el in elemCheck
         .pop-up-filter-checked__elem
-          +checkSlide(el.id)
+          +checkSlide(el.id + 'm')
           p.check-slide-text= el.text
     .pop-up-filter-option
       .news-content-settings-falls

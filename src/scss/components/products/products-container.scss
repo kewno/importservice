@@ -1,5 +1,6 @@
 .products-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: calc(100% - 385px) 395px;
 }
 
 .products-container-right {
@@ -68,11 +69,21 @@
 
 @include md {
   .products-container {
-    flex-direction: column;
+    grid-template-columns: 100%;
   }
 
   .products-container-right {
-    margin: 0;
+    margin: 30px 0;
+
+    .manager-slider {
+      .swiper-wrapper {
+        .swiper-slide {
+          &__img {
+            object-position: right;
+          }
+        }
+      }
+    }
   }
 }
 

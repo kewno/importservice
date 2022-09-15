@@ -38,7 +38,7 @@
         stroke: var(--red);
       }
     }
-    .main-menu-vertical { // z-index - повысить
+    .main-menu-vertical {
       max-height: 1500px;
     }
   }
@@ -299,7 +299,7 @@
 
 @include md {
   .main-menu {
-    .main-menu__burder { //&__burder
+    .main-menu__burder {
       display: block;
     }
   }

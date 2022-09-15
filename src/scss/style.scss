@@ -51,6 +51,7 @@ body {
   }
 
   &::before {
+    border-radius: 0;
     background: var(--red);
     opacity: 1;
   }
@@ -58,7 +59,7 @@ body {
 
 .simplebar-track.simplebar-vertical {
   background: var(--grey-light);
-  border-radius: 5px;
+  //border-radius: 5px;
 
   .simplebar-scrollbar {
     &::before {

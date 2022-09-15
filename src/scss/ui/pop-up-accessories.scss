@@ -1,5 +1,4 @@
 .wrap-pop-up-accessories {
-  //position: absolute;
   position: fixed;
   top: 0;
   left: 0;
@@ -17,13 +16,9 @@
 
 .pop-up-accessories {
   background: var(--white);
-  //height: 100%;
   height: 100vh;
-  //max-height: 100vh;
   max-width: 1331px;
   width: 100%;
-  //overflow-y: auto;
-  //overflow-x: hidden;
 }
 
 .pop-up-accessories-elem {
@@ -57,7 +52,7 @@
     font-size: 24px;
     line-height: 28px;
     text-transform: uppercase;
-    max-width: 300px; // для двойного эл
+    max-width: 300px;
   }
 }
 
@@ -156,10 +151,6 @@
     }
   }
 
-  //&_none {
-  //  display: none;
-  //}
-
   &__headline {
     margin: 0 0 0 15px;
     font-style: normal;
@@ -202,7 +193,7 @@
 }
 
 
-@media (max-width: 1300px) {
+@include lg {
   .pop-up-accessories-elem {
     flex-direction: column;
   }
@@ -284,7 +275,7 @@
   }
 }
 
-@media (max-width: 500px) {
+@include sm {
   .pop-up-accessories-head {
     padding: 12px 0 4px 0;
 

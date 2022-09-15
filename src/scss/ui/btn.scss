@@ -25,10 +25,7 @@
     height: 0;
     border-radius: 50%;
     opacity: 0.9;
-    //background-color: #00abec;
-    //-webkit-transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
     transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
-    //-webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     z-index: -1;
   }
@@ -51,7 +48,6 @@
     &:hover {
       border: 1px solid var(--red);
       color: var(--red);
-      //background: var(--white);
     }
   }
 
@@ -79,7 +75,6 @@
     }
 
     &:hover {
-      //background: var(--back-button);
       color: var(--red);
     }
   }

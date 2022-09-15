@@ -67,10 +67,8 @@
     }
   }
 }
-//@include tablet {
-//
-//}
-@media (max-width: 500px) {
+
+@include sm {
   .pop-up-call {
     padding: 40px 20px 0 20px;
   }

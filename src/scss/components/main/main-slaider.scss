@@ -35,6 +35,10 @@
 .slider-right-block {
   width: 48%;
   position: relative;
+
+  video {
+    object-fit: cover;
+  }
 }
 
 .control-slider {

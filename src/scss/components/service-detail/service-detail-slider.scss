@@ -2,12 +2,12 @@
   width: 100%;
   overflow: hidden;
   .slider {
-    max-width: 1131px;
+    //max-width: 1131px;
     position: relative;
     .swiper-wrapper {
       .swiper-slide {
         width: 100%;
-        height: 652px;
+        //height: 652px;
         &__image {
           width: 100%;
         }
@@ -44,11 +44,11 @@
 
 @include xl {
   .service-detail-slider {
-    max-width: 1040px;
+    //max-width: 1040px;
     .slider {
       .swiper-wrapper {
         .swiper-slide {
-          max-width: 1040px;
+          //max-width: 1040px;
           height: 600px;
 
           &__image {
@@ -62,11 +62,11 @@
 
 @include lg {
   .service-detail-slider {
-    max-width: 762px;
+    //max-width: 762px;
     .slider {
       .swiper-wrapper {
         .swiper-slide {
-          max-width: 762px;
+          //max-width: 762px;
           height: 438px;
 
           &__image {
@@ -104,11 +104,11 @@
 
 @include md {
   .service-detail-slider {
-    max-width: 891px;
+    //max-width: 891px;
     .slider {
       .swiper-wrapper {
         .swiper-slide {
-          max-width: 891px;
+          //max-width: 891px;
           height: 512px;
 
           &__image {
@@ -141,12 +141,12 @@
 
 @include sm {
   .service-detail-slider {
-    max-width: 320px;
+    //max-width: 320px;
     height: 320px;
     .slider {
       .swiper-wrapper {
         .swiper-slide {
-          max-width: 320px;
+          //max-width: 320px;
           height: 320px;
           &__image {
             height: 100%;

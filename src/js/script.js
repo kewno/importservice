@@ -1,3 +1,5 @@
+import {Swiper} from "swiper";
+
 document.addEventListener('DOMContentLoaded', () => {
   let burgerMenuElements = document.querySelectorAll('.main-menu-burger-elem svg');
   let burgerPoint = document.querySelector('.main-menu__burder');
@@ -12,16 +14,96 @@ document.addEventListener('DOMContentLoaded', () => {
   let mailRegular = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   let phoneRegular = /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/;
 
+
+  let sliderMultimedia = new Swiper('.pop-up-slider', {
+    slidesPerView: 1,
+    navigation: {
+      nextEl: ".pop-up-control_next",
+      prevEl: ".pop-up-control_prev",
+    },
+  })
+
+
+  let sliderMain = new Swiper('.slider', {
+    slidesPerView: 1,
+    navigation: {
+      nextEl: ".control-slider-next",
+      prevEl: ".control-slider-prev",
+    },
+  })
+
+  let activeSlider;
+
   let closePopUp = (el, className, e) => {
     el.classList.add(className);
     body.className = 'body_inherit';
   }
 
-  let openPopUp = (el, className, attr = null) => {
+  let closeMultimediaPopUp = (el, className) => {
+    let popUpSlider = document.querySelector(`.wrap-pop-up-multimedia .pop-up-slider .swiper-wrapper`);
+
+    let active;
+
+    el.classList.add(className);
+    body.className = 'body_inherit';
+
+    for (let i = 0; i < popUpSlider.children.length; i++) {
+      let slide = popUpSlider.children.item(i);
+      if (slide.className.indexOf('swiper-slide-active') !== -1) active = i;
+    }
+
+    while (popUpSlider.firstChild) {
+      popUpSlider.removeChild(popUpSlider.firstChild);
+    }
+
+    sliderMain[activeSlider].slideTo(active);
+    sliderMain[activeSlider].update();
+  }
+
+
+
+  let openPopUp = (el, className) => {
     el.classList.remove(className);
     body.className = 'body_hidden';
   }
 
+  let openMultimediaPopUp = (el, className, slider, content) => {
+
+    let popUpSlider = document.querySelector(`.wrap-pop-up-multimedia .pop-up-slider .swiper-wrapper`);
+
+    let active;
+
+    for (let i = 0; i < content.children.length; i++) {
+      let slide = content.children.item(i);
+      if (slide.className.indexOf('swiper-slide-active') !== -1) active = i;
+    }
+    popUpSlider.append(...content.children);
+    sliderMultimedia.slideTo(active);
+    sliderMultimedia.update();
+
+    el.classList.remove(className);
+
+    //let video = document.querySelector('.pop-up-multimedia-video video');
+    let videoPlay = document.querySelectorAll('.pop-up-multimedia__play .play');
+
+    videoPlay?.forEach((el) => {
+      el.addEventListener('click', () => {
+        if (!el.classList.contains('pop-up-multimedia__play_none') && el.closest('.pop-up-slider')) {
+          let slide = el.closest('.swiper-slide');
+          let video = slide.querySelector('video');
+          video.play();
+
+          video?.addEventListener('click', () => {
+            video.pause();
+            el.classList.remove('pop-up-multimedia__play_none');
+          })
+          el.classList.add('pop-up-multimedia__play_none');
+        }
+      })
+    })
+
+    body.className = 'body_hidden';
+  }
 
   let toggleSubmenu = (el) => {
     if (getComputedStyle(el.nextSibling).display === 'none') {
@@ -70,13 +152,31 @@ document.addEventListener('DOMContentLoaded', () => {
   let multimediaClose = document.querySelector('.wrap-pop-up-multimedia .pop-up-multimedia__cross .cross');
 
 
-  let slide = document.querySelectorAll('.slider-right-block');
+  let slide = document.querySelectorAll('.swiper-slide'); //swiper-slide slider-right-block
 
   slide?.forEach(function(elem) {
-    elem.addEventListener("click", () => openPopUp(multimedia, 'wrap-pop-up-multimedia_none', 'pop-up-multimedia_video'));
+    elem.addEventListener("click", (e) => {
+      let a = e.currentTarget;
+      let content = a.closest('.swiper-wrapper');
+      let b = a.closest('.container-slider');
+      if (!b) return;
+
+      if (b.className.indexOf('container-slider--first') !== -1) {
+        activeSlider = 0;
+      } else if (b.className.indexOf('container-slider--second') !== -1) {
+        activeSlider = 1;
+      } else if (b.className.indexOf('container-slider--third') !== -1) {
+        activeSlider = 2;
+      } else if (b.className.indexOf('container-slider--fourth') !== -1) {
+        activeSlider = 3;
+      }
+      let clone = content.cloneNode(true);
+
+      openMultimediaPopUp(multimedia, 'wrap-pop-up-multimedia_none', e, clone);
+    });
   })
 
-  multimediaClose?.addEventListener("click", () =>  closePopUp(multimedia, 'wrap-pop-up-multimedia_none'));
+  multimediaClose?.addEventListener("click", () =>  closeMultimediaPopUp(multimedia, 'wrap-pop-up-multimedia_none'));
 
   // certificate pop-up для открытия
   let certificate = document.querySelectorAll('.wrap-certificate-elem');
@@ -156,7 +256,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   //vacancies
   let popUpVacancies = document.querySelector('.wrap-pop-up-vacancies');
-
   let vacancies = document.querySelectorAll('.vacance-elem');
 
 
@@ -174,23 +273,39 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-  //video
-  let video = document.querySelector('.pop-up-multimedia-video video');
-  let videoPlay = document.querySelector('.pop-up-multimedia__play .play');
+  //video pop-up-multimedia__play
+  //let video = document.querySelector('.pop-up-multimedia-video video');
+  //let videoPlay = document.querySelector('.pop-up-multimedia__play .play');
 
-  videoPlay?.addEventListener('click', () => {
-    if (!videoPlay.classList.contains('pop-up-multimedia__play_none')) {
-      video.play();
-      videoPlay.classList.add('pop-up-multimedia__play_none');
-    }
-  })
+  // let video = document.querySelector('.pop-up-multimedia-video video');
+  // let videoPlay = document.querySelectorAll('.pop-up-slider .pop-up-multimedia__play .play');
+  // //debugger
+  // videoPlay?.forEach((el) => {
+  //   el.addEventListener('click', () => {
+  //     alert(1);
+  //     if (!el.classList.contains('pop-up-multimedia__play_none') && el.closest('.pop-up-slider')) {
+  //       alert(1);
+  //       video.play();
+  //       el.classList.add('pop-up-multimedia__play_none');
+  //     }
+  //   })
+  // })
 
-  video?.addEventListener('click', () => {
-    if (videoPlay.classList.contains('pop-up-multimedia__play_none')) {
-      video.pause();
-      videoPlay.classList.remove('pop-up-multimedia__play_none');
-    }
-  })
+  // videoPlay?.addEventListener('click', () => {
+  //   //debugger
+  //   if (!videoPlay.classList.contains('pop-up-multimedia__play_none') && videoPlay.closest('.pop-up-slider')) {
+  //     debugger
+  //     video.play();
+  //     videoPlay.classList.add('pop-up-multimedia__play_none');
+  //   }
+  // })
+
+  // video?.addEventListener('click', () => {
+  //   if (videoPlay.classList.contains('pop-up-multimedia__play_none')) {
+  //     video.pause();
+  //     videoPlay.classList.remove('pop-up-multimedia__play_none');
+  //   }
+  // })
 
 
   // check form
@@ -249,9 +364,12 @@ document.addEventListener('DOMContentLoaded', () => {
     e.preventDefault()
     let name = document.querySelector('.pop-up-vacancies-form .input_name .input-elem__input');
     let phone = document.querySelector('.pop-up-vacancies-form .input_phone .input-elem__input');
+    let file = document.querySelector('.pop-up-vacancies-form #input_file');
 
     if (name.value === '' || phone.value === '')
       alert('PopUp с текстом Заполните все поля');
+    else if (file.files.length === 0)
+      alert('Добавьте файл');
     else
         if (!phoneRegular.test(phone.value))
           alert('телефон не верен')
@@ -289,24 +407,47 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 
   // animation btn
+  const buttons = document.querySelectorAll(".btn");
 
-  // const buttons = document.querySelectorAll(".btn");
-  //
-  // buttons.forEach(button => {
-  //   ["mouseenter", "mouseout"].forEach(evt => {
-  //     button.addEventListener(evt, e => {
-  //       let parentOffset = button.getBoundingClientRect(),
-  //         relX = e.pageX - parentOffset.left,
-  //         relY = e.pageY - parentOffset.top;
-  //
-  //       const span = button.getElementsByTagName("span");
-  //
-  //       span[0].style.top = relY + "px";
-  //       span[0].style.left = relX + "px";
-  //     });
-  //   });
-  // });
+  buttons.forEach(button => {
+    ["mouseenter", "mouseout"].forEach(evt => {
+      button.addEventListener(evt, e => {
+        let parentOffset = button.getBoundingClientRect(),
+          relX = e.pageX - parentOffset.left - window.pageXOffset,
+          relY = e.pageY - parentOffset.top - window.pageYOffset;
+        const span = button.getElementsByTagName("span");
 
+        span[0].style.top = relY + "px";
+        span[0].style.left = relX + "px";
+      });
+    });
+  });
+
+
+  // input file
+  let files = document.querySelector('input[type=file]');
+  files?.addEventListener("change", (e) => {
+    let arr = e.target.value.split('\\');
+
+    let containerFail = document.querySelector('.pop-up-vacancies-form-put-fail');
+    //files
+    if (files.length !== 0)
+      containerFail.classList.remove('pop-up-vacancies-form-put-fail_none');
+
+    let name = document.querySelector('.pop-up-vacancies-form-put-fail-icons__text');
+    let fileName = arr[arr.length - 1];
+    let extension = fileName.split('.')
+
+    name.innerHTML = fileName;
+    let image = document.querySelector('.pop-up-vacancies-form-put-fail-icons__file');
+    image.src = `../../images/ui/file-${extension[1] || doc}.png`;
+
+    let dell = document.querySelector('.pop-up-vacancies-form-put-fail-icons__dell');
+
+    dell.addEventListener('click', () => {
+      containerFail.classList.add('pop-up-vacancies-form-put-fail_none');
+    })
+  })
 })
 
 

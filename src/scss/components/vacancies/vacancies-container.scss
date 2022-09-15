@@ -7,6 +7,10 @@
   }
   &__right {
     transform: translateY(-57px);
+
+    .sidebar-manager {
+      top: 100px;
+    }
   }
 }
 
@@ -22,3 +26,5 @@
     }
   }
 }
+
+

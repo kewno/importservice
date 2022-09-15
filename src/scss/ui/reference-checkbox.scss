@@ -22,7 +22,7 @@
 }
 
 
-@media (max-width: 800px) {
+@include tablet {
   .reference-checkbox {
     &__label {
       padding: 4px 18px 4px 16px;
@@ -30,7 +30,7 @@
   }
 }
 
-@media (max-width: 500px) {
+@include sm {
   .reference-checkbox {
     &__label {
       padding: 4px 16px 4px 14px;

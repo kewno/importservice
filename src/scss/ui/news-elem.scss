@@ -8,11 +8,11 @@
   flex-direction: column;
   cursor: pointer;
   transition: background-size .5s ease-in;
-  background-size: 100% 100%; //contain
+  background-size: 100% 100%;
   background-position: center;
 
   &:hover {
-    background-size: 110% 110%; //150%
+    background-size: 110% 110%;
   }
 
   &__href {
@@ -180,7 +180,7 @@
     }
     &__text {
       max-width: 460px;
-      margin: 15px 0 0; //5px
+      margin: 15px 0 0;
     }
   }
 

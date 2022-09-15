@@ -11,13 +11,13 @@
   max-width: 1130px;
   box-sizing: border-box;
   background: var(--bej);
-  padding: 85px 10px 54px; //10
+  padding: 85px 10px 54px;
 }
 
 .range-container-bearing {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;//space-between
+  justify-content: space-between;
 
   .bearing-elem {
     width: 29%;
@@ -43,7 +43,7 @@
 
 
 
-@media (max-width: 800px) {
+@include tablet {
   .range {
     &__headline {
       font-size: 32px;
@@ -74,7 +74,7 @@
   }
 }
 
-@media (max-width: 500px) {
+@include sm {
   .range {
     &__headline {
       font-size: 24px;

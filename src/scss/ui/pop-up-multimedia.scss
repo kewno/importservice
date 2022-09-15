@@ -131,6 +131,10 @@
   width: 100%;
   height: 100%;
 
+  &_none {
+    display: none;
+  }
+
   iframe {
     width: 100%;
     height: 80%;
@@ -181,11 +185,11 @@ video {
 }
 
 
-@include tablet { //md sm
+@include tablet {
   .pop-up-multimedia {
 
     &__play {
-      top: 45%;
+      top: 48%;
     }
   }
 }

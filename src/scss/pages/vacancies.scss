@@ -18,7 +18,13 @@
   .vacancies {
     &__wrap-sidebar {
       display: flex;
+
       margin-bottom: 24px;
+
+      .container__2920 {
+        padding: 0;
+      }
+
     }
   }
 }
