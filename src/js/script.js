@@ -444,25 +444,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // input file
   let files = document.querySelector('input[type=file]');
+  let fileAll = [];
 
   files?.addEventListener("change", (e) => {
     let fileMap = e.target.files;
-    // if (fileMap.length > 10) {
-    //   alert("Максимум 10 файлов");
-    //   return;
-    // }
 
     let arr = [];
 
 
     for (let i = 0; i < fileMap.length; i++) {
       arr.push(fileMap[i].name);
+      fileAll.push(fileMap[i]);
     }
 
-    let fileBrowse = document.querySelectorAll('.pop-up-vacancies-form-put-fail-icons-elem');
-    //let collFileBrowse = 0;
-    //if (fileBrowse) collFileBrowse = fileBrowse.length
-    if (arr.length + fileBrowse.length > 10) {
+    if (arr.length + fileAll.length > 10) {
       alert("Максимум 10 файлов");
       return;
     }
