@@ -451,10 +451,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let arr = [];
 
-
     for (let i = 0; i < fileMap.length; i++) {
       arr.push(fileMap[i].name);
-      fileAll.push(fileMap[i]);
     }
 
     if (arr.length + fileAll.length > 10) {
@@ -462,6 +460,9 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
+    for (let i = 0; i < fileMap.length; i++) {
+      fileAll.push(fileMap[i]);
+    }
 
     let containerFail = document.querySelector('.pop-up-vacancies-form-put-fail');
     containerFail.classList.remove('pop-up-vacancies-form-put-fail_none');
@@ -492,6 +493,7 @@ document.addEventListener('DOMContentLoaded', () => {
         containerElems.removeChild(containerElems.firstChild);
       }
       containerFail.classList.add('pop-up-vacancies-form-put-fail_none');
+      fileAll = [];
     })
   })
 })
