@@ -449,6 +449,8 @@ document.addEventListener('DOMContentLoaded', () => {
   files?.addEventListener("change", (e) => {
     let fileMap = e.target.files;
 
+    let extension = ['doc', 'docx', 'gif', 'jpg', 'pdf', 'png', 'psd', 'xls', 'zip'];
+
     let arr = [];
 
     for (let i = 0; i < fileMap.length; i++) {
@@ -476,24 +478,40 @@ document.addEventListener('DOMContentLoaded', () => {
       div.classList.add('pop-up-vacancies-form-put-fail-icons-elem');
       let img = document.createElement('img');
       img.classList.add('pop-up-vacancies-form-put-fail-icons-elem__file');
-      img.src=`../../images/ui/file-${elem[elem.length - 1]}.png`;
-      //debugger
+
+      if (extension.indexOf(elem[elem.length - 1]) !== -1)
+        img.src=`../../images/ui/file-${elem[elem.length - 1]}.png`;
+      else
+        img.src=`../../images/ui/file-doc.png`;
       let p = document.createElement('p');
       p.classList.add('pop-up-vacancies-form-put-fail-icons-elem__text');
-      p.innerHTML = elem[0];
+
+      p.innerHTML = el.substr(0, el.lastIndexOf("."));
+
+      let imgDell = document.createElement('img');
+      imgDell.src=`../../images/ui/dell.png`;
+      imgDell.classList.add('pop-up-vacancies-form-put-fail-icons__dell');
+
       div.appendChild(img);
       div.appendChild(p);
+      div.appendChild(imgDell);
       containerElems.appendChild(div);
     })
 
-    let dell = document.querySelector('.pop-up-vacancies-form-put-fail-icons__dell');
+    let dell = document.querySelectorAll('.pop-up-vacancies-form-put-fail-icons__dell');
 
-    dell.addEventListener('click', () => {
-      while (containerElems.firstChild) {
-        containerElems.removeChild(containerElems.firstChild);
-      }
-      containerFail.classList.add('pop-up-vacancies-form-put-fail_none');
-      fileAll = [];
+    dell.forEach(elem => {
+      elem.addEventListener('click', (e) => {
+        let container = e.target.closest('.pop-up-vacancies-form-put-fail-icons-elem');
+        let containerText = container.querySelector('.pop-up-vacancies-form-put-fail-icons-elem__text').innerHTML;
+
+        for (let i = 0; i < fileAll.length; i++) {
+          let name = fileAll[i].name.substr(0,fileAll[i].name.lastIndexOf("."));
+          if (name === containerText) fileAll.splice(i, 1);
+        }
+
+        container.remove();
+      })
     })
   })
 })
